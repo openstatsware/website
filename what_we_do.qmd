@@ -1,0 +1,14 @@
+---
+  title: "What We Do"
+---
+
+  SWE WG is a cross-industry international working group
+  
+  Our goals are to:
+  
+  * **Collaborate to engineer selected R-packages** to fill in gaps in the open-source statistical software landscape, and promote software tools designed by the working group through publications, conference presentations, workshops, and training courses, etc
+  
+  * **Develop best practices for engineering high-quality statistical software**, and promote the use of best practices in the broader Biostatistics community via public training materials
+  
+  * **Communicate and collaborate** with other R software initiatives
+

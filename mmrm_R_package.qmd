@@ -1,0 +1,33 @@
+---
+title: "MMRM R Package Development"
+---
+
+**Lead**: Daniel Sabanes Bove (Roche)
+
+**Objective**: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested
+
+```{r setup, include=FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+panderOptions('table.alignment.default', function(df){ifelse(sapply(df, is.numeric), 'right', 'left')})
+
+path <- getwd()
+
+## member list
+members <- as.data.frame(read_excel(paste(path, "/data/members.xlsx", sep = ""), col_types = NULL))
+```
+
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+mmrm.members <- (members %>% 
+                   filter(MMRM == 1) %>% 
+                   select(Firstname, Lastname, Affiliation) %>% 
+                   arrange(Firstname, Lastname))
+mmrm.out <- kable(mmrm.members)
+
+cat(knit(text = mmrm.out, quiet = TRUE))
+```
+
+To learn more about the MMRM R package visit <https://github.com/openpharma/mmrm>.

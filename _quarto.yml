@@ -6,8 +6,26 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: "Home"
+      - text: "About Us"
+        menu:
+          - href: what_we_do.qmd
+          - href: people.qmd
+          - href: join_us.qmd
+          - href: contact_us.qmd
+      - href: news.qmd
+        text: "News"
+      - text: "Task Forces"
+        menu:
+          - href: mmrm_R_package.qmd
+      - text: "Resources"
+        menu:
+          - href: video.qmd
+          - href: webinar.qmd
+          - href: presentation.qmd
+          - href: publication.qmd
+      - href: events.qmd
+        text: "Events"
 
 format:
   html:

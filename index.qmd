@@ -1,11 +1,6 @@
 ---
-title: "testwebsite"
+title: "Software Engineering Working Group"
 ---
 
-This is a Quarto website.
+Welcome to the home page of the Software Engineering Working Group (SWE WG).
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
