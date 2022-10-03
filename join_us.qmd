@@ -8,4 +8,5 @@
   
   * Join as a task force member, who actively contributes to one or several task force(s).
   
-  If you are interested to join the ASA BIOP SWE WG, please contact us **[to add contact info]**
+  If you are interested to join the ASA BIOP SWE WG, please contact us:
+  [Daniel Sabanes Bove](mailto:daniel.sabanes_bove@roche.com) or [Ya Wang](mailto:ya.wang10@gilead.com)
