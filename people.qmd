@@ -10,26 +10,8 @@
 
 
 **Members**
-```{r setup, include=FALSE}
-## load packages
-packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
-for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
-
-knitr::opts_chunk$set(echo = TRUE)
-panderOptions('table.alignment.default', function(df){ifelse(sapply(df, is.numeric), 'right', 'left')})
-
-path <- getwd()
-
-## member list
-members <- as.data.frame(read_excel(paste(path, "/data/members.xlsx", sep = ""), col_types = NULL))
-```
-
 ```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
-swe.wg.members <- (members %>% 
-                   filter(SWE_WG_Member == 1) %>% 
-                   select(Firstname, Lastname, Affiliation) %>% 
-                   arrange(Firstname, Lastname))
-swe.wg.out <- kable(swe.wg.members)
-
-cat(knit(text = swe.wg.out, quiet = TRUE))
+path <- getwd()
+source(file = paste(path, "/utils/read_members.r", sep = ""))
+read.members("SWE_WG_Member")
 ```

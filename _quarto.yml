@@ -9,7 +9,7 @@ website:
         text: "Home"
       - text: "About Us"
         menu:
-          - href: what_we_do.qmd
+          - href: goals.qmd
           - href: people.qmd
           - href: join_us.qmd
           - href: contact_us.qmd
