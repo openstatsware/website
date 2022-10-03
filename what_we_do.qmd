@@ -10,5 +10,5 @@
   
   * **Develop good SWE practices** for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.
   
-  * **Communicate and collaborate** with other R software initiatives
+  * **Communicate and collaborate** with other R software initiatives including via the [R Consortium](https://www.r-consortium.org/).
 
