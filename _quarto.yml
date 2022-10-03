@@ -20,10 +20,10 @@ website:
           - href: mmrm_R_package.qmd
       - text: "Resources"
         menu:
-          - href: video.qmd
-          - href: webinar.qmd
-          - href: presentation.qmd
-          - href: publication.qmd
+          - href: videos.qmd
+          - href: webinars.qmd
+          - href: presentations.qmd
+          - href: publications.qmd
       - href: events.qmd
         text: "Events"
 
