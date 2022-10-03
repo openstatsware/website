@@ -8,7 +8,7 @@
   
   * **Engineer selected R-packages** to fill in gaps in the open-source statistical software landscape, and promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.
   
-  * **Develop best practices for engineering high-quality statistical software**, and promote the use of best practices in the broader Biostatistics community via public training materials
+  * **Develop good SWE practices** for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.
   
   * **Communicate and collaborate** with other R software initiatives
 
