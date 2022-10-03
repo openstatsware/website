@@ -2,7 +2,7 @@
   title: "Goals"
 ---
 
-  SWE WG is a cross-industry international working group
+  The SWE WG is a scientific working group of the [American Statistical Association (ASA) Biopharmaceutical section (BIOP)](https://community.amstat.org/biop/home).
   
   Our goals are to:
   
