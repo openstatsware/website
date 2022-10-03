@@ -30,4 +30,4 @@ mmrm.out <- kable(mmrm.members)
 cat(knit(text = mmrm.out, quiet = TRUE))
 ```
 
-To learn more about the MMRM R package visit <https://github.com/openpharma/mmrm>.
+To learn more about the MMRM R package visit https://openpharma.github.io/mmrm/.
