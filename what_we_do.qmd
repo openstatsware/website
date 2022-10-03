@@ -1,5 +1,5 @@
 ---
-  title: "What We Do"
+  title: "Goals"
 ---
 
   SWE WG is a cross-industry international working group
