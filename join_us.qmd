@@ -2,7 +2,7 @@
   title: "Join Us"
 ---
 
-  There are multiple ways to get involved with the ASA BIOP SWE WG
+  There are multiple ways to get involved with the ASA BIOP SWE WG:
   
   * Join as a member, who attend the ASA BIOP SWE WG meetings
   
