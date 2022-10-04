@@ -13,4 +13,4 @@ read.members("MMRM")
 
 ```
 
-To learn more about the MMRM R package visit https://openpharma.github.io/mmrm/.
+To learn more about the MMRM R package visit [openpharma.github.io/mmrm](https://openpharma.github.io/mmrm/).
