@@ -1,8 +1,8 @@
 ---
-title: "Software Engineering Working Group"
+title: "ASA Biopharmaceutical Section Software Engineering Working Group"
 ---
 
-Welcome to the home page of the Software Engineering Working Group (SWE WG). To learn more about the WG see [about us](goals.qmd).
+Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see [about us](goals.qmd).
 
 
 **Placeholder for the WG hexagon**
