@@ -13,10 +13,8 @@ website:
           - href: people.qmd
           - href: join_us.qmd
           - href: contact_us.qmd
-      - text: "News"
-        menu:
-          - href: news.qmd
-          # - href: events.qmd
+      - href: news.qmd
+        text: "News"
       - text: "Task Forces"
         menu:
           - href: mmrm_R_package.qmd
