@@ -15,7 +15,8 @@ read.members <- function(subset)
   members.subset <- (members %>%
                        filter(!!subset == 1) %>%
                        select(Firstname, Lastname, Affiliation) %>%
-                       arrange(Firstname, Lastname))
+                       arrange(Firstname, Lastname) %>%
+                       rename(`First Name` = Firstname, `Last Name` = Lastname))
 
   ## output member list
   members.out <- kable(members.subset)
