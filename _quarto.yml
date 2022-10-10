@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "ASA BIOP SWE WG"
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Home"
+      - text: "About Us"
+        menu:
+          - href: goals.qmd
+          - href: people.qmd
+          - href: join_us.qmd
+          - href: contact_us.qmd
+      - href: news.qmd
+        text: "News"
+      - text: "Task Forces"
+        menu:
+          - href: mmrm_R_package.qmd
+      # - text: "Resources"
+      #   menu:
+      #     - href: videos.qmd
+      #     - href: webinars.qmd
+      #     - href: presentations.qmd
+      #     - href: publications.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

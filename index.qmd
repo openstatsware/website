@@ -1,0 +1,13 @@
+---
+title: "ASA Biopharmaceutical Section Software Engineering Working Group"
+---
+
+Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see [about us](goals.qmd).
+
+
+**Placeholder for the WG hexagon**
+
+
+**Latest Updates**
+
+* **7 Oct 2022**: Initial publication of the website.

@@ -1,0 +1,17 @@
+---
+  title: "People"
+---
+
+**Co-Chairs**
+
+  * Daniel Sabanes Bove (Roche)
+
+  * Ya Wang (Gilead)
+
+
+**Members**
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.r", sep = ""))
+read.members("SWE_WG_Member")
+```

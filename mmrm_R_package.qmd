@@ -1,0 +1,16 @@
+---
+title: "MMRM R Package Development"
+---
+
+**Lead**: Daniel Sabanes Bove (Roche)
+
+**Objective**: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.
+
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.r", sep = ""))
+read.members("MMRM")
+
+```
+
+To learn more about the MMRM R package visit [openpharma.github.io/mmrm](https://openpharma.github.io/mmrm/).

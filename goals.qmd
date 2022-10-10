@@ -1,0 +1,14 @@
+---
+  title: "Goals"
+---
+
+  The SWE WG is a scientific working group of the [American Statistical Association (ASA) Biopharmaceutical section (BIOP)](https://community.amstat.org/biop/home).
+  
+  Our goals are to:
+  
+  * **Engineer selected R-packages** to fill in gaps in the open-source statistical software landscape, and to promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.
+  
+  * **Develop good SWE practices** for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.
+  
+  * **Communicate and collaborate** with other R software initiatives including via the [R Consortium](https://www.r-consortium.org/).
+
