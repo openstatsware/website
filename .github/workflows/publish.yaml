@@ -1,0 +1,41 @@
+---
+# Github Action Workflow to publish
+# the Quarto website to GitHub Pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+     - main
+
+name: Publish Site
+
+env:
+  QUARTO_DIR: "."
+
+jobs:
+  publish:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: install.packages("pander", repos = "https://cloud.r-project.org")
+        shell: Rscript {0}
+
+      - name: Render Quarto Project
+        run: quarto render --output-dir _site
+        shell: bash
+        working-directory: ${{ env.QUARTO_DIR }}
+
+      - name: Publish Project
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./${{ env.QUARTO_DIR }}/_site
+          destination_dir: ${{ env.QUARTO_DIR }}

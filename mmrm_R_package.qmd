@@ -8,7 +8,7 @@ title: "MMRM R Package Development"
 
 ```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
 path <- getwd()
-source(file = paste(path, "/utils/read_members.r", sep = ""))
+source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("MMRM")
 
 ```
