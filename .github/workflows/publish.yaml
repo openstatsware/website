@@ -24,6 +24,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: install.packages("pander", repos = "https://cloud.r-project.org")
+        shell: Rscript {0}
+
       - name: Render Quarto Project
         run: quarto render --output-dir _site
         shell: bash
