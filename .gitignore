@@ -1,6 +1,19 @@
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
+# Quarto
 /.quarto/
+*.pdf
+_cache
+cache
+*_cache
+*_files
+libs
+_freeze
+_site
+
+# MacOS
+.DS_Store
