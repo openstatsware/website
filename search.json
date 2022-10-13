@@ -1,38 +1,17 @@
 [
   {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
+    "objectID": "goals.html",
+    "href": "goals.html",
+    "title": "Goals",
     "section": "",
-    "text": "Daniel Sabanes Bove (Roche)\nYa Wang (Gilead)\n\nMembers\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlessandro\nGasparini\nKarolinska Institutet\n\n\nAndy\nMiskell\nEli Lilly\n\n\nBecca\nKrouse\nGSK\n\n\nBen\nArancibia\nGSK\n\n\nBrian\nLang\nMSD\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nDong\nXi\nGilead Sciences\n\n\nFriedrich\nPahlke\nRPACT\n\n\nJian\nWang\nEli Lilly\n\n\nKeaven\nAnderson\nMerck\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nPeikun\nWu\nRNGUS\n\n\nRon\nYu\nGilead Sciences\n\n\nWill\nLandau\nEli Lilly\n\n\nYa\nWang\nGilead Sciences"
+    "text": "Our goals are to:\n\nEngineer selected R-packages to fill in gaps in the open-source statistical software landscape, and to promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.\nDevelop good SWE practices for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.\nCommunicate and collaborate with other R software initiatives including via the R Consortium."
   },
   {
-    "objectID": "videos.html",
-    "href": "videos.html",
-    "title": "Videos",
+    "objectID": "events.html",
+    "href": "events.html",
+    "title": "Events",
     "section": "",
     "text": "To be added later."
-  },
-  {
-    "objectID": "mmrm_R_package.html",
-    "href": "mmrm_R_package.html",
-    "title": "MMRM R Package Development",
-    "section": "",
-    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
-    "section": "",
-    "text": "Placeholder for the WG hexagon\nLatest Updates\n\n7 Oct 2022: Initial publication of the website."
-  },
-  {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
-    "section": "",
-    "text": "7 Oct 2022: Initial publication of the website."
   },
   {
     "objectID": "join_us.html",
@@ -42,9 +21,16 @@
     "text": "Join as a member, who attends the ASA BIOP SWE WG meetings.\nJoin as a task force member, who actively contributes to one or several task force(s).\n\nIf you are interested to join the ASA BIOP SWE WG, please contact us: Daniel Sabanes Bove or Ya Wang"
   },
   {
-    "objectID": "events.html",
-    "href": "events.html",
-    "title": "Events",
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "To be added later."
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
     "text": "To be added later."
   },
@@ -56,16 +42,30 @@
     "text": "To be added later."
   },
   {
-    "objectID": "goals.html",
-    "href": "goals.html",
-    "title": "Goals",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
     "section": "",
-    "text": "Our goals are to:\n\nEngineer selected R-packages to fill in gaps in the open-source statistical software landscape, and to promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.\nDevelop good SWE practices for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.\nCommunicate and collaborate with other R software initiatives including via the R Consortium."
+    "text": "Placeholder for the WG hexagon\nLatest Updates\n\n7 Oct 2022: Initial publication of the website."
   },
   {
-    "objectID": "presentations.html",
-    "href": "presentations.html",
-    "title": "Presentations",
+    "objectID": "mmrm_R_package.html",
+    "href": "mmrm_R_package.html",
+    "title": "MMRM R Package Development",
+    "section": "",
+    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "Daniel Sabanes Bove (Roche)\nYa Wang (Gilead)\n\nMembers\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlessandro\nGasparini\nKarolinska Institutet\n\n\nAndy\nMiskell\nEli Lilly\n\n\nBecca\nKrouse\nGSK\n\n\nBen\nArancibia\nGSK\n\n\nBrian\nLang\nMSD\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nDong\nXi\nGilead Sciences\n\n\nFriedrich\nPahlke\nRPACT\n\n\nJian\nWang\nEli Lilly\n\n\nJoe\nRickert\nRStudio & R Consortium\n\n\nKeaven\nAnderson\nMerck\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nPeikun\nWu\nRNGUS\n\n\nRon\nYu\nGilead Sciences\n\n\nWill\nLandau\nEli Lilly\n\n\nYa\nWang\nGilead Sciences"
+  },
+  {
+    "objectID": "videos.html",
+    "href": "videos.html",
+    "title": "Videos",
     "section": "",
     "text": "To be added later."
   },
@@ -77,10 +77,10 @@
     "text": "Loading…"
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
     "section": "",
-    "text": "To be added later."
+    "text": "7 Oct 2022: Initial publication of the website."
   }
 ]
