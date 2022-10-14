@@ -3,7 +3,9 @@ project:
 
 website:
   title: "ASA BIOP SWE WG"
+  favicon: "sticker/sticker-600.png"
   navbar:
+    logo: "sticker/sticker-300.png"
     left:
       - href: index.qmd
         text: "Home"
