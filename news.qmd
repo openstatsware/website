@@ -2,7 +2,7 @@
   title: "News"
 ---
 
+- **10 Oct 2022**: Added hex sticker for the working group. 
+  Credits to <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Kalashnyk</a> on Flaticon for creating the sticker icon.
 
--   **10 Oct 2022**: Added hex sticker for the working group. Credits to <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Kalashnyk</a> on Flaticon for creating the sticker icon.
-
--   **7 Oct 2022**: Initial publication of the website.
+- **7 Oct 2022**: Initial publication of the website.
