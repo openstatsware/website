@@ -1,0 +1,23 @@
+read.news <- function(how_many = NULL, decreasing = TRUE) {
+  # Load packages
+  packs.html <- c("glue")
+  for (i in seq_along(packs.html)) {
+    library(packs.html[i], character.only = TRUE)
+  }
+
+  # Import data
+  news_data <- read.csv(file = "data/news.csv")
+  news_data$Date <- as.Date(news_data$Date)
+
+  # Sort
+  news_data <- news_data[order(news_data$Date, decreasing = decreasing), ]
+
+  # Determine how many to print
+  max_news <- ifelse(is.null(how_many), nrow(news_data), min(how_many, nrow(news_data)))
+
+  # Print
+  for (i in seq_len(max_news)) {
+    txt <- glue("- **{news_data$Date[i]}**: {news_data$Text[i]}")
+    print(txt)
+  }
+}
