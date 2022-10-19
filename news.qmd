@@ -1,8 +1,18 @@
 ---
-  title: "News"
+title: "News"
+editor_options: 
+  chunk_output_type: console
 ---
 
-- **10 Oct 2022**: Added hex sticker for the working group. 
-  Credits to <a href="https://www.flaticon.com/free-icons/technology" title="technology icons">Kalashnyk</a> on Flaticon for creating the sticker icon.
+```{r}
+#| include = FALSE
+source(file = "utils/read_news.R")
+```
 
-- **7 Oct 2022**: Initial publication of the website.
+```{r}
+#| message = FALSE,
+#| warning = FALSE,
+#| results = "asis",
+#| echo = FALSE
+read.news()
+```

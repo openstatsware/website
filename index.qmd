@@ -1,5 +1,7 @@
 ---
 title: "ASA Biopharmaceutical Section Software Engineering Working Group"
+editor_options: 
+  chunk_output_type: console
 ---
 
 Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see [about us](goals.qmd).
@@ -8,5 +10,15 @@ Welcome to the home page of the American Statistical Association (ASA) Biopharma
 
 **Latest Updates:**
 
-```{r, child = "news.qmd"}
+```{r}
+#| include = FALSE
+source(file = "utils/read_news.R")
+```
+
+```{r}
+#| message = FALSE,
+#| warning = FALSE,
+#| results = "asis",
+#| echo = FALSE
+read.news(how_many = 5)
 ```
