@@ -15,19 +15,13 @@ website:
           - href: people.qmd
           - href: join_us.qmd
           - href: contact_us.qmd
-      - text: "News"
-        menu:
-          - href: news.qmd
-          - href: wg_announcement.qmd
+      - href: news.qmd
+        text: "News"
+      - href: blog.qmd
+        text: "Blog"
       - text: "Task Forces"
         menu:
           - href: mmrm_R_package.qmd
-      # - text: "Resources"
-      #   menu:
-      #     - href: videos.qmd
-      #     - href: webinars.qmd
-      #     - href: presentations.qmd
-      #     - href: publications.qmd
 
 format:
   html:
