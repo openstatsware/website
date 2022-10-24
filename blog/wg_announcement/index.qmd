@@ -1,0 +1,23 @@
+---
+title: "New ASA BIOP working group on Software Engineering"
+author: "SWE WG"
+subtitle: Fostering open source code collaboration within Biostatistics
+description: We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).
+date: "2022-10-24"
+categories: [news]
+image: "sticker-1200.png"
+---
+
+With the shift of biostatistics work from proprietary software (e.g. SAS) to R, it is now even more important to write reliable and reproducible code, and to be selective with the R packages we use. This topic is equally relevant for biostatistics work as it is for programming and other roles. A recent [panel discussion](https://www.linkedin.com/pulse/research-software-engineering-clinical-biostatistics-saban%C3%A9s-bov%C3%A9/) on this topic highlighted this evolving need across companies and academia.
+
+To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the [American Statistical Association (ASA) Biopharmaceutical section (BIOP)](https://community.amstat.org/biop/home) which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our [landing page](https://community.amstat.org/biop/workinggroups/swe-wg) and [website](https://rconsortium.github.io/asa-biop-swe-wg/) (hosted by the [R Consortium](https://www.r-consortium.org/about) GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.
+
+The primary objective of the SWE WG is to engineer R packages that implement important methods that are often utilized in biostatistics but still missing from our R toolbox. The first product is the recently-published R package implementing mixed models for repeated measures (MMRM): [mmrm](https://cran.r-project.org/package=mmrm). In particular, a critical advantage of this package over existing implementations is that it is faster and converges more reliably. It also provides a comprehensive set of features: users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite adjusted degrees of freedom, and extract the least square means estimates by using the [emmeans package](https://github.com/rvlenth/emmeans). We aim to establish the R package [mmrm](https://cran.r-project.org/package=mmrm) as a new standard for fitting MMRM and will communicate it broadly. We welcome any community contributions to the R package, including feedback, questions and feature requests.
+
+The secondary objective is to develop best practices for engineering high-quality open-source statistical software, and to promote the use of these best practices in the broader biostatistics community via public training materials.
+
+➞ Would you like to try out the new package mmrm? Install it from [CRAN](https://cran.r-project.org/package=mmrm) and read the [documentation](https://openpharma.github.io/mmrm/) (hosted by the [openpharma GitHub organization](https://openpharma.github.io/#manifesto)).
+
+➞ What do you think is missing in the statisticians' R toolbox? Comment [here](https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html)!
+
+➞ Are you developing R packages and are interested in joining the working group? Please visit [our website](https://rconsortium.github.io/asa-biop-swe-wg/) on [how to join](https://rconsortium.github.io/asa-biop-swe-wg/join_us.html) (no ASA membership required).
