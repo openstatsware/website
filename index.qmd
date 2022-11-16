@@ -20,5 +20,5 @@ source(file = "utils/read_news.R")
 #| warning = FALSE,
 #| results = "asis",
 #| echo = FALSE
-read.news(how_many = 5)
+read.news(how_many = 3)
 ```
