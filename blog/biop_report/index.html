@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="SWE WG">
+<meta name="dcterms.date" content="2022-11-16">
+<meta name="description" content="We wrote an article for the Biopharmaceutical Report introducing the SWE WG.">
 
-<title>ASA BIOP SWE WG - Blog</title>
+<title>ASA BIOP SWE WG - Software Engineering in Biostatistics - Towards Improving a Critical Competence</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./sticker/sticker-600.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../sticker/sticker-600.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,39 +62,9 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -103,10 +74,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./sticker/sticker-300.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../sticker/sticker-300.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">ASA BIOP SWE WG</span>
     </a>
   </div>
@@ -116,40 +87,40 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="../../index.html">Home</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
-    <a class="dropdown-item" href="./goals.html">
+    <a class="dropdown-item" href="../../goals.html">
  <span class="dropdown-text">Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./people.html">
+    <a class="dropdown-item" href="../../people.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./join_us.html">
+    <a class="dropdown-item" href="../../join_us.html">
  <span class="dropdown-text">Join Us</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contact_us.html">
+    <a class="dropdown-item" href="../../contact_us.html">
  <span class="dropdown-text">Contact Us</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./news.html">News</a>
+    <a class="nav-link" href="../../news.html">News</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page">Blog</a>
+    <a class="nav-link" href="../../blog.html">Blog</a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-task-forces" role="button" data-bs-toggle="dropdown" aria-expanded="false">Task Forces</a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-task-forces">    
         <li>
-    <a class="dropdown-item" href="./mmrm_R_package.html">
+    <a class="dropdown-item" href="../../mmrm_R_package.html">
  <span class="dropdown-text">MMRM R Package Development</span></a>
   </li>  
     </ul>
@@ -163,112 +134,58 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Software Engineering in Biostatistics - Towards Improving a Critical Competence</h1>
+            <p class="subtitle lead">Article introducing the SWE WG in BIOP Report</p>
+                  <div>
+        <div class="description">
+          We wrote an article for the Biopharmaceutical Report introducing the SWE WG.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>SWE WG </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 16, 2022</p>
+      </div>
+    </div>
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<p>In the <a href="https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BioPharm_fall2022FINAL.pdf">Fall edition of the Biopharmaceutical Report</a> we start from the importance of reliable software for statistical analyses, in particular in the pharmaceutical industry. We explain that the increase in using open source software is increasing the criticality of this topic, and summarize the progress that has been made by different initiatives around R in particular. Finally we motivate the creation of our new working group with the fact that little attention seems to have been devoted to good software engineering in biostatistics.</p>
+<p>Read the full article on pages 61 and 62 of the <a href="https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BioPharm_fall2022FINAL.pdf">Biopharmaceutical Report</a> and let us know if you have any <a href="https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html">comments or feedback</a> - we would love to hear from you!</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1668709682905" data-listing-reading-time-sort="0.575">
-<div class="thumbnail">
-<p><a href="./blog/biop_report/index.html"> <img src="./blog/biop_report/asa-biop.jpg" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./blog/biop_report/index.html">
-<h3 class="no-anchor listing-title">
-Software Engineering in Biostatistics - Towards Improving a Critical Competence
-</h3>
-<div class="listing-subtitle">
-Article introducing the SWE WG in BIOP Report
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./blog/biop_report/index.html">
-<div class="listing-description">
-<p>We wrote an article for the Biopharmaceutical Report introducing the SWE WG.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/biop_report/index.html">
-<div class="listing-date">
-Nov 16, 2022
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1668709682905" data-listing-reading-time-sort="1.965">
-<div class="thumbnail">
-<p><a href="./blog/wg_announcement/index.html"> <img src="./blog/wg_announcement/sticker-1200.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./blog/wg_announcement/index.html">
-<h3 class="no-anchor listing-title">
-New ASA BIOP working group on Software Engineering
-</h3>
-<div class="listing-subtitle">
-Fostering open source code collaboration within Biostatistics
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./blog/wg_announcement/index.html">
-<div class="listing-description">
-<p>We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/wg_announcement/index.html">
-<div class="listing-date">
-Oct 24, 2022
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

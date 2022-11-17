@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
     "section": "",
-    "text": "Latest Updates:\n\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+    "text": "Latest Updates:\n\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon."
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Fostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
+    "text": "Article introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "mmrm_R_package.html",
@@ -25,7 +25,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+    "text": "2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
   },
   {
     "objectID": "webinars.html",
@@ -75,6 +75,13 @@
     "title": "Contact Us",
     "section": "",
     "text": "Loading…"
+  },
+  {
+    "objectID": "blog/biop_report/index.html",
+    "href": "blog/biop_report/index.html",
+    "title": "Software Engineering in Biostatistics - Towards Improving a Critical Competence",
+    "section": "",
+    "text": "Read the full article on pages 61 and 62 of the Biopharmaceutical Report and let us know if you have any comments or feedback - we would love to hear from you!"
   },
   {
     "objectID": "blog/wg_announcement/index.html",
