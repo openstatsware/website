@@ -13,7 +13,7 @@ the effort that goes into it, and its enormous impact on data science, to
 a non-technical audience. 
 Visualizations can be very helpful here and we created a 
 [video](https://youtu.be/DAIR_rBV3zQ) showing the 
-first six months of development of the mmrm R package.
+first six months of development of the [`mmrm`](https://openpharma.github.io/mmrm/main/) R package.
 The video is based on the cumulative commit history of the git repository where
 the package development happens.
 It shows contributions to the "main" branch of the repository and how contributors
