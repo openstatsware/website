@@ -34,4 +34,4 @@ If you want to co-star in the next iteration of the video, check out the
 contribute! Our contribution guidelines can be found [here](https://openpharma.github.io/mmrm/main/CONTRIBUTING.html).
 
 We used [gource](https://gource.io/) to create the video following an 
-[example and guide](https://youtu.be/_ZUddQAhPFw) by Nan Xiao.
+[example and guide](https://youtu.be/_ZUddQAhPFw) by [Nan Xiao](https://nanx.me).
