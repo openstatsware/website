@@ -2,7 +2,7 @@
 title: "Visualizing successful collaboration"
 author: "SWE WG"
 subtitle: "A visual time lapse of six months of work on the mmrm R package"
-description: Communicating the benefit of open collaboration can be hard - we used the "gource" tool to create a video based on the repositoy history of the mmrm R package.
+description: Communicating the benefit of open collaboration can be hard - we used the "gource" tool to create a video based on the repository history of the mmrm R package.
 date: "2022-11-20"
 categories: [news]
 image: "mmrm-video.png"
