@@ -9,7 +9,7 @@ image: "mmrm-video.png"
 ---
 
 It can be hard to communicate the benefit of open-source collaboration, 
-the effort that goes into it, and its enormous impact on data science to 
+the effort that goes into it, and its enormous impact on data science, to 
 a non-technical audience. 
 Visualizations can be very helpful here and we created a 
 [video](https://youtu.be/DAIR_rBV3zQ) showing the 
