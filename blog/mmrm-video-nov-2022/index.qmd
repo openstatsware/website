@@ -1,0 +1,37 @@
+---
+title: "Visualizing successful collaboration"
+author: "SWE WG"
+subtitle: "A visual time lapse of six months of work on the mmrm R package"
+description: Communicating the benefit of open collaboration can be hard - we used the "gource" tool to create a video based on the repository history of the mmrm R package.
+date: "2022-11-20"
+categories: [news]
+image: "mmrm-video.png"
+---
+
+It can be hard to communicate the benefit of open-source collaboration, 
+the effort that goes into it, and its enormous impact on data science, to 
+a non-technical audience. 
+Visualizations can be very helpful here and we created a 
+[video](https://youtu.be/DAIR_rBV3zQ) showing the 
+first six months of development of the [`mmrm`](https://openpharma.github.io/mmrm/main/) R package.
+The video is based on the cumulative commit history of the git repository where
+the package development happens.
+It shows contributions to the "main" branch of the repository and how contributors
+add or edit files.
+Files are visualized by dots and arranged in a tree structure defined by the
+folders in the repository.
+The video is optimized for full HD quality.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DAIR_rBV3zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Only direct code contributions are shown. This does not include, ideation,
+community organization, code reviews, bug reporting, or answering questions, and
+promoting the package - 
+all of which are important to make such a project a long-term success.
+
+If you want to co-star in the next iteration of the video, check out the
+[mmrm git repository](https://github.com/openpharma/mmrm), get in touch and
+contribute! Our contribution guidelines can be found [here](https://openpharma.github.io/mmrm/main/CONTRIBUTING.html).
+
+We used [gource](https://gource.io/) to create the video following an 
+[example and guide](https://youtu.be/_ZUddQAhPFw) by [Nan Xiao](https://nanx.me).
