@@ -11,7 +11,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Article introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
+    "text": "A visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "mmrm_R_package.html",
@@ -82,6 +82,13 @@
     "title": "Software Engineering in Biostatistics - Towards Improving a Critical Competence",
     "section": "",
     "text": "Read the full article on pages 61 and 62 of the Biopharmaceutical Report and let us know if you have any comments or feedback - we would love to hear from you!"
+  },
+  {
+    "objectID": "blog/mmrm-video-nov-2022/index.html",
+    "href": "blog/mmrm-video-nov-2022/index.html",
+    "title": "Visualizing successful collaboration",
+    "section": "",
+    "text": "Only direct code contributions are shown. This does not include, ideation, community organization, code reviews, bug reporting, or answering questions, and promoting the package - all of which are important to make such a project a long-term success.\nIf you want to co-star in the next iteration of the video, check out the mmrm git repository, get in touch and contribute! Our contribution guidelines can be found here.\nWe used gource to create the video following an example and guide by Nan Xiao."
   },
   {
     "objectID": "blog/wg_announcement/index.html",
