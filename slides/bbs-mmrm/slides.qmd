@@ -1,0 +1,92 @@
+---
+title: "mmrm"
+author: "Daniel Sabanes Bove"
+format: 
+  revealjs:
+    incremental: true
+    logo: sticker-1200.png
+title-slide-attributes: 
+  data-background-image: mmrm.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 80% 50%
+---
+
+## Acknowledgments
+
+copy from nadf deck - change order of columns
+
+## Motivation
+
+-   2 years ago, we thought we had solved the MMRM problem, using `lme4` and `lmerTest`
+-   However in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)
+-   `nlme` did not give Satterthwaite adjusted degrees of freedom, and with `emmeans` it is only approximate, also has convergence issues
+-   Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom. But it did not work.
+
+## Idea
+
+-   Because `glmmTMB` is always using a random effects representation, cannot have a real unstructured model (need to use a trick)
+-   We only want to fit a fixed effects model with a structured covariance matrix for each subject.
+-   The idea was to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` and code exactly the model we want.
+-   Basically we need to write the log-likelihood in `C++` using the `TMB` provided libraries (`Eigen` etc.)
+
+## Advantages of `TMB`
+
+-   Since we use `C++` it is fast (but `Rcpp` could also have been used instead)
+-   Automatic differentiation of the log-likelihood as a function of the variance parameters
+-   Therefore we get the gradient and Hessian exactly and without additional coding
+-   This can be used from the R side with the `TMB` interface and plugged into optimization functions
+
+## Cross-industry collaboration
+
+-   We created an initial prototype quickly and open sourced it on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
+-   In parallel we assembled multiple other companies - many of them had been struggling to implement MMRM in R reliably too.
+-   This was the start of the Software Engineering working group (SWE WG)
+    - read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+    - official working group of the ASA Biopharmaceutical section
+
+## Features
+
+-   Continuous responses with normal residuals.
+-   Marginal linear models (no individual-level random effects).
+-   Covariance structures: Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence and spatial exponential. Allows group specific covariance estimates.
+-   REML or ML estimation, weighted observations.
+-   `emmeans` package can be used to obtain least square means and test linear contrasts.
+-   Satterthwaite adjusted degrees of freedom.
+
+## Getting started
+
+-   `mmrm` is on CRAN. Use this as a starting point:
+
+. . .
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages("mmrm")
+library(mmrm)
+fit <- mmrm(
+  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),
+  data = fev_data
+)
+summary(fit)
+library(emmeans)
+emmeans(fit, ~ ARMCD | AVISIT)
+```
+
+-   Visit [openpharma.github.io/mmrm](https://openpharma.github.io/mmrm/) for detailed docs including vignettes
+-   Consider [tern.mmrm](https://insightsengineering.github.io/tern.mmrm/main/) for high-level clinical reporting interface, incl. standard tables and graphs
+
+## Outlook
+
+- We still have major features on our backlog:
+  - Kenward-Roger (improved variance-covariance matrix, degrees of freedom)
+  - Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
+  - Type II and type III Anova tests
+- Working on comparison to other implementations 
+  - regarding estimates, computation time, convergence 
+- Please let us know what is missing for you!
+
+## Thank you! Questions?
+
+![](mmrm.png)
+![](sticker-1200.png)
+
