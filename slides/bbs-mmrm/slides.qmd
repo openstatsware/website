@@ -1,26 +1,55 @@
 ---
 title: "mmrm"
 author: "Daniel Sabanes Bove"
+institute: (Statistical Engineering,
+  Pharma Product Development Data Sciences, 
+  Roche)
+date: "@BBS/EFSPI workshop 8 Dec 2022"
 format: 
   revealjs:
     incremental: true
     logo: sticker-1200.png
+    slide-number: c/t
 title-slide-attributes: 
   data-background-image: mmrm.png
   data-background-size: 20%
   data-background-opacity: "0.5"
-  data-background-position: 80% 50%
+  data-background-position: 80% 10%
 ---
 
 ## Acknowledgments
 
-copy from nadf deck - change order of columns
+::: nonincremental
+::: columns
+::: {.column width="50%"}
+Authors:
+
+-   Kevin Kunzmann (Boehringer Ingelheim)
+-   Brian Matthew Lang (MSD)
+-   Ya Wang (Gilead)
+-   Julia Dedic (Roche)
+-   Doug Kelkhoff (Roche)
+-   Liming Li (Roche)
+:::
+
+::: {.column width="50%"}
+Thanks to:
+
+-   Ben Bolker (McMaster University)
+-   Software Engineering working group (SWE WG)
+-   Gonzalo Duran Pacheco (Roche)
+-   Craig Gower-Page (Roche)
+-   Dinakar Kulkarni (Roche)
+-   Davide Garolini (Roche)
+:::
+:::
+:::
 
 ## Motivation
 
 -   2 years ago, we thought we had solved the MMRM problem, using `lme4` and `lmerTest`
 -   However in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)
--   `nlme` did not give Satterthwaite adjusted degrees of freedom, and with `emmeans` it is only approximate, also has convergence issues
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, and with `emmeans` it is only approximate, also has convergence issues
 -   Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom. But it did not work.
 
 ## Idea
@@ -42,8 +71,8 @@ copy from nadf deck - change order of columns
 -   We created an initial prototype quickly and open sourced it on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
 -   In parallel we assembled multiple other companies - many of them had been struggling to implement MMRM in R reliably too.
 -   This was the start of the Software Engineering working group (SWE WG)
-    - read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
-    - official working group of the ASA Biopharmaceutical section
+    -   Read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+    -   Official working group of the ASA Biopharmaceutical section
 
 ## Features
 
@@ -77,16 +106,22 @@ emmeans(fit, ~ ARMCD | AVISIT)
 
 ## Outlook
 
-- We still have major features on our backlog:
-  - Kenward-Roger (improved variance-covariance matrix, degrees of freedom)
-  - Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
-  - Type II and type III Anova tests
-- Working on comparison to other implementations 
-  - regarding estimates, computation time, convergence 
-- Please let us know what is missing for you!
+-   We still have major features on our backlog:
+    -   Kenward-Roger (improved variance-covariance matrix, degrees of freedom)
+    -   Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
+    -   Type II and type III Anova tests
+-   Working on comparison to other implementations
+    -   regarding estimates, computation time, convergence
+-   Please let us know what is missing for you!
 
 ## Thank you! Questions?
 
-![](mmrm.png)
-![](sticker-1200.png)
+::: columns
+::: {.column width="50%"}
+![](mmrm.png){height="500"}
+:::
 
+::: {.column width="50%"}
+![](sticker-1200.png){height="500"}
+:::
+:::
