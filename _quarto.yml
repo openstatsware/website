@@ -26,7 +26,7 @@ website:
           - href: mmrm_R_package.qmd
     right:
       - icon: rss
-        href: index-news.xml
+        href: blog.xml
 
 format:
   html:
