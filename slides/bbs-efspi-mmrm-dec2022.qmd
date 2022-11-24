@@ -57,11 +57,11 @@ Thanks to:
 -   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
 -   We only want to fit a fixed effects model with a structured covariance matrix for each subject
 -   The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
--   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries 
+-   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
 
 ## Advantages of `TMB`
 
--   Since we use `C++` it is fast (but `Rcpp` could also have been used instead)
+-   Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
 -   Automatic differentiation of the log-likelihood as a function of the variance parameters
 -   We get the gradient and Hessian exactly and without additional coding
 -   This can be used from the R side with the `TMB` interface and plugged into optimizers
@@ -69,17 +69,17 @@ Thanks to:
 ## Cross-industry collaboration
 
 -   We created an initial prototype quickly and open sourced it on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
--   In parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R
+-   In parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R (crucial gap in toolbox so far)
 -   This was the start of the Software Engineering working group (SWE WG)
     -   Read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
     -   Official working group of the ASA Biopharmaceutical section
 
 ## Features
 
--   Linear model for dependent observations within independent subjects   
--   Covariance structures for the dependent observations: 
-    - Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
-    - Allows group specific covariance estimates and weights
+-   Linear model for dependent observations within independent subjects
+-   Covariance structures for the dependent observations:
+    -   Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
+    -   Allows group specific covariance estimates and weights
 -   REML or ML estimation, using multiple optimizers if needed
 -   `emmeans` interface for least square means
 -   Satterthwaite adjusted degrees of freedom
@@ -113,7 +113,7 @@ emmeans(fit, ~ ARMCD | AVISIT)
     -   Type II and type III ANOVA tests
 -   Working on comparison to other implementations
     -   Parameter estimates, computation time, convergence, ...
--   Please let us know what is missing in `mmrm` for you!
+-   Please let us know what is missing in `mmrm` for you! And try it out :-)
 
 ## Thank you! Questions?
 
