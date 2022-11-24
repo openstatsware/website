@@ -109,7 +109,7 @@ emmeans(fit, ~ ARMCD | AVISIT)
 -   We still have major features on our backlog:
     -   Kenward-Roger (improved variance-covariance matrix, degrees of freedom)
     -   Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
-    -   Type II and type III Anova tests
+    -   Type II and type III ANOVA tests
 -   Working on comparison to other implementations
     -   parameter estimates, computation time, convergence
 -   Please let us know what is missing for you!
