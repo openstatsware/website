@@ -7,32 +7,11 @@
     "text": "Latest Updates:\n\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "A visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "mmrm_R_package.html",
-    "href": "mmrm_R_package.html",
-    "title": "MMRM R Package Development",
-    "section": "",
-    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
-  },
-  {
     "objectID": "news.html",
     "href": "news.html",
     "title": "News",
     "section": "",
     "text": "2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
-  },
-  {
-    "objectID": "webinars.html",
-    "href": "webinars.html",
-    "title": "Webinars",
-    "section": "",
-    "text": "To be added later."
   },
   {
     "objectID": "presentations.html",
@@ -49,11 +28,18 @@
     "text": "To be added later."
   },
   {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "Daniel Sabanes Bove (Roche)\nYa Wang (Gilead)\n\nMembers\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlessandro\nGasparini\nRed Door Analytics\n\n\nAndrew\nBean\nNovartis\n\n\nAndy\nMiskell\nEli Lilly\n\n\nBecca\nKrouse\nGSK\n\n\nBen\nArancibia\nGSK\n\n\nBrian\nLang\nMSD\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nDong\nXi\nGilead Sciences\n\n\nFriedrich\nPahlke\nRPACT\n\n\nJian\nWang\nEli Lilly\n\n\nJoe\nRickert\nRStudio & R Consortium\n\n\nJuliane\nManitz\nEMD Serono\n\n\nKeaven\nAnderson\nMerck\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nMichelle\nZhang\nAffamed\n\n\nOrla\nDoyle\nNovartis\n\n\nPascal\nKieslich\nMerck KGaA\n\n\nPeikun\nWu\nR&G US\n\n\nRon\nYu\nGilead Sciences\n\n\nSonggu\nXie\nRegeneron\n\n\nTerri\nJohnson\nEdwards Lifesciences\n\n\nVitaly\nDruker\nAstraZeneca\n\n\nWill\nLandau\nEli Lilly\n\n\nYa\nWang\nGilead Sciences\n\n\nYoni\nSidi\nSage Therapeutics"
+    "text": "To be added later."
+  },
+  {
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Loading…"
   },
   {
     "objectID": "goals.html",
@@ -70,11 +56,18 @@
     "text": "Join as a working group member, who attends the ASA BIOP SWE WG meetings.\nJoin as a task force member, who actively contributes to one or several task force(s).\n\nIf you are interested to join the ASA BIOP SWE WG, please contact us: Daniel Sabanes Bove or Ya Wang"
   },
   {
-    "objectID": "contact_us.html",
-    "href": "contact_us.html",
-    "title": "Contact Us",
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
     "section": "",
-    "text": "Loading…"
+    "text": "Daniel Sabanes Bove (Roche)\nYa Wang (Gilead)\n\nMembers\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlessandro\nGasparini\nRed Door Analytics\n\n\nAndrew\nBean\nNovartis\n\n\nAndy\nMiskell\nEli Lilly\n\n\nBecca\nKrouse\nGSK\n\n\nBen\nArancibia\nGSK\n\n\nBrian\nLang\nMSD\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nDong\nXi\nGilead Sciences\n\n\nFriedrich\nPahlke\nRPACT\n\n\nGregory\nChen\nMSD\n\n\nJian\nWang\nEli Lilly\n\n\nJoe\nRickert\nRStudio & R Consortium\n\n\nJuliane\nManitz\nEMD Serono\n\n\nKeaven\nAnderson\nMerck\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nMichelle\nZhang\nAffamed\n\n\nOrla\nDoyle\nNovartis\n\n\nPascal\nKieslich\nMerck KGaA\n\n\nPeikun\nWu\nR&G US\n\n\nRon\nYu\nGilead Sciences\n\n\nRyan\nWang\nJohnson & Johnson\n\n\nSonggu\nXie\nRegeneron\n\n\nTerri\nJohnson\nEdwards Lifesciences\n\n\nVitaly\nDruker\nAstraZeneca\n\n\nWill\nLandau\nEli Lilly\n\n\nYa\nWang\nGilead Sciences\n\n\nYoni\nSidi\nSage Therapeutics"
+  },
+  {
+    "objectID": "blog/wg_announcement/index.html",
+    "href": "blog/wg_announcement/index.html",
+    "title": "New ASA BIOP working group on Software Engineering",
+    "section": "",
+    "text": "To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the American Statistical Association (ASA) Biopharmaceutical section (BIOP) which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our landing page and website (hosted by the R Consortium GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.\nThe primary objective of the SWE WG is to engineer R packages that implement important methods that are often utilized in biostatistics but still missing from our R toolbox. The first product is the recently-published R package implementing mixed models for repeated measures (MMRM): mmrm. In particular, a critical advantage of this package over existing implementations is that it is faster and converges more reliably. It also provides a comprehensive set of features: users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite adjusted degrees of freedom, and extract the least square means estimates by using the emmeans package. We aim to establish the R package mmrm as a new standard for fitting MMRM and will communicate it broadly. We welcome any community contributions to the R package, including feedback, questions and feature requests.\nThe secondary objective is to develop best practices for engineering high-quality open-source statistical software, and to promote the use of these best practices in the broader biostatistics community via public training materials.\n➞ Would you like to try out the new package mmrm? Install it from CRAN and read the documentation (hosted by the openpharma GitHub organization).\n➞ What do you think is missing in the statisticians’ R toolbox? Comment here!\n➞ Are you developing R packages and are interested in joining the working group? Please visit our website on how to join (no ASA membership required)."
   },
   {
     "objectID": "blog/biop_report/index.html",
@@ -91,17 +84,24 @@
     "text": "Only direct code contributions are shown. This does not include, ideation, community organization, code reviews, bug reporting, or answering questions, and promoting the package - all of which are important to make such a project a long-term success.\nIf you want to co-star in the next iteration of the video, check out the mmrm git repository, get in touch and contribute! Our contribution guidelines can be found here.\nWe used gource to create the video following an example and guide by Nan Xiao."
   },
   {
-    "objectID": "blog/wg_announcement/index.html",
-    "href": "blog/wg_announcement/index.html",
-    "title": "New ASA BIOP working group on Software Engineering",
-    "section": "",
-    "text": "To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the American Statistical Association (ASA) Biopharmaceutical section (BIOP) which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our landing page and website (hosted by the R Consortium GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.\nThe primary objective of the SWE WG is to engineer R packages that implement important methods that are often utilized in biostatistics but still missing from our R toolbox. The first product is the recently-published R package implementing mixed models for repeated measures (MMRM): mmrm. In particular, a critical advantage of this package over existing implementations is that it is faster and converges more reliably. It also provides a comprehensive set of features: users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite adjusted degrees of freedom, and extract the least square means estimates by using the emmeans package. We aim to establish the R package mmrm as a new standard for fitting MMRM and will communicate it broadly. We welcome any community contributions to the R package, including feedback, questions and feature requests.\nThe secondary objective is to develop best practices for engineering high-quality open-source statistical software, and to promote the use of these best practices in the broader biostatistics community via public training materials.\n➞ Would you like to try out the new package mmrm? Install it from CRAN and read the documentation (hosted by the openpharma GitHub organization).\n➞ What do you think is missing in the statisticians’ R toolbox? Comment here!\n➞ Are you developing R packages and are interested in joining the working group? Please visit our website on how to join (no ASA membership required)."
-  },
-  {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "webinars.html",
+    "href": "webinars.html",
+    "title": "Webinars",
     "section": "",
     "text": "To be added later."
+  },
+  {
+    "objectID": "mmrm_R_package.html",
+    "href": "mmrm_R_package.html",
+    "title": "MMRM R Package Development",
+    "section": "",
+    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "A visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
   }
 ]
