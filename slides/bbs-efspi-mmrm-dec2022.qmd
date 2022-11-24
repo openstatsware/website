@@ -1,0 +1,128 @@
+---
+title: "mmrm"
+author: "Daniel Sabanes Bove"
+institute: (Statistical Engineering,
+  Pharma Product Development Data Sciences, 
+  Roche)
+date: "@BBS/EFSPI Workshop 8 Dec 2022"
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 80% 10%
+---
+
+## Acknowledgments
+
+::: nonincremental
+::: columns
+::: {.column width="50%"}
+Authors:
+
+-   Kevin Kunzmann (Boehringer Ingelheim)
+-   Brian Matthew Lang (MSD)
+-   Ya Wang (Gilead)
+-   Julia Dedic (Roche)
+-   Doug Kelkhoff (Roche)
+-   Liming Li (Roche)
+:::
+
+::: {.column width="50%"}
+Thanks to:
+
+-   Ben Bolker (McMaster University)
+-   Software Engineering working group (SWE WG)
+-   Gonzalo Duran Pacheco (Roche)
+-   Craig Gower-Page (Roche)
+-   Dinakar Kulkarni (Roche)
+-   Davide Garolini (Roche)
+:::
+:::
+:::
+
+## Motivation
+
+-   2 years ago, we thought we had solved the MMRM problem, using `lme4` and `lmerTest`
+-   However in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+-   Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom, but it did not work
+
+## Idea
+
+-   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
+-   We only want to fit a fixed effects model with a structured covariance matrix for each subject
+-   The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
+-   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
+
+## Advantages of `TMB`
+
+-   Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
+-   Automatic differentiation of the log-likelihood as a function of the variance parameters
+-   We get the gradient and Hessian exactly and without additional coding
+-   This can be used from the R side with the `TMB` interface and plugged into optimizers
+
+## Cross-industry collaboration
+
+-   We created an initial prototype quickly and open sourced it on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
+-   In parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R (crucial gap in toolbox so far)
+-   This was the start of the Software Engineering working group (SWE WG)
+    -   Read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+    -   Official working group of the ASA Biopharmaceutical section
+
+## Features
+
+-   Linear model for dependent observations within independent subjects
+-   Covariance structures for the dependent observations:
+    -   Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
+    -   Allows group specific covariance estimates and weights
+-   REML or ML estimation, using multiple optimizers if needed
+-   `emmeans` interface for least square means
+-   Satterthwaite adjusted degrees of freedom
+
+## Getting started
+
+-   `mmrm` is on CRAN - use this as a starting point:
+
+. . .
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages("mmrm")
+library(mmrm)
+fit <- mmrm(
+  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),
+  data = fev_data
+)
+summary(fit)
+library(emmeans)
+emmeans(fit, ~ ARMCD | AVISIT)
+```
+
+-   Visit [openpharma.github.io/mmrm](https://openpharma.github.io/mmrm/) for detailed docs including vignettes
+-   Consider [tern.mmrm](https://insightsengineering.github.io/tern.mmrm/main/) for high-level clinical reporting interface, incl. standard tables and graphs
+
+## Outlook
+
+-   We still have major features on our backlog:
+    -   Kenward-Roger (improved variance-covariance matrix, degrees of freedom)
+    -   Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
+    -   Type II and type III ANOVA tests
+-   Working on comparison to other implementations
+    -   Parameter estimates, computation time, convergence, ...
+-   Please let us know what is missing in `mmrm` for you! And try it out :-)
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="50%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="500"}
+:::
+
+::: {.column width="50%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+:::
+:::
