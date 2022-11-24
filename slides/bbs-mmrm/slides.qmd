@@ -57,7 +57,7 @@ Thanks to:
 -   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (need to use a trick)
 -   We only want to fit a fixed effects model with a structured covariance matrix for each subject.
 -   The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want.
--   Basically we need to write the log-likelihood in `C++` using the `TMB` provided libraries (`Eigen` etc.)
+-   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries (`Eigen` etc.)
 
 ## Advantages of `TMB`
 
