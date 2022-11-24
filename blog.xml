@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>ASA BIOP SWE WG</title>
+<link>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</link>
+<atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
+<generator>quarto-1.1.189</generator>
+<lastBuildDate>Sun, 20 Nov 2022 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Visualizing successful collaboration</title>
+  <dc:creator>SWE WG</dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>It can be hard to communicate the benefit of open-source collaboration, the effort that goes into it, and its enormous impact on data science, to a non-technical audience. Visualizations can be very helpful here and we created a <a href="https://youtu.be/DAIR_rBV3zQ">video</a> showing the first six months of development of the <a href="https://openpharma.github.io/mmrm/main/"><code>mmrm</code></a> R package. The video is based on the cumulative commit history of the git repository where the package development happens. It shows contributions to the “main” branch of the repository and how contributors add or edit files. Files are visualized by dots and arranged in a tree structure defined by the folders in the repository. The video is optimized for full HD quality.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DAIR_rBV3zQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Only direct code contributions are shown. This does not include, ideation, community organization, code reviews, bug reporting, or answering questions, and promoting the package - all of which are important to make such a project a long-term success.</p>
+<p>If you want to co-star in the next iteration of the video, check out the <a href="https://github.com/openpharma/mmrm">mmrm git repository</a>, get in touch and contribute! Our contribution guidelines can be found <a href="https://openpharma.github.io/mmrm/main/CONTRIBUTING.html">here</a>.</p>
+<p>We used <a href="https://gource.io/">gource</a> to create the video following an <a href="https://youtu.be/_ZUddQAhPFw">example and guide</a> by <a href="https://nanx.me">Nan Xiao</a>.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/index.html</guid>
+  <pubDate>Sun, 20 Nov 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/mmrm-video.png" medium="image" type="image/png" height="113" width="144"/>
+</item>
+<item>
+  <title>Software Engineering in Biostatistics - Towards Improving a Critical Competence</title>
+  <dc:creator>SWE WG</dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In the <a href="https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BioPharm_fall2022FINAL.pdf">Fall edition of the Biopharmaceutical Report</a> we start from the importance of reliable software for statistical analyses, in particular in the pharmaceutical industry. We explain that the increase in using open source software is increasing the criticality of this topic, and summarize the progress that has been made by different initiatives around R in particular. Finally we motivate the creation of our new working group with the fact that little attention seems to have been devoted to good software engineering in biostatistics.</p>
+<p>Read the full article on pages 61 and 62 of the <a href="https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BioPharm_fall2022FINAL.pdf">Biopharmaceutical Report</a> and let us know if you have any <a href="https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html">comments or feedback</a> - we would love to hear from you!</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/index.html</guid>
+  <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/asa-biop.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>New ASA BIOP working group on Software Engineering</title>
+  <dc:creator>SWE WG</dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>With the shift of biostatistics work from proprietary software (e.g.&nbsp;SAS) to R, it is now even more important to write reliable and reproducible code, and to be selective with the R packages we use. This topic is equally relevant for biostatistics work as it is for programming and other roles. A recent <a href="https://www.linkedin.com/pulse/research-software-engineering-clinical-biostatistics-saban%C3%A9s-bov%C3%A9/">panel discussion</a> on this topic highlighted this evolving need across companies and academia.</p>
+<p>To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the <a href="https://community.amstat.org/biop/home">American Statistical Association (ASA) Biopharmaceutical section (BIOP)</a> which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our <a href="https://community.amstat.org/biop/workinggroups/swe-wg">landing page</a> and <a href="https://rconsortium.github.io/asa-biop-swe-wg/">website</a> (hosted by the <a href="https://www.r-consortium.org/about">R Consortium</a> GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.</p>
+<p>The primary objective of the SWE WG is to engineer R packages that implement important methods that are often utilized in biostatistics but still missing from our R toolbox. The first product is the recently-published R package implementing mixed models for repeated measures (MMRM): <a href="https://cran.r-project.org/package=mmrm">mmrm</a>. In particular, a critical advantage of this package over existing implementations is that it is faster and converges more reliably. It also provides a comprehensive set of features: users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite adjusted degrees of freedom, and extract the least square means estimates by using the <a href="https://github.com/rvlenth/emmeans">emmeans package</a>. We aim to establish the R package <a href="https://cran.r-project.org/package=mmrm">mmrm</a> as a new standard for fitting MMRM and will communicate it broadly. We welcome any community contributions to the R package, including feedback, questions and feature requests.</p>
+<p>The secondary objective is to develop best practices for engineering high-quality open-source statistical software, and to promote the use of these best practices in the broader biostatistics community via public training materials.</p>
+<p>➞ Would you like to try out the new package mmrm? Install it from <a href="https://cran.r-project.org/package=mmrm">CRAN</a> and read the <a href="https://openpharma.github.io/mmrm/">documentation</a> (hosted by the <a href="https://openpharma.github.io/#manifesto">openpharma GitHub organization</a>).</p>
+<p>➞ What do you think is missing in the statisticians’ R toolbox? Comment <a href="https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html">here</a>!</p>
+<p>➞ Are you developing R packages and are interested in joining the working group? Please visit <a href="https://rconsortium.github.io/asa-biop-swe-wg/">our website</a> on <a href="https://rconsortium.github.io/asa-biop-swe-wg/join_us.html">how to join</a> (no ASA membership required).</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/index.html</guid>
+  <pubDate>Mon, 24 Oct 2022 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/sticker-1200.png" medium="image" type="image/png" height="167" width="144"/>
+</item>
+</channel>
+</rss>
