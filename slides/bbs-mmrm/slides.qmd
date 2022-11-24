@@ -80,7 +80,7 @@ Thanks to:
 -   Marginal linear models (no individual-level random effects).
 -   Covariance structures: Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence and spatial exponential. Allows group specific covariance estimates.
 -   REML or ML estimation, weighted observations.
--   `emmeans` package can be used to obtain least square means and test linear contrasts.
+-   The `emmeans` package can be used to obtain least square means and test linear contrasts.
 -   Satterthwaite adjusted degrees of freedom.
 
 ## Getting started
