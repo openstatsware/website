@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/index.html</loc>
-    <lastmod>2022-11-24T08:14:29.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/news.html</loc>
-    <lastmod>2022-11-24T08:14:30.931Z</lastmod>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/videos.html</loc>
+    <lastmod>2022-11-24T14:33:42.372Z</lastmod>
   </url>
   <url>
     <loc>https://rconsortium.github.io/asa-biop-swe-wg/presentations.html</loc>
-    <lastmod>2022-11-24T08:14:31.259Z</lastmod>
+    <lastmod>2022-11-24T14:33:43.052Z</lastmod>
   </url>
   <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/videos.html</loc>
-    <lastmod>2022-11-24T08:14:31.599Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/publications.html</loc>
-    <lastmod>2022-11-24T08:14:31.879Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html</loc>
-    <lastmod>2022-11-24T08:14:32.155Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/goals.html</loc>
-    <lastmod>2022-11-24T08:14:32.439Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/join_us.html</loc>
-    <lastmod>2022-11-24T08:14:32.723Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/people.html</loc>
-    <lastmod>2022-11-24T08:14:34.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/index.html</loc>
-    <lastmod>2022-11-24T08:14:34.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/index.html</loc>
-    <lastmod>2022-11-24T08:14:34.915Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/index.html</loc>
-    <lastmod>2022-11-24T08:14:35.235Z</lastmod>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/news.html</loc>
+    <lastmod>2022-11-24T14:33:44.316Z</lastmod>
   </url>
   <url>
     <loc>https://rconsortium.github.io/asa-biop-swe-wg/webinars.html</loc>
-    <lastmod>2022-11-24T08:14:35.511Z</lastmod>
+    <lastmod>2022-11-24T14:33:44.632Z</lastmod>
   </url>
   <url>
     <loc>https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html</loc>
-    <lastmod>2022-11-24T08:14:37.083Z</lastmod>
+    <lastmod>2022-11-24T14:33:46.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/join_us.html</loc>
+    <lastmod>2022-11-24T14:33:46.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/index.html</loc>
+    <lastmod>2022-11-24T14:33:47.480Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/people.html</loc>
+    <lastmod>2022-11-24T14:33:48.932Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html</loc>
+    <lastmod>2022-11-24T14:33:49.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/publications.html</loc>
+    <lastmod>2022-11-24T14:33:49.472Z</lastmod>
   </url>
   <url>
     <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</loc>
-    <lastmod>2022-11-24T08:14:37.463Z</lastmod>
+    <lastmod>2022-11-24T14:33:49.848Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/slides/bbs-efspi-mmrm-dec2022.html</loc>
+    <lastmod>2022-11-24T14:33:51.028Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/goals.html</loc>
+    <lastmod>2022-11-24T14:33:51.632Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/index.html</loc>
+    <lastmod>2022-11-24T14:33:51.976Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/index.html</loc>
+    <lastmod>2022-11-24T14:33:52.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/index.html</loc>
+    <lastmod>2022-11-24T14:33:52.592Z</lastmod>
   </url>
 </urlset>

@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
+    "objectID": "videos.html",
+    "href": "videos.html",
+    "title": "Videos",
     "section": "",
-    "text": "Latest Updates:\n\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon."
-  },
-  {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
-    "section": "",
-    "text": "2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+    "text": "To be added later."
   },
   {
     "objectID": "presentations.html",
@@ -21,32 +14,25 @@
     "text": "To be added later."
   },
   {
-    "objectID": "videos.html",
-    "href": "videos.html",
-    "title": "Videos",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+  },
+  {
+    "objectID": "webinars.html",
+    "href": "webinars.html",
+    "title": "Webinars",
     "section": "",
     "text": "To be added later."
   },
   {
-    "objectID": "publications.html",
-    "href": "publications.html",
-    "title": "Publications",
+    "objectID": "mmrm_R_package.html",
+    "href": "mmrm_R_package.html",
+    "title": "MMRM R Package Development",
     "section": "",
-    "text": "To be added later."
-  },
-  {
-    "objectID": "contact_us.html",
-    "href": "contact_us.html",
-    "title": "Contact Us",
-    "section": "",
-    "text": "Loading…"
-  },
-  {
-    "objectID": "goals.html",
-    "href": "goals.html",
-    "title": "Goals",
-    "section": "",
-    "text": "Our goals are to:\n\nEngineer selected R-packages to fill in gaps in the open-source statistical software landscape, and to promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.\nDevelop good SWE practices for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.\nCommunicate and collaborate with other R software initiatives including via the R Consortium."
+    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
   },
   {
     "objectID": "join_us.html",
@@ -56,11 +42,109 @@
     "text": "Join as a working group member, who attends the ASA BIOP SWE WG meetings.\nJoin as a task force member, who actively contributes to one or several task force(s).\n\nIf you are interested to join the ASA BIOP SWE WG, please contact us: Daniel Sabanes Bove or Ya Wang"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
+    "section": "",
+    "text": "Latest Updates:\n\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon."
+  },
+  {
     "objectID": "people.html",
     "href": "people.html",
     "title": "People",
     "section": "",
     "text": "Daniel Sabanes Bove (Roche)\nYa Wang (Gilead)\n\nMembers\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlessandro\nGasparini\nRed Door Analytics\n\n\nAndrew\nBean\nNovartis\n\n\nAndy\nMiskell\nEli Lilly\n\n\nBecca\nKrouse\nGSK\n\n\nBen\nArancibia\nGSK\n\n\nBrian\nLang\nMSD\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nDong\nXi\nGilead Sciences\n\n\nFriedrich\nPahlke\nRPACT\n\n\nGregory\nChen\nMSD\n\n\nJian\nWang\nEli Lilly\n\n\nJoe\nRickert\nRStudio & R Consortium\n\n\nJuliane\nManitz\nEMD Serono\n\n\nKeaven\nAnderson\nMerck\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nMichelle\nZhang\nAffamed\n\n\nOrla\nDoyle\nNovartis\n\n\nPascal\nKieslich\nMerck KGaA\n\n\nPeikun\nWu\nR&G US\n\n\nRon\nYu\nGilead Sciences\n\n\nRyan\nWang\nJohnson & Johnson\n\n\nSonggu\nXie\nRegeneron\n\n\nTerri\nJohnson\nEdwards Lifesciences\n\n\nVitaly\nDruker\nAstraZeneca\n\n\nWill\nLandau\nEli Lilly\n\n\nYa\nWang\nGilead Sciences\n\n\nYoni\nSidi\nSage Therapeutics"
+  },
+  {
+    "objectID": "contact_us.html",
+    "href": "contact_us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Loading…"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "To be added later."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "A visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
+    "title": "mmrm",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\n\n\nAuthors:\n\nKevin Kunzmann (Boehringer Ingelheim)\nBrian Matthew Lang (MSD)\nYa Wang (Gilead)\nJulia Dedic (Roche)\nDoug Kelkhoff (Roche)\nLiming Li (Roche)\n\n\nThanks to:\n\nBen Bolker (McMaster University)\nSoftware Engineering working group (SWE WG)\nGonzalo Duran Pacheco (Roche)\nCraig Gower-Page (Roche)\nDinakar Kulkarni (Roche)\nDavide Garolini (Roche)"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
+    "title": "mmrm",
+    "section": "Motivation",
+    "text": "Motivation\n\n2 years ago, we thought we had solved the MMRM problem, using lme4 and lmerTest\nHowever in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#idea",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#idea",
+    "title": "mmrm",
+    "section": "Idea",
+    "text": "Idea\n\nBecause glmmTMB is always using a random effects representation, we cannot have a real unstructured model (uses \\(\\sigma = \\varepsilon > 0\\) trick)\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
+    "title": "mmrm",
+    "section": "Advantages of TMB",
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
+    "title": "mmrm",
+    "section": "Cross-industry collaboration",
+    "text": "Cross-industry collaboration\n\nWe created an initial prototype quickly and open sourced it on github.com/openpharma/mmrm\nIn parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R (crucial gap in toolbox so far)\nThis was the start of the Software Engineering working group (SWE WG)\n\nRead more at rconsortium.github.io/asa-biop-swe-wg\nOfficial working group of the ASA Biopharmaceutical section"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#features",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#features",
+    "title": "mmrm",
+    "section": "Features",
+    "text": "Features\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\nSatterthwaite adjusted degrees of freedom"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
+    "title": "mmrm",
+    "section": "Getting started",
+    "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit <- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
+    "title": "mmrm",
+    "section": "Outlook",
+    "text": "Outlook\n\nWe still have major features on our backlog:\n\nKenward-Roger (improved variance-covariance matrix, degrees of freedom)\nRobust sandwich estimator for covariance matrix (important when not using unstructured covariance)\nType II and type III ANOVA tests\n\nWorking on comparison to other implementations\n\nParameter estimates, computation time, convergence, …\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
+  },
+  {
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
+    "title": "mmrm",
+    "section": "Thank you! Questions?",
+    "text": "Thank you! Questions?"
+  },
+  {
+    "objectID": "goals.html",
+    "href": "goals.html",
+    "title": "Goals",
+    "section": "",
+    "text": "Our goals are to:\n\nEngineer selected R-packages to fill in gaps in the open-source statistical software landscape, and to promote software tools designed by the working group through publications, conference presentations, workshops, and training courses.\nDevelop good SWE practices for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.\nCommunicate and collaborate with other R software initiatives including via the R Consortium."
   },
   {
     "objectID": "blog/wg_announcement/index.html",
@@ -82,26 +166,5 @@
     "title": "Visualizing successful collaboration",
     "section": "",
     "text": "Only direct code contributions are shown. This does not include, ideation, community organization, code reviews, bug reporting, or answering questions, and promoting the package - all of which are important to make such a project a long-term success.\nIf you want to co-star in the next iteration of the video, check out the mmrm git repository, get in touch and contribute! Our contribution guidelines can be found here.\nWe used gource to create the video following an example and guide by Nan Xiao."
-  },
-  {
-    "objectID": "webinars.html",
-    "href": "webinars.html",
-    "title": "Webinars",
-    "section": "",
-    "text": "To be added later."
-  },
-  {
-    "objectID": "mmrm_R_package.html",
-    "href": "mmrm_R_package.html",
-    "title": "MMRM R Package Development",
-    "section": "",
-    "text": "Objective: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nBrian\nLang\nMSD\n\n\nDaniel\nLeibovitz\nIncyte\n\n\nDaniel\nSabanes Bove\nRoche\n\n\nJulia\nDedic\nRoche\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nLiming\nLi\nRoche\n\n\nYa\nWang\nGilead Sciences\n\n\n\nTo learn more about the MMRM R package visit openpharma.github.io/mmrm."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "A visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
   }
 ]
