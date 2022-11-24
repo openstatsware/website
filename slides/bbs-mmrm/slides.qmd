@@ -111,7 +111,7 @@ emmeans(fit, ~ ARMCD | AVISIT)
     -   Robust sandwich estimator for covariance matrix (important when not using unstructured covariance)
     -   Type II and type III Anova tests
 -   Working on comparison to other implementations
-    -   regarding estimates, computation time, convergence
+    -   parameter estimates, computation time, convergence
 -   Please let us know what is missing for you!
 
 ## Thank you! Questions?
