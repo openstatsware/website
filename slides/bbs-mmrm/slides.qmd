@@ -69,7 +69,7 @@ Thanks to:
 ## Cross-industry collaboration
 
 -   We created an initial prototype quickly and open sourced it on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
--   In parallel we assembled multiple other companies - many of them had been struggling to implement MMRM in R reliably too.
+-   In parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R.
 -   This was the start of the Software Engineering working group (SWE WG)
     -   Read more at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
     -   Official working group of the ASA Biopharmaceutical section
