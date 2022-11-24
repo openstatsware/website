@@ -63,7 +63,7 @@ Thanks to:
 
 -   Since we use `C++` it is fast (but `Rcpp` could also have been used instead)
 -   Automatic differentiation of the log-likelihood as a function of the variance parameters
--   Therefore we get the gradient and Hessian exactly and without additional coding
+-   We get the gradient and Hessian exactly and without additional coding
 -   This can be used from the R side with the `TMB` interface and plugged into optimization functions
 
 ## Cross-industry collaboration
