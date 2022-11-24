@@ -49,7 +49,7 @@ Thanks to:
 
 -   2 years ago, we thought we had solved the MMRM problem, using `lme4` and `lmerTest`
 -   However in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)
--   `nlme` does not give Satterthwaite adjusted degrees of freedom, and with `emmeans` it is only approximate, also has convergence issues
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
 -   Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom. But it did not work.
 
 ## Idea
