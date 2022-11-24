@@ -4,6 +4,8 @@ project:
 website:
   title: "ASA BIOP SWE WG"
   favicon: "sticker/sticker-600.png"
+  site-url: "https://rconsortium.github.io/asa-biop-swe-wg"
+  description: "Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)"
   navbar:
     logo: "sticker/sticker-300.png"
     left:
@@ -22,6 +24,9 @@ website:
       - text: "Task Forces"
         menu:
           - href: mmrm_R_package.qmd
+    right:
+      - icon: rss
+        href: blog.xml
 
 format:
   html:
