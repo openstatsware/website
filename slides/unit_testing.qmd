@@ -9,20 +9,90 @@ format:
     slide-number: c/t
 ---
 
-## Wikipedia Definition of “Unit testing” 
+# What is this talk about?
+:::: {.columns}
+::: {.column width="40%"}
+- Working with good testing habits remove the fear of change
+- As you  gain more confidence your development speed and package stability increases
+:::
+::: {.column width="60%"}
+![](https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif)
+:::
+::::
 
-- Unit tests [...] ensure that a section of an application (known as the “unit”) meets its design and behaves as intended.
-- In procedural programming, a “unit” could be [...] an individual function or procedure. 
-- A unit test provides a strict, written contract that the piece of code must satisfy. 
-- By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
+## Who do you write tests for?
 
----
+Unit testing is a method to communicate to various stakeholders the package requirements. 
+
+![](testing_venn.jpeg){.absolute top=200 left=250 width="55%"}
+
+## Test Flavors
+
+There are different flavors of unit tests that we write
+
+- **Developer Tests**
+  - Tests that help the software developer speed up and iterate over different versions
+- **Quality Assurance (QA) Tests**
+  - Proving that the package isn't broken or that functions are returning the expected answers
+
+## Test Flavors
+:::: {.columns}
+::: {.column width="50%"}
+
+**Developer Tests**
+
+*Remove Fear of Change*
+
+- Assist with package design
+- Guide for refactoring
+
+*Reduce Development Time*
+
+- Explain code to others
+- Pinpoint errors
+- Minimize debugging/manual testing
+
+:::
+::: {.column width="50%"}
+
+**QA Tests**
+
+- Encode object requirements
+- Catch performance degradation
+
+:::
+::::
+
+## Basics of testing
+
+- **Setup**: Setup the inputs for the test
+- **Action**: Perform an action that the result of will be tested
+- **Assertion**: Define an assertion what the result is *expected* to be
+
+The code should test a specific characteristic or functionality of the package, if your action does many things at once then it will be difficult to diagnose why it failed
+
+## Planning tests for success
+
+Write tests to evaluate the exported behavior that the package user would invoke. This sets up the ability to refactor code and the tests will not have to be written as the package iterates and improves.
+
+## Maximizing the tests package surface area
+
+
+
+## Wikipedia Definition of "Unit testing"
+
+-   Unit tests \[...\] ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
+-   In procedural programming, a "unit" could be \[...\] an individual function or procedure.
+-   A unit test provides a strict, written contract that the piece of code must satisfy.
+-   By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
+
+----
 
 ## What are unit tests?
 
 For [examples](https://github.com/openpharma/mmrm/tree/main/tests/testthat), and for [structure](https://r-pkgs.org/tests.html#test-structure)
 
-```r
+``` r
 test_that(“my_fun can do xyz as expected”, {
   input <- … # prepare input for xyz
   result <- my_fun(input, …)  # do xyz
@@ -31,15 +101,14 @@ test_that(“my_fun can do xyz as expected”, {
 })
 ```
 
----
 
 ## What expectations can I use?
 
-- All expectations start with `expect_` prefix and take result and expected as arguments. 
-- They will throw an error if the comparison evaluates to a value different than what is expected.
-- Often used ones are:
+-   All expectations start with `expect_` prefix and take result and expected as arguments.
+-   They will throw an error if the comparison evaluates to a value different than what is expected.
+-   Often used ones are:
 
-```r
+``` r
 expect_identical() # exact identity 
 expect_equal() # equal up to numerical tolerance
 expect_match() # character matches regular expression
@@ -50,65 +119,65 @@ expect_is() # object is of specific class
 expect_true(), expect_false() # general usage
 ```
 
----
+------------------------------------------------------------------------
 
 ## Why can I not just use examples?
 
 Wait a second `…`
 
-`R` packages contain example code for documented functions or objects. 
+`R` packages contain example code for documented functions or objects.
 
-These are automatically executed by `R CMD CHECK` and thus the CI automation. 
+These are automatically executed by `R CMD CHECK` and thus the CI automation.
 
 So this sounds sufficient, right? `…`
 
 Not really.
 
----
+------------------------------------------------------------------------
 
 ## Why can I not just use examples?
 
-- If a code change causes a bug that does not lead to an error, this bug will not be detected (e.g., wrong or no output of a function), because examples usually don’t compare vs. expected results or behavior.
-- Examples are not testing internal functions (i.e. units) that build up the API for users or developers.
-- The fundamental problem of using *only* traditional regression tests applies: Manual debugging becomes necessary to track down root cause of error.
+-   If a code change causes a bug that does not lead to an error, this bug will not be detected (e.g., wrong or no output of a function), because examples usually don't compare vs. expected results or behavior.
+-   Examples are not testing internal functions (i.e. units) that build up the API for users or developers.
+-   The fundamental problem of using *only* traditional regression tests applies: Manual debugging becomes necessary to track down root cause of error.
 
----
+------------------------------------------------------------------------
 
 ## So why should I write unit tests?
 
-- **Faster Debugging**: Only need to search narrow (unit) scope for the root cause.
-- **Faster Development**: Have confidence that no side-bugs from new code.
-- **Better Design**: Encourages aggressive refactoring into small maintainable units.
-- **Better Documentation**: Developers can look at the unit tests to understand a function’s usage and behavior.
-- **Excellent Regression Tool**: With the strict contracts in place, we can refactor with confidence.
-- **Reduce Future Cost**: Writing unit tests is an investment that pays off long-term because bugs can be orders more expensive than testing (time for users and developers)
+-   **Faster Debugging**: Only need to search narrow (unit) scope for the root cause.
+-   **Faster Development**: Have confidence that no side-bugs from new code.
+-   **Better Design**: Encourages aggressive refactoring into small maintainable units.
+-   **Better Documentation**: Developers can look at the unit tests to understand a function's usage and behavior.
+-   **Excellent Regression Tool**: With the strict contracts in place, we can refactor with confidence.
+-   **Reduce Future Cost**: Writing unit tests is an investment that pays off long-term because bugs can be orders more expensive than testing (time for users and developers)
 
----
+------------------------------------------------------------------------
 
 ## When should I write unit tests?
 
-- In test-driven development (TDD), unit tests are created before the code itself is written. When the tests pass, that code is considered complete.
-- When developing new functions, you anyway need to do some (interactive) testing. Directly starting with the unit test therefore saves development time.
-- Unit tests should be included in the PR that merges the new or modified code. It allows the reviewer to check the behavior without running code themselves. Additional unit test cases might be suggested by the reviewer then.
-- When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now. Only then you ensure that the bug won’t come back undetected.
+-   In test-driven development (TDD), unit tests are created before the code itself is written. When the tests pass, that code is considered complete.
+-   When developing new functions, you anyway need to do some (interactive) testing. Directly starting with the unit test therefore saves development time.
+-   Unit tests should be included in the PR that merges the new or modified code. It allows the reviewer to check the behavior without running code themselves. Additional unit test cases might be suggested by the reviewer then.
+-   When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now. Only then you ensure that the bug won't come back undetected.
 
----
+------------------------------------------------------------------------
 
 ## How should I write unit tests?
 
-- Isolatable:  Can be run on its own (maybe maximum the whole file when helper functions for mocking data sets etc. are used).
-- Repeatable: Deterministic behavior (e.g. use set.seed() with RNG).
-- Automatable: No user input must be required etc, so can be run by CI.
-- Readable: Important for code maintenance by other developers. Therefore prefer to compare vs. explicit and numeric results (instead of comparing with output of other function that is not visible to reader).
-- Small: Only test one behavior with each unit test. 
-- Fast: Because it will be run in automation.
-- Relevant: Test all relevant features that are part of the function’s contract.
+-   Isolatable: Can be run on its own (maybe maximum the whole file when helper functions for mocking data sets etc. are used).
+-   Repeatable: Deterministic behavior (e.g. use set.seed() with RNG).
+-   Automatable: No user input must be required etc, so can be run by CI.
+-   Readable: Important for code maintenance by other developers. Therefore prefer to compare vs. explicit and numeric results (instead of comparing with output of other function that is not visible to reader).
+-   Small: Only test one behavior with each unit test.
+-   Fast: Because it will be run in automation.
+-   Relevant: Test all relevant features that are part of the function's contract.
 
----
+------------------------------------------------------------------------
 
 ## Summary
 
-- Unit tests are required and daily business in professional software development.
-- Unit tests take time to write. Expect at least the same time and likely more spent on writing unit tests than writing the actual code.
-- Unit tests pay off though, by speeding up development and debugging, improving design and documentation, and enabling refactoring. Most importantly, avoid user facing bugs than can be orders more expensive.
-- Unit tests need to be complemented by higher level tests, e.g. how functions play together (integration tests), and user assessment tests (UAT), of course. 
+-   Unit tests are required and daily business in professional software development.
+-   Unit tests take time to write. Expect at least the same time and likely more spent on writing unit tests than writing the actual code.
+-   Unit tests pay off though, by speeding up development and debugging, improving design and documentation, and enabling refactoring. Most importantly, avoid user facing bugs than can be orders more expensive.
+-   Unit tests need to be complemented by higher level tests, e.g. how functions play together (integration tests), and user assessment tests (UAT), of course.
