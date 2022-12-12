@@ -1,0 +1,6 @@
+---
+title: "MMRM R Adoption Series"
+author: "Ben Arancibia and Yoni Sidi"
+format: revealjs
+editor: visual
+---
