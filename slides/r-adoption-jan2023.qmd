@@ -1,6 +1,32 @@
 ---
 title: "MMRM R Adoption Series"
 author: "Ben Arancibia and Yoni Sidi"
-format: revealjs
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
 editor: visual
 ---
+
+## 
+
+# Agenda
+
+-   Introduction and Overview of AWA SWE
+
+-   Mix Models for Repeated Measures - Why is it a Problem?
+
+-   MMRM Package
+
+    -   ASA SWE Development Practices
+
+    -   Why this is not "yet another package"
+
+    -   Long Term Perspective
+
+    -   Comparing MMRM R Package to SAS - Demo
+
+-   Closing and Next Steps
+
+s
