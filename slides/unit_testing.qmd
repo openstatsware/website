@@ -75,9 +75,17 @@ The code should test a specific characteristic or functionality of the package, 
 
 Write tests to evaluate the exported behavior that the package user would invoke. This sets up the ability to refactor code and the tests will not have to be written as the package iterates and improves.
 
-## Maximizing the tests package surface area
-
-
+## Testing surface areas
+:::: {.columns}
+::: {.column width="50%"}
+- When writing unit tests for functions it is important to take into account the surface area of the tests
+- In this example we have three unit tests on `stats::mean.default`
+- Tests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure.
+:::
+::: {.column width="50%"}
+![](test_flow_mean.png){width="75%"}
+:::
+::::
 
 ## Wikipedia Definition of "Unit testing"
 
