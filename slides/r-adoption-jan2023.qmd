@@ -1,11 +1,16 @@
 ---
-title: "MMRM R Adoption Series"
+title: "MMRM and ASA SWE - R Adoption Series"
 author: "Ben Arancibia and Yoni Sidi"
 format: 
   revealjs:
     incremental: true
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 80% 10%
 editor: visual
 ---
 
@@ -29,4 +34,5 @@ editor: visual
 
 -   Closing and Next Steps
 
-s
+# 
+
