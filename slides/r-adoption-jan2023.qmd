@@ -3,20 +3,20 @@ title: "MMRM and ASA SWE - R Adoption Series"
 author: "Ben Arancibia and Yoni Sidi"
 format: 
   revealjs:
+    theme: dark
     incremental: true
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
 title-slide-attributes: 
-  data-background-image: https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
   data-background-size: 20%
   data-background-opacity: "0.5"
   data-background-position: 80% 10%
 editor: visual
 ---
 
-## 
 
-# Agenda
+## Agenda
 
 -   Introduction and Overview of AWA SWE
 
@@ -34,5 +34,13 @@ editor: visual
 
 -   Closing and Next Steps
 
-# 
+## Software Engineering in Biostatistics
+
+-   the importance of reliable software for statistical analysis cannot be underestimated in the pharmaceutical industry
+-   in the past a lot of of regulatory grade statistical analysis has been done with proprietary software, but was supported by internally written software
+-   open source software has been increasing in usage within Biostatistics and the use of R and R packages is becoming more prevalent
+-   an issue that has been encountered is that current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages
+-   to deal with this identified issue, a group came together part of the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
+
+## SWE WG - What We Want to Work on
 
