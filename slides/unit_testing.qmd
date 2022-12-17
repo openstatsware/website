@@ -111,7 +111,23 @@ When you are developing new features in a package make sure to prepare the area 
 1. Clone GitHub repositories of packages of package developers you are familar with and run the tests you find there, you will learn a lot about testing, coding and strategies
 1. Read books to learn testing strategies
 
+## What can and should be unit tested?
 
+1. Script
+1. Packages
+1. Shiny apps
+1. Data derivation
+
+## Unit testing frameworks
+
+1. script/packages: testthat, tinytest, box, Runit
+1. shiny apps: shinytest2, reactor, crrry
+1. data: pointblank, assertr, validate, dataReporter
+
+## Communicating Tests
+
+1. covr
+1. covrpage
 
 ## Wikipedia Definition of "Unit testing"
 
