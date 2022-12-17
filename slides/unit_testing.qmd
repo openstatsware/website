@@ -73,7 +73,9 @@ The code should test a specific characteristic or functionality of the package, 
 
 ## Planning tests for success
 
-Write tests to evaluate the exported behavior that the package user would invoke. This sets up the ability to refactor code and the tests will not have to be written as the package iterates and improves.
+- Write tests to evaluate the exported behavior that the package user would invoke. This sets up the ability to refactor code and the tests will not have to be written as the package iterates and improves.
+
+- You can't control how other maintainers are developing packages and managing their lifecycle. Write tests that you will not need to update or maintain because of a dependency.
 
 ## Testing surface areas
 :::: {.columns}
@@ -87,14 +89,36 @@ Write tests to evaluate the exported behavior that the package user would invoke
 :::
 ::::
 
+## Refactoring with a safety net
+When you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature. This will serve two main purposes
+
+:::: {.columns}
+::: {.column width="35%"}
+![](https://media.giphy.com/media/HlPP3bY8FRsWs/giphy.gif)
+:::
+::: {.column width="65%"}
+
+1. Communicate to others and to yourself what the goals of the feature.
+1. Free to develop the idea while writing messy code and refactoring it while still controlling for the basic requirements.
+:::
+::::
+
+
+## Some strategies for learning
+
+1. Pair with experienced developer buddy(ies)
+1. Fork GitHub repositories and help out with refactoring or features, developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues. The process of merging a pull request will teach you hands on.
+1. Clone GitHub repositories of packages of package developers you are familar with and run the tests you find there, you will learn a lot about testing, coding and strategies
+1. Read books to learn testing strategies
+
+
+
 ## Wikipedia Definition of "Unit testing"
 
 -   Unit tests \[...\] ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
 -   In procedural programming, a "unit" could be \[...\] an individual function or procedure.
 -   A unit test provides a strict, written contract that the piece of code must satisfy.
 -   By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
-
-----
 
 ## What are unit tests?
 
@@ -108,6 +132,7 @@ test_that(“my_fun can do xyz as expected”, {
   expect_identical(result, expected) # define the expectation
 })
 ```
+
 
 
 ## What expectations can I use?
@@ -127,8 +152,6 @@ expect_is() # object is of specific class
 expect_true(), expect_false() # general usage
 ```
 
-------------------------------------------------------------------------
-
 ## Why can I not just use examples?
 
 Wait a second `…`
@@ -141,15 +164,12 @@ So this sounds sufficient, right? `…`
 
 Not really.
 
-------------------------------------------------------------------------
 
 ## Why can I not just use examples?
 
 -   If a code change causes a bug that does not lead to an error, this bug will not be detected (e.g., wrong or no output of a function), because examples usually don't compare vs. expected results or behavior.
 -   Examples are not testing internal functions (i.e. units) that build up the API for users or developers.
 -   The fundamental problem of using *only* traditional regression tests applies: Manual debugging becomes necessary to track down root cause of error.
-
-------------------------------------------------------------------------
 
 ## So why should I write unit tests?
 
@@ -160,16 +180,12 @@ Not really.
 -   **Excellent Regression Tool**: With the strict contracts in place, we can refactor with confidence.
 -   **Reduce Future Cost**: Writing unit tests is an investment that pays off long-term because bugs can be orders more expensive than testing (time for users and developers)
 
-------------------------------------------------------------------------
-
 ## When should I write unit tests?
 
 -   In test-driven development (TDD), unit tests are created before the code itself is written. When the tests pass, that code is considered complete.
 -   When developing new functions, you anyway need to do some (interactive) testing. Directly starting with the unit test therefore saves development time.
 -   Unit tests should be included in the PR that merges the new or modified code. It allows the reviewer to check the behavior without running code themselves. Additional unit test cases might be suggested by the reviewer then.
 -   When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now. Only then you ensure that the bug won't come back undetected.
-
-------------------------------------------------------------------------
 
 ## How should I write unit tests?
 
@@ -180,8 +196,6 @@ Not really.
 -   Small: Only test one behavior with each unit test.
 -   Fast: Because it will be run in automation.
 -   Relevant: Test all relevant features that are part of the function's contract.
-
-------------------------------------------------------------------------
 
 ## Summary
 
