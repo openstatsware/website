@@ -129,6 +129,17 @@ When you are developing new features in a package make sure to prepare the area 
 1. covr
 1. covrpage
 
+## Tying it together with automation
+
+:::: {.columns}
+::: {.column width="65%"}
+When developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests.
+:::
+::: {.column width="35%"}
+![](https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif)
+:::
+::::
+
 ## Wikipedia Definition of "Unit testing"
 
 -   Unit tests \[...\] ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
