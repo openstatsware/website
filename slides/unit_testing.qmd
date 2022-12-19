@@ -7,6 +7,8 @@ format:
   revealjs:
     incremental: false
     slide-number: c/t
+editor_options: 
+  chunk_output_type: console
 ---
 
 # What is this talk about?
@@ -128,6 +130,48 @@ When you are developing new features in a package make sure to prepare the area 
 
 1. covr
 1. covrpage
+
+## Mapping the Logic
+
+```{r}
+library(ggplot2)
+color_data <- dplyr::bind_cols(
+  tidyr::expand_grid(
+    xColor = seq(0,1,length.out=100),
+    yColor = seq(0,1,length.out=100)
+  ),
+  tidyr::expand_grid(
+    x = seq(3,1,length.out=100),
+    y = seq(1,3,length.out=100),
+  ))|>
+  dplyr::mutate(
+    zColor = xColor^3+yColor
+  )
+
+axis_labels <- tibble::tibble(
+  x = c(1.25, 2.95),
+  xend = c(2.75,2.95),
+  y = c(1.1,2.75),
+  yend = c(1.1,1.25),
+  label = c('Less Surface Area is Better','More Coverage is Better')
+)
+
+path_labels <- tibble::tibble(
+  x    = c(1.05, 1.25, 1.35, 1.45, 2.5),
+  xend = c(1.35, 1.85, 1.90, 2.00, 1.50),
+  y    = c(2.25, 1.50, 1.50, 1.40, 2.8),
+  yend = c(2.85, 2.75, 2.50, 2.30, 1.20),
+  label = c('bad tests', 'snapshots','no tests','examples', 'unit tests')
+)
+
+ggplot() +
+  geom_raster(data = color_data, aes(x, y,fill = zColor),show.legend = FALSE)+
+  scale_fill_distiller(type = "div", palette = 8, direction=-1) +
+  scale_y_reverse() +
+  geomtextpath::geom_textcurve(aes(x = x,xend = xend, y = y, yend = yend, label = label),linetype = NA, data = path_labels, size = 5) +
+  geomtextpath::geom_textsegment(aes(x = x,xend = xend, y = y, yend = yend, label = label),arrow = grid::arrow(type = 'closed',length = unit(0.1, "inches")),data = axis_labels, size = 4) +
+  theme_void()
+```
 
 ## Tying it together with automation
 
