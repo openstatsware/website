@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -116,10 +116,13 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About Us</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
     <a class="dropdown-item" href="./goals.html">
@@ -140,13 +143,17 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./news.html">News</a>
+    <a class="nav-link" href="./news.html">
+ <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page">Blog</a>
+    <a class="nav-link active" href="./blog.html" aria-current="page">
+ <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-task-forces" role="button" data-bs-toggle="dropdown" aria-expanded="false">Task Forces</a>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-task-forces" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Task Forces</span>
+    </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-task-forces">    
         <li>
     <a class="dropdown-item" href="./mmrm_R_package.html">
@@ -159,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item compact">
     <a class="nav-link" href="./blog.xml"><i class="bi bi-rss" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -179,6 +186,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -201,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1668902400000" data-listing-file-modified-sort="1670267913921" data-listing-reading-time-sort="0.975">
+<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1668902400000" data-listing-file-modified-sort="1671572149935" data-listing-reading-time-sort="0.975">
 <div class="thumbnail">
 <p><a href="./blog/mmrm-video-nov-2022/index.html"> <img src="./blog/mmrm-video-nov-2022/mmrm-video.png" class="thumnail-image"> </a></p>
 </div>
@@ -236,7 +244,7 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1670267913921" data-listing-reading-time-sort="0.575">
+<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1671572149935" data-listing-reading-time-sort="0.575">
 <div class="thumbnail">
 <p><a href="./blog/biop_report/index.html"> <img src="./blog/biop_report/asa-biop.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -271,7 +279,7 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1670267913925" data-listing-reading-time-sort="1.965">
+<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1671572149935" data-listing-reading-time-sort="1.965">
 <div class="thumbnail">
 <p><a href="./blog/wg_announcement/index.html"> <img src="./blog/wg_announcement/sticker-1200.png" class="thumnail-image"> </a></p>
 </div>
@@ -352,7 +360,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -388,24 +413,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
