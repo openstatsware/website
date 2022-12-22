@@ -1,0 +1,147 @@
+---
+title: "Unit Testing for R Developers"
+subtitle: "1: The Basics"
+author: "Daniel Sabanes Bove, Jonathan Sidi"
+date: ""
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.9"
+  data-background-position: 50% 5%
+editor_options: 
+  chunk_output_type: console
+---
+
+## What are we going to talk about?
+:::: {.columns}
+::: {.column width="40%"}
+- Introduce unit tests for R packages
+- Show that writing unit tests is easy
+:::
+::: {.column width="60%"}
+![](https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif)
+:::
+::::
+
+## Wikipedia Definition of "Unit testing"
+
+-   Unit tests \[...\] ensure that a section of an application (known as the "unit") meets its design and behaves as intended.
+-   In procedural programming, a "unit" could be \[...\] an individual function or procedure.
+-   A unit test provides a strict, written contract that the piece of code must satisfy.
+-   By writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications.
+
+## What is the structure of unit tests?
+
+- **Setup**: Set up the inputs for the test.
+- **Compute**: Compute the result which will be tested.
+- **Expect**: Define the expected result.
+- **Compare**: Compare the actual with the expected result.
+
+## How do unit tests for R packages look like?
+
+The most popular testing framework for R packages is [`{testthat}`](https://testthat.r-lib.org/).
+
+Therefore we show here the `{testthat}` syntax, but the structure is similar in other frameworks.
+
+. . .
+
+``` r
+test_that("my_fun can do xyz as expected", {
+  input <- … # setup: prepare input for xyz
+  result <- my_fun(input, …)  # compute: do xyz
+  expected <- … # expect: hardcode what the result of xyz should be
+  expect_identical(result, expected) # compare result with expectation
+})
+```
+
+## What comparisons can I use with `{testthat}`?
+
+-   All comparisons start with `expect_` prefix and take result and expected as arguments.
+
+-   They will throw an error if the comparison evaluates to a value different than what is expected.
+
+-   Often used ones are:
+
+. . .
+
+``` r
+expect_identical() # exact identity 
+expect_equal() # equal up to numerical tolerance
+expect_match() # character matches regular expression
+expect_silent() # no message, warning, error is produced
+expect_warning() # (specific) warning occurs
+expect_error() # (specific) error occurs
+expect_is() # object is of specific class
+expect_true(), expect_false() # general usage
+```
+
+## Can I not just use examples?
+
+"Wait a second ...
+
+R packages contain example code for documented functions or objects.
+
+These are automatically executed by `R CMD CHECK`.
+
+So this sounds sufficient, right? ..."
+
+. . .
+
+→ **Not really!**
+
+## Why can I not just use examples?
+
+-   **Misses Bugs**: If a code change causes a bug that does not lead to an error, this bug will not be detected.
+    *   E.g., wrong or no output of a function.
+    *   Because examples (usually) don't compare vs. expected results or behavior!
+-   **Misses Internals**: Examples cannot test internal functions (i.e. units) that build up the API for users or developers.
+    *   Manual debugging becomes necessary to track down root cause of error down to internal functions.
+
+## So why should I write unit tests?
+
+-   **Faster Debugging**: Only need to search narrow (unit) scope for the root cause.
+-   **Faster Development**: Have confidence that no side-bugs from new code.
+-   **Better Design**: Encourages aggressive refactoring into small maintainable units.
+-   **Better Documentation**: Developers can look at the unit tests to understand a function's usage and behavior.
+-   **Excellent Regression Tool**: With the strict contracts in place, we can refactor with confidence.
+-   **Reduce Future Cost**: Writing unit tests is an investment that pays off long-term.
+
+## When should I write unit tests?
+
+-   **Before coding**: In test-driven development (TDD), unit tests are created before the code itself is written. When the tests pass, that code is considered complete.
+-   **During coding**: When developing new functions, you anyway need to do some (interactive) testing. Directly starting with the unit test therefore saves development time.
+-   **In PR**: Unit tests should be included in the PR that merges the new or modified code. It allows the reviewer to check the behavior without running code themselves.
+-   **When bug bites**: When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now.
+
+## How should I write unit tests?
+
+-   **Isolatable**: Can be run on its own.
+-   **Repeatable**: Deterministic behavior (e.g. use `set.seed()`).
+-   **Automatable**: No user input must be required etc, so can be run by continuous integration (CI).
+-   **Readable**: Compare vs. explicit and numeric results, instead of other function result.
+-   **Small**: Only test one behavior with each unit test.
+-   **Fast**: Because it will be run in automation.
+-   **Coverage**: Test all relevant features that are part of the function's contract.
+
+## Summary
+
+Unit tests ...
+
+-   ... **are required** and daily business in professional software development.
+-   ... **take time** to write. Expect at least the same time and likely more spent on writing unit tests than writing the actual code.
+-   ... **pay off** though, by speeding up development and debugging, improving design and documentation, and enabling refactoring. 
+-   ... **avoid bugs** than can be orders more expensive.
+-   ... **are complemented** by higher level tests, e.g. how functions play together (integration tests).
+
+## Brought to you by the Software Engineering Working Group
+
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500" fig-align="center"}
+
+<div style="text-align: center">
+[rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg/)
+</div>
