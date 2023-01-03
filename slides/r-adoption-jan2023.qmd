@@ -15,7 +15,6 @@ title-slide-attributes:
 editor: visual
 ---
 
-
 ## Agenda
 
 -   Introduction and Overview of AWA SWE
@@ -39,8 +38,19 @@ editor: visual
 -   the importance of reliable software for statistical analysis cannot be underestimated in the pharmaceutical industry
 -   in the past a lot of of regulatory grade statistical analysis has been done with proprietary software, but was supported by internally written software
 -   open source software has been increasing in usage within Biostatistics and the use of R and R packages is becoming more prevalent
--   an issue that has been encountered is that current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages
--   to deal with this identified issue, a group came together part of the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
+-   a couple of issues is that current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages and it's harder to adopt packages in organizations without good documentation and maintenance
 
-## SWE WG - What We Want to Work on
+## How to deal with these issues?
 
+-   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
+
+## SWE WG - Goals
+
+-   SWE WG goals are to:
+
+    -   engineer R Packages to fill critical gaps
+    -   develop and share best practices for engineering robust and reliable software for Biostatistics
+        -   version control, code review, unit testing, integration tests, continuous deployment, reproducibility, package design, and object oriented programming
+        
+## WHY MMRM?
+- 
