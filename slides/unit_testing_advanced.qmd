@@ -1,0 +1,229 @@
+---
+title: "Unit Testing for R Developers"
+subtitle: "2: Advancing your skills"
+author: "Daniel Sabanes Bove, Jonathan Sidi"
+date: ""
+format: 
+  revealjs:
+    incremental: false
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.9"
+  data-background-position: 50% 5%
+editor_options: 
+  chunk_output_type: console
+---
+
+## What are we going to talk about?
+
+:::: {.columns}
+::: {.column width="40%"}
+- Understand the philosophy behind unit testing and how it relates to other tests
+- Gain more confidence in your testing framework by examining coverage
+:::
+::: {.column width="60%"}
+![](https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif)
+:::
+::::
+
+## What is the structure of unit tests?
+
+- **Setup**: Set up the inputs for the test.
+- **Compute**: Compute the result which will be tested.
+- **Expect**: Define the expected result.
+- **Compare**: Compare the actual with the expected result.
+
+The code should test a specific characteristic or functionality of the package.
+
+Because if your action does too many things at once, you have to search longer for the bug.
+
+## Who do you write tests for?
+
+Unit testing is a method to communicate to various stakeholders the package requirements. 
+
+![](testing_venn.jpeg){.absolute top=200 left=250 width="55%"}
+
+## Test Flavors
+
+There are different flavors of unit tests that we write
+
+- **Developer Tests**
+  - Tests that help the software developer speed up and iterate over different versions
+- **Quality Assurance (QA) Tests**
+  - Proving that the package isn't broken or that functions are returning the expected answers
+
+## Test Flavors
+
+:::: {.columns}
+::: {.column width="50%"}
+
+**Developer Tests**
+
+*Remove Fear of Change*
+
+- Assist with package design
+- Guide for refactoring
+
+*Reduce Development Time*
+
+- Explain code to others
+- Pinpoint errors
+- Minimize debugging/manual testing
+
+:::
+::: {.column width="50%"}
+
+**QA Tests**
+
+- Encode object requirements
+- Catch performance degradation
+
+:::
+::::
+
+## Planning tests for success
+
+- Write tests to evaluate the exported behavior that the package user would invoke. 
+    * Sets up the ability to refactor code.
+    * Tests will not have to be rewritten as the package iterates and improves.
+
+- Write tests that you will not need to update or maintain because of a dependency.
+    * Because you can't control how other maintainers are developing packages and managing their lifecycle. 
+
+## Testing surface areas
+
+:::: {.columns}
+::: {.column width="50%"}
+- When writing unit tests for functions it is important to take into account the surface area of the tests
+- In this example we have three unit tests on `stats::mean.default`
+- Tests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure.
+:::
+::: {.column width="50%"}
+![](test_flow_mean.png){width="75%"}
+:::
+::::
+
+## Adding new features with a safety net
+
+When you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature. 
+
+This will serve two main purposes:
+
+:::: {.columns}
+::: {.column width="35%"}
+![](https://media.giphy.com/media/HlPP3bY8FRsWs/giphy.gif)
+:::
+::: {.column width="65%"}
+
+1. **Communicate the goals** of the feature to others and to yourself.
+1. **Free to develop** the idea while writing messy code and refactoring it while still controlling for the basic requirements.
+:::
+::::
+
+
+## Some strategies for learning
+
+1. **Pair up** with experienced developer buddies.
+1. **Help out** with refactoring or features on GitHub repositories:
+    - Developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues. 
+    - The process of merging a pull request will teach you hands on.
+1. **Clone repositories** of packages of package developers you are familiar with:
+    - Run the tests you find there.
+    - You will learn a lot about testing, coding and strategies.
+1. **Read books** to learn testing strategies.
+
+## What can and should be unit tested?
+
+todo: add more details
+
+1. Script
+1. Packages
+1. Shiny apps
+1. Data derivation
+
+## Overview of unit testing frameworks
+
+1. script/packages: testthat, tinytest, box, Runit
+1. shiny apps: shinytest2, reactor, crrry
+1. data: pointblank, assertr, validate, dataReporter
+
+## Communicating Tests: Coverage
+
+1. covr
+1. covrpage
+
+todo: add more details here
+
+## Mapping the Logic
+
+```{r}
+library(ggplot2)
+color_data <- dplyr::bind_cols(
+  tidyr::expand_grid(
+    xColor = seq(0,1,length.out=100),
+    yColor = seq(0,1,length.out=100)
+  ),
+  tidyr::expand_grid(
+    x = seq(3,1,length.out=100),
+    y = seq(1,3,length.out=100),
+  ))|>
+  dplyr::mutate(
+    zColor = xColor^3+yColor
+  )
+
+axis_labels <- tibble::tibble(
+  x = c(1.25, 2.95),
+  xend = c(2.75,2.95),
+  y = c(1.1,2.75),
+  yend = c(1.1,1.25),
+  label = c('Less Surface Area is Better','More Coverage is Better')
+)
+
+path_labels <- tibble::tibble(
+  x    = c(1.05, 1.25, 1.35, 1.45, 2.5),
+  xend = c(1.35, 1.85, 1.90, 2.00, 1.50),
+  y    = c(2.25, 1.50, 1.50, 1.40, 2.8),
+  yend = c(2.85, 2.75, 2.50, 2.30, 1.20),
+  label = c('bad tests', 'snapshots','no tests','examples', 'unit tests')
+)
+
+ggplot() +
+  geom_raster(data = color_data, aes(x, y,fill = zColor),show.legend = FALSE)+
+  scale_fill_distiller(type = "div", palette = 8, direction=-1) +
+  scale_y_reverse() +
+  geomtextpath::geom_textcurve(aes(x = x,xend = xend, y = y, yend = yend, label = label),linetype = NA, data = path_labels, size = 5) +
+  geomtextpath::geom_textsegment(aes(x = x,xend = xend, y = y, yend = yend, label = label),arrow = grid::arrow(type = 'closed',length = unit(0.1, "inches")),data = axis_labels, size = 4) +
+  theme_void()
+```
+
+todo: move "no tests" to low coverage.
+explain before what snapshot tests are
+explain what bad tests are?
+
+## Tying it together with automation
+
+todo: consider moving to outlook in summary? this would be separate talk
+
+:::: {.columns}
+::: {.column width="65%"}
+When developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests.
+:::
+::: {.column width="35%"}
+![](https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif)
+:::
+::::
+
+## Summary
+
+todo
+
+## Brought to you by the Software Engineering Working Group
+
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500" fig-align="center"}
+
+<div style="text-align: center">
+[rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg/)
+</div>
