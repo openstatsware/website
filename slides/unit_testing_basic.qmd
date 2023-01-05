@@ -8,11 +8,12 @@ format:
     incremental: true
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
+    margin: 0.05
 title-slide-attributes: 
   data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
-  data-background-size: 20%
+  data-background-size: 10%
   data-background-opacity: "0.9"
-  data-background-position: 50% 5%
+  data-background-position: 92% 30%
 editor_options: 
   chunk_output_type: console
 ---
@@ -65,8 +66,6 @@ test_that("my_fun can do xyz as expected", {
 
 -   They will throw an error if the comparison evaluates to a value different than what is expected.
 
--   Often used ones are:
-
 . . .
 
 ``` r
@@ -108,35 +107,33 @@ So this sounds sufficient, right? ..."
 -   **Faster Development**: Have confidence that no side-bugs from new code.
 -   **Better Design**: Encourages aggressive refactoring into small maintainable units.
 -   **Better Documentation**: Developers can look at the unit tests to understand a function's usage and behavior.
--   **Excellent Regression Tool**: With the strict contracts in place, we can refactor with confidence.
 -   **Reduce Future Cost**: Writing unit tests is an investment that pays off long-term.
 
 ## When should I write unit tests?
 
--   **Before coding**: In test-driven development (TDD), unit tests are created before the code itself is written. When the tests pass, that code is considered complete.
--   **During coding**: When developing new functions, you anyway need to do some (interactive) testing. Directly starting with the unit test therefore saves development time.
--   **In PR**: Unit tests should be included in the PR that merges the new or modified code. It allows the reviewer to check the behavior without running code themselves.
+-   **Before coding**: In test-driven development (TDD), unit tests are created before the code itself is written.
+-   **During coding**: When developing new functions, you anyway need to do some (interactive) testing.
+-   **In PR**: Unit tests should be included in the PR that merges the new or modified code. 
 -   **When bug bites**: When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now.
 
 ## How should I write unit tests?
 
 -   **Isolatable**: Can be run on its own.
 -   **Repeatable**: Deterministic behavior (e.g. use `set.seed()`).
--   **Automatable**: No user input must be required etc, so can be run by continuous integration (CI).
--   **Readable**: Compare vs. explicit and numeric results, instead of other function result.
+-   **Readable**: Keep it simple.
 -   **Small**: Only test one behavior with each unit test.
 -   **Fast**: Because it will be run in automation.
--   **Coverage**: Test all relevant features that are part of the function's contract.
+-   **Coverage**: Test all relevant features.
 
 ## Summary
 
 Unit tests ...
 
 -   ... **are required** and daily business in professional software development.
--   ... **take time** to write. Expect at least the same time and likely more spent on writing unit tests than writing the actual code.
+-   ... **take time** to write. 
 -   ... **pay off** though, by speeding up development and debugging, improving design and documentation, and enabling refactoring. 
 -   ... **avoid bugs** than can be orders more expensive.
--   ... **are complemented** by higher level tests, e.g. how functions play together (integration tests).
+-   ... **are complemented** by higher level tests (integration tests).
 
 ## Brought to you by the Software Engineering Working Group
 
