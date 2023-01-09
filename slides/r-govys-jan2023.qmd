@@ -1,0 +1,74 @@
+---
+title: "Introducing the Software Engineering working group"
+subtitle: "- who we are and what we build together"
+author: "Daniel Sabanes Bove, Ya Wang"
+date: "R Govys meeting, 19 Jan 2023"
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 98% 10%
+---
+
+## ASA BIOP Software Engineering working group (SWE WG)
+
+-   An official working group of the ASA Biopharmaceutical Section
+-   Formed in August 2022
+-   Cross-industry collaboration with more than 30 members from over 20 organizations
+-   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+
+
+## Motivation
+
+-   Open-source software has gained increasing popularity in Biostatistics over the last two decades
+    -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
+    -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability 
+-   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
+
+
+## Goals
+
+-   **Primary Goal**: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps
+
+-   **Secondary Goal**: Develop and disseminate best practices for engineering high-quality open-source statistical software
+
+
+## SWE WG Activities
+
+-   First R package `mmrm` was published on CRAN in October 2022 and updated in December
+    -  We aim to estabilish this package as a new standard for fitting mixed models for repeated measures (MMRM)
+    -  We have been developing and adopting best practices for software in the `mmrm` package, and open sourced it at [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm) 
+    -  Currently under active development to add more features
+
+
+## SWE WG Activities (con't)
+
+-   Prepare public training materials to disseminate best practice for software engineering in the Biostatistics community
+    -  At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials 
+    -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
+    -  Video clips in preparation with a focus on best practices for software engineering
+
+
+## Long term perspective 
+
+-   Software engineering is a critical competence in producing high-quality statistical software
+-   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics 
+
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="50%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="500"}
+:::
+
+::: {.column width="50%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+:::
+:::
