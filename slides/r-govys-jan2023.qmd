@@ -8,6 +8,8 @@ format:
     incremental: true
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
+    toc: true
+    toc-depth: 1
 title-slide-attributes: 
   data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
   data-background-size: 20%
@@ -15,21 +17,28 @@ title-slide-attributes:
   data-background-position: 98% 10%
 ---
 
+# What is the SWE WG?
+
 ## ASA BIOP Software Engineering working group (SWE WG)
 
 -   An official working group of the ASA Biopharmaceutical Section
 -   Formed in August 2022
 -   Cross-industry collaboration with more than 30 members from over 20 organizations
 -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
-
+-   Open for new members!
 
 ## Motivation
 
+-   The importance of reliable software for statistical analysis cannot be underestimated in the pharmaceutical industry
+-   In the past a lot of of regulatory grade statistical analysis has been done with proprietary software, but was supported by internally written software
 -   Open-source software has gained increasing popularity in Biostatistics over the last two decades
     -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
     -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability 
--   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
 
+## Motivation (con't)
+
+-   Current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages and it's harder to adopt packages in organizations without good documentation and maintenance
+-   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
 
 ## Goals
 
@@ -41,7 +50,7 @@ title-slide-attributes:
 ## SWE WG Activities
 
 -   First R package `mmrm` was published on CRAN in October 2022 and updated in December
-    -  We aim to estabilish this package as a new standard for fitting mixed models for repeated measures (MMRM)
+    -  We aim to establish this package as a new standard for fitting mixed models for repeated measures (MMRM)
     -  We have been developing and adopting best practices for software in the `mmrm` package, and open sourced it at [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm) 
     -  Currently under active development to add more features
 
@@ -53,6 +62,46 @@ title-slide-attributes:
     -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
     -  Video clips in preparation with a focus on best practices for software engineering
 
+## SWE Development Practices
+
+-  user interface design
+-  version control with git
+-  unit and integration tests
+-  consistent and readable code style
+-  documentation
+-  continuous integration setup 
+-  publication on website and repositories
+-  etc.
+
+# `mmrm` package example
+
+## Motivation
+
+- table overview?
+
+## Before creating a new package
+
+- first try to improve existing package
+  - here we tried with glmmTMB
+- think about long term maintenance and responsibility
+
+## Package overview
+
+- Daniel has some slides
+
+## Why this is not "yet another package"
+
+- high quality?
+- collaboration?
+
+## Comparing MMRM R Package to SAS
+
+- details how we did that
+- timing comparisons?
+
+## Demo
+
+# Closing and Next Steps
 
 ## Long term perspective 
 
@@ -60,6 +109,11 @@ title-slide-attributes:
 -   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
 -   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics 
 
+## New packages coming up
+
+- sasr
+- HTA
+- Bayesian MMRM
 
 ## Thank you! Questions?
 
