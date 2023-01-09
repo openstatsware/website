@@ -23,8 +23,6 @@ editor: visual
 
 -   MMRM Package
 
-    -   ASA SWE Development Practices
-
     -   Why this is not "yet another package"
 
     -   Long Term Perspective
@@ -92,6 +90,17 @@ editor: visual
     -  At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials 
     -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
     -  Video clips in preparation with a focus on best practices for software engineering
+    
+## Why it's not just another package
 
+- Ongoing maintenance and support from the pharmaceutical industry that is supported by American Statistical Association 
+- Package is part of the mission, but to emphasize our goal is to push out information on practices for engineering high-quality open-source statistical software
+    
+## Long term perspective 
 
+-   Software engineering is a critical competence in producing high-quality statistical software
+-   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics 
 
+## Comparing SAS and R 
+- Comparing MMRM R Package to SAS - Demo
