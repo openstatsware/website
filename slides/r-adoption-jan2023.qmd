@@ -35,22 +35,63 @@ editor: visual
 
 ## Software Engineering in Biostatistics
 
--   the importance of reliable software for statistical analysis cannot be underestimated in the pharmaceutical industry
--   in the past a lot of of regulatory grade statistical analysis has been done with proprietary software, but was supported by internally written software
--   open source software has been increasing in usage within Biostatistics and the use of R and R packages is becoming more prevalent
--   a couple of issues is that current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages and it's harder to adopt packages in organizations without good documentation and maintenance
+-   Open-source software has gained increasing popularity in Biostatistics over the last two decades
+    -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
+    -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability 
+-   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
 
 ## How to deal with these issues?
 
 -   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
 
-## SWE WG - Goals
+## ASA BIOP Software Engineering working group (SWE WG)
 
--   SWE WG goals are to:
+-   An official working group of the ASA Biopharmaceutical Section
+-   Formed in August 2022
+-   Cross-industry collaboration with more than 30 members from over 20 organizations
+-   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
 
-    -   engineer R Packages to fill critical gaps
-    -   develop and share best practices for engineering robust and reliable software for Biostatistics
-        -   version control, code review, unit testing, integration tests, continuous deployment, reproducibility, package design, and object oriented programming
+## Goals
+
+-   **Primary Goal**: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps
+
+-   **Secondary Goal**: Develop and disseminate best practices for engineering high-quality open-source statistical software
+
+## SWE WG Activities
+
+-   First R package `mmrm` was published on CRAN in October 2022 and updated in December
+    -  We aim to estabilish this package as a new standard for fitting mixed models for repeated measures (MMRM)
+    -  We have been developing and adopting best practices for software in the `mmrm` package, and open sourced it at [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm) 
+    -  Currently under active development to add more features
         
 ## WHY MMRM?
-- 
+-   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+-   No great R Package - initially though that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
+-   Learned that this approach failed on Ophthalamology data (slow, did not converge
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+-   tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+
+## Idea
+
+-   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
+-   We only want to fit a fixed effects model with a structured covariance matrix for each subject
+-   The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
+-   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
+
+## Advantages of `TMB`
+
+-   Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
+-   Automatic differentiation of the log-likelihood as a function of the variance parameters
+-   We get the gradient and Hessian exactly and without additional coding
+-   This can be used from the R side with the `TMB` interface and plugged into optimizers
+
+
+## What's next with {mmrm} and SWE WG
+
+-   Prepare public training materials to disseminate best practice for software engineering in the Biostatistics community
+    -  At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials 
+    -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
+    -  Video clips in preparation with a focus on best practices for software engineering
+
+
+
