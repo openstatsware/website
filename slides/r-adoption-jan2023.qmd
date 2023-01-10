@@ -1,0 +1,204 @@
+---
+title: "MMRM and ASA SWE - R Adoption Series"
+author: "Ben Arancibia and Yoni Sidi"
+format: 
+  revealjs:
+    theme: dark
+    incremental: false
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 80% 10%
+editor: visual
+---
+
+## Agenda
+
+-   Introduction and Overview of AWA SWE
+
+-   Mix Models for Repeated Measures - Why is it a Problem?
+
+-   MMRM Package
+
+    -   Why this is not "yet another package"
+
+    -   Long Term Perspective
+
+    -   Comparing MMRM R Package to SAS - Demo
+
+-   Closing and Next Steps
+
+## Software Engineering in Biostatistics
+
+-   Open-source software has gained increasing popularity in Biostatistics over the last two decades
+    -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
+    -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability
+-   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
+
+## How to deal with these issues?
+
+-   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
+
+## ASA BIOP Software Engineering working group (SWE WG)
+
+-   An official working group of the ASA Biopharmaceutical Section
+-   Formed in August 2022
+-   Cross-industry collaboration with more than 30 members from over 20 organizations
+-   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+
+## Goals
+
+-   **Primary Goal**: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps
+
+-   **Secondary Goal**: Develop and disseminate best practices for engineering high-quality open-source statistical software
+
+## SWE WG Activities
+
+-   First R package `mmrm` was published on CRAN in October 2022 and updated in December
+    -   We aim to estabilish this package as a new standard for fitting mixed models for repeated measures (MMRM)
+    -   We have been developing and adopting best practices for software in the `mmrm` package, and open sourced it at [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
+    -   Currently under active development to add more features
+
+## WHY MMRM?
+
+-   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+-   No great R Package - initially though that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
+-   Learned that this approach failed on Ophthalamology data (slow, did not converge
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+-   tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+
+## Idea
+
+-   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
+-   We only want to fit a fixed effects model with a structured covariance matrix for each subject
+-   The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
+-   We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
+
+## Advantages of `TMB`
+
+-   Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
+-   Automatic differentiation of the log-likelihood as a function of the variance parameters
+-   We get the gradient and Hessian exactly and without additional coding
+-   This can be used from the R side with the `TMB` interface and plugged into optimizers
+
+## What's next with {mmrm} and SWE WG
+
+-   Prepare public training materials to disseminate best practice for software engineering in the Biostatistics community
+    -   At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials
+    -   Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop
+    -   Video clips in preparation with a focus on best practices for software engineering
+
+## Why it's not just another package
+
+-   Ongoing maintenance and support from the pharmaceutical industry that is supported by American Statistical Association
+-   Package is part of the mission, but to emphasize our goal is to push out information on practices for engineering high-quality open-source statistical software
+
+## Long term perspective
+
+-   Software engineering is a critical competence in producing high-quality statistical software
+-   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
+
+## Comparing SAS and R
+
+- Estimation Methods
+- Covariance structures
+- Degrees of Freedom
+- contrasts
+- comparing estimates
+- run times
+
+## Estimation Methods
+
+|       Method     | mmrm::mmrm | SAS |
+|:----------------|:----------:|:---:|
+|       ML         |     X      |  X  |
+|       REML       |     X      |  X  |
+|       MIVQUE0*   |            |  X  |
+
+*MIVQUE0: minimum variance quadratic unbiased estimation of the covariance parameters
+
+##  Covariance structures
+
+- SAS has 23 non-spatial covariance structures, while mmrm has 10. 
+  - 9 structures intersect with SAS
+  - Ante-dependence (homogeneous) is only in the mmrm package. 
+- SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.
+
+##  Covariance structures details
+
+|       Covariance structures                   | mmrm::mmrm   |  SAS  |
+|:----------------------------------------------|:------------:|:-----:|
+|     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
+|     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
+| Compound symmetry (hetero/homo) |     X/X      |  X/X  |
+|  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
+|  Ante-dependence (hetero/homo)  |     X/X      |  X    |
+|        Spatial exponential                    |     X        |  X    |
+
+## Degrees of Freedom Methods
+
+|       Method     | mmrm::mmrm | SAS |
+|:----------------|:----------:|:---:|
+|       Contain         |      X*     |  X  |
+|       Between/Within  |       X* |      X  |
+|       Residual         |    X*       |  X  |
+|       Satterthwaite         |     X      |  X  |
+|       Kenward-Roger       |     X      |  X  |
+|       Kenward-Roger (Linear)   |  X          |  X  |
+
+*Available through the `emmeans` package.
+
+## Contrasts/LSMEANS
+
+Contrasts and LSMeans estimates are available in `mmrm` using
+
+  - `mmrm::df_1d`, `mmrm::df_md` 
+  - S3 method that is compatible with `emmeans`
+
+These are comparable to the LSMEANS statement in SAS.
+
+## Estimate Comparison
+
+To compare estimates of `mmrm` and SAS we will use simulated data that describes the disease progression of Essential Tremor, where the primary endpoint defined as the change from baseline of the upper limb score
+
+
+All subjects have response values drawn from a multivariate normal distribution.
+The subject response values have length n=7 for Days 8, 15, 29, 43, 57, 71, and 91.
+
+## Data Generating Process {.smaller}
+
+Each subject's random draw requires a length n=7 expected value vector $\mu_k$ 
+and a 7x7 covariance matrix $\Sigma_k$ both specific for dose cohort $k$:
+
+$$X_{k,i} \stackrel{iid}\sim N_7(\mu_k, \Sigma_k)$$
+The mean vector $\mu_k$ is calculated from an emax relationship to model the treatment effect onset vs. time:
+$$\mu_k(x) = \zeta\frac{x}{EC_{50} + x}$$
+for day $x$ where $EC_{50}$ is the expected day when 50% of treatment effect is attained and 
+$\zeta$ scales the fraction such the day 91 value is the full expected treatment effect.
+This constant $\zeta$ is equal to the cohort $k$ mean treatment effect, $m_k$, times
+$1 + \frac{EC_{50}}{91}$.
+
+## Example
+
+Assume for a given cohort the expected treatment effect at Day 91 is $-3.0$ points
+and the treatment 50% effect time is 7 days. Quantity $\zeta = -3.23$, the value required
+such $\zeta \times \frac{91}{7 + 91} = -3.0$.
+
+```{r}
+mu_fun <- function(x) {-3 * (98/91) * x / (7+x)}
+dat <- tibble::tibble(day = 1:91)
+dat[['mu']] <- mu_fun(dat[['day']])
+dat2 <- tibble::tibble(day = c( 8, 15, 29, 43, 57, 71, 91))
+dat2[['mu']] <- mu_fun(dat2[['day']])
+ggplot2::ggplot(data = dat, ggplot2::aes(x = day, y = mu)) +
+  ggplot2::geom_line() +
+  ggplot2::geom_point(data = dat2) +
+  ggplot2::geom_hline(ggplot2::aes(yintercept = -3.23)) +
+  ggplot2::theme_minimal()
+```
+
+
