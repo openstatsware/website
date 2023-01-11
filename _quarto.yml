@@ -24,6 +24,9 @@ website:
       - text: "Task Forces"
         menu:
           - href: mmrm_R_package.qmd
+      - href: presentations.qmd
+        text: "Presentations"
+
     right:
       - icon: rss
         href: blog.xml
