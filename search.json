@@ -98,6 +98,202 @@
     "text": "Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see about us.\n\nLatest Updates:\n\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon."
   },
   {
+    "objectID": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
+    "href": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
+    "title": "Unit Testing for R Developers",
+    "section": "What are we going to talk about?",
+    "text": "What are we going to talk about?\n\n\n\nUnderstand the philosophy behind unit testing and how it relates to other tests\nGain more confidence in your testing framework by examining coverage"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
+    "href": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "What is the structure of unit tests?",
+    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result.\n\nThe code should test a specific characteristic or functionality of the package.\nBecause if your action does too many things at once, you have to search longer for the bug."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
+    "href": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
+    "title": "Unit Testing for R Developers",
+    "section": "Who do you write tests for?",
+    "text": "Who do you write tests for?\nUnit testing is a method to communicate to various stakeholders the package requirements."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#test-flavors",
+    "href": "slides/unit_testing_advanced.html#test-flavors",
+    "title": "Unit Testing for R Developers",
+    "section": "Test Flavors",
+    "text": "Test Flavors\nThere are different flavors of unit tests that we write\n\nDeveloper Tests\n\nTests that help the software developer speed up and iterate over different versions\n\nQuality Assurance (QA) Tests\n\nProving that the package isn’t broken or that functions are returning the expected answers"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#test-flavors-1",
+    "href": "slides/unit_testing_advanced.html#test-flavors-1",
+    "title": "Unit Testing for R Developers",
+    "section": "Test Flavors",
+    "text": "Test Flavors\n\n\nDeveloper Tests\nRemove Fear of Change\n\nAssist with package design\nGuide for refactoring\n\nReduce Development Time\n\nExplain code to others\nPinpoint errors\nMinimize debugging/manual testing\n\n\nQA Tests\n\nEncode object requirements\nCatch performance degradation"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success",
+    "href": "slides/unit_testing_advanced.html#planning-tests-for-success",
+    "title": "Unit Testing for R Developers",
+    "section": "Planning tests for success",
+    "text": "Planning tests for success\n\nWrite tests to evaluate the exported behavior that the package user would invoke.\n\nSets up the ability to refactor code.\nTests will not have to be rewritten as the package iterates and improves.\n\nWrite tests that you will not need to update or maintain because of a dependency.\n\nBecause you can’t control how other maintainers are developing packages and managing their lifecycle."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#testing-surface-areas",
+    "href": "slides/unit_testing_advanced.html#testing-surface-areas",
+    "title": "Unit Testing for R Developers",
+    "section": "Testing surface areas",
+    "text": "Testing surface areas\n\n\n\nWhen writing unit tests for functions it is important to take into account the surface area of the tests\nIn this example we have three unit tests on stats::mean.default\nTests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
+    "href": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
+    "title": "Unit Testing for R Developers",
+    "section": "Adding new features with a safety net",
+    "text": "Adding new features with a safety net\nWhen you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature.\nThis will serve two main purposes:\n\n\n\n\n\nCommunicate the goals of the feature to others and to yourself.\nFree to develop the idea while writing messy code and refactoring it while still controlling for the basic requirements."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#some-strategies-for-learning",
+    "href": "slides/unit_testing_advanced.html#some-strategies-for-learning",
+    "title": "Unit Testing for R Developers",
+    "section": "Some strategies for learning",
+    "text": "Some strategies for learning\n\nPair up with experienced developer buddies.\nHelp out with refactoring or features on GitHub repositories:\n\nDevelopers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.\nThe process of merging a pull request will teach you hands on.\n\nClone repositories of packages of package developers you are familiar with:\n\nRun the tests you find there.\nYou will learn a lot about testing, coding and strategies.\n\nRead books to learn testing strategies."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
+    "href": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
+    "title": "Unit Testing for R Developers",
+    "section": "What can and should be unit tested?",
+    "text": "What can and should be unit tested?\ntodo: add more details\n\nScript\nPackages\nShiny apps\nData derivation"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
+    "href": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
+    "title": "Unit Testing for R Developers",
+    "section": "Overview of unit testing frameworks",
+    "text": "Overview of unit testing frameworks\n\nscript/packages: testthat, tinytest, box, Runit\nshiny apps: shinytest2, reactor, crrry\ndata: pointblank, assertr, validate, dataReporter"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#communicating-tests-coverage",
+    "href": "slides/unit_testing_advanced.html#communicating-tests-coverage",
+    "title": "Unit Testing for R Developers",
+    "section": "Communicating Tests: Coverage",
+    "text": "Communicating Tests: Coverage\n\ncovr\ncovrpage\n\ntodo: add more details here"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#mapping-the-logic",
+    "href": "slides/unit_testing_advanced.html#mapping-the-logic",
+    "title": "Unit Testing for R Developers",
+    "section": "Mapping the Logic",
+    "text": "Mapping the Logic\n\ntodo: move “no tests” to low coverage. explain before what snapshot tests are explain what bad tests are?"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#tying-it-together-with-automation",
+    "href": "slides/unit_testing_advanced.html#tying-it-together-with-automation",
+    "title": "Unit Testing for R Developers",
+    "section": "Tying it together with automation",
+    "text": "Tying it together with automation\ntodo: consider moving to outlook in summary? this would be separate talk\n\n\nWhen developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#summary",
+    "href": "slides/unit_testing_advanced.html#summary",
+    "title": "Unit Testing for R Developers",
+    "section": "Summary",
+    "text": "Summary\ntodo"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
+    "href": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
+    "title": "Unit Testing for R Developers",
+    "section": "Brought to you by the Software Engineering Working Group",
+    "text": "Brought to you by the Software Engineering Working Group\n\n\n\n\n\n\nrconsortium.github.io/asa-biop-swe-wg"
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#what-are-we-going-to-talk-about",
+    "href": "slides/unit_testing_basic.html#what-are-we-going-to-talk-about",
+    "title": "Unit Testing for R Developers",
+    "section": "What are we going to talk about?",
+    "text": "What are we going to talk about?\n\n\n\nIntroduce unit tests for R packages\nShow that writing unit tests is easy"
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#wikipedia-definition-of-unit-testing",
+    "href": "slides/unit_testing_basic.html#wikipedia-definition-of-unit-testing",
+    "title": "Unit Testing for R Developers",
+    "section": "Wikipedia Definition of “Unit testing”",
+    "text": "Wikipedia Definition of “Unit testing”\n\nUnit tests […] ensure that a section of an application (known as the “unit”) meets its design and behaves as intended.\nIn procedural programming, a “unit” could be […] an individual function or procedure.\nA unit test provides a strict, written contract that the piece of code must satisfy.\nBy writing tests first for the smallest testable units, then the compound behaviors between those, one can build up comprehensive tests for complex applications."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#what-is-the-structure-of-unit-tests",
+    "href": "slides/unit_testing_basic.html#what-is-the-structure-of-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "What is the structure of unit tests?",
+    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#how-do-unit-tests-for-r-packages-look-like",
+    "href": "slides/unit_testing_basic.html#how-do-unit-tests-for-r-packages-look-like",
+    "title": "Unit Testing for R Developers",
+    "section": "How do unit tests for R packages look like?",
+    "text": "How do unit tests for R packages look like?\nThe most popular testing framework for R packages is {testthat}.\nTherefore we show here the {testthat} syntax, but the structure is similar in other frameworks.\n\ntest_that(\"my_fun can do xyz as expected\", {\n  input <- … # setup: prepare input for xyz\n  result <- my_fun(input, …)  # compute: do xyz\n  expected <- … # expect: hardcode what the result of xyz should be\n  expect_identical(result, expected) # compare result with expectation\n})"
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#what-comparisons-can-i-use-with-testthat",
+    "href": "slides/unit_testing_basic.html#what-comparisons-can-i-use-with-testthat",
+    "title": "Unit Testing for R Developers",
+    "section": "What comparisons can I use with {testthat}?",
+    "text": "What comparisons can I use with {testthat}?\n\nAll comparisons start with expect_ prefix and take result and expected as arguments.\nThey will throw an error if the comparison evaluates to a value different than what is expected.\n\n\nexpect_identical() # exact identity \nexpect_equal() # equal up to numerical tolerance\nexpect_match() # character matches regular expression\nexpect_silent() # no message, warning, error is produced\nexpect_warning() # (specific) warning occurs\nexpect_error() # (specific) error occurs\nexpect_is() # object is of specific class\nexpect_true(), expect_false() # general usage"
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#can-i-not-just-use-examples",
+    "href": "slides/unit_testing_basic.html#can-i-not-just-use-examples",
+    "title": "Unit Testing for R Developers",
+    "section": "Can I not just use examples?",
+    "text": "Can I not just use examples?\n“Wait a second …\nR packages contain example code for documented functions or objects.\nThese are automatically executed by R CMD CHECK.\nSo this sounds sufficient, right? …”\n\n→ Not really!"
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#why-can-i-not-just-use-examples",
+    "href": "slides/unit_testing_basic.html#why-can-i-not-just-use-examples",
+    "title": "Unit Testing for R Developers",
+    "section": "Why can I not just use examples?",
+    "text": "Why can I not just use examples?\n\nMisses Bugs: If a code change causes a bug that does not lead to an error, this bug will not be detected.\n\nE.g., wrong or no output of a function.\nBecause examples (usually) don’t compare vs. expected results or behavior!\n\nMisses Internals: Examples cannot test internal functions (i.e. units) that build up the API for users or developers.\n\nManual debugging becomes necessary to track down root cause of error down to internal functions."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#so-why-should-i-write-unit-tests",
+    "href": "slides/unit_testing_basic.html#so-why-should-i-write-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "So why should I write unit tests?",
+    "text": "So why should I write unit tests?\n\nFaster Debugging: Only need to search narrow (unit) scope for the root cause.\nFaster Development: Have confidence that no side-bugs from new code.\nBetter Design: Encourages aggressive refactoring into small maintainable units.\nBetter Documentation: Developers can look at the unit tests to understand a function’s usage and behavior.\nReduce Future Cost: Writing unit tests is an investment that pays off long-term."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#when-should-i-write-unit-tests",
+    "href": "slides/unit_testing_basic.html#when-should-i-write-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "When should I write unit tests?",
+    "text": "When should I write unit tests?\n\nBefore coding: In test-driven development (TDD), unit tests are created before the code itself is written.\nDuring coding: When developing new functions, you anyway need to do some (interactive) testing.\nIn PR: Unit tests should be included in the PR that merges the new or modified code.\nWhen bug bites: When a bug is detected, add unit test(s) that reproduce the bug, fix the code and confirm that the corresponding unit tests pass now."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#how-should-i-write-unit-tests",
+    "href": "slides/unit_testing_basic.html#how-should-i-write-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "How should I write unit tests?",
+    "text": "How should I write unit tests?\n\nIsolatable: Can be run on its own.\nRepeatable: Deterministic behavior (e.g. use set.seed()).\nReadable: Keep it simple.\nSmall: Only test one behavior with each unit test.\nFast: Because it will be run in automation.\nCoverage: Test all relevant features."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#summary",
+    "href": "slides/unit_testing_basic.html#summary",
+    "title": "Unit Testing for R Developers",
+    "section": "Summary",
+    "text": "Summary\nUnit tests …\n\n… are required and daily business in professional software development.\n… take time to write.\n… pay off though, by speeding up development and debugging, improving design and documentation, and enabling refactoring.\n… avoid bugs than can be orders more expensive.\n… are complemented by higher level tests (integration tests)."
+  },
+  {
+    "objectID": "slides/unit_testing_basic.html#brought-to-you-by-the-software-engineering-working-group",
+    "href": "slides/unit_testing_basic.html#brought-to-you-by-the-software-engineering-working-group",
+    "title": "Unit Testing for R Developers",
+    "section": "Brought to you by the Software Engineering Working Group",
+    "text": "Brought to you by the Software Engineering Working Group\n\n\n\n\n\n\nrconsortium.github.io/asa-biop-swe-wg"
+  },
+  {
     "objectID": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
     "href": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
     "title": "mmrm",
