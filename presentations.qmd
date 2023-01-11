@@ -2,4 +2,10 @@
 title: "Presentations"
 ---
 
-To be added later.
+- *Statistical software for continuous longitudinal endpoints: Introducing the R package `mmrm`*. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.       
+  - [slides](slides/bbs-efspi-mmrm-dec2022.html) 
+  - [recording](https://streamingmedia.roche.com/media/t/1_toj7v6bn) (35:00)  
+
+- *Statistical Software Engineering 101*. Video blog series on ASA BIOP Youtube channel.
+  - Unit Testing for R Developers
+    - 1: The Basics [[slides](slides/unit_testing_basic.html), [video](https://www.youtube.com/watch?v=mfLXiP4A9CA)]
