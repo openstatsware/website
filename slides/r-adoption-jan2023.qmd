@@ -13,6 +13,8 @@ title-slide-attributes:
   data-background-opacity: "0.5"
   data-background-position: 80% 10%
 editor: visual
+editor_options: 
+  chunk_output_type: console
 ---
 
 ## Agenda
@@ -104,101 +106,127 @@ editor: visual
 
 ## Comparing SAS and R
 
+To run an mmrm model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. Less model assumptions are applied in PROC MIXED (primarily how one treats missingness). 
+
+We will compares the PROC MIXED procedure to the `{mmrm}` package. The following pieces will be compared.
+
+::: columns
+::: {.column width="50%"}
+- Documentation
+- Unit Testing
 - Estimation Methods
 - Covariance structures
+:::
+::: {.column width="50%"}
 - Degrees of Freedom
 - contrasts
 - comparing estimates
 - run times
+:::
+:::
+
+## Documentation
+
+Both languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.
+
+::: columns
+::: {.column width="50%"}
+`{mmrm}`
+:::
+::: {.column width="50%"}
+`PROC MIXED`
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
+- [Homepage](https://openpharma.github.io/mmrm/main/index.html)
+- [Usage](https://openpharma.github.io/mmrm/main/articles/introduction.html)
+- [Estimation](https://openpharma.github.io/mmrm/main/articles/algorithm.html)
+- [Covariance Structures](https://openpharma.github.io/mmrm/main/articles/covariance.html)
+- Degrees of Freedom [KR](https://openpharma.github.io/mmrm/main/articles/kenward.html)/[Satterthwaite](https://openpharma.github.io/mmrm/main/articles/satterthwaite.html)
+:::
+::: {.column width="50%"}
+- [Homepage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_toc.htm)
+- [Usage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_examples02.htm)
+- [Theory](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_details01.htm)
+- [Covariance Structures](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type)
+- [Degrees of Freedom](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm)
+:::
+:::
+
+## Unit Testing
+
+One major advantage of the `{mmrm}` over `PROC MIXED` is that the unit testing in `{mmrm}` is transparent. It uses the `{testthat}` framework with `{covr}` to communicate the testing coverage. Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
 
 ## Estimation Methods
 
-|       Method     | mmrm::mmrm | SAS |
+|       Method     | `{mmrm}`   |  `PROC MIXED`  |
 |:----------------|:----------:|:---:|
 |       ML         |     X      |  X  |
 |       REML       |     X      |  X  |
-|       MIVQUE0*   |            |  X  |
-
-*MIVQUE0: minimum variance quadratic unbiased estimation of the covariance parameters
 
 ##  Covariance structures
 
+::: columns
+::: {.column width="60%"}
 - SAS has 23 non-spatial covariance structures, while mmrm has 10. 
   - 9 structures intersect with SAS
   - Ante-dependence (homogeneous) is only in the mmrm package. 
 - SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.
+:::
+
+::: {.column width="40%"}
+:::{.callout-tip}
+For users that need more structure `{mmrm}` is easily extensible via [feature requests](https://github.com/openpharma/mmrm/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) in the GitHub repository.
+:::
+![](https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif)
+:::
+:::
 
 ##  Covariance structures details
 
-|       Covariance structures                   | mmrm::mmrm   |  SAS  |
+|       Covariance structures                   | `{mmrm}`   |  `PROC MIXED`  |
 |:----------------------------------------------|:------------:|:-----:|
 |     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
 |     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
 | Compound symmetry (hetero/homo) |     X/X      |  X/X  |
 |  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
 |  Ante-dependence (hetero/homo)  |     X/X      |  X    |
-|        Spatial exponential                    |     X        |  X    |
+|        Spatial exponential      |     X        |  X    |
 
 ## Degrees of Freedom Methods
 
-|       Method     | mmrm::mmrm | SAS |
-|:----------------|:----------:|:---:|
-|       Contain         |      X*     |  X  |
-|       Between/Within  |       X* |      X  |
-|       Residual         |    X*       |  X  |
-|       Satterthwaite         |     X      |  X  |
-|       Kenward-Roger       |     X      |  X  |
-|       Kenward-Roger (Linear)   |  X          |  X  |
+|       Method     |  `{mmrm}`      | `PROC MIXED` |
+|:---------------- |:----------:|:---:|
+|       Contain         |     X*     |  X  |
+|       Between/Within  |     X     |  X  |
+|       Residual        |     X*     |  X  |
+|       Satterthwaite   |     X      |  X  |
+|       Kenward-Roger   |     X      |  X  |
+|       Kenward-Roger (Linear)**   |  X|  X  |
 
-*Available through the `emmeans` package.
+* Available through the `emmeans` package.
+
+** This is not equivalent to the KR2 setting in `PROC MIXED`
 
 ## Contrasts/LSMEANS
 
 Contrasts and LSMeans estimates are available in `mmrm` using
 
+::: columns
+::: {.column width="70%"}
   - `mmrm::df_1d`, `mmrm::df_md` 
   - S3 method that is compatible with `emmeans`
+  - LS means difference can be produced through emmeans (`pairs` method)
+  - Degrees of freedom method is passed from `mmrm` to `emmeans`
+  - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
+:::
 
-These are comparable to the LSMEANS statement in SAS.
-
-## Estimate Comparison
-
-To compare estimates of `mmrm` and SAS we will use simulated data that describes the disease progression of Essential Tremor, where the primary endpoint defined as the change from baseline of the upper limb score
-
-
-All subjects have response values drawn from a multivariate normal distribution.
-The subject response values have length n=7 for Days 8, 15, 29, 43, 57, 71, and 91.
-
-## Data Generating Process {.smaller}
-
-Each subject's random draw requires a length n=7 expected value vector $\mu_k$ 
-and a 7x7 covariance matrix $\Sigma_k$ both specific for dose cohort $k$:
-
-$$X_{k,i} \stackrel{iid}\sim N_7(\mu_k, \Sigma_k)$$
-The mean vector $\mu_k$ is calculated from an emax relationship to model the treatment effect onset vs. time:
-$$\mu_k(x) = \zeta\frac{x}{EC_{50} + x}$$
-for day $x$ where $EC_{50}$ is the expected day when 50% of treatment effect is attained and 
-$\zeta$ scales the fraction such the day 91 value is the full expected treatment effect.
-This constant $\zeta$ is equal to the cohort $k$ mean treatment effect, $m_k$, times
-$1 + \frac{EC_{50}}{91}$.
-
-## Example
-
-Assume for a given cohort the expected treatment effect at Day 91 is $-3.0$ points
-and the treatment 50% effect time is 7 days. Quantity $\zeta = -3.23$, the value required
-such $\zeta \times \frac{91}{7 + 91} = -3.0$.
-
-```{r}
-mu_fun <- function(x) {-3 * (98/91) * x / (7+x)}
-dat <- tibble::tibble(day = 1:91)
-dat[['mu']] <- mu_fun(dat[['day']])
-dat2 <- tibble::tibble(day = c( 8, 15, 29, 43, 57, 71, 91))
-dat2[['mu']] <- mu_fun(dat2[['day']])
-ggplot2::ggplot(data = dat, ggplot2::aes(x = day, y = mu)) +
-  ggplot2::geom_line() +
-  ggplot2::geom_point(data = dat2) +
-  ggplot2::geom_hline(ggplot2::aes(yintercept = -3.23)) +
-  ggplot2::theme_minimal()
-```
-
+::: {.column width="30%"}
+:::{.callout-note}
+These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax08.htm) statement in `PROC MIXED`.
+:::
+:::
+:::
 
