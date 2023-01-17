@@ -1,6 +1,6 @@
 ---
 title: "Introducing the Software Engineering working group"
-subtitle: "- who we are and what we build together"
+subtitle: "Who we are and what we build together"
 author: "Daniel Sabanes Bove, Ya Wang"
 date: "R Govys meeting, 19 Jan 2023"
 format: 
@@ -29,16 +29,21 @@ title-slide-attributes:
 
 ## Motivation
 
--   The importance of reliable software for statistical analysis cannot be underestimated in the pharmaceutical industry
--   In the past a lot of of regulatory grade statistical analysis has been done with proprietary software, but was supported by internally written software
+-   Importance of reliable software for statistical analysis cannot be underestimated
+-   In the past a lot of statistical analyses have been performed with proprietary software
 -   Open-source software has gained increasing popularity in Biostatistics over the last two decades
-    -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
-    -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability 
+    -   Pros: rapid uptake of novel methods and great opportunities for collaboration and innovation
+    -   Cons: users face huge variability in software quality (reliability, efficiency and maintainability)
 
 ## Motivation (con't)
 
--   Current repositories (GitHub, CRAN) do not require any statistical quality assurance for R packages and it's harder to adopt packages in organizations without good documentation and maintenance
--   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
+-   Current repositories (GitHub, CRAN):
+    - Do not require any statistical quality assurance 
+    - It's harder to adopt packages without good documentation and maintenance
+-   Developing high-quality software is critical to inform clinical and regulatory decisions:
+    - Good coding practices
+    - Reproducible outputs
+    - Self-sufficient documentation 
 
 ## Goals
 
@@ -60,44 +65,85 @@ title-slide-attributes:
 -   Prepare public training materials to disseminate best practice for software engineering in the Biostatistics community
     -  At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials 
     -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
-    -  Video clips in preparation with a focus on best practices for software engineering
+    -  [Youtube series](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS) with a focus on best practices for software engineering
 
-## SWE Development Practices
+## Best Practices for Software Engineering
 
--  user interface design
--  version control with git
--  unit and integration tests
--  consistent and readable code style
--  documentation
--  continuous integration setup 
--  publication on website and repositories
+-  User interface design
+-  Version control with git
+-  Unit and integration tests
+-  Consistent and readable code style
+-  Documentation
+-  Continuous integration setup 
+-  Publication on website and repositories
 -  etc.
 
 # `mmrm` package example
 
 ## Motivation
 
-- table overview?
+-   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+-   No great R Package - initially thought that it was solved by using `lme4` with `lmerTest`
+-   But this approach failed on large data (slow, did not converge)
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
 
 ## Before creating a new package
 
-- first try to improve existing package
-  - here we tried with glmmTMB
-- think about long term maintenance and responsibility
+- First try to improve existing package
+  - Here we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+  - But it did not work
+- Think about long term maintenance and responsibility
 
-## Package overview
+## `mmrm` Package overview
 
-- Daniel has some slides
+-   Linear model for dependent observations within independent subjects
+-   Multiple covariance structures available for the dependent observations
+-   REML or ML estimation, using multiple optimizers if needed
+-   `emmeans` interface for least square means, `tidymodels` for easy model fitting
+-   Satterthwaite and Kenward-Roger adjustments
 
-## Why this is not "yet another package"
+## Why it's not just another package
 
-- high quality?
-- collaboration?
+-   Ongoing maintenance and support from the pharmaceutical industry
+    -   5 companies being involved in the development, on track to become standard package
+-   Development using best practices as show case for high quality package
+    - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
 
-## Comparing MMRM R Package to SAS
+## Covariance structures
 
-- details how we did that
-- timing comparisons?
+|       Covariance structures                   | `{mmrm}`   |  `PROC MIXED`  |
+|:----------------------------------------------|:------------:|:-----:|
+|     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
+|     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
+| Compound symmetry (hetero/homo) |     X/X      |  X/X  |
+|  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
+|  Ante-dependence (hetero/homo)  |     X/X      |  X    |
+|        Spatial exponential      |     X        |  X    |
+
+## Degrees of Freedom Methods
+
+|       Method     |  `{mmrm}`      | `PROC MIXED` |
+|:---------------- |:----------:|:---:|
+|       Contain         |     X*     |  X  |
+|       Between/Within  |     X*     |  X  |
+|       Residual        |     X*     |  X  |
+|       Satterthwaite   |     X      |  X  |
+|       Kenward-Roger   |     X      |  X  |
+|       Kenward-Roger (Linear)**   |  X|  X  |
+
+*Available through the `emmeans` package.
+
+**This is not equivalent to the KR2 setting in `PROC MIXED`
+
+## Contrasts/LSMEANS
+
+Contrasts and least square means estimates are available in `mmrm` using:
+
+  - `df_1d`, `df_md` 
+  - S3 method that is compatible with `emmeans`
+  - LS means difference can be produced through `emmeans` (`pairs` method)
+  - Degrees of freedom method is passed from `mmrm` to `emmeans`
+  - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
 
 ## Demo
 
@@ -106,13 +152,13 @@ title-slide-attributes:
 ## Long term perspective 
 
 -   Software engineering is a critical competence in producing high-quality statistical software
--   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   A lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
 -   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics 
 
 ## New packages coming up
 
 - sasr
-- HTA
+- HTA packages
 - Bayesian MMRM
 
 ## Thank you! Questions?
