@@ -13,8 +13,6 @@ title-slide-attributes:
   data-background-opacity: "0.5"
   data-background-position: 80% 10%
 editor: visual
-editor_options: 
-  chunk_output_type: console
 ---
 
 ## Agenda
@@ -106,22 +104,22 @@ editor_options:
 
 ## Comparing SAS and R
 
-To run an mmrm model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. Less model assumptions are applied in PROC MIXED (primarily how one treats missingness). 
+To run an mmrm model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. 
 
-We will compares the PROC MIXED procedure to the `{mmrm}` package. The following pieces will be compared.
+- Less model assumptions are applied in PROC MIXED, primarily how one treats missingness.
+
+- We will compares the PROC MIXED procedure to the `{mmrm}` package in the following attributes:
 
 ::: columns
 ::: {.column width="50%"}
 - Documentation
 - Unit Testing
 - Estimation Methods
-- Covariance structures
 :::
 ::: {.column width="50%"}
+- Covariance structures
 - Degrees of Freedom
-- contrasts
-- comparing estimates
-- run times
+- Contrasts
 :::
 :::
 
@@ -206,9 +204,9 @@ For users that need more structure `{mmrm}` is easily extensible via [feature re
 |       Kenward-Roger   |     X      |  X  |
 |       Kenward-Roger (Linear)**   |  X|  X  |
 
-* Available through the `emmeans` package.
+*Available through the `emmeans` package.
 
-** This is not equivalent to the KR2 setting in `PROC MIXED`
+**This is not equivalent to the KR2 setting in `PROC MIXED`
 
 ## Contrasts/LSMEANS
 
@@ -229,4 +227,3 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
 :::
 :::
 :::
-
