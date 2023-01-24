@@ -104,7 +104,7 @@ editor: visual
 
 ## Comparing SAS and R
 
-To run an mmrm model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. 
+To run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. 
 
 - Less model assumptions are applied in PROC MIXED, primarily how one treats missingness.
 
@@ -157,6 +157,10 @@ Both languages have online documentation of the technical details of the estimat
 
 One major advantage of the `{mmrm}` over `PROC MIXED` is that the unit testing in `{mmrm}` is transparent. It uses the `{testthat}` framework with `{covr}` to communicate the testing coverage. Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
 
+:::{.callout-note}
+The integration tests in `{mmrm}` are set to a tolerance of 10e^-3 when compared to SAS outputs.
+:::
+
 ## Estimation Methods
 
 |       Method     | `{mmrm}`   |  `PROC MIXED`  |
@@ -198,7 +202,7 @@ For users that need more structure `{mmrm}` is easily extensible via [feature re
 |       Method     |  `{mmrm}`      | `PROC MIXED` |
 |:---------------- |:----------:|:---:|
 |       Contain         |     X*     |  X  |
-|       Between/Within  |     X     |  X  |
+|       Between/Within  |     X*     |  X  |
 |       Residual        |     X*     |  X  |
 |       Satterthwaite   |     X      |  X  |
 |       Kenward-Roger   |     X      |  X  |
