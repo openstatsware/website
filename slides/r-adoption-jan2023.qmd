@@ -67,7 +67,7 @@ editor: visual
     -   We have been developing and adopting best practices for software in the `mmrm` package, and open sourced it at [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
     -   Currently under active development to add more features
 
-## WHY MMRM?
+## Why do we need a package for MMRM?
 ::: columns
 ::: {.column width="50%"}
 -   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
