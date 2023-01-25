@@ -45,7 +45,7 @@ editor: visual
 
 ## How to deal with these issues?
 
--   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the ASA called the "Software Engineering Working Group" SWE WG to look R packages from a statistical point of view
+-   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the "Software Engineering Working Group" (SWE WG) to look R packages from a statistical point of view
 
 ## ASA BIOP Software Engineering working group (SWE WG)
 
