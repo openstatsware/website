@@ -68,12 +68,19 @@ editor: visual
     -   Currently under active development to add more features
 
 ## WHY MMRM?
-
+::: columns
+::: {.column width="50%"}
 -   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
 -   No great R Package - initially though that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
+:::
+
+
+::: {.column width="50%"}
 -   Learned that this approach failed on Ophthalamology data (slow, did not converge
 -   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
 -   tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+:::
+:::
 
 ## Idea
 
@@ -101,17 +108,6 @@ editor: visual
 -   Ongoing maintenance and support from the pharmaceutical industry that is supported by American Statistical Association
 -   Package is part of the mission, but to emphasize our goal is to push out information on practices for engineering high-quality open-source statistical software
 
-## Long term perspective
-
--   Software engineering is a critical competence in producing high-quality statistical software
--   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
--   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
-
-## New packages coming up
-
--   sasr
--   HTA
--   Bayesian MMRM
 
 ## Comparing SAS and R
 
@@ -244,5 +240,33 @@ Contrasts and LSMeans estimates are available in `mmrm` using
 ::: callout-note
 These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax08.htm) statement in `PROC MIXED`.
 :::
+:::
+:::
+
+## SWE Long Term Perspective
+
+-   Software engineering is a critical competence in producing high-quality statistical software
+-   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
+
+## New packages SWE is Working On
+
+-   sasr
+-   HTA
+-   Bayesian MMRM
+
+::: callout-note
+Have an interest in working on these topics? Come work with us, information on the SWE WG can be found here: [ASA BIOP SWE WG](https://rconsortium.github.io/asa-biop-swe-wg) 
+:::
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="50%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="500"}
+:::
+
+::: {.column width="50%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
 :::
 :::
