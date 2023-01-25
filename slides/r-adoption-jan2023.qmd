@@ -1,5 +1,5 @@
 ---
-title: "MMRM and ASA SWE - R Adoption Series"
+title: "Introducting the Software Engineering Working Group and {mmrm}"
 author: "Ben Arancibia and Yoni Sidi"
 format: 
   revealjs:
