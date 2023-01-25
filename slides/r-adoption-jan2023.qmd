@@ -76,7 +76,7 @@ editor: visual
 
 
 ::: {.column width="50%"}
--   Learned that this approach failed on Ophthalamology data (slow, did not converge
+-   Learned that this approach failed on large data sets (slow, did not converge)
 -   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
 -   tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
 :::
