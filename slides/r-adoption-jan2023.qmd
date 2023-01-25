@@ -47,7 +47,7 @@ editor: visual
 
 -   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the "Software Engineering Working Group" (SWE WG) to look R packages from a statistical point of view
 
-## ASA BIOP Software Engineering working group (SWE WG)
+## Software Engineering working group (SWE WG)
 
 -   An official working group of the ASA Biopharmaceutical Section
 -   Formed in August 2022
