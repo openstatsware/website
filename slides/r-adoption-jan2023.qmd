@@ -17,7 +17,7 @@ editor: visual
 
 ## Agenda
 
--   Introduction and Overview of AWA SWE
+-   Introduction and Overview of SWE WG
 
 -   Mix Models for Repeated Measures - Why is it a Problem?
 
