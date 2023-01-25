@@ -82,7 +82,7 @@ editor: visual
 :::
 :::
 
-## Idea
+## Idea with some Details
 
 -   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
 -   We only want to fit a fixed effects model with a structured covariance matrix for each subject
