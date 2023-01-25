@@ -31,6 +31,11 @@ editor: visual
 
 -   Closing and Next Steps
 
+## Who we are
+
+- Ben Arancibia: Director of Data Science at GSK sitting within Statistical Data Sciences Innovation Hub 
+- Yoni Sidi: Director of Modeling and Simulation at Sage Therapeutics
+
 ## Software Engineering in Biostatistics
 
 -   Open-source software has gained increasing popularity in Biostatistics over the last two decades
@@ -84,7 +89,7 @@ editor: visual
 -   We get the gradient and Hessian exactly and without additional coding
 -   This can be used from the R side with the `TMB` interface and plugged into optimizers
 
-## What's next with {mmrm} and SWE WG
+## What's next with {mmrm} & SWEWG
 
 -   Prepare public training materials to disseminate best practice for software engineering in the Biostatistics community
     -   At the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials
@@ -102,24 +107,31 @@ editor: visual
 -   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
 -   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
 
+## New packages coming up
+
+-   sasr
+-   HTA
+-   Bayesian MMRM
+
 ## Comparing SAS and R
 
-To run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures. 
+To run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.
 
-- Less model assumptions are applied in PROC MIXED, primarily how one treats missingness.
+-   Less model assumptions are applied in PROC MIXED, primarily how one treats missingness.
 
-- We will compares the PROC MIXED procedure to the `{mmrm}` package in the following attributes:
+-   We will compares the PROC MIXED procedure to the `{mmrm}` package in the following attributes:
 
 ::: columns
 ::: {.column width="50%"}
-- Documentation
-- Unit Testing
-- Estimation Methods
+-   Documentation
+-   Unit Testing
+-   Estimation Methods
 :::
+
 ::: {.column width="50%"}
-- Covariance structures
-- Degrees of Freedom
-- Contrasts
+-   Covariance structures
+-   Degrees of Freedom
+-   Contrasts
 :::
 :::
 
@@ -131,6 +143,7 @@ Both languages have online documentation of the technical details of the estimat
 ::: {.column width="50%"}
 `{mmrm}`
 :::
+
 ::: {.column width="50%"}
 `PROC MIXED`
 :::
@@ -138,18 +151,19 @@ Both languages have online documentation of the technical details of the estimat
 
 ::: columns
 ::: {.column width="50%"}
-- [Homepage](https://openpharma.github.io/mmrm/main/index.html)
-- [Usage](https://openpharma.github.io/mmrm/main/articles/introduction.html)
-- [Estimation](https://openpharma.github.io/mmrm/main/articles/algorithm.html)
-- [Covariance Structures](https://openpharma.github.io/mmrm/main/articles/covariance.html)
-- Degrees of Freedom [KR](https://openpharma.github.io/mmrm/main/articles/kenward.html)/[Satterthwaite](https://openpharma.github.io/mmrm/main/articles/satterthwaite.html)
+-   [Homepage](https://openpharma.github.io/mmrm/main/index.html)
+-   [Usage](https://openpharma.github.io/mmrm/main/articles/introduction.html)
+-   [Estimation](https://openpharma.github.io/mmrm/main/articles/algorithm.html)
+-   [Covariance Structures](https://openpharma.github.io/mmrm/main/articles/covariance.html)
+-   Degrees of Freedom [KR](https://openpharma.github.io/mmrm/main/articles/kenward.html)/[Satterthwaite](https://openpharma.github.io/mmrm/main/articles/satterthwaite.html)
 :::
+
 ::: {.column width="50%"}
-- [Homepage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_toc.htm)
-- [Usage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_examples02.htm)
-- [Theory](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_details01.htm)
-- [Covariance Structures](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type)
-- [Degrees of Freedom](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm)
+-   [Homepage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_toc.htm)
+-   [Usage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_examples02.htm)
+-   [Theory](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_details01.htm)
+-   [Covariance Structures](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type)
+-   [Degrees of Freedom](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm)
 :::
 :::
 
@@ -157,60 +171,61 @@ Both languages have online documentation of the technical details of the estimat
 
 One major advantage of the `{mmrm}` over `PROC MIXED` is that the unit testing in `{mmrm}` is transparent. It uses the `{testthat}` framework with `{covr}` to communicate the testing coverage. Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
 
-:::{.callout-note}
-The integration tests in `{mmrm}` are set to a tolerance of 10e^-3 when compared to SAS outputs.
+::: callout-note
+The integration tests in `{mmrm}` are set to a tolerance of 10e\^-3 when compared to SAS outputs.
 :::
 
 ## Estimation Methods
 
-|       Method     | `{mmrm}`   |  `PROC MIXED`  |
-|:----------------|:----------:|:---:|
-|       ML         |     X      |  X  |
-|       REML       |     X      |  X  |
+| Method | `{mmrm}` | `PROC MIXED` |
+|:-------|:--------:|:------------:|
+| ML     |    X     |      X       |
+| REML   |    X     |      X       |
 
-##  Covariance structures
+## Covariance structures
 
 ::: columns
 ::: {.column width="60%"}
-- SAS has 23 non-spatial covariance structures, while mmrm has 10. 
-  - 9 structures intersect with SAS
-  - Ante-dependence (homogeneous) is only in the mmrm package. 
-- SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.
+-   SAS has 23 non-spatial covariance structures, while mmrm has 10.
+    -   9 structures intersect with SAS
+    -   Ante-dependence (homogeneous) is only in the mmrm package.
+-   SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.
 :::
 
 ::: {.column width="40%"}
-:::{.callout-tip}
+::: callout-tip
 For users that need more structure `{mmrm}` is easily extensible via [feature requests](https://github.com/openpharma/mmrm/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) in the GitHub repository.
 :::
+
 ![](https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif)
 :::
 :::
 
-##  Covariance structures details
+## Covariance structures details
 
-|       Covariance structures                   | `{mmrm}`   |  `PROC MIXED`  |
-|:----------------------------------------------|:------------:|:-----:|
-|     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
-|     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
-| Compound symmetry (hetero/homo) |     X/X      |  X/X  |
-|  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
-|  Ante-dependence (hetero/homo)  |     X/X      |  X    |
-|        Spatial exponential      |     X        |  X    |
+| Covariance structures              | `{mmrm}` | `PROC MIXED` |
+|:-----------------------------------|:--------:|:------------:|
+| Unstructured (Unweighted/Weighted) |   X/X    |     X/X      |
+| Toeplitz (hetero/homo)             |   X/X    |     X/X      |
+| Compound symmetry (hetero/homo)    |   X/X    |     X/X      |
+| Auto-regressive (hetero/homo)      |   X/X    |     X/X      |
+| Ante-dependence (hetero/homo)      |   X/X    |      X       |
+| Spatial exponential                |    X     |      X       |
 
 ## Degrees of Freedom Methods
 
-|       Method     |  `{mmrm}`      | `PROC MIXED` |
-|:---------------- |:----------:|:---:|
-|       Contain         |     X*     |  X  |
-|       Between/Within  |     X*     |  X  |
-|       Residual        |     X*     |  X  |
-|       Satterthwaite   |     X      |  X  |
-|       Kenward-Roger   |     X      |  X  |
-|       Kenward-Roger (Linear)**   |  X|  X  |
+| Method                     | `{mmrm}` | `PROC MIXED` |
+|:---------------------------|:--------:|:------------:|
+| Contain                    |   X\*    |      X       |
+| Between/Within             |   X\*    |      X       |
+| Residual                   |   X\*    |      X       |
+| Satterthwaite              |    X     |      X       |
+| Kenward-Roger              |    X     |      X       |
+| Kenward-Roger (Linear)\*\* |    X     |      X       |
 
-*Available through the `emmeans` package.
+\*Available through the `emmeans` package.
 
-**This is not equivalent to the KR2 setting in `PROC MIXED`
+\*\*This is not equivalent to the KR2 setting in `PROC MIXED`
 
 ## Contrasts/LSMEANS
 
@@ -218,15 +233,15 @@ Contrasts and LSMeans estimates are available in `mmrm` using
 
 ::: columns
 ::: {.column width="70%"}
-  - `mmrm::df_1d`, `mmrm::df_md` 
-  - S3 method that is compatible with `emmeans`
-  - LS means difference can be produced through emmeans (`pairs` method)
-  - Degrees of freedom method is passed from `mmrm` to `emmeans`
-  - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
+-   `mmrm::df_1d`, `mmrm::df_md`
+-   S3 method that is compatible with `emmeans`
+-   LS means difference can be produced through emmeans (`pairs` method)
+-   Degrees of freedom method is passed from `mmrm` to `emmeans`
+-   By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
 :::
 
 ::: {.column width="30%"}
-:::{.callout-note}
+::: callout-note
 These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax08.htm) statement in `PROC MIXED`.
 :::
 :::
