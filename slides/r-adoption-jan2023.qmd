@@ -82,6 +82,13 @@ editor: visual
 :::
 :::
 
+## Before creating a new package
+
+- First try to improve existing package
+  - Here we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+  - But it did not work
+- Think about long term maintenance and responsibility
+
 ## Idea with some Details
 
 -   Because `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
