@@ -247,7 +247,7 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
 ## SWE WG Long Term Perspective
 
 -   Software engineering is a critical competence in producing high-quality statistical software
--   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   A lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
 -   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
 
 ## What's next with {mmrm} & SWEWG
