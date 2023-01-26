@@ -244,7 +244,7 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
 :::
 :::
 
-## SWEWG Long Term Perspective
+## SWE WG Long Term Perspective
 
 -   Software engineering is a critical competence in producing high-quality statistical software
 -   A lot of work need to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
