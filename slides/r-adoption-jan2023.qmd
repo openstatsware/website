@@ -257,7 +257,7 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
     -   Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop
     -   Video series on best practices for software engineering ([link](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS))
     
-## New packages SWE is Working On
+## New packages SWE WG is Working On
 
 -   sasr
 -   HTA
