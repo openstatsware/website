@@ -427,6 +427,174 @@
     "text": "Brought to you by the Software Engineering Working Group\n\n\n\n\n\n\nrconsortium.github.io/asa-biop-swe-wg"
   },
   {
+    "objectID": "slides/r-adoption-jan2023.html#agenda",
+    "href": "slides/r-adoption-jan2023.html#agenda",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroduction and Overview of SWE WG\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nLong Term Perspective\nComparing MMRM R Package to SAS - Demo\n\nClosing and Next Steps"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#who-we-are",
+    "href": "slides/r-adoption-jan2023.html#who-we-are",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Who we are",
+    "text": "Who we are\n\nBen Arancibia: Director of Data Science at GSK sitting within Statistical Data Sciences Innovation Hub\nYoni Sidi: Director of Modeling and Simulation at Sage Therapeutics"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#software-engineering-in-biostatistics",
+    "href": "slides/r-adoption-jan2023.html#software-engineering-in-biostatistics",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Software Engineering in Biostatistics",
+    "text": "Software Engineering in Biostatistics\n\nOpen-source software has gained increasing popularity in Biostatistics over the last two decades\n\nPros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation\nCons: users face huge variability in software quality, in particular reliability, efficiency and maintainability\n\nDeveloping high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#how-to-deal-with-these-issues",
+    "href": "slides/r-adoption-jan2023.html#how-to-deal-with-these-issues",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "How to deal with these issues?",
+    "text": "How to deal with these issues?\n\nTo deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the “Software Engineering Working Group” (SWE WG) to look R packages from a statistical point of view"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#software-engineering-working-group-swe-wg",
+    "href": "slides/r-adoption-jan2023.html#software-engineering-working-group-swe-wg",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Software Engineering working group (SWE WG)",
+    "text": "Software Engineering working group (SWE WG)\n\nAn official working group of the ASA Biopharmaceutical Section\nFormed in August 2022\nCross-industry collaboration with more than 30 members from over 20 organizations\nHome page at rconsortium.github.io/asa-biop-swe-wg"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#goals",
+    "href": "slides/r-adoption-jan2023.html#goals",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Goals",
+    "text": "Goals\n\nPrimary Goal: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps\nSecondary Goal: Develop and disseminate best practices for engineering high-quality open-source statistical software"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#swe-wg-activities",
+    "href": "slides/r-adoption-jan2023.html#swe-wg-activities",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "SWE WG Activities",
+    "text": "SWE WG Activities\n\nFirst R package mmrm was published on CRAN in October 2022 and updated in December\n\nWe aim to estabilish this package as a new standard for fitting mixed models for repeated measures (MMRM)\nWe have been developing and adopting best practices for software in the mmrm package, and open sourced it at github.com/openpharma/mmrm\nCurrently under active development to add more features"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#why-do-we-need-a-package-for-mmrm",
+    "href": "slides/r-adoption-jan2023.html#why-do-we-need-a-package-for-mmrm",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Why do we need a package for MMRM?",
+    "text": "Why do we need a package for MMRM?\n\n\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially though that the MMRM problem was solved by using a combination of lme4 and lmerTest\n\n\n\nLearned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\ntried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#before-creating-a-new-package",
+    "href": "slides/r-adoption-jan2023.html#before-creating-a-new-package",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Before creating a new package",
+    "text": "Before creating a new package\n\nFirst try to improve existing package\n\nHere we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom\nBut it did not work\n\nThink about long term maintenance and responsibility"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#idea-with-some-details",
+    "href": "slides/r-adoption-jan2023.html#idea-with-some-details",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Idea with some Details",
+    "text": "Idea with some Details\n\nBecause glmmTMB is always using a random effects representation, we cannot have a real unstructured model (uses \\(\\sigma = \\varepsilon > 0\\) trick)\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#advantages-of-tmb",
+    "href": "slides/r-adoption-jan2023.html#advantages-of-tmb",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Advantages of TMB",
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#why-its-not-just-another-package",
+    "href": "slides/r-adoption-jan2023.html#why-its-not-just-another-package",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Why it’s not just another package",
+    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry that is supported by American Statistical Association\nPackage is part of the mission, but to emphasize our goal is to push out information on practices for engineering high-quality open-source statistical software"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#comparing-sas-and-r",
+    "href": "slides/r-adoption-jan2023.html#comparing-sas-and-r",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Comparing SAS and R",
+    "text": "Comparing SAS and R\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.\n\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compares the PROC MIXED procedure to the {mmrm} package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nEstimation Methods\n\n\n\nCovariance structures\nDegrees of Freedom\nContrasts"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#documentation",
+    "href": "slides/r-adoption-jan2023.html#documentation",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Documentation",
+    "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#unit-testing",
+    "href": "slides/r-adoption-jan2023.html#unit-testing",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Unit Testing",
+    "text": "Unit Testing\nOne major advantage of the {mmrm} over PROC MIXED is that the unit testing in {mmrm} is transparent. It uses the {testthat} framework with {covr} to communicate the testing coverage. Unit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\nNote\n\n\nThe integration tests in {mmrm} are set to a tolerance of 10e^-3 when compared to SAS outputs."
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#estimation-methods",
+    "href": "slides/r-adoption-jan2023.html#estimation-methods",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Estimation Methods",
+    "text": "Estimation Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nML\nX\nX\n\n\nREML\nX\nX"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#covariance-structures",
+    "href": "slides/r-adoption-jan2023.html#covariance-structures",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Covariance structures",
+    "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structure {mmrm} is easily extensible via feature requests in the GitHub repository."
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#covariance-structures-details",
+    "href": "slides/r-adoption-jan2023.html#covariance-structures-details",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Covariance structures details",
+    "text": "Covariance structures details\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#degrees-of-freedom-methods",
+    "href": "slides/r-adoption-jan2023.html#degrees-of-freedom-methods",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Degrees of Freedom Methods",
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not equivalent to the KR2 setting in PROC MIXED"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#contrastslsmeans",
+    "href": "slides/r-adoption-jan2023.html#contrastslsmeans",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Contrasts/LSMEANS",
+    "text": "Contrasts/LSMEANS\nContrasts and LSMeans estimates are available in mmrm using\n\n\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does.\n\n\n\n\n\n\n\n\nNote\n\n\nThese are comparable to the LSMEANS statement in PROC MIXED."
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#swe-wg-long-term-perspective",
+    "href": "slides/r-adoption-jan2023.html#swe-wg-long-term-perspective",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "SWE WG Long Term Perspective",
+    "text": "SWE WG Long Term Perspective\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#whats-next-with-mmrm-swewg",
+    "href": "slides/r-adoption-jan2023.html#whats-next-with-mmrm-swewg",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "What’s next with {mmrm} & SWEWG",
+    "text": "What’s next with {mmrm} & SWEWG\n\nPrepare public training materials to disseminate best practice for software engineering in the Biostatistics community\n\nAt the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials\nOrganize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop\nVideo series on best practices for software engineering (link)"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#new-packages-swe-wg-is-working-on",
+    "href": "slides/r-adoption-jan2023.html#new-packages-swe-wg-is-working-on",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "New packages SWE WG is Working On",
+    "text": "New packages SWE WG is Working On\n\nsasr\nHTA\nBayesian MMRM\n\n\n\n\n\n\n\nNote\n\n\nHave an interest in working on these topics? Come work with us, information on the SWE WG can be found here: ASA BIOP SWE WG"
+  },
+  {
+    "objectID": "slides/r-adoption-jan2023.html#thank-you-questions",
+    "href": "slides/r-adoption-jan2023.html#thank-you-questions",
+    "title": "Introducting the Software Engineering Working Group and {mmrm}",
+    "section": "Thank you! Questions?",
+    "text": "Thank you! Questions?"
+  },
+  {
     "objectID": "videos.html",
     "href": "videos.html",
     "title": "Videos",
