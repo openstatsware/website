@@ -2,7 +2,9 @@
 title: "Presentations"
 ---
 
--   *Introducing the Software Engineering working group: Who we are and what we build together*. R Govys Meetup, 19 Jan 2023. 
+-   *Introducing the Software Engineering working group and {mmrm}*. R/Adoption Series Webinar, 26 Jan 2023.
+    -   [slides](slides/r-adoption-jan2023.html)
+-   *Introducing the Software Engineering working group: Who we are and what we build together*. R Govys Meetup, 19 Jan 2023.
     -   [slides](slides/r-govys-jan2023.html)
 -   *Statistical software for continuous longitudinal endpoints: Introducing the R package `mmrm`*. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.
     -   [slides](slides/bbs-efspi-mmrm-dec2022.html)
