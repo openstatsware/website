@@ -1,0 +1,22 @@
+---
+title: "HTA-R workstream"
+---
+
+**Lead**: Gregory Chen (MSD)
+
+**Objective**: 
+This workstream in SWE WG unites voluntary statistical software engineers that are experienced in HTA (Health Technology Assessment) or highly-interested in this area. 
+The team aims to develop open-source R tools of good quality in the right formats (R pkg, apps, user guides) that are useful to both manufacturers and payers, to support crucial analytic topics in HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to [EUnetHTA](https://www.eunethta.eu/).
+
+The workstream also works within a broader group (link tbd) of business and methodological SMEs in HTA and Market Access space of our pharma industry, to ensure this open-source HTA pipeline of R tools is relevant over time and the tools can be adopted easily by business and payers.   
+
+Current Work Plan: link tbd
+Github repo: [link](https://www.github.io/hta-pharma/).
+
+
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.R", sep = ""))
+read.members("HTA")
+
+```
