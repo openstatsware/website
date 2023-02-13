@@ -24,4 +24,4 @@ We covered topics from R package basics over development workflows, quality, and
 
 We thank the BBS for supporting the workshop, Roche for hosting the event, and the participants for a lively and inspiring atmosphere.
 
-The course materials are online under CC-BY license [here](https://openpharma.github.io/workshop-r-swe/) and the source code for all materials is available [here](https://github.com/openpharma/workshop-r-swe). We might migrate them to an organisational repository soon.
+The course materials are online under CC-BY license [here](https://openpharma.github.io/workshop-r-swe/) and the source code for all materials is available [here](https://github.com/openpharma/workshop-r-swe).
