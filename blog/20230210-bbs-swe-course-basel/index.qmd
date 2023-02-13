@@ -8,7 +8,13 @@ categories: [news]
 image: "topics_and_people.jpg"
 ---
 
-On Friday February 10, Daniel, Friedrich, and Kevin held a one-day workshop on good software engineering practice for R (GSWEP4R) in Basel.
+On Friday February 10, Daniel, Friedrich, and Kevin held
+a one-day workshop on good software engineering practice for R
+(GSWEP4R) in Basel.
+In order to achieve the best learning experience for
+participants, we only offered this course face to face without dialing in
+option - and the 50 seats had been booked out quickly within days after the
+course had been announced.
 
 ::: {layout-nrow="2" fig-align="center"}
 ![](Daniel.jpg){width="50%"}
@@ -20,8 +26,22 @@ On Friday February 10, Daniel, Friedrich, and Kevin held a one-day workshop on g
 ![](testing.jpg){width="50%"}
 :::
 
-We covered topics from R package basics over development workflows, quality, and modern collaboration tools to publishing. We consider democratizing these skills crucial to foster a vibrant R package ecosystem in biostatics. Even if you do not intend to write your own package, a solid understanding of how all of this fits together enables you to participate in the community and positively influence future development by reporting bugs, giving feedback, or bringing your methodological expertise to the table of open-source development.
+We covered topics from R package basics over development workflows, quality,
+and modern collaboration tools to publishing. We consider democratizing these
+skills crucial to foster a vibrant R package ecosystem in biostatics.
+Even if you do not intend to write your own package,
+a solid understanding of how all of this fits together enables you to
+participate in the community and positively influence future development
+by reporting bugs, giving feedback, or bringing your methodological expertise
+to the table of open-source development.
 
-We thank the BBS for supporting the workshop, Roche for hosting the event, and the participants for a lively and inspiring atmosphere.
+We thank the BBS for supporting the workshop, Roche for hosting the event,
+and the participants for a lively and inspiring atmosphere.
 
-The course materials are online under CC-BY license [here](https://openpharma.github.io/workshop-r-swe/) and the source code for all materials is available [here](https://github.com/openpharma/workshop-r-swe).
+The course materials are online under CC-BY license
+[here](https://openpharma.github.io/workshop-r-swe/) and the source code for
+all materials is available [here](https://github.com/openpharma/workshop-r-swe).
+
+We also plan to repeat the course in other locations in the future
+- please reach out if you are interested to work with the SWE WG to
+host a course!
