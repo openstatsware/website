@@ -32,3 +32,4 @@ inspiring atmosphere.
 The course materials are online under CC-BY license [here](https://kkmann.github.io/workshop-r-swe/) and the source code for
 all materials is available [here](https://github.com/kkmann/workshop-r-swe).
 We might migrate them to an organisational repository soon.
+We also plan to repeat the course in other locations in the future - please reach out if you are interested to work with the SWE WG to host a course!
