@@ -1,0 +1,34 @@
+---
+title: "Workshop on good software engineering practice for R"
+subtitle: "Teaching foundations of SWE for statisticians with R"
+author: "SWE WG"
+description: Under the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.
+date: "2023-02-13"
+categories: [news]
+image: "topics_and_people.jpg"
+---
+
+On Friday February 10, Daniel, Friedrich, and Kevin held
+a one-day workshop on good software engineering practice for R
+(GSWEP4R) in Basel.
+
+![](topics_and_people.jpg){width=90% fig-align="center"}
+
+We covered topics from R package basics over development workflows,
+quality, and modern collaboration tools to publishing.
+We consider democratizing these skills crucial to foster
+a vibrant R package ecosystem in biostatics.
+Even if you do not intend to write your own package,
+a solid understanding of how all of this fits together
+enables you to participate in the community and positively
+influence future development by reporting bugs, giving feedback,
+or bringing your methodological expertise to the table of
+open-source development.
+
+We thank the BBS for supporting the workshop, Roche for
+hosting the event, and the participants for a lively and
+inspiring atmosphere.
+
+The course materials are online under CC-BY license [here](https://kkmann.github.io/workshop-r-swe/) and the source code for
+all materials is available [here](https://github.com/kkmann/workshop-r-swe).
+We might migrate them to an organisational repository soon.
