@@ -12,3 +12,4 @@ title: "Presentations"
 -   *Statistical Software Engineering 101*. Video blog series on ASA BIOP Youtube channel.
     -   Unit Testing for R Developers
         -   1: The Basics \[[slides](slides/unit_testing_basic.html), [video](https://www.youtube.com/watch?v=mfLXiP4A9CA)\]
+        -   2: Advancing your skills \[[slides](slides/unit_testing_advanced.html)\]
