@@ -1,18 +1,19 @@
 ---
 title: "Unit Testing for R Developers"
 subtitle: "2: Advancing your skills"
-author: "Daniel Sabanes Bove, Jonathan Sidi"
+author: "Jonathan Sidi, Daniel Sabanes Bove"
 date: ""
 format: 
   revealjs:
-    incremental: false
+    incremental: true
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
+    margin: 0.05
 title-slide-attributes: 
   data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
-  data-background-size: 20%
+  data-background-size: 10%
   data-background-opacity: "0.9"
-  data-background-position: 50% 5%
+  data-background-position: 92% 30%
 editor_options: 
   chunk_output_type: console
 ---
@@ -37,6 +38,8 @@ editor_options:
 -   **Expect**: Define the expected result.
 -   **Compare**: Compare the actual with the expected result.
 
+. . .
+
 The code should test a specific characteristic or functionality of the package.
 
 Because if your action does too many things at once, you have to search longer for the bug.
@@ -49,15 +52,16 @@ Unit testing is a method to communicate to various stakeholders the package requ
 
 ## Test Flavors
 
-There are different flavors of unit tests that we write
+There are different flavors of unit tests that we write:
 
 -   **Developer Tests**
     -   Tests that help the software developer speed up and iterate over different versions
 -   **Quality Assurance (QA) Tests**
     -   Proving that the package isn't broken or that functions are returning the expected answers
 
-## Test Flavors
+## Test Flavors (cont'd)
 
+::: nonincremental
 ::: columns
 ::: {.column width="50%"}
 **Developer Tests**
@@ -81,6 +85,7 @@ There are different flavors of unit tests that we write
 -   Catch performance degradation
 :::
 :::
+::: 
 
 ## Planning tests for success
 
@@ -127,34 +132,33 @@ This will serve two main purposes:
 2.  **Help out** with refactoring or features on GitHub repositories:
     -   Developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.
     -   The process of merging a pull request will teach you hands on.
-3.  **Clone repositories** of packages of package developers you are familiar with:
+3.  **Clone repositories** of packages you are familiar with:
     -   Run the tests you find there.
     -   You will learn a lot about testing, coding and strategies.
-4.  **Read books** to learn testing strategies.
 
 ## What can and should be unit tested?
 
 1.  Script
-  - Single files with functions can have unit tests built for them
+    - Single files with functions can have unit tests
 2.  Packages
-  - This is the standard object to write tests for
+    - This is the standard object to write tests for
 3.  Shiny apps
-  - Shiny app UI and reactivity can be tested
+    - Shiny app UI and reactivity can be tested
 4.  Data derivation
-  - Testing data preprocessing pipelines for expected characteristics of columns
+    - Testing data preprocessing pipelines for expected characteristics of columns
 
 ## Overview of unit testing frameworks
 
-1.  script/packages: testthat, tinytest, box, Runit
-2.  shiny apps: shinytest2, reactor, crrry
-3.  data: pointblank, assertr, validate, dataReporter
+1.  script/packages: `testthat`, `tinytest`, `box`, `Runit`
+2.  shiny apps: `shinytest2`, `reactor`, `crrry`
+3.  data: `pointblank`, `assertr`, `validate`, `dataReporter`
 
 ## Communicating Tests: Coverage
 
-1.  covr
+1.  [`covr`](https://cran.r-project.org/package=covr)
   - R package that evaluates the % of lines of code that are tested
-2.  covrpage
-  - R package that summarizes covr statistics into simple reports that can be shared
+2.  [`covrpage`](https://github.com/yonicd/covrpage)
+  - R package that summarizes `covr` statistics into simple reports that can be shared
 
 ## Mapping the Logic
 
@@ -198,11 +202,20 @@ ggplot() +
   theme_void()
 ```
 
-todo: move "no tests" to low coverage. explain before what snapshot tests are explain what bad tests are?
+<!-- Explain before what snapshot tests and explain what bad tests are -->
 
-## Tying it together with automation
+## Summary
 
-todo: consider moving to outlook in summary? this would be separate talk
+- Philosophy of testing:
+  - Aggregate of all tests should cover the whole functionality
+  - But each test on its own should be specific and only have small surface
+  - Developer vs. Quality Assurance Tests
+  - Not just R packages: also scripts, Shiny apps, data
+- How to communicate test coverage:
+  - Use `covr` to calculate coverage
+  - Use `covrpage` to create a summary report
+
+## Outlook: Automating Tests
 
 ::: columns
 ::: {.column width="65%"}
@@ -213,10 +226,6 @@ When developing through a version control platform like GitHub, GitLab, Bitbucke
 ![](https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif)
 :::
 :::
-
-## Summary
-
-todo
 
 ## Brought to you by the Software Engineering Working Group
 
