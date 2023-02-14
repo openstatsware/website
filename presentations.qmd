@@ -2,6 +2,8 @@
 title: "Presentations"
 ---
 
+-   *Workshop on Good Software Engineering Practice for R*. BBS workshop, Basel, 10 Feb 2023.
+    -   [slides](https://openpharma.github.io/workshop-r-swe/listing.html)
 -   *Introducing the Software Engineering working group and {mmrm}*. R/Adoption Series Webinar, 26 Jan 2023.
     -   [slides](slides/r-adoption-jan2023.html)
 -   *Introducing the Software Engineering working group: Who we are and what we build together*. R Govys Meetup, 19 Jan 2023.
