@@ -10,7 +10,48 @@
 <atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
 <generator>quarto-1.2.269</generator>
-<lastBuildDate>Sun, 20 Nov 2022 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Feb 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Workshop on good software engineering practice for R</title>
+  <dc:creator>SWE WG</dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>On Friday February 10, Daniel, Friedrich, and Kevin held a one-day workshop on good software engineering practice for R (GSWEP4R) in Basel. In order to achieve the best learning experience for participants, we only offered this course face to face without dialing in option - and the 50 seats had been booked out quickly within days after the course had been announced.</p>
+<div class="quarto-layout-panel" data-fig-align="center">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Friedrich.jpg" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Kevin.jpg" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/testing.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>We covered topics from R package basics over development workflows, quality, and modern collaboration tools to publishing. We consider democratizing these skills crucial to foster a vibrant R package ecosystem in biostatics. Even if you do not intend to write your own package, a solid understanding of how all of this fits together enables you to participate in the community and positively influence future development by reporting bugs, giving feedback, or bringing your methodological expertise to the table of open-source development.</p>
+<p>We thank the BBS for supporting the workshop, Roche for hosting the event, and the participants for a lively and inspiring atmosphere.</p>
+<p>The course materials are online under CC-BY license <a href="https://openpharma.github.io/workshop-r-swe/">here</a> and the source code for all materials is available <a href="https://github.com/openpharma/workshop-r-swe">here</a>.</p>
+<p>We also plan to repeat the course in other locations in the future - please reach out if you are interested to work with the SWE WG to host a course!</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/index.html</guid>
+  <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Visualizing successful collaboration</title>
   <dc:creator>SWE WG</dc:creator>

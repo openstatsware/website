@@ -4,14 +4,14 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Introducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]"
+    "text": "Workshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
     "section": "",
-    "text": "Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see about us.\n\nLatest Updates:\n\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering"
+    "text": "Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see about us.\n\nLatest Updates:\n\n2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report"
   },
   {
     "objectID": "join_us.html",
@@ -606,7 +606,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+    "text": "2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
   },
   {
     "objectID": "mmrm_R_package.html",
@@ -627,7 +627,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Visualizing successful collaboration\n\n\nA visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\nSoftware Engineering in Biostatistics - Towards Improving a Critical Competence\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\nNew ASA BIOP working group on Software Engineering\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
+    "text": "Workshop on good software engineering practice for R\n\n\nTeaching foundations of SWE for statisticians with R\n\n\n\n\nnews\n\n\n\n\nUnder the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.\n\n\n\n\n\n\nFeb 13, 2023\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\nVisualizing successful collaboration\n\n\nA visual time lapse of six months of work on the mmrm R package\n\n\n\n\nnews\n\n\n\n\nCommunicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.\n\n\n\n\n\n\nNov 20, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\nSoftware Engineering in Biostatistics - Towards Improving a Critical Competence\n\n\nArticle introducing the SWE WG in BIOP Report\n\n\n\n\nnews\n\n\n\n\nWe wrote an article for the Biopharmaceutical Report introducing the SWE WG.\n\n\n\n\n\n\nNov 16, 2022\n\n\nSWE WG\n\n\n\n\n\n\n  \n\n\n\n\nNew ASA BIOP working group on Software Engineering\n\n\nFostering open source code collaboration within Biostatistics\n\n\n\n\nnews\n\n\n\n\nWe are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).\n\n\n\n\n\n\nOct 24, 2022\n\n\nSWE WG\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/biop_report/index.html",
@@ -649,6 +649,13 @@
     "title": "Visualizing successful collaboration",
     "section": "",
     "text": "It can be hard to communicate the benefit of open-source collaboration, the effort that goes into it, and its enormous impact on data science, to a non-technical audience. Visualizations can be very helpful here and we created a video showing the first six months of development of the mmrm R package. The video is based on the cumulative commit history of the git repository where the package development happens. It shows contributions to the “main” branch of the repository and how contributors add or edit files. Files are visualized by dots and arranged in a tree structure defined by the folders in the repository. The video is optimized for full HD quality.\n\n\nOnly direct code contributions are shown. This does not include, ideation, community organization, code reviews, bug reporting, or answering questions, and promoting the package - all of which are important to make such a project a long-term success.\nIf you want to co-star in the next iteration of the video, check out the mmrm git repository, get in touch and contribute! Our contribution guidelines can be found here.\nWe used gource to create the video following an example and guide by Nan Xiao."
+  },
+  {
+    "objectID": "blog/20230210-bbs-swe-course-basel/index.html",
+    "href": "blog/20230210-bbs-swe-course-basel/index.html",
+    "title": "Workshop on good software engineering practice for R",
+    "section": "",
+    "text": "On Friday February 10, Daniel, Friedrich, and Kevin held a one-day workshop on good software engineering practice for R (GSWEP4R) in Basel. In order to achieve the best learning experience for participants, we only offered this course face to face without dialing in option - and the 50 seats had been booked out quickly within days after the course had been announced.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe covered topics from R package basics over development workflows, quality, and modern collaboration tools to publishing. We consider democratizing these skills crucial to foster a vibrant R package ecosystem in biostatics. Even if you do not intend to write your own package, a solid understanding of how all of this fits together enables you to participate in the community and positively influence future development by reporting bugs, giving feedback, or bringing your methodological expertise to the table of open-source development.\nWe thank the BBS for supporting the workshop, Roche for hosting the event, and the participants for a lively and inspiring atmosphere.\nThe course materials are online under CC-BY license here and the source code for all materials is available here.\nWe also plan to repeat the course in other locations in the future - please reach out if you are interested to work with the SWE WG to host a course!"
   },
   {
     "objectID": "people.html",
