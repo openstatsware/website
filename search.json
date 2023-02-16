@@ -4,7 +4,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Workshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]"
+    "text": "Workshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
   },
   {
     "objectID": "index.html",
@@ -53,7 +53,7 @@
     "href": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
     "title": "Unit Testing for R Developers",
     "section": "What is the structure of unit tests?",
-    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result.\n\nThe code should test a specific characteristic or functionality of the package.\nBecause if your action does too many things at once, you have to search longer for the bug."
+    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result.\n\n\nThe code should test a specific characteristic or functionality of the package.\nBecause if your action does too many things at once, you have to search longer for the bug."
   },
   {
     "objectID": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
@@ -67,21 +67,21 @@
     "href": "slides/unit_testing_advanced.html#test-flavors",
     "title": "Unit Testing for R Developers",
     "section": "Test Flavors",
-    "text": "Test Flavors\nThere are different flavors of unit tests that we write\n\nDeveloper Tests\n\nTests that help the software developer speed up and iterate over different versions\n\nQuality Assurance (QA) Tests\n\nProving that the package isn’t broken or that functions are returning the expected answers"
+    "text": "Test Flavors\nThere are different flavors of unit tests that we write:\n\nDeveloper Tests\n\nTests that help the software developer speed up and iterate over different versions\n\nQuality Assurance (QA) Tests\n\nProving that the package isn’t broken or that functions are returning the expected answers"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#test-flavors-1",
-    "href": "slides/unit_testing_advanced.html#test-flavors-1",
+    "objectID": "slides/unit_testing_advanced.html#test-flavors-contd",
+    "href": "slides/unit_testing_advanced.html#test-flavors-contd",
     "title": "Unit Testing for R Developers",
-    "section": "Test Flavors",
-    "text": "Test Flavors\n\n\nDeveloper Tests\nRemove Fear of Change\n\nAssist with package design\nGuide for refactoring\n\nReduce Development Time\n\nExplain code to others\nPinpoint errors\nMinimize debugging/manual testing\n\n\nQA Tests\n\nEncode object requirements\nCatch performance degradation"
+    "section": "Test Flavors (cont’d)",
+    "text": "Test Flavors (cont’d)\n\n\n\nDeveloper Tests\nRemove Fear of Change\n\nAssist with package design\nGuide for refactoring\n\nReduce Development Time\n\nExplain code to others\nPinpoint errors\nMinimize debugging/manual testing\n\n\nQA Tests\n\nEncode object requirements\nCatch performance degradation"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success",
     "href": "slides/unit_testing_advanced.html#planning-tests-for-success",
     "title": "Unit Testing for R Developers",
     "section": "Planning tests for success",
-    "text": "Planning tests for success\n\nWrite tests to evaluate the exported behavior that the package user would invoke.\n\nSets up the ability to refactor code.\nTests will not have to be rewritten as the package iterates and improves.\n\nWrite tests that you will not need to update or maintain because of a dependency.\n\nBecause you can’t control how other maintainers are developing packages and managing their lifecycle."
+    "text": "Planning tests for success\n\nWrite tests to evaluate the exported behavior that the package user would invoke.\n\nSets up the ability to refactor code.\nTests will not have to be rewritten as the package iterates and improves.\n\nWrite tests that you will not need to update or maintain because of a dependency.\n\nBecause you can’t control how other maintainers are developing packages and managing their lifecycle.\nNote: Having unit tests allows dependency changes to be detected earlz enough - e.g. CRAN is running reverse dependency checks before accepting new package versions"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#testing-surface-areas",
@@ -102,49 +102,56 @@
     "href": "slides/unit_testing_advanced.html#some-strategies-for-learning",
     "title": "Unit Testing for R Developers",
     "section": "Some strategies for learning",
-    "text": "Some strategies for learning\n\nPair up with experienced developer buddies.\nHelp out with refactoring or features on GitHub repositories:\n\nDevelopers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.\nThe process of merging a pull request will teach you hands on.\n\nClone repositories of packages of package developers you are familiar with:\n\nRun the tests you find there.\nYou will learn a lot about testing, coding and strategies.\n\nRead books to learn testing strategies."
+    "text": "Some strategies for learning\n\nPair up with experienced developer buddies.\nHelp out with refactoring or features on GitHub repositories:\n\nDevelopers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.\nThe process of merging a pull request will teach you hands on.\n\nClone repositories of packages you are familiar with:\n\nRun the tests you find there.\nYou will learn a lot about testing, coding and strategies."
   },
   {
     "objectID": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
     "href": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
     "title": "Unit Testing for R Developers",
     "section": "What can and should be unit tested?",
-    "text": "What can and should be unit tested?\ntodo: add more details\n\nScript\nPackages\nShiny apps\nData derivation"
+    "text": "What can and should be unit tested?\n\nScript\n\nSingle files with functions can have unit tests\n\nPackages\n\nThis is the standard object to write tests for\n\nShiny apps\n\nShiny app UI and reactivity can be tested\n\nData derivation\n\nTesting data preprocessing pipelines for expected characteristics of columns"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
     "href": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
     "title": "Unit Testing for R Developers",
     "section": "Overview of unit testing frameworks",
-    "text": "Overview of unit testing frameworks\n\nscript/packages: testthat, tinytest, box, Runit\nshiny apps: shinytest2, reactor, crrry\ndata: pointblank, assertr, validate, dataReporter"
+    "text": "Overview of unit testing frameworks\n\nscript/packages: testthat, tinytest, box, Runit\nshiny apps: shinytest2, reactor, crrry\ndata: pointblank, assertr, validate, dataReporter\nplots: vdiffr"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#testing-plot-functions",
+    "href": "slides/unit_testing_advanced.html#testing-plot-functions",
+    "title": "Unit Testing for R Developers",
+    "section": "Testing plot functions",
+    "text": "Testing plot functions\n\nvdiffr package allows to save vector graphics file of the expected plot outcome\nworks for both base plots as well as ggplots\nBeware of false positive test failures though\n\noperating systems can lead to slightly different plot outcomes\nrequires manual visual checks\n\nAlternative for ggplot:\n\nuse ggplot2::layer_data() function to extract layer information\nuse that for comparisons in tests instead of vector graphics"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#communicating-tests-coverage",
     "href": "slides/unit_testing_advanced.html#communicating-tests-coverage",
     "title": "Unit Testing for R Developers",
     "section": "Communicating Tests: Coverage",
-    "text": "Communicating Tests: Coverage\n\ncovr\ncovrpage\n\ntodo: add more details here"
+    "text": "Communicating Tests: Coverage\n\ncovr\n\n\nR package that evaluates the % of lines of code that are tested\nUse covr::package_coverage() to analyze current package coverage\n\n\ncovrpage\n\n\nR package that summarizes covr statistics into simple reports that can be shared\nUse covrpage::covrpage() to create the report page"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#mapping-the-logic",
     "href": "slides/unit_testing_advanced.html#mapping-the-logic",
     "title": "Unit Testing for R Developers",
     "section": "Mapping the Logic",
-    "text": "Mapping the Logic\n\ntodo: move “no tests” to low coverage. explain before what snapshot tests are explain what bad tests are?"
-  },
-  {
-    "objectID": "slides/unit_testing_advanced.html#tying-it-together-with-automation",
-    "href": "slides/unit_testing_advanced.html#tying-it-together-with-automation",
-    "title": "Unit Testing for R Developers",
-    "section": "Tying it together with automation",
-    "text": "Tying it together with automation\ntodo: consider moving to outlook in summary? this would be separate talk\n\n\nWhen developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests."
+    "text": "Mapping the Logic"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#summary",
     "href": "slides/unit_testing_advanced.html#summary",
     "title": "Unit Testing for R Developers",
     "section": "Summary",
-    "text": "Summary\ntodo"
+    "text": "Summary\n\nPhilosophy of testing:\n\nAggregate of all tests should cover the whole functionality\nBut each test on its own should be specific and only have small surface\nDeveloper vs. Quality Assurance Tests\nNot just R packages: also scripts, Shiny apps, data\n\nHow to communicate test coverage:\n\nUse covr to calculate coverage\nUse covrpage to create a summary report"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#outlook-automating-tests",
+    "href": "slides/unit_testing_advanced.html#outlook-automating-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "Outlook: Automating Tests",
+    "text": "Outlook: Automating Tests\n\n\nWhen developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests."
   },
   {
     "objectID": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",

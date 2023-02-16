@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
-  <meta name="author" content="Daniel Sabanes Bove, Jonathan Sidi">
+  <meta name="author" content="Jonathan Sidi, Daniel Sabanes Bove">
   <title>ASA BIOP SWE WG - Unit Testing for R Developers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -324,14 +324,14 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" data-background-opacity="0.9" data-background-position="50% 5%" data-background-size="20%" class="quarto-title-block center">
+<section id="title-slide" data-background-image="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" data-background-opacity="0.9" data-background-position="92% 30%" data-background-size="10%" class="quarto-title-block center">
   <h1 class="title">Unit Testing for R Developers</h1>
   <p class="subtitle">2: Advancing your skills</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Daniel Sabanes Bove, Jonathan Sidi 
+Jonathan Sidi, Daniel Sabanes Bove 
 </div>
 </div>
 </div>
@@ -342,8 +342,8 @@ Daniel Sabanes Bove, Jonathan Sidi
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li>Understand the philosophy behind unit testing and how it relates to other tests</li>
-<li>Gain more confidence in your testing framework by examining coverage</li>
+<li class="fragment">Understand the philosophy behind unit testing and how it relates to other tests</li>
+<li class="fragment">Gain more confidence in your testing framework by examining coverage</li>
 </ul>
 </div><div class="column" style="width:60%;">
 <p><img data-src="https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif"></p>
@@ -353,13 +353,15 @@ Daniel Sabanes Bove, Jonathan Sidi
 <section id="what-is-the-structure-of-unit-tests" class="slide level2">
 <h2>What is the structure of unit tests?</h2>
 <ul>
-<li><strong>Setup</strong>: Set up the inputs for the test.</li>
-<li><strong>Compute</strong>: Compute the result which will be tested.</li>
-<li><strong>Expect</strong>: Define the expected result.</li>
-<li><strong>Compare</strong>: Compare the actual with the expected result.</li>
+<li class="fragment"><strong>Setup</strong>: Set up the inputs for the test.</li>
+<li class="fragment"><strong>Compute</strong>: Compute the result which will be tested.</li>
+<li class="fragment"><strong>Expect</strong>: Define the expected result.</li>
+<li class="fragment"><strong>Compare</strong>: Compare the actual with the expected result.</li>
 </ul>
+<div class="fragment">
 <p>The code should test a specific characteristic or functionality of the package.</p>
 <p>Because if your action does too many things at once, you have to search longer for the bug.</p>
+</div>
 </section>
 <section id="who-do-you-write-tests-for" class="slide level2">
 <h2>Who do you write tests for?</h2>
@@ -368,20 +370,21 @@ Daniel Sabanes Bove, Jonathan Sidi
 </section>
 <section id="test-flavors" class="slide level2">
 <h2>Test Flavors</h2>
-<p>There are different flavors of unit tests that we write</p>
+<p>There are different flavors of unit tests that we write:</p>
 <ul>
-<li><strong>Developer Tests</strong>
+<li class="fragment"><strong>Developer Tests</strong>
 <ul>
-<li>Tests that help the software developer speed up and iterate over different versions</li>
+<li class="fragment">Tests that help the software developer speed up and iterate over different versions</li>
 </ul></li>
-<li><strong>Quality Assurance (QA) Tests</strong>
+<li class="fragment"><strong>Quality Assurance (QA) Tests</strong>
 <ul>
-<li>Proving that the package isn’t broken or that functions are returning the expected answers</li>
+<li class="fragment">Proving that the package isn’t broken or that functions are returning the expected answers</li>
 </ul></li>
 </ul>
 </section>
-<section id="test-flavors-1" class="slide level2">
-<h2>Test Flavors</h2>
+<section id="test-flavors-contd" class="slide level2">
+<h2>Test Flavors (cont’d)</h2>
+<div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Developer Tests</strong></p>
@@ -404,18 +407,20 @@ Daniel Sabanes Bove, Jonathan Sidi
 </ul>
 </div>
 </div>
+</div>
 </section>
 <section id="planning-tests-for-success" class="slide level2">
 <h2>Planning tests for success</h2>
 <ul>
-<li>Write tests to evaluate the exported behavior that the package user would invoke.
+<li class="fragment">Write tests to evaluate the exported behavior that the package user would invoke.
 <ul>
-<li>Sets up the ability to refactor code.</li>
-<li>Tests will not have to be rewritten as the package iterates and improves.</li>
+<li class="fragment">Sets up the ability to refactor code.</li>
+<li class="fragment">Tests will not have to be rewritten as the package iterates and improves.</li>
 </ul></li>
-<li>Write tests that you will not need to update or maintain because of a dependency.
+<li class="fragment">Write tests that you will not need to update or maintain because of a dependency.
 <ul>
-<li>Because you can’t control how other maintainers are developing packages and managing their lifecycle.</li>
+<li class="fragment">Because you can’t control how other maintainers are developing packages and managing their lifecycle.</li>
+<li class="fragment">Note: Having unit tests allows dependency changes to be detected earlz enough - e.g.&nbsp;CRAN is running reverse dependency checks before accepting new package versions</li>
 </ul></li>
 </ul>
 </section>
@@ -424,9 +429,9 @@ Daniel Sabanes Bove, Jonathan Sidi
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>When writing unit tests for functions it is important to take into account the surface area of the tests</li>
-<li>In this example we have three unit tests on <code>stats::mean.default</code></li>
-<li>Tests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure.</li>
+<li class="fragment">When writing unit tests for functions it is important to take into account the surface area of the tests</li>
+<li class="fragment">In this example we have three unit tests on <code>stats::mean.default</code></li>
+<li class="fragment">Tests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="test_flow_mean.png" style="width:75.0%"></p>
@@ -442,8 +447,8 @@ Daniel Sabanes Bove, Jonathan Sidi
 <p><img data-src="https://media.giphy.com/media/HlPP3bY8FRsWs/giphy.gif"></p>
 </div><div class="column" style="width:65%;">
 <ol type="1">
-<li><strong>Communicate the goals</strong> of the feature to others and to yourself.</li>
-<li><strong>Free to develop</strong> the idea while writing messy code and refactoring it while still controlling for the basic requirements.</li>
+<li class="fragment"><strong>Communicate the goals</strong> of the feature to others and to yourself.</li>
+<li class="fragment"><strong>Free to develop</strong> the idea while writing messy code and refactoring it while still controlling for the basic requirements.</li>
 </ol>
 </div>
 </div>
@@ -451,54 +456,107 @@ Daniel Sabanes Bove, Jonathan Sidi
 <section id="some-strategies-for-learning" class="slide level2">
 <h2>Some strategies for learning</h2>
 <ol type="1">
-<li><strong>Pair up</strong> with experienced developer buddies.</li>
-<li><strong>Help out</strong> with refactoring or features on GitHub repositories:
+<li class="fragment"><strong>Pair up</strong> with experienced developer buddies.</li>
+<li class="fragment"><strong>Help out</strong> with refactoring or features on GitHub repositories:
 <ul>
-<li>Developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.</li>
-<li>The process of merging a pull request will teach you hands on.</li>
+<li class="fragment">Developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.</li>
+<li class="fragment">The process of merging a pull request will teach you hands on.</li>
 </ul></li>
-<li><strong>Clone repositories</strong> of packages of package developers you are familiar with:
+<li class="fragment"><strong>Clone repositories</strong> of packages you are familiar with:
 <ul>
-<li>Run the tests you find there.</li>
-<li>You will learn a lot about testing, coding and strategies.</li>
+<li class="fragment">Run the tests you find there.</li>
+<li class="fragment">You will learn a lot about testing, coding and strategies.</li>
 </ul></li>
-<li><strong>Read books</strong> to learn testing strategies.</li>
 </ol>
 </section>
 <section id="what-can-and-should-be-unit-tested" class="slide level2">
 <h2>What can and should be unit tested?</h2>
-<p>todo: add more details</p>
 <ol type="1">
-<li>Script</li>
-<li>Packages</li>
-<li>Shiny apps</li>
-<li>Data derivation</li>
+<li class="fragment">Script
+<ul>
+<li class="fragment">Single files with functions can have unit tests</li>
+</ul></li>
+<li class="fragment">Packages
+<ul>
+<li class="fragment">This is the standard object to write tests for</li>
+</ul></li>
+<li class="fragment">Shiny apps
+<ul>
+<li class="fragment">Shiny app UI and reactivity can be tested</li>
+</ul></li>
+<li class="fragment">Data derivation
+<ul>
+<li class="fragment">Testing data preprocessing pipelines for expected characteristics of columns</li>
+</ul></li>
 </ol>
 </section>
 <section id="overview-of-unit-testing-frameworks" class="slide level2">
 <h2>Overview of unit testing frameworks</h2>
 <ol type="1">
-<li>script/packages: testthat, tinytest, box, Runit</li>
-<li>shiny apps: shinytest2, reactor, crrry</li>
-<li>data: pointblank, assertr, validate, dataReporter</li>
+<li class="fragment">script/packages: <code>testthat</code>, <code>tinytest</code>, <code>box</code>, <code>Runit</code></li>
+<li class="fragment">shiny apps: <code>shinytest2</code>, <code>reactor</code>, <code>crrry</code></li>
+<li class="fragment">data: <code>pointblank</code>, <code>assertr</code>, <code>validate</code>, <code>dataReporter</code></li>
+<li class="fragment">plots: <code>vdiffr</code></li>
 </ol>
+</section>
+<section id="testing-plot-functions" class="slide level2">
+<h2>Testing plot functions</h2>
+<ul>
+<li class="fragment"><code>vdiffr</code> package allows to save vector graphics file of the expected plot outcome</li>
+<li class="fragment">works for both base plots as well as <code>ggplot</code>s</li>
+<li class="fragment">Beware of false positive test failures though
+<ul>
+<li class="fragment">operating systems can lead to slightly different plot outcomes</li>
+<li class="fragment">requires manual visual checks</li>
+</ul></li>
+<li class="fragment">Alternative for <code>ggplot</code>:
+<ul>
+<li class="fragment">use <code>ggplot2::layer_data()</code> function to extract layer information</li>
+<li class="fragment">use that for comparisons in tests instead of vector graphics</li>
+</ul></li>
+</ul>
 </section>
 <section id="communicating-tests-coverage" class="slide level2">
 <h2>Communicating Tests: Coverage</h2>
 <ol type="1">
-<li>covr</li>
-<li>covrpage</li>
+<li class="fragment"><a href="https://cran.r-project.org/package=covr"><code>covr</code></a></li>
 </ol>
-<p>todo: add more details here</p>
+<ul>
+<li class="fragment">R package that evaluates the % of lines of code that are tested</li>
+<li class="fragment">Use <code>covr::package_coverage()</code> to analyze current package coverage</li>
+</ul>
+<ol start="2" type="1">
+<li class="fragment"><a href="https://github.com/yonicd/covrpage"><code>covrpage</code></a></li>
+</ol>
+<ul>
+<li class="fragment">R package that summarizes <code>covr</code> statistics into simple reports that can be shared</li>
+<li class="fragment">Use <code>covrpage::covrpage()</code> to create the report page</li>
+</ul>
 </section>
 <section id="mapping-the-logic" class="slide level2">
 <h2>Mapping the Logic</h2>
 
-<img data-src="unit_testing_advanced_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"><p>todo: move “no tests” to low coverage. explain before what snapshot tests are explain what bad tests are?</p>
+<!-- Explain before what snapshot tests and explain what bad tests are -->
+<img data-src="unit_testing_advanced_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li class="fragment">Philosophy of testing:
+<ul>
+<li class="fragment">Aggregate of all tests should cover the whole functionality</li>
+<li class="fragment">But each test on its own should be specific and only have small surface</li>
+<li class="fragment">Developer vs.&nbsp;Quality Assurance Tests</li>
+<li class="fragment">Not just R packages: also scripts, Shiny apps, data</li>
+</ul></li>
+<li class="fragment">How to communicate test coverage:
+<ul>
+<li class="fragment">Use <code>covr</code> to calculate coverage</li>
+<li class="fragment">Use <code>covrpage</code> to create a summary report</li>
+</ul></li>
+</ul>
 </section>
-<section id="tying-it-together-with-automation" class="slide level2">
-<h2>Tying it together with automation</h2>
-<p>todo: consider moving to outlook in summary? this would be separate talk</p>
+<section id="outlook-automating-tests" class="slide level2">
+<h2>Outlook: Automating Tests</h2>
 <div class="columns">
 <div class="column" style="width:65%;">
 <p>When developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests.</p>
@@ -506,10 +564,6 @@ Daniel Sabanes Bove, Jonathan Sidi
 <p><img data-src="https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif"></p>
 </div>
 </div>
-</section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
-<p>todo</p>
 </section>
 <section id="brought-to-you-by-the-software-engineering-working-group" class="slide level2">
 <h2>Brought to you by the Software Engineering Working Group</h2>
@@ -709,7 +763,7 @@ Daniel Sabanes Bove, Jonathan Sidi
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 5.0e-2,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
