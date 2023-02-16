@@ -9,6 +9,7 @@ format:
     logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
     slide-number: c/t
     margin: 0.05
+    fontsize: 25px
 title-slide-attributes: 
   data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
   data-background-size: 10%
@@ -92,9 +93,12 @@ There are different flavors of unit tests that we write:
 -   Write tests to evaluate the exported behavior that the package user would invoke.
     -   Sets up the ability to refactor code.
     -   Tests will not have to be rewritten as the package iterates and improves.
+    
+## Planning tests for success (cont'd)
+
 -   Write tests that you will not need to update or maintain because of a dependency.
     -   Because you can't control how other maintainers are developing packages and managing their lifecycle.
-    - Note: Having unit tests allows dependency changes to be detected earlz enough - e.g. CRAN is running reverse dependency checks before accepting new package versions
+    - Note: Having unit tests allows dependency changes to be detected early enough - e.g. CRAN is running reverse dependency checks before accepting new package versions
 
 ## Testing surface areas
 
@@ -162,6 +166,9 @@ This will serve two main purposes:
 - Beware of false positive test failures though
   - operating systems can lead to slightly different plot outcomes
   - requires manual visual checks
+  
+## Testing plot functions (cont'd)
+
 - Alternative for `ggplot`:
   - use `ggplot2::layer_data()` function to extract layer information
   - use that for comparisons in tests instead of vector graphics
@@ -169,11 +176,12 @@ This will serve two main purposes:
 ## Communicating Tests: Coverage
 
 1.  [`covr`](https://cran.r-project.org/package=covr)
-  - R package that evaluates the % of lines of code that are tested
-  - Use `covr::package_coverage()` to analyze current package coverage
+    - R package that evaluates the % of lines of code that are tested
+    - Use `covr::package_coverage()` to analyze current package coverage
+    
 2.  [`covrpage`](https://github.com/yonicd/covrpage)
-  - R package that summarizes `covr` statistics into simple reports that can be shared
-  - Use `covrpage::covrpage()` to create the report page
+    - R package that summarizes `covr` statistics into simple reports that can be shared
+    - Use `covrpage::covrpage()` to create the report page
   
 ## Mapping the Logic
 
