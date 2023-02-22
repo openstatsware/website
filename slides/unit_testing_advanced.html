@@ -417,10 +417,15 @@ Jonathan Sidi, Daniel Sabanes Bove
 <li class="fragment">Sets up the ability to refactor code.</li>
 <li class="fragment">Tests will not have to be rewritten as the package iterates and improves.</li>
 </ul></li>
+</ul>
+</section>
+<section id="planning-tests-for-success-contd" class="slide level2">
+<h2>Planning tests for success (cont’d)</h2>
+<ul>
 <li class="fragment">Write tests that you will not need to update or maintain because of a dependency.
 <ul>
 <li class="fragment">Because you can’t control how other maintainers are developing packages and managing their lifecycle.</li>
-<li class="fragment">Note: Having unit tests allows dependency changes to be detected earlz enough - e.g.&nbsp;CRAN is running reverse dependency checks before accepting new package versions</li>
+<li class="fragment">Note: Having unit tests allows dependency changes to be detected early enough - e.g.&nbsp;CRAN is running reverse dependency checks before accepting new package versions</li>
 </ul></li>
 </ul>
 </section>
@@ -509,6 +514,11 @@ Jonathan Sidi, Daniel Sabanes Bove
 <li class="fragment">operating systems can lead to slightly different plot outcomes</li>
 <li class="fragment">requires manual visual checks</li>
 </ul></li>
+</ul>
+</section>
+<section id="testing-plot-functions-contd" class="slide level2">
+<h2>Testing plot functions (cont’d)</h2>
+<ul>
 <li class="fragment">Alternative for <code>ggplot</code>:
 <ul>
 <li class="fragment">use <code>ggplot2::layer_data()</code> function to extract layer information</li>
@@ -519,19 +529,17 @@ Jonathan Sidi, Daniel Sabanes Bove
 <section id="communicating-tests-coverage" class="slide level2">
 <h2>Communicating Tests: Coverage</h2>
 <ol type="1">
-<li class="fragment"><a href="https://cran.r-project.org/package=covr"><code>covr</code></a></li>
-</ol>
+<li class="fragment"><a href="https://cran.r-project.org/package=covr"><code>covr</code></a>
 <ul>
 <li class="fragment">R package that evaluates the % of lines of code that are tested</li>
 <li class="fragment">Use <code>covr::package_coverage()</code> to analyze current package coverage</li>
-</ul>
-<ol start="2" type="1">
-<li class="fragment"><a href="https://github.com/yonicd/covrpage"><code>covrpage</code></a></li>
-</ol>
+</ul></li>
+<li class="fragment"><a href="https://github.com/yonicd/covrpage"><code>covrpage</code></a>
 <ul>
 <li class="fragment">R package that summarizes <code>covr</code> statistics into simple reports that can be shared</li>
 <li class="fragment">Use <code>covrpage::covrpage()</code> to create the report page</li>
-</ul>
+</ul></li>
+</ol>
 </section>
 <section id="mapping-the-logic" class="slide level2">
 <h2>Mapping the Logic</h2>
