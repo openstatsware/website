@@ -10,7 +10,7 @@ The team aims to develop open-source R tools of good quality in the right format
 
 The workstream also works within a broader group of business and methodological SMEs in HTA and Market Access space of our pharma industry, to ensure this open-source HTA pipeline of R tools is relevant over time and the tools can be adopted easily by business and payers.   
 
-Github repo: [link](https://www.github.io/hta-pharma/).
+Find more details in our GitHub organization: [link](https://www.github.io/hta-pharma/).
 
 
 ```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
