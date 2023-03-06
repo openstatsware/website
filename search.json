@@ -25,7 +25,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
+    "text": "2023-03-05: <a href=‘./hta_page.html’ title=‘technology icons’>HTA Workstream is here now\n2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report\n2022-10-24: Announcing the new ASA BIOP working group on Software Engineering\n2022-10-10: Added hex sticker for the working group. Credits to Kalashnyk on Flaticon for creating the sticker icon.\n2022-10-07: Initial publication of the website."
   },
   {
     "objectID": "people.html",
@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "ASA Biopharmaceutical Section Software Engineering Working Group",
     "section": "",
-    "text": "Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see about us.\n\nLatest Updates:\n\n2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site\n2022-11-16: Article introducing the SWE WG in BIOP Report"
+    "text": "Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see about us.\n\nLatest Updates:\n\n2023-03-05: <a href=‘./hta_page.html’ title=‘technology icons’>HTA Workstream is here now\n2023-02-13: Workshop on good software engineering practice for R\n2023-01-20: Presentations are now available on this site"
   },
   {
     "objectID": "mmrm_R_package.html",
@@ -684,5 +684,12 @@
     "title": "Presentations",
     "section": "",
     "text": "Workshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
+  },
+  {
+    "objectID": "hta_page.html",
+    "href": "hta_page.html",
+    "title": "HTA-R workstream",
+    "section": "",
+    "text": "Lead: Gregory Chen (MSD)\nObjective: This workstream of the SWE WG unites voluntary statistical software engineers that are experienced in HTA (Health Technology Assessment) or highly-interested in this area. The team aims to develop open-source R tools of good quality in the right formats (R packages, apps, user guides) that are useful to both manufacturers and payers, to support crucial analytic topics in HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA.\nThe workstream also works within a broader group of business and methodological SMEs in HTA and Market Access space of our pharma industry, to ensure this open-source HTA pipeline of R tools is relevant over time and the tools can be adopted easily by business and payers.\nFind more details in our GitHub organization: link.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nCedric\nRevil\nMSD\n\n\nChristos\nKokaliaris\nRoche\n\n\nChrysostomos\nKalyvas\nMSD\n\n\nGregory\nChen\nMSD\n\n\nIssac\nGravestock\nRoche\n\n\nMichael\nSeo\nRoche\n\n\nMiranta\nAntoniou\nRoche\n\n\nRossella\nBelleli\nRoche"
   }
 ]
