@@ -17,5 +17,4 @@ Find more details in our GitHub organization: [link](https://www.github.io/hta-p
 path <- getwd()
 source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("HTA")
-
 ```
