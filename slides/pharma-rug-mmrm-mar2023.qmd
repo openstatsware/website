@@ -51,8 +51,7 @@ Thanks to:
 -   Mixed Models for Repeated Measures - Why is it a Problem?
 -   MMRM Package
     -   Why this is not "yet another package"
-    -   Long Term Perspective
-    -   Comparing MMRM R Package to SAS
+    -   Comparing MMRM R Package to other Implementations
 -   Closing and Next Steps
 
 ## Software Engineering in Biostatistics
