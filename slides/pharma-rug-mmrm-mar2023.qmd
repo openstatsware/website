@@ -110,6 +110,14 @@ Thanks to:
 -   We get the gradient and Hessian exactly and without additional coding
 -   This can be used from the R side with the `TMB` interface and plugged into optimizers
 
+## Why it's not just another package
+
+-   Ongoing maintenance and support from the pharmaceutical industry
+    -   5 companies being involved in the development, on track to become standard package
+-   Development using best practices as show case for high quality package
+    - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
+
+
 ## Features of {mmrm}
 
 -   Linear model for dependent observations within independent subjects
