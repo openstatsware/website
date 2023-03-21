@@ -257,7 +257,7 @@ parameterization.
 
 ## Contrasts/LSMEANS
 
-Contrasts and LSMeans estimates are available in `mmrm` using
+Contrasts and least square (LS) means estimates are available in `mmrm` using
 
 ::: columns
 ::: {.column width="70%"}
