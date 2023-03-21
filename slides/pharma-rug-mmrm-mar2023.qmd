@@ -25,24 +25,34 @@ title-slide-attributes:
 Authors:
 
 -   Brian Matthew Lang (MSD)
+-   Christian Stock (BI)
+-   Craig Gower-Page (Roche)
+-   Dan James (AstraZeneca)
 -   Daniel Sabanes Bove (Roche, lead)
--   Doug Kelkhoff (Roche)
--   Julia Dedic (Roche)
--   Kevin Kunzmann (Boehringer Ingelheim)
--   Ya Wang (Gilead)
 :::
 
 ::: {.column width="50%"}
+Authors:
+
+-   Doug Kelkhoff (Roche)
+-   Julia Dedic (Roche)
+-   Kevin Kunzmann (BI)
+-   Liming Li (Roche)
+-   Ya Wang (Gilead)
+:::
+:::
+:::
+
+## Acknowledgments
+
+::: nonincremental
 Thanks to:
 
 -   Ben Bolker (McMaster University)
--   Craig Gower-Page (Roche)
 -   Davide Garolini (Roche)
 -   Dinakar Kulkarni (Roche)
 -   Gonzalo Duran Pacheco (Roche)
 -   Software Engineering working group (SWE WG)
-:::
-:::
 :::
 
 ## Agenda
@@ -61,16 +71,13 @@ Thanks to:
     -   Cons: variability in software quality
 -   Developing high-quality software is critical
 
-## How to deal with these issues?
-
--   To deal with the issues of statistical quality assurances for R packages and creating high quality statistical software a group came together to create through the "Software Engineering Working Group" (SWE WG) to look R packages from a statistical point of view
-
 ## Software Engineering working group (SWE WG)
 
 -   An official working group of the ASA Biopharmaceutical Section
 -   Formed in August 2022
 -   Cross-industry collaboration (>35 members from >25 organizations)
 -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+-   Deal with the issues of statistical quality assurances for R packages and create high quality statistical software
 
 ## Why do we need a package for MMRM?
 ::: columns
@@ -117,7 +124,7 @@ Thanks to:
     - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
 
 
-## Features of {mmrm}
+## Features of {`mmrm`}
 
 -   Linear model for dependent observations within independent subjects
 -   Covariance structures for the dependent observations:
@@ -132,11 +139,11 @@ Thanks to:
 
 ## Comparing SAS and R
 
-To run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.
+To run an MMRM model in SAS it is recommended to use either the `PROC MIXED` or `PROC GLM` procedures.
 
--   Less model assumptions are applied in PROC MIXED, primarily how one treats missingness.
+-   Less model assumptions are applied in `PROC MIXED`, primarily how one treats missingness.
 
--   We will compares the PROC MIXED procedure to the `{mmrm}` package in the following attributes:
+-   We will compares the `PROC MIXED` procedure to the `{mmrm}` package in the following attributes:
 
 ::: columns
 ::: {.column width="50%"}
@@ -186,7 +193,9 @@ Both languages have online documentation of the technical details of the estimat
 
 ## Unit Testing
 
-One major advantage of the `{mmrm}` over `PROC MIXED` is that the unit testing in `{mmrm}` is transparent. It uses the `{testthat}` framework with `{covr}` to communicate the testing coverage. Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
+-   Unit tests in `{mmrm}` are transparent, compared to `PROC MIXED`.
+-   Uses the `{testthat}` framework with `{covr}` to communicate the testing coverage.
+-   Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
 
 ::: callout-note
 The integration tests in `{mmrm}` are set to a tolerance of 10e\^-3 when compared to SAS outputs.
@@ -250,17 +259,16 @@ For users that need more structures, `{mmrm}` is easily extensible - let us know
 | Kenward-Roger              |    X     |      X       |
 | Kenward-Roger (Linear)\*\* |    X     |      X       |
 
-\*Available through the `emmeans` package, and ongoing work in `mmrm`.
+\*Available through `emmeans`, and ongoing work in `mmrm`.
 
-\*\*This is not identical to the KR-Linear setting in `PROC MIXED` because of different
-parameterization.
+\*\*This is not identical to the KR(Lin) in `PROC MIXED`.
 
 ## Contrasts/LSMEANS
 
 Contrasts and least square (LS) means estimates are available in `mmrm` using
 
 ::: columns
-::: {.column width="70%"}
+::: {.column width="80%"}
 -   `mmrm::df_1d`, `mmrm::df_md`
 -   S3 method that is compatible with `emmeans`
 -   LS means difference can be produced through emmeans (`pairs` method)
@@ -268,7 +276,7 @@ Contrasts and least square (LS) means estimates are available in `mmrm` using
 -   By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
 :::
 
-::: {.column width="30%"}
+::: {.column width="20%"}
 ::: callout-note
 These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax08.htm) statement in `PROC MIXED`.
 :::
