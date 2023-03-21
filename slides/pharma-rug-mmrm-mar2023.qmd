@@ -54,7 +54,7 @@ Thanks to:
     -   Comparing MMRM R Package to other Implementations
 -   Closing and Next Steps
 
-## Software Engineering in Biostatistics
+## Context: Software Engineering in Biostatistics
 
 -   Open-source software has gained increasing popularity in Biostatistics over the last two decades
     -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
