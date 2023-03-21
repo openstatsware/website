@@ -124,7 +124,7 @@ Thanks to:
     - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
 
 
-## Features of {`mmrm`}
+## Features of `{mmrm}` {.smaller}
 
 -   Linear model for dependent observations within independent subjects
 -   Covariance structures for the dependent observations:
@@ -137,7 +137,7 @@ Thanks to:
 -   Robust sandwich estimator for covariance
 
 
-## Comparing SAS and R
+## Comparing `{mmrm}` and SAS
 
 To run an MMRM model in SAS it is recommended to use either the `PROC MIXED` or `PROC GLM` procedures.
 
@@ -149,7 +149,6 @@ To run an MMRM model in SAS it is recommended to use either the `PROC MIXED` or 
 ::: {.column width="50%"}
 -   Documentation
 -   Unit Testing
--   Estimation Methods
 :::
 
 ::: {.column width="50%"}
@@ -194,19 +193,12 @@ Both languages have online documentation of the technical details of the estimat
 ## Unit Testing
 
 -   Unit tests in `{mmrm}` are transparent, compared to `PROC MIXED`.
--   Uses the `{testthat}` framework with `{covr}` to communicate the testing coverage.
+-   Uses the `testthat` framework with `covr` to communicate the testing coverage.
 -   Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
 
 ::: callout-note
 The integration tests in `{mmrm}` are set to a tolerance of 10e\^-3 when compared to SAS outputs.
 :::
-
-## Estimation Methods
-
-| Method | `{mmrm}` | `PROC MIXED` |
-|:-------|:--------:|:------------:|
-| ML     |    X     |      X       |
-| REML   |    X     |      X       |
 
 ## Covariance structures
 
@@ -285,26 +277,33 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
 
 ## Benchmarking with other R packages
 
-Other R packages, like `nlme`, `lme4` and `glmmTMB`, can somehow work with MMRM models.
+Other R packages, like `nlme`, `lme4` and `glmmTMB` can support MMRM analysis
 However:
 
-- `nlme::gls` supports unstructured, compound symmetry and auto-regressive
-- `lme4::lmer` only supports `unstructured`
-- `glmmTMB::glmmtmb` only supports `unstructured`
+-   Covariance structure supported is limited
+-   Computaional efficiency is not satisfying
+-   Convergence issues(especially for `lme4`)
+-   Need other(multiple) packages to support `Satterthwaite` and `Kenward-Roger` degrees of freedom, or Sandwich covariance estimator.
 
 ## Computational Efficiency
 
 `mmrm` not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)
 
-Table: Comparison of convergence times: milliseconds
+![](converge_speed.png)
 
-| function  | median|  lower|  upper| evaluations|
-|:----------|------:|------:|------:|-----------:|
-|mmrm       |  34.05|  33.39|  34.22|          10|
-|lmer       |  70.33|  68.13|  70.81|          10|
-|gls        | 226.98| 211.81| 232.41|          10|
-|glmmtmb    | 321.83| 300.88| 343.68|          10|
+## Differences with SAS
 
+`{mmrm}` has small difference from SAS 
+
+::: columns
+::: {.column width="50%"}
+![](estimate_diff.png)
+:::
+
+::: {.column width="50%"}
+![](sd_diff.png)
+:::
+:::
 ## Getting started
 
 -   `mmrm` is on CRAN - use this as a starting point:
