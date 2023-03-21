@@ -250,7 +250,7 @@ For users that need more structures, `{mmrm}` is easily extensible - let us know
 | Kenward-Roger              |    X     |      X       |
 | Kenward-Roger (Linear)\*\* |    X     |      X       |
 
-\*Available through the `emmeans` package.
+\*Available through the `emmeans` package, and ongoing work in `mmrm`.
 
 \*\*This is not identical to the KR-Linear setting in `PROC MIXED` because of different
 parameterization.
