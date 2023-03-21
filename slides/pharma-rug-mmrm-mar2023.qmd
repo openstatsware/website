@@ -211,7 +211,7 @@ The integration tests in `{mmrm}` are set to a tolerance of 10e\^-3 when compare
 
 ::: {.column width="40%"}
 ::: callout-tip
-For users that need more structure `{mmrm}` is easily extensible via [feature requests](https://github.com/openpharma/mmrm/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) in the GitHub repository.
+For users that need more structures, `{mmrm}` is easily extensible - let us know via [feature requests](https://github.com/openpharma/mmrm/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) in the GitHub repository.
 :::
 
 ![](https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif)
