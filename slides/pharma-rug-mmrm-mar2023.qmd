@@ -69,7 +69,7 @@ Thanks to:
 
 -   An official working group of the ASA Biopharmaceutical Section
 -   Formed in August 2022
--   Cross-industry collaboration with more than 30 members from over 20 organizations
+-   Cross-industry collaboration (>35 members from >25 organizations)
 -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
 
 ## Why do we need a package for MMRM?
