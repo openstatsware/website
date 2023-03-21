@@ -56,10 +56,10 @@ Thanks to:
 
 ## Context: Software Engineering in Biostatistics
 
--   Open-source software has gained increasing popularity in Biostatistics over the last two decades
-    -   Pros: rapid uptake of novel statistical methods and unprecedented opportunities for collaboration and innovation
-    -   Cons: users face huge variability in software quality, in particular reliability, efficiency and maintainability
--   Developing high-quality software with good coding practices, reproducible outputs, and self-sufficient documentation is critical to inform clinical and regulatory decisions
+-   Open-source software has gained increasing popularity in Biostatistics
+    -   Pros: rapid uptake of novel statistical methods, unprecedented opportunities for collaboration
+    -   Cons: variability in software quality
+-   Developing high-quality software is critical
 
 ## How to deal with these issues?
 
