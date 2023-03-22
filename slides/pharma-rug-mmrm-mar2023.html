@@ -10,8 +10,8 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.335">
 
-  <meta name="author" content="Jonathan Sidi, Daniel Sabanes Bove">
-  <title>ASA BIOP SWE WG - Unit Testing for R Developers</title>
+  <meta name="author" content="Liming Li">
+  <title>ASA BIOP SWE WG - mmrm</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,6 +29,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -324,264 +388,504 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" data-background-opacity="0.9" data-background-position="92% 30%" data-background-size="10%" class="quarto-title-block center">
-  <h1 class="title">Unit Testing for R Developers</h1>
-  <p class="subtitle">2: Advancing your skills</p>
+<section id="title-slide" data-background-image="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" data-background-opacity="0.5" data-background-position="80% 10%" data-background-size="20%" class="quarto-title-block center">
+  <h1 class="title">mmrm</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Jonathan Sidi, Daniel Sabanes Bove 
+Liming Li 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            (Statistical Engineering, Pharma Product Development Data Sciences, Roche)
+          </p>
+    </div>
 </div>
 
+  <p class="date">3/31/23</p>
 </section>
-<section id="what-are-we-going-to-talk-about" class="slide level2">
-<h2>What are we going to talk about?</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li class="fragment">Understand the philosophy behind unit testing and how it relates to other tests</li>
-<li class="fragment">Gain more confidence in your testing framework by examining coverage</li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p><img data-src="https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif"></p>
-</div>
-</div>
-</section>
-<section id="what-is-the-structure-of-unit-tests" class="slide level2">
-<h2>What is the structure of unit tests?</h2>
-<ul>
-<li class="fragment"><strong>Setup</strong>: Set up the inputs for the test.</li>
-<li class="fragment"><strong>Compute</strong>: Compute the result which will be tested.</li>
-<li class="fragment"><strong>Expect</strong>: Define the expected result.</li>
-<li class="fragment"><strong>Compare</strong>: Compare the actual with the expected result.</li>
-</ul>
-<div class="fragment">
-<p>The code should test a specific characteristic or functionality of the package.</p>
-<p>Because if your action does too many things at once, you have to search longer for the bug.</p>
-</div>
-</section>
-<section id="who-do-you-write-tests-for" class="slide level2">
-<h2>Who do you write tests for?</h2>
-<p>Unit testing is a method to communicate to various stakeholders the package requirements.</p>
-<p><img data-src="testing_venn.jpeg" class="absolute" style="top: 200px; left: 250px; width: 55%; "></p>
-</section>
-<section id="test-flavors" class="slide level2">
-<h2>Test Flavors</h2>
-<p>There are different flavors of unit tests that we write:</p>
-<ul>
-<li class="fragment"><strong>Developer Tests</strong>
-<ul>
-<li class="fragment">Tests that help the software developer speed up and iterate over different versions</li>
-</ul></li>
-<li class="fragment"><strong>Quality Assurance (QA) Tests</strong>
-<ul>
-<li class="fragment">Proving that the package isn’t broken or that functions are returning the expected answers</li>
-</ul></li>
-</ul>
-</section>
-<section id="test-flavors-contd" class="slide level2">
-<h2>Test Flavors (cont’d)</h2>
+<section id="acknowledgments" class="slide level2">
+<h2>Acknowledgments</h2>
 <div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Developer Tests</strong></p>
-<p><em>Remove Fear of Change</em></p>
+<p>Authors:</p>
 <ul>
-<li>Assist with package design</li>
-<li>Guide for refactoring</li>
-</ul>
-<p><em>Reduce Development Time</em></p>
-<ul>
-<li>Explain code to others</li>
-<li>Pinpoint errors</li>
-<li>Minimize debugging/manual testing</li>
+<li>Brian Matthew Lang (MSD)</li>
+<li>Christian Stock (BI)</li>
+<li>Craig Gower-Page (Roche)</li>
+<li>Dan James (AstraZeneca)</li>
+<li>Daniel Sabanes Bove (Roche, lead)</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>QA Tests</strong></p>
+<p>Authors:</p>
 <ul>
-<li>Encode object requirements</li>
-<li>Catch performance degradation</li>
+<li>Doug Kelkhoff (Roche)</li>
+<li>Julia Dedic (Roche)</li>
+<li>Kevin Kunzmann (BI)</li>
+<li>Liming Li (Roche)</li>
+<li>Ya Wang (Gilead)</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
-<section id="planning-tests-for-success" class="slide level2">
-<h2>Planning tests for success</h2>
+<section id="acknowledgments-1" class="slide level2">
+<h2>Acknowledgments</h2>
+<div>
+<p>Thanks to:</p>
 <ul>
-<li class="fragment">Write tests to evaluate the exported behavior that the package user would invoke.
+<li>Ben Bolker (McMaster University)</li>
+<li>Davide Garolini (Roche)</li>
+<li>Dinakar Kulkarni (Roche)</li>
+<li>Gonzalo Duran Pacheco (Roche)</li>
+<li>Software Engineering working group (SWE WG)</li>
+</ul>
+</div>
+</section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
 <ul>
-<li class="fragment">Sets up the ability to refactor code.</li>
-<li class="fragment">Tests will not have to be rewritten as the package iterates and improves.</li>
+<li class="fragment">Introduction and Overview of SWE WG</li>
+<li class="fragment">Mixed Models for Repeated Measures - Why is it a Problem?</li>
+<li class="fragment">MMRM Package
+<ul>
+<li class="fragment">Why this is not “yet another package”</li>
+<li class="fragment">Comparing MMRM R Package to other Implementations</li>
 </ul></li>
+<li class="fragment">Closing and Next Steps</li>
 </ul>
 </section>
-<section id="planning-tests-for-success-contd" class="slide level2">
-<h2>Planning tests for success (cont’d)</h2>
+<section id="context-software-engineering-in-biostatistics" class="slide level2">
+<h2>Context: Software Engineering in Biostatistics</h2>
 <ul>
-<li class="fragment">Write tests that you will not need to update or maintain because of a dependency.
+<li class="fragment">Open-source software has gained increasing popularity in Biostatistics
 <ul>
-<li class="fragment">Because you can’t control how other maintainers are developing packages and managing their lifecycle.</li>
-<li class="fragment">Note: Having unit tests allows dependency changes to be detected early enough - e.g.&nbsp;CRAN is running reverse dependency checks before accepting new package versions</li>
+<li class="fragment">Pros: rapid uptake of novel statistical methods, unprecedented opportunities for collaboration</li>
+<li class="fragment">Cons: variability in software quality</li>
 </ul></li>
+<li class="fragment">Developing high-quality software is critical</li>
 </ul>
 </section>
-<section id="testing-surface-areas" class="slide level2">
-<h2>Testing surface areas</h2>
+<section id="software-engineering-working-group-swe-wg" class="slide level2">
+<h2>Software Engineering working group (SWE WG)</h2>
+<ul>
+<li class="fragment">An official working group of the ASA Biopharmaceutical Section</li>
+<li class="fragment">Formed in August 2022</li>
+<li class="fragment">Cross-industry collaboration (&gt;35 members from &gt;25 organizations)</li>
+<li class="fragment">Home page at <a href="https://rconsortium.github.io/asa-biop-swe-wg">rconsortium.github.io/asa-biop-swe-wg</a></li>
+<li class="fragment">Deal with the issues of statistical quality assurances for R packages and create high quality statistical software</li>
+</ul>
+</section>
+<section id="why-do-we-need-a-package-for-mmrm" class="slide level2">
+<h2>Why do we need a package for MMRM?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li class="fragment">When writing unit tests for functions it is important to take into account the surface area of the tests</li>
-<li class="fragment">In this example we have three unit tests on <code>stats::mean.default</code></li>
-<li class="fragment">Tests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure.</li>
+<li class="fragment">Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials</li>
+<li class="fragment">No great R Package - initially though that the MMRM problem was solved by using a combination of <code>lme4</code> and <code>lmerTest</code></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="test_flow_mean.png" style="width:75.0%"></p>
+<ul>
+<li class="fragment">Learned that this approach failed on large data sets (slow, did not converge)</li>
+<li class="fragment"><code>nlme</code> does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with <code>emmeans</code> it is only approximate</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="adding-new-features-with-a-safety-net" class="slide level2">
-<h2>Adding new features with a safety net</h2>
-<p>When you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature.</p>
-<p>This will serve two main purposes:</p>
+<section id="before-creating-a-new-package" class="slide level2">
+<h2>Before creating a new package</h2>
+<ul>
+<li class="fragment">First try to improve existing package
+<ul>
+<li class="fragment">Here we tried to extend <code>glmmTMB</code> to calculate Satterthwaite adjusted degrees of freedom</li>
+<li class="fragment">But it did not work
+<ul>
+<li class="fragment"><code>glmmTMB</code> is always using a random effects representation, we cannot have a real unstructured model (uses <span class="math inline">\(\sigma = \varepsilon &gt; 0\)</span> trick)</li>
+</ul></li>
+</ul></li>
+<li class="fragment">Think about long term maintenance and responsibility</li>
+</ul>
+</section>
+<section id="idea-with-some-details" class="slide level2">
+<h2>Idea with some Details</h2>
+<ul>
+<li class="fragment">We only want to fit a fixed effects model with a structured covariance matrix for each subject</li>
+<li class="fragment">The idea is then to use the Template Model Builder (<code>TMB</code>) directly - as it is also underlying <code>glmmTMB</code> - but code the exact model we want</li>
+<li class="fragment">We do this by implementing the log-likelihood in <code>C++</code> using the <code>TMB</code> provided libraries</li>
+</ul>
+</section>
+<section id="advantages-of-tmb" class="slide level2">
+<h2>Advantages of <code>TMB</code></h2>
+<ul>
+<li class="fragment">Fast <code>C++</code> framework for defining objective functions (<code>Rcpp</code> would have been alternative interface)</li>
+<li class="fragment">Automatic differentiation of the log-likelihood as a function of the variance parameters</li>
+<li class="fragment">Syntactic sugars to allow simple matrix calculations or operations like R</li>
+<li class="fragment">We get the gradient and Hessian exactly and without additional coding</li>
+<li class="fragment">This can be used from the R side with the <code>TMB</code> interface and plugged into optimizers</li>
+</ul>
+</section>
+<section id="why-its-not-just-another-package" class="slide level2">
+<h2>Why it’s not just another package</h2>
+<ul>
+<li class="fragment">Ongoing maintenance and support from the pharmaceutical industry
+<ul>
+<li class="fragment">5 companies being involved in the development, on track to become standard package</li>
+</ul></li>
+<li class="fragment">Development using best practices as show case for high quality package
+<ul>
+<li class="fragment">Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results</li>
+</ul></li>
+</ul>
+</section>
+<section id="features-of-mmrm" class="slide level2 smaller">
+<h2>Features of <code>{mmrm}</code></h2>
+<ul>
+<li class="fragment">Linear model for dependent observations within independent subjects</li>
+<li class="fragment">Covariance structures for the dependent observations:
+<ul>
+<li class="fragment">Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential</li>
+<li class="fragment">Allows group specific covariance estimates and weights</li>
+</ul></li>
+<li class="fragment">REML or ML estimation, using multiple optimizers if needed</li>
+<li class="fragment"><code>emmeans</code> interface for least square means</li>
+<li class="fragment">Satterthwaite adjusted degrees of freedom</li>
+<li class="fragment">Kenward-Roger adjusted degrees of freedom</li>
+<li class="fragment">Robust sandwich estimator for covariance</li>
+</ul>
+</section>
+<section id="comparing-mmrm-and-sas" class="slide level2">
+<h2>Comparing <code>{mmrm}</code> and SAS</h2>
+<p>To run an MMRM model in SAS it is recommended to use either the <code>PROC MIXED</code> or <code>PROC GLM</code> procedures.</p>
+<ul>
+<li class="fragment"><p>Less model assumptions are applied in <code>PROC MIXED</code>, primarily how one treats missingness.</p></li>
+<li class="fragment"><p>We will compares the <code>PROC MIXED</code> procedure to the <code>{mmrm}</code> package in the following attributes:</p></li>
+</ul>
 <div class="columns">
-<div class="column" style="width:35%;">
-<p><img data-src="https://media.giphy.com/media/HlPP3bY8FRsWs/giphy.gif"></p>
-</div><div class="column" style="width:65%;">
-<ol type="1">
-<li class="fragment"><strong>Communicate the goals</strong> of the feature to others and to yourself.</li>
-<li class="fragment"><strong>Free to develop</strong> the idea while writing messy code and refactoring it while still controlling for the basic requirements.</li>
-</ol>
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Documentation</li>
+<li class="fragment">Unit Testing</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Covariance structures</li>
+<li class="fragment">Degrees of Freedom</li>
+<li class="fragment">Contrasts</li>
+</ul>
 </div>
 </div>
 </section>
-<section id="some-strategies-for-learning" class="slide level2">
-<h2>Some strategies for learning</h2>
-<ol type="1">
-<li class="fragment"><strong>Pair up</strong> with experienced developer buddies.</li>
-<li class="fragment"><strong>Help out</strong> with refactoring or features on GitHub repositories:
+<section id="documentation" class="slide level2">
+<h2>Documentation</h2>
+<p>Both languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>{mmrm}</code></p>
+</div><div class="column" style="width:50%;">
+<p><code>PROC MIXED</code></p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li class="fragment">Developers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.</li>
-<li class="fragment">The process of merging a pull request will teach you hands on.</li>
-</ul></li>
-<li class="fragment"><strong>Clone repositories</strong> of packages you are familiar with:
+<li class="fragment"><a href="https://openpharma.github.io/mmrm/main/index.html">Homepage</a></li>
+<li class="fragment"><a href="https://openpharma.github.io/mmrm/main/articles/introduction.html">Usage</a></li>
+<li class="fragment"><a href="https://openpharma.github.io/mmrm/main/articles/algorithm.html">Estimation</a></li>
+<li class="fragment"><a href="https://openpharma.github.io/mmrm/main/articles/covariance.html">Covariance Structures</a></li>
+<li class="fragment">Degrees of Freedom <a href="https://openpharma.github.io/mmrm/main/articles/kenward.html">KR</a>/<a href="https://openpharma.github.io/mmrm/main/articles/satterthwaite.html">Satterthwaite</a></li>
+</ul>
+</div><div class="column" style="width:50%;">
 <ul>
-<li class="fragment">Run the tests you find there.</li>
-<li class="fragment">You will learn a lot about testing, coding and strategies.</li>
-</ul></li>
-</ol>
+<li class="fragment"><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_toc.htm">Homepage</a></li>
+<li class="fragment"><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_examples02.htm">Usage</a></li>
+<li class="fragment"><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_details01.htm">Theory</a></li>
+<li class="fragment"><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type">Covariance Structures</a></li>
+<li class="fragment"><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm">Degrees of Freedom</a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="what-can-and-should-be-unit-tested" class="slide level2">
-<h2>What can and should be unit tested?</h2>
-<ol type="1">
-<li class="fragment">Script
+<section id="unit-testing" class="slide level2">
+<h2>Unit Testing</h2>
 <ul>
-<li class="fragment">Single files with functions can have unit tests</li>
-</ul></li>
-<li class="fragment">Packages
-<ul>
-<li class="fragment">This is the standard object to write tests for</li>
-</ul></li>
-<li class="fragment">Shiny apps
-<ul>
-<li class="fragment">Shiny app UI and reactivity can be tested</li>
-</ul></li>
-<li class="fragment">Data derivation
-<ul>
-<li class="fragment">Testing data preprocessing pipelines for expected characteristics of columns</li>
-</ul></li>
-</ol>
+<li class="fragment">Unit tests in <code>{mmrm}</code> are transparent, compared to <code>PROC MIXED</code>.</li>
+<li class="fragment">Uses the <code>testthat</code> framework with <code>covr</code> to communicate the testing coverage.</li>
+<li class="fragment">Unit tests can be found in the GitHub repository under <a href="https://github.com/openpharma/mmrm/tree/main/tests/testthat">./tests</a>.</li>
+</ul>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>The integration tests in <code>{mmrm}</code> are set to a tolerance of 10e^-3 when compared to SAS outputs.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="overview-of-unit-testing-frameworks" class="slide level2">
-<h2>Overview of unit testing frameworks</h2>
-<ol type="1">
-<li class="fragment">script/packages: <code>testthat</code>, <code>tinytest</code>, <code>box</code>, <code>Runit</code></li>
-<li class="fragment">shiny apps: <code>shinytest2</code>, <code>reactor</code>, <code>crrry</code></li>
-<li class="fragment">data: <code>pointblank</code>, <code>assertr</code>, <code>validate</code>, <code>dataReporter</code></li>
-<li class="fragment">plots: <code>vdiffr</code></li>
-</ol>
-</section>
-<section id="testing-plot-functions" class="slide level2">
-<h2>Testing plot functions</h2>
+<section id="covariance-structures" class="slide level2">
+<h2>Covariance structures</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
 <ul>
-<li class="fragment"><code>vdiffr</code> package allows to save vector graphics file of the expected plot outcome</li>
-<li class="fragment">works for both base plots as well as <code>ggplot</code>s</li>
-<li class="fragment">Beware of false positive test failures though
+<li class="fragment">SAS has 23 non-spatial covariance structures, while mmrm has 10.
 <ul>
-<li class="fragment">operating systems can lead to slightly different plot outcomes</li>
-<li class="fragment">requires manual visual checks</li>
+<li class="fragment">9 structures intersect with SAS</li>
+<li class="fragment">Ante-dependence (homogeneous) is only in the mmrm package.</li>
 </ul></li>
+<li class="fragment">SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>For users that need more structures, <code>{mmrm}</code> is easily extensible - let us know via <a href="https://github.com/openpharma/mmrm/issues/new?assignees=&amp;labels=enhancement&amp;template=feature_request.md&amp;title=">feature requests</a> in the GitHub repository.</p>
+</div>
+</div>
+</div>
+<p><img data-src="https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif"></p>
+</div>
+</div>
+</section>
+<section id="covariance-structures-details" class="slide level2">
+<h2>Covariance structures details</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Covariance structures</th>
+<th style="text-align: center;"><code>{mmrm}</code></th>
+<th style="text-align: center;"><code>PROC MIXED</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Unstructured (Unweighted/Weighted)</td>
+<td style="text-align: center;">X/X</td>
+<td style="text-align: center;">X/X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Toeplitz (hetero/homo)</td>
+<td style="text-align: center;">X/X</td>
+<td style="text-align: center;">X/X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Compound symmetry (hetero/homo)</td>
+<td style="text-align: center;">X/X</td>
+<td style="text-align: center;">X/X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Auto-regressive (hetero/homo)</td>
+<td style="text-align: center;">X/X</td>
+<td style="text-align: center;">X/X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ante-dependence (hetero/homo)</td>
+<td style="text-align: center;">X/X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spatial exponential</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="covariance-estimators" class="slide level2">
+<h2>Covariance Estimators</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Covariance estimators</th>
+<th style="text-align: center;"><code>{mmrm}</code></th>
+<th style="text-align: center;"><code>PROC MIXED</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Asymptotic</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kenward-Roger</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Empirical</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Jackknife</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bias-Reduced Linearization</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="degrees-of-freedom-methods" class="slide level2">
+<h2>Degrees of Freedom Methods</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: center;"><code>{mmrm}</code></th>
+<th style="text-align: center;"><code>PROC MIXED</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Contain</td>
+<td style="text-align: center;">X*</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Between/Within</td>
+<td style="text-align: center;">X*</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Residual</td>
+<td style="text-align: center;">X*</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Satterthwaite</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kenward-Roger</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kenward-Roger (Linear)**</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<p>*Available through <code>emmeans</code>, and ongoing work in <code>mmrm</code>.</p>
+<p>**This is not identical to the KR(Lin) in <code>PROC MIXED</code>.</p>
+</section>
+<section id="contrastslsmeans" class="slide level2">
+<h2>Contrasts/LSMEANS</h2>
+<p>Contrasts and least square (LS) means estimates are available in <code>mmrm</code> using</p>
+<div class="columns">
+<div class="column" style="width:80%;">
+<ul>
+<li class="fragment"><code>mmrm::df_1d</code>, <code>mmrm::df_md</code></li>
+<li class="fragment">S3 method that is compatible with <code>emmeans</code></li>
+<li class="fragment">LS means difference can be produced through emmeans (<code>pairs</code> method)</li>
+<li class="fragment">Degrees of freedom method is passed from <code>mmrm</code> to <code>emmeans</code></li>
+<li class="fragment">By default <code>PROC MIXED</code> and <code>mmrm</code> do not adjust for multiplicity, whereas <code>emmeans</code> does.</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>These are comparable to the <a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax08.htm">LSMEANS</a> statement in <code>PROC MIXED</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="benchmarking-with-other-r-packages" class="slide level2">
+<h2>Benchmarking with other R packages</h2>
+<p>Other R packages, like <code>nlme</code>, <code>lme4</code> and <code>glmmTMB</code> can support MMRM analysis However:</p>
+<ul>
+<li class="fragment">Covariance structure supported is limited</li>
+<li class="fragment">Computaional efficiency is not satisfying</li>
+<li class="fragment">Convergence issues(especially for <code>lme4</code>)</li>
+<li class="fragment">Need other(multiple) packages to support <code>Satterthwaite</code> and <code>Kenward-Roger</code> degrees of freedom, or Sandwich covariance estimator.</li>
 </ul>
 </section>
-<section id="testing-plot-functions-contd" class="slide level2">
-<h2>Testing plot functions (cont’d)</h2>
-<ul>
-<li class="fragment">Alternative for <code>ggplot</code>:
-<ul>
-<li class="fragment">use <code>ggplot2::layer_data()</code> function to extract layer information</li>
-<li class="fragment">use that for comparisons in tests instead of vector graphics</li>
-</ul></li>
-</ul>
-</section>
-<section id="communicating-tests-coverage" class="slide level2">
-<h2>Communicating Tests: Coverage</h2>
-<ol type="1">
-<li class="fragment"><a href="https://cran.r-project.org/package=covr"><code>covr</code></a>
-<ul>
-<li class="fragment">R package that evaluates the % of lines of code that are tested</li>
-<li class="fragment">Use <code>covr::package_coverage()</code> to analyze current package coverage</li>
-</ul></li>
-<li class="fragment"><a href="https://github.com/yonicd/covrpage"><code>covrpage</code></a>
-<ul>
-<li class="fragment">R package that summarizes <code>covr</code> statistics into simple reports that can be shared</li>
-<li class="fragment">Use <code>covrpage::covrpage()</code> to create the report page</li>
-</ul></li>
-</ol>
-</section>
-<section id="mapping-the-logic" class="slide level2">
-<h2>Mapping the Logic</h2>
+<section id="computational-efficiency" class="slide level2">
+<h2>Computational Efficiency</h2>
+<p><code>mmrm</code> not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)</p>
 
-<!-- Explain before what snapshot tests and explain what bad tests are -->
-<img data-src="unit_testing_advanced_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="summary" class="slide level2">
-<h2>Summary</h2>
+<img data-src="converge_speed.png" class="r-stretch"></section>
+<section id="differences-with-sas" class="slide level2">
+<h2>Differences with SAS</h2>
+<p><code>{mmrm}</code> has small difference from SAS</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="estimate_diff.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="sd_diff.png"></p>
+</div>
+</div>
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
 <ul>
-<li class="fragment">Philosophy of testing:
+<li class="fragment"><code>mmrm</code> is on CRAN - use this as a starting point:</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"mmrm"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(mmrm)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>fit <span class="ot">&lt;-</span> <span class="fu">mmrm</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="at">formula =</span> FEV1 <span class="sc">~</span> RACE <span class="sc">+</span> SEX <span class="sc">+</span> ARMCD <span class="sc">*</span> AVISIT <span class="sc">+</span> <span class="fu">us</span>(AVISIT <span class="sc">|</span> USUBJID),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="at">data =</span> fev_data</span>
+<span id="cb1-6"><a href="#cb1-6"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">summary</span>(fit)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">emmeans</span>(fit, <span class="sc">~</span> ARMCD <span class="sc">|</span> AVISIT)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
-<li class="fragment">Aggregate of all tests should cover the whole functionality</li>
-<li class="fragment">But each test on its own should be specific and only have small surface</li>
-<li class="fragment">Developer vs.&nbsp;Quality Assurance Tests</li>
-<li class="fragment">Not just R packages: also scripts, Shiny apps, data</li>
+<li class="fragment">Visit <a href="https://openpharma.github.io/mmrm/">openpharma.github.io/mmrm</a> for detailed docs including vignettes</li>
+<li class="fragment">Consider <a href="https://insightsengineering.github.io/tern.mmrm/main/">tern.mmrm</a> for high-level clinical reporting interface, incl.&nbsp;standard tables and graphs</li>
+</ul>
+</div>
+</section>
+<section id="outlook" class="slide level2">
+<h2>Outlook</h2>
+<ul>
+<li class="fragment">We still have major features on our backlog:
+<ul>
+<li class="fragment">Type II and type III ANOVA tests</li>
 </ul></li>
-<li class="fragment">How to communicate test coverage:
+<li class="fragment">Working on comparison to other implementations
 <ul>
-<li class="fragment">Use <code>covr</code> to calculate coverage</li>
-<li class="fragment">Use <code>covrpage</code> to create a summary report</li>
+<li class="fragment">Parameter estimates, computation time, convergence, …</li>
 </ul></li>
+<li class="fragment">Please let us know what is missing in <code>mmrm</code> for you! And try it out :-)</li>
 </ul>
 </section>
-<section id="outlook-automating-tests" class="slide level2">
-<h2>Outlook: Automating Tests</h2>
+<section id="thank-you-questions" class="slide level2">
+<h2>Thank you! Questions?</h2>
 <div class="columns">
-<div class="column" style="width:65%;">
-<p>When developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests.</p>
-</div><div class="column" style="width:35%;">
-<p><img data-src="https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif"></p>
-</div>
-</div>
-</section>
-<section id="brought-to-you-by-the-software-engineering-working-group" class="slide level2">
-<h2>Brought to you by the Software Engineering Working Group</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
+<div class="column" style="width:50%;">
+<p><img data-src="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" height="500"></p>
+</div><div class="column" style="width:50%;">
 <p><img data-src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" height="500"></p>
-</figure>
 </div>
-<div style="text-align: center">
-<p><a href="https://rconsortium.github.io/asa-biop-swe-wg/">rconsortium.github.io/asa-biop-swe-wg</a></p>
 </div>
 
 <p><img src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" class="slide-logo"></p>
@@ -771,7 +1075,7 @@ Jonathan Sidi, Daniel Sabanes Bove
         height: 700,
 
         // Factor of the display size that should remain empty around the content
-        margin: 5.0e-2,
+        margin: 0.1,
 
         math: {
           mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
