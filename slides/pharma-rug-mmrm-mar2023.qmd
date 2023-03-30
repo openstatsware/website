@@ -148,10 +148,11 @@ To run an MMRM model in SAS it is recommended to use either the `PROC MIXED` or 
 ::: {.column width="50%"}
 -   Documentation
 -   Unit Testing
+-   Covariance structures
 :::
 
 ::: {.column width="50%"}
--   Covariance structures
+-   Covariance Estimators
 -   Degrees of Freedom
 -   Contrasts
 :::
