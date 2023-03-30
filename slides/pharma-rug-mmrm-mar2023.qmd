@@ -1,5 +1,5 @@
 ---
-title: "mmrm"
+title: "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures"
 author: "Liming Li"
 institute: (Statistical Engineering,
   Pharma Product Development Data Sciences, 
@@ -32,7 +32,6 @@ Authors:
 :::
 
 ::: {.column width="50%"}
-Authors:
 
 -   Doug Kelkhoff (Roche)
 -   Julia Dedic (Roche)
@@ -83,7 +82,7 @@ Thanks to:
 ::: columns
 ::: {.column width="50%"}
 -   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
--   No great R Package - initially though that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
+-   No great R Package - initially thought that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
 :::
 
 
