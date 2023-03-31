@@ -44,175 +44,175 @@
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#acknowledgments",
     "href": "slides/pharma-rug-mmrm-mar2023.html#acknowledgments",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\n\n\n\nAuthors:\n\nBrian Matthew Lang (MSD)\nChristian Stock (BI)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Sabanes Bove (Roche, lead)\n\n\nAuthors:\n\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nKevin Kunzmann (BI)\nLiming Li (Roche)\nYa Wang (Gilead)"
+    "text": "Acknowledgments\n\n\n\nAuthors:\n\nBrian Matthew Lang (MSD)\nChristian Stock (BI)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Sabanes Bove (Roche, lead)\n\n\n\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nKevin Kunzmann (BI)\nLiming Li (Roche)\nYa Wang (Gilead)"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#acknowledgments-1",
     "href": "slides/pharma-rug-mmrm-mar2023.html#acknowledgments-1",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Acknowledgments",
     "text": "Acknowledgments\n\nThanks to:\n\nBen Bolker (McMaster University)\nDavide Garolini (Roche)\nDinakar Kulkarni (Roche)\nGonzalo Duran Pacheco (Roche)\nSoftware Engineering working group (SWE WG)"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#agenda",
     "href": "slides/pharma-rug-mmrm-mar2023.html#agenda",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Agenda",
     "text": "Agenda\n\nIntroduction and Overview of SWE WG\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nComparing MMRM R Package to other Implementations\n\nClosing and Next Steps"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#context-software-engineering-in-biostatistics",
     "href": "slides/pharma-rug-mmrm-mar2023.html#context-software-engineering-in-biostatistics",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Context: Software Engineering in Biostatistics",
     "text": "Context: Software Engineering in Biostatistics\n\nOpen-source software has gained increasing popularity in Biostatistics\n\nPros: rapid uptake of novel statistical methods, unprecedented opportunities for collaboration\nCons: variability in software quality\n\nDeveloping high-quality software is critical"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#software-engineering-working-group-swe-wg",
     "href": "slides/pharma-rug-mmrm-mar2023.html#software-engineering-working-group-swe-wg",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Software Engineering working group (SWE WG)",
     "text": "Software Engineering working group (SWE WG)\n\nAn official working group of the ASA Biopharmaceutical Section\nFormed in August 2022\nCross-industry collaboration (>35 members from >25 organizations)\nHome page at rconsortium.github.io/asa-biop-swe-wg\nDeal with the issues of statistical quality assurances for R packages and create high quality statistical software"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#why-do-we-need-a-package-for-mmrm",
     "href": "slides/pharma-rug-mmrm-mar2023.html#why-do-we-need-a-package-for-mmrm",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Why do we need a package for MMRM?",
-    "text": "Why do we need a package for MMRM?\n\n\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially though that the MMRM problem was solved by using a combination of lme4 and lmerTest\n\n\n\nLearned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate"
+    "text": "Why do we need a package for MMRM?\n\n\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially thought that the MMRM problem was solved by using a combination of lme4 and lmerTest\n\n\n\nLearned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#before-creating-a-new-package",
     "href": "slides/pharma-rug-mmrm-mar2023.html#before-creating-a-new-package",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Before creating a new package",
     "text": "Before creating a new package\n\nFirst try to improve existing package\n\nHere we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom\nBut it did not work\n\nglmmTMB is always using a random effects representation, we cannot have a real unstructured model (uses \\(\\sigma = \\varepsilon > 0\\) trick)\n\n\nThink about long term maintenance and responsibility"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#idea-with-some-details",
     "href": "slides/pharma-rug-mmrm-mar2023.html#idea-with-some-details",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Idea with some Details",
     "text": "Idea with some Details\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#advantages-of-tmb",
     "href": "slides/pharma-rug-mmrm-mar2023.html#advantages-of-tmb",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Advantages of TMB",
     "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nSyntactic sugars to allow simple matrix calculations or operations like R\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#why-its-not-just-another-package",
     "href": "slides/pharma-rug-mmrm-mar2023.html#why-its-not-just-another-package",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Why it’s not just another package",
     "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#features-of-mmrm",
     "href": "slides/pharma-rug-mmrm-mar2023.html#features-of-mmrm",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Features of {mmrm}",
     "text": "Features of {mmrm}\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\nSatterthwaite adjusted degrees of freedom\nKenward-Roger adjusted degrees of freedom\nRobust sandwich estimator for covariance"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#comparing-mmrm-and-sas",
     "href": "slides/pharma-rug-mmrm-mar2023.html#comparing-mmrm-and-sas",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Comparing {mmrm} and SAS",
-    "text": "Comparing {mmrm} and SAS\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.\n\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compares the PROC MIXED procedure to the {mmrm} package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\n\n\n\nCovariance structures\nDegrees of Freedom\nContrasts"
+    "text": "Comparing {mmrm} and SAS\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.\n\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compares the PROC MIXED procedure to the {mmrm} package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nCovariance structures\n\n\n\nCovariance Estimators\nDegrees of Freedom\nContrasts"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#documentation",
     "href": "slides/pharma-rug-mmrm-mar2023.html#documentation",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Documentation",
     "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#unit-testing",
     "href": "slides/pharma-rug-mmrm-mar2023.html#unit-testing",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Unit Testing",
     "text": "Unit Testing\n\nUnit tests in {mmrm} are transparent, compared to PROC MIXED.\nUses the testthat framework with covr to communicate the testing coverage.\nUnit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\n\nNote\n\n\nThe integration tests in {mmrm} are set to a tolerance of 10e^-3 when compared to SAS outputs."
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#covariance-structures",
     "href": "slides/pharma-rug-mmrm-mar2023.html#covariance-structures",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Covariance structures",
     "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structures, {mmrm} is easily extensible - let us know via feature requests in the GitHub repository."
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#covariance-structures-details",
     "href": "slides/pharma-rug-mmrm-mar2023.html#covariance-structures-details",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Covariance structures details",
     "text": "Covariance structures details\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#covariance-estimators",
     "href": "slides/pharma-rug-mmrm-mar2023.html#covariance-estimators",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Covariance Estimators",
     "text": "Covariance Estimators\n\n\n\nCovariance estimators\n{mmrm}\nPROC MIXED\n\n\n\n\nAsymptotic\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nEmpirical\nX\nX\n\n\nJackknife\nX\n\n\n\nBias-Reduced Linearization\nX"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#degrees-of-freedom-methods",
     "href": "slides/pharma-rug-mmrm-mar2023.html#degrees-of-freedom-methods",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Degrees of Freedom Methods",
     "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through emmeans, and ongoing work in mmrm.\n**This is not identical to the KR(Lin) in PROC MIXED."
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#contrastslsmeans",
     "href": "slides/pharma-rug-mmrm-mar2023.html#contrastslsmeans",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Contrasts/LSMEANS",
     "text": "Contrasts/LSMEANS\nContrasts and least square (LS) means estimates are available in mmrm using\n\n\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does.\n\n\n\n\n\n\n\n\nNote\n\n\nThese are comparable to the LSMEANS statement in PROC MIXED."
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#benchmarking-with-other-r-packages",
     "href": "slides/pharma-rug-mmrm-mar2023.html#benchmarking-with-other-r-packages",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Benchmarking with other R packages",
     "text": "Benchmarking with other R packages\nOther R packages, like nlme, lme4 and glmmTMB can support MMRM analysis However:\n\nCovariance structure supported is limited\nComputaional efficiency is not satisfying\nConvergence issues(especially for lme4)\nNeed other(multiple) packages to support Satterthwaite and Kenward-Roger degrees of freedom, or Sandwich covariance estimator."
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#computational-efficiency",
     "href": "slides/pharma-rug-mmrm-mar2023.html#computational-efficiency",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Computational Efficiency",
     "text": "Computational Efficiency\nmmrm not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#differences-with-sas",
     "href": "slides/pharma-rug-mmrm-mar2023.html#differences-with-sas",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Differences with SAS",
     "text": "Differences with SAS\n{mmrm} has small difference from SAS"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#getting-started",
     "href": "slides/pharma-rug-mmrm-mar2023.html#getting-started",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Getting started",
     "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit <- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#outlook",
     "href": "slides/pharma-rug-mmrm-mar2023.html#outlook",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Outlook",
     "text": "Outlook\n\nWe still have major features on our backlog:\n\nType II and type III ANOVA tests\n\nWorking on comparison to other implementations\n\nParameter estimates, computation time, convergence, …\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
   },
   {
     "objectID": "slides/pharma-rug-mmrm-mar2023.html#thank-you-questions",
     "href": "slides/pharma-rug-mmrm-mar2023.html#thank-you-questions",
-    "title": "mmrm",
+    "title": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures",
     "section": "Thank you! Questions?",
     "text": "Thank you! Questions?"
   },
@@ -354,7 +354,7 @@
     "href": "slides/r-adoption-jan2023.html#why-do-we-need-a-package-for-mmrm",
     "title": "Introducting the Software Engineering Working Group and {mmrm}",
     "section": "Why do we need a package for MMRM?",
-    "text": "Why do we need a package for MMRM?\n\n\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially though that the MMRM problem was solved by using a combination of lme4 and lmerTest\n\n\n\nLearned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\ntried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom"
+    "text": "Why do we need a package for MMRM?\n\n\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially thought that the MMRM problem was solved by using a combination of lme4 and lmerTest\n\n\n\nLearned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\ntried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom"
   },
   {
     "objectID": "slides/r-adoption-jan2023.html#before-creating-a-new-package",
@@ -816,7 +816,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Workshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
+    "text": "*{mmrm}: an Open Source R Package for Mixed Model Repeated Measures\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
   },
   {
     "objectID": "index.html",
