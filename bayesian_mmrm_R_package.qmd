@@ -1,0 +1,13 @@
+---
+title: "Bayesian MMRM R Package Development"
+---
+
+**Lead**: Will Landau (Eli Lilly)
+
+**Objective**: To develop an R package for Bayesian mixed models with repeated measures (MMRM) to support robust analysis of longitudinal clinical data.
+
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.R", sep = ""))
+read.members("bayesian_mmrm")
+```
