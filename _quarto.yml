@@ -25,6 +25,7 @@ website:
         menu:
           - href: mmrm_R_package.qmd
           - href: hta_page.qmd
+          - href: bayesian_mmrm_R_package.qmd
       - href: presentations.qmd
         text: "Presentations"
 
