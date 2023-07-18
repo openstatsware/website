@@ -4,8 +4,14 @@ title: "Presentations"
 
 -   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures
     - [slides](slides/pharma-rug-mmrm-mar2023.html)
--   *Workshop on Good Software Engineering Practice for R*. BBS workshop, Basel, 10 Feb 2023.
+-   *Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package*. R Meetup, 21 Jul 2023.
+    -   [slides](slides/r-meetup-july2023.html)
+-   *Workshop on Good Software Engineering Practice for R*. San Francisco bay area, 20 Jul 2023.
+    -   [slides](https://openpharma.github.io/workshop-r-swe-sf/listing.html)
+-   *Workshop on Good Software Engineering Practice for R*. Shanghai, 24 Mar 2023.
     -   [slides](https://openpharma.github.io/workshop-r-swe/listing.html)
+-   *Workshop on Good Software Engineering Practice for R*. BBS workshop, Basel, 10 Feb 2023.
+    -   [slides](https://kkmann.github.io/workshop-r-swe/listing.html)
 -   *Introducing the Software Engineering working group and {mmrm}*. R/Adoption Series Webinar, 26 Jan 2023.
     -   [slides](slides/r-adoption-jan2023.html)
 -   *Introducing the Software Engineering working group: Who we are and what we build together*. R Govys Meetup, 19 Jan 2023.

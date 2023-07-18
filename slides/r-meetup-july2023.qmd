@@ -1,0 +1,141 @@
+---
+title: "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package"
+author: "Laura Harris "
+date: "21 July 2023"
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+    toc: true
+    toc-depth: 1
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 98% 10%
+---
+
+# What is the SWE WG?
+
+## ASA BIOP Software Engineering working group (SWE WG)
+
+-   An official working group of the ASA Biopharmaceutical Section
+-   Formed in August 2022
+-   Cross-industry collaboration with more than 30 members from over 20 organizations
+-   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+-   Open for new members!
+
+## Motivation
+
+-   Open-source software has gained increasing popularity in Biostatistics over the last two decades
+-   Current repositories (GitHub, CRAN) don't require any statistical quality assurance 
+-   Developing high-quality software is critical to inform clinical and regulatory decisions:
+    - Good coding practices
+    - Reproducible outputs
+    - Self-sufficient documentation 
+
+## Goals
+
+-   **Primary Goal**: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps
+
+-   **Secondary Goal**: Develop and disseminate best practices for engineering high-quality open-source statistical software
+
+## SWE WG Activities
+
+-   Engineer selected R packages to fill in gaps in the open-source statistical software landscape
+    -  First R package [`mmrm`](https://cran.r-project.org/web/packages/mmrm/index.html) was published on CRAN in October 2022 and updated in December
+-   Disseminate best practice for software engineering in the Biostatistics community
+    -  Organize 1-day [workshop](https://openpharma.github.io/workshop-r-swe-sf/) on best R package development practices 
+    -  Organize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop 
+    -  [Youtube series](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS) with a focus on best practices for software engineering
+
+## Best Practices for Software Engineering
+
+-  User interface design
+-  Version control with git
+-  Unit and integration tests
+-  Consistent and readable code style
+-  Documentation
+-  Continuous integration setup 
+-  Publication on website and repositories
+-  etc.
+
+# `mmrm` package
+
+## Motivation
+
+-   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+-   No great R Package - initially thought that it was solved by using `lme4` with `lmerTest`
+-   But this approach failed on large data (slow, did not converge)
+-   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+
+## Before creating a new package
+
+- First try to improve existing package
+  - Here we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+  - But it did not work
+- Think about long term maintenance and responsibility
+
+## `mmrm` Package overview
+
+-   Linear model for dependent observations within independent subjects
+-   Multiple covariance structures available for the dependent observations
+-   REML or ML estimation, using multiple optimizers if needed
+-   `emmeans` interface for least square means, `tidymodels` for easy model fitting
+-   Satterthwaite and Kenward-Roger adjustments
+
+## Why it's not just another package
+
+-   Ongoing maintenance and support from the pharmaceutical industry
+    -   5 companies being involved in the development, on track to become standard package
+-   Development using best practices as show case for high quality package
+    - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
+
+## Covariance structures
+
+|       Covariance structures                   | `{mmrm}`   |  `PROC MIXED`  |
+|:----------------------------------------------|:------------:|:-----:|
+|     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
+|     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
+| Compound symmetry (hetero/homo) |     X/X      |  X/X  |
+|  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
+|  Ante-dependence (hetero/homo)  |     X/X      |  X    |
+|        Spatial exponential      |     X        |  X    |
+
+## Degrees of Freedom Methods
+
+|       Method     |  `{mmrm}`      | `PROC MIXED` |
+|:---------------- |:----------:|:---:|
+|       Contain         |     X*     |  X  |
+|       Between/Within  |     X*     |  X  |
+|       Residual        |     X*     |  X  |
+|       Satterthwaite   |     X      |  X  |
+|       Kenward-Roger   |     X      |  X  |
+|       Kenward-Roger (Linear)**   |  X|  X  |
+
+*Available through the `emmeans` package.
+
+**This is not equivalent to the KR2 setting in `PROC MIXED`
+
+## Contrasts/LSMEANS
+
+Contrasts and least square means estimates are available in `mmrm` using:
+
+  - `df_1d`, `df_md` 
+  - S3 method that is compatible with `emmeans`
+  - LS means difference can be produced through `emmeans` (`pairs` method)
+  - Degrees of freedom method is passed from `mmrm` to `emmeans`
+  - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="50%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="500"}
+:::
+
+::: {.column width="50%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+:::
+:::
