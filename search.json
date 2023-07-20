@@ -574,6 +574,97 @@
     "text": "Thank you! Questions?"
   },
   {
+    "objectID": "slides/r-meetup-july2023.html#asa-biop-software-engineering-working-group-swe-wg",
+    "href": "slides/r-meetup-july2023.html#asa-biop-software-engineering-working-group-swe-wg",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "ASA BIOP Software Engineering working group (SWE WG)",
+    "text": "ASA BIOP Software Engineering working group (SWE WG)\n\nAn official working group of the ASA Biopharmaceutical Section\nFormed in August 2022\nCross-industry collaboration with more than 30 members from over 20 organizations\nHome page at rconsortium.github.io/asa-biop-swe-wg\nOpen for new members!"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#motivation",
+    "href": "slides/r-meetup-july2023.html#motivation",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Motivation",
+    "text": "Motivation\n\nOpen-source software has gained increasing popularity in Biostatistics over the last two decades\nCurrent repositories (GitHub, CRAN) don’t require any statistical quality assurance\nDeveloping high-quality software is critical to inform clinical and regulatory decisions:\n\nGood coding practices\nReproducible outputs\nSelf-sufficient documentation"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#goals",
+    "href": "slides/r-meetup-july2023.html#goals",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Goals",
+    "text": "Goals\n\nPrimary Goal: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps\nSecondary Goal: Develop and disseminate best practices for engineering high-quality open-source statistical software"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#swe-wg-activities",
+    "href": "slides/r-meetup-july2023.html#swe-wg-activities",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "SWE WG Activities",
+    "text": "SWE WG Activities\n\nEngineer selected R packages to fill in gaps in the open-source statistical software landscape\n\nFirst R package mmrm was published on CRAN in October 2022 and updated in December\n\nDisseminate best practice for software engineering in the Biostatistics community\n\nOrganize 1-day workshop on best R package development practices\nOrganize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop\nYoutube series with a focus on best practices for software engineering"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#best-practices-for-software-engineering",
+    "href": "slides/r-meetup-july2023.html#best-practices-for-software-engineering",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Best Practices for Software Engineering",
+    "text": "Best Practices for Software Engineering\n\nUser interface design\nVersion control with git\nUnit and integration tests\nConsistent and readable code style\nDocumentation\nContinuous integration setup\nPublication on website and repositories\netc."
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#motivation-1",
+    "href": "slides/r-meetup-july2023.html#motivation-1",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Motivation",
+    "text": "Motivation\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially thought that it was solved by using lme4 with lmerTest\nBut this approach failed on large data (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#before-creating-a-new-package",
+    "href": "slides/r-meetup-july2023.html#before-creating-a-new-package",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Before creating a new package",
+    "text": "Before creating a new package\n\nFirst try to improve existing package\n\nHere we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom\nBut it did not work\n\nThink about long term maintenance and responsibility"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#mmrm-package-overview",
+    "href": "slides/r-meetup-july2023.html#mmrm-package-overview",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "mmrm Package overview",
+    "text": "mmrm Package overview\n\nLinear model for dependent observations within independent subjects\nMultiple covariance structures available for the dependent observations\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means, tidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#why-its-not-just-another-package",
+    "href": "slides/r-meetup-july2023.html#why-its-not-just-another-package",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Why it’s not just another package",
+    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#covariance-structures",
+    "href": "slides/r-meetup-july2023.html#covariance-structures",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Covariance structures",
+    "text": "Covariance structures\n\n\n\n\n\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#degrees-of-freedom-methods",
+    "href": "slides/r-meetup-july2023.html#degrees-of-freedom-methods",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Degrees of Freedom Methods",
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not equivalent to the KR2 setting in PROC MIXED"
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#contrastslsmeans",
+    "href": "slides/r-meetup-july2023.html#contrastslsmeans",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Contrasts/LSMEANS",
+    "text": "Contrasts/LSMEANS\nContrasts and least square means estimates are available in mmrm using:\n\ndf_1d, df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does."
+  },
+  {
+    "objectID": "slides/r-meetup-july2023.html#thank-you-questions",
+    "href": "slides/r-meetup-july2023.html#thank-you-questions",
+    "title": "Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package",
+    "section": "Thank you! Questions?",
+    "text": "Thank you! Questions?"
+  },
+  {
     "objectID": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
     "href": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
     "title": "Unit Testing for R Developers",
@@ -858,7 +949,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "*{mmrm}: an Open Source R Package for Mixed Model Repeated Measures\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
+    "text": "*{mmrm}: an Open Source R Package for Mixed Model Repeated Measures\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
   },
   {
     "objectID": "videos.html",
