@@ -900,7 +900,7 @@
     "href": "bayesian_mmrm_R_package.html",
     "title": "Bayesian MMRM R Package Development",
     "section": "",
-    "text": "Lead: Will Landau (Eli Lilly)\nObjective: To develop an R package for Bayesian mixed models with repeated measures (MMRM) to support robust analysis of longitudinal clinical data.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAndrew\nBean\nNovartis\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIndependent\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nWill\nLandau\nEli Lilly\n\n\nYoni\nSidi\nSage Therapeutics"
+    "text": "Lead: Will Landau (Eli Lilly)\nObjective: To develop an R package for Bayesian mixed models with repeated measures (MMRM) to support robust analysis of longitudinal clinical data.\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAndrew\nBean\nNovartis\n\n\nChristian\nStock\nBoehringer Ingelheim\n\n\nDaniel\nLeibovitz\nIndependent\n\n\nKevin\nKunzmann\nBoehringer Ingelheim\n\n\nWill\nLandau\nEli Lilly\n\n\nYoni\nSidi\nSage Therapeutics\n\n\n\nTo learn more about our Bayesian MMRM R package using brms, please visit rconsortium.github.io/brms.mmrm/."
   },
   {
     "objectID": "mmrm_R_package.html",
