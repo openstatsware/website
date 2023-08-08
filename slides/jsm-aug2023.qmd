@@ -23,6 +23,7 @@ title-slide-attributes:
 - `mmrm` Package
   - Why this is not "yet another package"
   - Comparing `mmrm` package to SAS
+  - Benchmarking with other R packages
 - Closing and next steps
 
 ## Software Engineering working group (SWE WG) {.smaller}
@@ -39,7 +40,7 @@ title-slide-attributes:
 
 - Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
 - No great R Package 
-  - Initially thought that the MMRM problem was solved by using `lme4` with `lmerTest`, but it failed on large data sets (slow, did not converge)
+  - Initially thought that the MMRM problem was solved by using `lme4` with `lmerTest`, learned that this approach failed on large data sets (slow, did not converge)
   - `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
   - Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom, but it did not work
 
@@ -89,7 +90,7 @@ title-slide-attributes:
 :::
 
 ::: {.column width="50%"}
-- Covariance structures
+- Covariance Structures
 - Degrees of Freedom
 - Contrasts
 :::
@@ -197,12 +198,31 @@ Contrasts and least square means estimates are available in `mmrm` using:
   - Degrees of freedom method is passed from `mmrm` to `emmeans`
   - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
 
+## Benchmarking with other R packages
+
+- Compared `mmrm::mmrm` with `nlme::gls`, `lme4::lmer`, `glmmTMB::glmmTMB`
+- Highlights 
+  - `mmrm` has faster convergence time 
+    - Using `FEV` dataset as an example, `mmrm` took ~50 ms, while `lmer` ~200 ms, `gls` and `glmmTMB` >600 ms
+  - `mmrm` and `gls` estimates have smaller differences from SAS `PROC MIXED` estimates
+  - `mmrm` and `gls` are more resilient to missingness
+- Detailed results at the online [comparison vignette](https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html)
+
+## Impact of `mmrm`
+
+- CRAN downloads: 382 in the last week (7/31/2023 – 8/6/2023)
+  - [https://cran.r-project.org/web/packages/mmrm/](https://cran.r-project.org/web/packages/mmrm/) 
+
+- GitHub repository: 60 stars as of 8/7/2023
+  - [https://github.com/openpharma/mmrm](https://github.com/openpharma/mmrm) 
+
+
 ## Outlook
 
 - We still have major features on our backlog
   - Type II and type III ANOVA tests
-- Working on comparison to other implementations
-  - Parameter estimates, computation time, convergence, ...
+- CRAN version 0.3 is coming soon
+  - Add argument `covariance`, different covariance estimators (empirical, empirical Jackknife, empirical bias-reduced), `predict` method, etc
 - Please let us know what is missing in `mmrm` for you! And try it out :-)
 
 ## Thank you! Questions?
