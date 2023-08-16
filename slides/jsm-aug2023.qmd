@@ -1,0 +1,238 @@
+---
+title: "{mmrm}"
+subtitle: "A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures"
+author: "Ya Wang"
+institute: on Behalf of ASA BIOP Software Engineering Working Group (SWE WG)
+date: "8 August 2023"
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    slide-number: c/t
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-size: 18%
+  data-background-opacity: "0.5"
+  data-background-position: 98% 10%
+---
+
+## Outline
+
+- Introduction to SWE WG
+- Motivation: why do we need a package for MMRM?
+- `mmrm` Package
+  - Why this is not "yet another package"
+  - Comparing `mmrm` package to SAS
+  - Benchmarking with other R packages
+- Closing and next steps
+
+## Software Engineering working group (SWE WG) {.smaller}
+
+- Official working group of the ASA Biopharmaceutical Section
+  - Formed in August 2022
+  - Cross-industry collaboration (>35 members from >25 organizations)
+- Goal 
+  - Engineer selected R packages to fill in gaps in the open-source statistical software landscape 
+  - Develop and disseminate best practices for engineering high-quality open-source statistical software
+- Homepage: [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+
+## Motivation: why do we need a package for MMRM {.smaller}
+
+- Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+- No great R Package 
+  - Initially thought that the MMRM problem was solved by using `lme4` with `lmerTest`, learned that this approach failed on large data sets (slow, did not converge)
+  - `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+  - Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom, but it did not work
+
+## Idea
+
+- We only want to fit a fixed effects model with a structured covariance matrix for each subject
+- The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
+- We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
+
+## Advantages of `TMB`
+
+- Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
+- Automatic differentiation of the log-likelihood as a function of the variance parameters
+- We get the gradient and Hessian exactly and without additional coding
+- This can be used from the R side with the `TMB` interface and plugged into optimizers
+
+## Why it's not just another package
+
+- Ongoing maintenance and support from the pharmaceutical industry
+  - 5 companies being involved in the development, on track to become standard package
+- Development using best practices as show case for high quality package
+  - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
+
+## Features of `mmrm` {.smaller}
+
+- Linear model for dependent observations within independent subjects
+- Covariance structures for the dependent observations:
+  - Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
+  - Allows group specific covariance estimates and weights
+- REML or ML estimation, using multiple optimizers if needed
+- `emmeans` interface for least square means
+- `tidymodels` for easy model fitting
+- Satterthwaite and Kenward-Roger adjustments
+- Robust sandwich estimator for covariance
+
+## Comparing SAS and R
+
+- To run an MMRM model in SAS it is recommended to use either the `PROC MIXED` or `PROC GLM` procedures.
+- Less model assumptions are applied in `PROC MIXED`, primarily how one treats missingness.
+- We will compare the `PROC MIXED` procedure to the `mmrm` package in the following attributes:
+
+::: columns
+::: {.column width="50%"}
+- Documentation
+- Unit Testing
+- Estimation Methods
+:::
+
+::: {.column width="50%"}
+- Covariance Structures
+- Degrees of Freedom
+- Contrasts
+:::
+:::
+
+## Documentation
+
+Both languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.
+
+::: columns
+::: {.column width="50%"}
+`{mmrm}`
+:::
+
+::: {.column width="50%"}
+`PROC MIXED`
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
+- [Homepage](https://openpharma.github.io/mmrm/main/index.html)
+- [Usage](https://openpharma.github.io/mmrm/main/articles/introduction.html)
+- [Estimation](https://openpharma.github.io/mmrm/main/articles/algorithm.html)
+- [Covariance Structures](https://openpharma.github.io/mmrm/main/articles/covariance.html)
+- Degrees of Freedom [KR](https://openpharma.github.io/mmrm/main/articles/kenward.html)/[Satterthwaite](https://openpharma.github.io/mmrm/main/articles/satterthwaite.html)
+:::
+
+::: {.column width="50%"}
+- [Homepage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_toc.htm)
+- [Usage](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_examples02.htm)
+- [Theory](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_details01.htm)
+- [Covariance Structures](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type)
+- [Degrees of Freedom](https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm)
+:::
+:::
+
+## Unit Testing
+
+- Unit tests in `mmrm` are transparent, compared to `PROC MIXED`.
+- Uses the `testthat` framework with `covr` to communicate the testing coverage.
+- Unit tests can be found in the GitHub repository under [./tests](https://github.com/openpharma/mmrm/tree/main/tests/testthat).
+
+::: callout-note
+The integration tests in `mmrm` are set to a tolerance of 10e\^-3 when compared to SAS outputs.
+:::
+
+## Estimation Methods
+
+| Method | `{mmrm}` | `PROC MIXED` |
+|:-------|:--------:|:------------:|
+| ML     |    X     |      X       |
+| REML   |    X     |      X       |
+
+## Covariance structures
+
+::: columns
+::: {.column width="60%"}
+- SAS has 23 non-spatial covariance structures, while mmrm has 10.
+  - 9 structures intersect with SAS
+  - Ante-dependence (homogeneous) is only in the mmrm package.
+- SAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.
+:::
+
+::: {.column width="40%"}
+::: callout-tip
+For users that need more structures, `mmrm` is easily extensible - let us know via [feature requests](https://github.com/openpharma/mmrm/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) in the GitHub repository.
+:::
+:::
+:::
+
+## Covariance structures details
+
+|       Covariance structures                   | `{mmrm}`   |  `PROC MIXED`  |
+|:----------------------------------------------|:------------:|:-----:|
+|     Unstructured (Unweighted/Weighted)        |     X/X      |  X/X  |
+|     Toeplitz (hetero/homo)      |     X/X      |  X/X  |
+| Compound symmetry (hetero/homo) |     X/X      |  X/X  |
+|  Auto-regressive (hetero/homo)  |     X/X      |  X/X  |
+|  Ante-dependence (hetero/homo)  |     X/X      |  X    |
+|        Spatial exponential      |     X        |  X    |
+
+## Degrees of Freedom Methods
+
+|       Method     |  `{mmrm}`      | `PROC MIXED` |
+|:---------------- |:----------:|:---:|
+|       Contain         |     X*     |  X  |
+|       Between/Within  |     X*     |  X  |
+|       Residual        |     X*     |  X  |
+|       Satterthwaite   |     X      |  X  |
+|       Kenward-Roger   |     X      |  X  |
+|       Kenward-Roger (Linear)**   |  X|  X  |
+
+*Available through the `emmeans` package.
+
+**This is not identical to the KR(Lin) in `PROC MIXED`
+
+## Contrasts/LSMEANS
+
+Contrasts and least square means estimates are available in `mmrm` using:
+
+  - `mmrm::df_1d`, `mmrm::df_md` 
+  - S3 method that is compatible with `emmeans`
+  - LS means difference can be produced through `emmeans` (`pairs` method)
+  - Degrees of freedom method is passed from `mmrm` to `emmeans`
+  - By default `PROC MIXED` and `mmrm` do not adjust for multiplicity, whereas `emmeans` does.
+
+## Benchmarking with other R packages
+
+- Compared `mmrm::mmrm` with `nlme::gls`, `lme4::lmer`, `glmmTMB::glmmTMB`
+- Highlights 
+  - `mmrm` has faster convergence time 
+    - Using `FEV` dataset as an example, `mmrm` took ~50 ms, while `lmer` ~200 ms, `gls` and `glmmTMB` >600 ms
+  - `mmrm` and `gls` estimates have smaller differences from SAS `PROC MIXED` estimates
+  - `mmrm` and `gls` are more resilient to missingness
+- Detailed results at the online [comparison vignette](https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html)
+
+## Impact of `mmrm`
+
+- CRAN downloads: 382 in the last week (7/31/2023 – 8/6/2023)
+  - [https://cran.r-project.org/web/packages/mmrm/](https://cran.r-project.org/web/packages/mmrm/) 
+
+- GitHub repository: 60 stars as of 8/7/2023
+  - [https://github.com/openpharma/mmrm](https://github.com/openpharma/mmrm) 
+
+
+## Outlook
+
+- We still have major features on our backlog
+  - Type II and type III ANOVA tests
+- CRAN version 0.3 is coming soon
+  - Add argument `covariance`, different covariance estimators (empirical, empirical Jackknife, empirical bias-reduced), `predict` method, etc
+- Please let us know what is missing in `mmrm` for you! And try it out :-)
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="50%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="500"}
+:::
+
+::: {.column width="50%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+:::
+:::
