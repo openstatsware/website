@@ -1,0 +1,218 @@
+---
+title: "Plugging the gaps: Lessons learned from implementing the mmrm R package"
+author: "Kevin Kunzmann on behalf of the ASA BIOP SWE WG"
+institute: Boehringer Ingelheim
+date: "June 13 2023"
+date-format: long
+format: 
+  revealjs:
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    fontsize: 34px
+    slide-number: true
+title-slide-attributes: 
+  data-background-image: https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png
+  data-background-size: 15%
+  data-background-opacity: "1.0"
+  data-background-position: 90% 10%
+css: style.css
+---
+
+## Package Authors:
+
+::: columns
+::: {.column width="50%"}
+-   Brian Matthew Lang (MSD)
+-   Christian Stock (Boehringer-Ingelheim)
+-   Craig Gower-Page (Roche)
+-   Dan James (AstraZeneca)
+-   Daniel Sabanes Bove (Roche, lead)
+:::
+
+::: {.column width="50%"}
+-   Doug Kelkhoff (Roche)
+-   Julia Dedic (Roche)
+-   Kevin Kunzmann (Boehringer-Ingelheim)
+-   Liming Li (Roche)
+-   Ya Wang (Gilead)
+:::
+:::
+
+### Acknowledgments & thanks to: {.smaller}
+
+Ben Bolker (McMaster University), Davide Garolini (Roche), Dinakar Kulkarni (Roche), Gonzalo Duran Pacheco (Roche), </br>[**ASA BIOP Software Engineering working group (SWE WG)**](https://rconsortium.github.io/asa-biop-swe-wg/)
+
+## Agenda
+
+-   Overview of Open Source in Biostatistics
+-   Case Study: `{mmrm}` Package
+    -   Mixed Models for Repeated Measures - Why bother?
+    -   Why this is not "yet another package"
+-   Lessons Learned
+-   Next Steps
+
+## Open Source in Biostatistics
+
+-   Open-source software increasing popularity in Biostatistics
+-   Rapid uptake of novel statistical methods
+-   Unprecedented opportunities for collaboration
+-   Transparency of methods and implementation
+-   Variability in software quality
+-   No statistical quality assurance on open-source extension package repositories, e.g. CRAN
+-   No industry standard for assessing quality of R packages
+-   **Reliable software for core statistical analysis is paramount**
+
+## The ASA BIOP SWE Working Group
+
+-   Idea: form industry working group to identify and fill gaps in R package landscape with reliable implementations of crucial methods
+-   [ASA Biopharmaceutical section software engineering working group](https://rconsortium.github.io/asa-biop-swe-wg/) (ASA BIOP SWE WG)
+-   Foster good coding practices for easier maintenance, review. and transparency:
+    -   Version control for traceability and structured change management
+    -   Self-sufficient high-quality documentation
+    -   Code style standards for easier review
+    -   Extensive unit testing and CI/CD for test-driven development
+    -   Reproducible outputs, especially for stochastic algorithms
+
+## Why do we need a package for MMRMs?
+
+-   MMRM popular for longitudinal continuous outcomes in randomized clinical trials
+-   Think about long term maintenance and responsibility!
+-   Try to improve existing package
+    -   extend `glmmTMB` with Satterthwaite adjusted degrees of freedom
+    -   not feasible: `glmmTMB` only random effects representation, no real unstructured model
+-   No tailored R package with sufficient capabilities/reliability
+-   `lme4` + `lmerTest`: fails on large data sets (slow, convergence issues)
+-   `nlme`: no Satterthwaite adjusted degrees of freedom, convergence issues, only approximate `emmeans`
+
+## Case Study: The [`{mmrm}`](https://cran.r-project.org/package=mmrm) Package
+
+-   Linear model for dependent observations within independent subjects
+-   Multiple covariance structures for the dependent observations
+-   REML or ML estimation, using multiple optimizers if needed
+-   `emmeans` interface for least square means
+-   `tidymodels` for easy model fitting
+-   Satterthwaite and Kenward-Roger adjustments for degrees of freedom
+-   Designed for needs of pharma applications from ground up
+-   Ongoing maintenance and support from the pharma industry
+    -   5 companies involved in the development
+    -   ambition to become standard package within the field
+    
+## How we develop `{mmrm}`
+
+-   Created initial prototype quickly, open-sourced on [github.com/openpharma/mmrm](https://github.com/openpharma/mmrm)
+-   In parallel, assembled multiple other companies with shared interest in reliable MMRM for R
+-   $\leadsto$ Start of Software Engineering working group (SWE WG), with \>35 members from \>25 organizations
+<!-- -   Read more at rconsortium.github.io/asa-biop-swe-wg, Official working group of the ASA Biopharmaceutical section -->
+-   Focus on core issues and aim for frequent releases of new features instead of waiting for perfect state
+-   Do not compromise quality on the way, rather less done well
+-   Regular online developer calls to align next steps
+
+## Getting started with `{mmrm}`
+
+-   `{mmrm}` is on CRAN - use this as a starting point:
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages("mmrm")
+library(mmrm)
+fit <- mmrm(
+  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),
+  data = fev_data
+)
+summary(fit)
+library(emmeans)
+emmeans(fit, ~ ARMCD | AVISIT)
+```
+
+-   Visit [openpharma.github.io/mmrm](https://openpharma.github.io/mmrm/) for detailed docs
+
+## Comparing `{mmrm}` and SAS
+
+Comparison to *de-facto* gold standard in SAS with `PROC MIXED`:
+
+::: columns
+::: {.column width="50%"}
+### `{mmrm}`
+- Documentation: Available online
+- Testing: Transparent + coverage
+- Covariance structures: 10 non-spatial covariance structures
+- Focus on population marginal models
+:::
+
+::: {.column width="50%"}
+### `PROC MIXED`
+- Documentation: Available online
+- Testing: Hidden
+- Covariance structures: 23 non-spatial covariance structures
+- Marginal and individual level random effects
+:::
+:::
+
+## Deviation from SAS
+
+* negligible differences from SAS in (non-representative) set of examples
+* `{mmrm}` orders of magnitude closer than `{glmmTMB}` or `{nlme}`
+
+::: columns
+::: {.column width="40%"}
+![](estimate_diff.png)
+:::
+
+::: {.column width="40%"}
+![](sd_diff.png)
+:::
+:::
+
+
+## Speed
+
+- `{mmrm}` fast due to C++ code via template model builder (TMB) library
+- `{mmrm}` uses efficient automatic gradients for the ML/REML objective
+
+![](converge_speed.png)
+
+
+## Lessons Learned: Best Practices {.smaller}
+
+-   User interface design (function names etc.)
+    - Difficult to get right
+    - Spend enough time on making it convenient/familiar
+-   Testing:
+    - Unit tests are essential for preventing regression and assuring quality
+    - Use continuous integration to catch errors early
+-   Documentation:
+    - Lots of work but extremely important
+    - Needs to be kept up-to-date
+    - Testing alone is not sufficient - also use example & vignettes for building trust with users
+
+## Lessons Learned: Collaboration
+
+-   Important to go public as soon as possible - you never know who else might be interested/could help
+-   Version control with git: cornerstone of effective collaboration
+-   Agree on standards:
+    - Consistent and readable code style: transparency and easier collaboration
+    - How to contribute: Written (!) contribution guidelines + lowering the entry hurdle using developer calls
+-   Leverage network of developers in companies to get feedback from real projects as soon as possible
+-   Emphasize importance of non-coding contributions like documentation
+
+## Long Term Perspective & Next Steps
+
+-   Software engineering is a critical competence in producing high-quality statistical software
+-   A lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+-   Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
+-   Continue to highlight and support cross-industry collaboration through, e.g.: Phuse, R Consortium, openpharma
+-   Publicize existing open source projects, e.g.: `admiral`, `rtables`, Bayesian `mmrm`
+
+## Thank you! Questions?
+
+::: columns
+::: {.column width="33%"}
+![](https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png){height="300"}
+:::
+
+::: {.column width="33%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="300"}
+:::
+
+::: {.column width="33%"}
+![](aimslogo.png){height="300"}
+:::
+:::
