@@ -2,7 +2,11 @@
 title: "Presentations"
 ---
 
--   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures
+-   *{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. JSM, 8 Aug 2023. 
+    - [slides](slides/jsm-aug2023.html)
+-   *Plugging the gaps: Lessons learned from implementing the mmrm R package*. PSI, 13 Jun 2023.
+    - [slides](slides/2023-psi-aims-london.html)
+-   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. Pharma RUG, 31 Mar 2023.
     - [slides](slides/pharma-rug-mmrm-mar2023.html)
 -   *Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package*. R Meetup, 21 Jul 2023.
     -   [slides](slides/r-meetup-july2023.html)
