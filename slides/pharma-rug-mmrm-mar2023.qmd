@@ -4,7 +4,7 @@ author: "Liming Li"
 institute: (Statistical Engineering,
   Pharma Product Development Data Sciences, 
   Roche)
-date: "Pharama RUG, 31 Mar 2023"
+date: "Pharma RUG, 31 Mar 2023"
 format: 
   revealjs:
     incremental: true
@@ -32,7 +32,6 @@ Authors:
 :::
 
 ::: {.column width="50%"}
-
 -   Doug Kelkhoff (Roche)
 -   Julia Dedic (Roche)
 -   Kevin Kunzmann (BI)
@@ -74,32 +73,31 @@ Thanks to:
 
 -   An official working group of the ASA Biopharmaceutical Section
 -   Formed in August 2022
--   Cross-industry collaboration (>35 members from >25 organizations)
+-   Cross-industry collaboration (\>35 members from \>25 organizations)
 -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
 -   Deal with the issues of statistical quality assurances for R packages and create high quality statistical software
 
 ## Why do we need a package for MMRM?
+
 ::: columns
 ::: {.column width="50%"}
 -   Mixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
 -   No great R Package - initially thought that the MMRM problem was solved by using a combination of `lme4` and `lmerTest`
 :::
 
-
 ::: {.column width="50%"}
 -   Learned that this approach failed on large data sets (slow, did not converge)
 -   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
-
 :::
 :::
 
 ## Before creating a new package
 
-- First try to improve existing package
-  - Here we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
-  - But it did not work
-    - `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
-- Think about long term maintenance and responsibility
+-   First try to improve existing package
+    -   Here we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom
+    -   But it did not work
+        -   `glmmTMB` is always using a random effects representation, we cannot have a real unstructured model (uses $\sigma = \varepsilon > 0$ trick)
+-   Think about long term maintenance and responsibility
 
 ## Idea with some Details
 
@@ -120,8 +118,7 @@ Thanks to:
 -   Ongoing maintenance and support from the pharmaceutical industry
     -   5 companies being involved in the development, on track to become standard package
 -   Development using best practices as show case for high quality package
-    - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
-
+    -   Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
 
 ## Features of `{mmrm}` {.smaller}
 
@@ -134,7 +131,6 @@ Thanks to:
 -   Satterthwaite adjusted degrees of freedom
 -   Kenward-Roger adjusted degrees of freedom
 -   Robust sandwich estimator for covariance
-
 
 ## Comparing `{mmrm}` and SAS
 
@@ -277,7 +273,7 @@ These are comparable to the [LSMEANS](https://documentation.sas.com/doc/en/pgmsa
 
 ## Benchmarking with other R packages
 
-Other R packages, like `nlme`, `lme4` and `glmmTMB` can support MMRM analysis
+Other R packages, like `nlme`, `lme4` and `glmmTMB` can support MMRM analysis.
 However:
 
 -   Covariance structure supported is limited
@@ -293,7 +289,7 @@ However:
 
 ## Differences with SAS
 
-`{mmrm}` has small difference from SAS 
+`{mmrm}` has small difference from SAS
 
 ::: columns
 ::: {.column width="50%"}
@@ -304,6 +300,7 @@ However:
 ![](sd_diff.png)
 :::
 :::
+
 ## Getting started
 
 -   `mmrm` is on CRAN - use this as a starting point:
