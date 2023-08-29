@@ -7,6 +7,7 @@ format:
     incremental: true   
     toc: true
     toc-depth: 1
+    toc-title: Outline
 ---
 
 ```{r setup}
@@ -34,7 +35,7 @@ Founded last year:
 
 ## Why a new WG?
 
-- Started with MMRM work
+- Started with specific R-package project (more below)
 - Makes sense to stay together as a group also for other package projects
 - New focus on good engineering practices and collaborative work
 - Importance of reliable software for statistical analysis can not be underestimated
@@ -58,7 +59,7 @@ Founded last year:
   - ... focusing on what is needed for biopharmaceutical applications
 - Secondary: 
   - Develop and disseminate best practices for engineering high-quality open-source statistical software
-- By actively doing the statistical engineering work together, we align on best practices can communicate these to others
+- By actively doing the statistical engineering work together, we align on best practices and can communicate these to others
 
 ## Members and meetings
 
@@ -78,12 +79,12 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 ## Workstreams
 
-- Frequentist MMRM [🌎](https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html)
-  - Develop `mmrm` (see below)
+- Mixed Models for Repeated Measures (MMRM) [🌎](https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html)
+  - Develop `mmrm` (see below) to use frequentist inference in MMRM
 - Bayesian MMRM [🌎](https://rconsortium.github.io/asa-biop-swe-wg/bayesian_mmrm_R_package.html)
   - Develop `brms.mmrm` (see below)
 - Health Technology Assessment [🌎](https://github.com/hta-pharma/)
-  - Develop open-source R tools to support crucial analytic topics in HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA
+  - Develop open-source R tools to support HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA
 - Note: Also "just" contributing to workstreams is great!
 
 # Achievements in the first year
@@ -91,17 +92,17 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 ## New R packages released to CRAN
 
 - `mmrm` 
-  - R package for frequentist inference in mixed models with repeated measures (MMRM), based on `TMB`
+  - R package for frequentist inference in MMRM, based on `TMB` (which provides automatic differentiation in `C++` and R frontend)
   - See documentation [🌎](https://openpharma.github.io/mmrm/)
   - Easiest to install from CRAN [🌎](https://cran.r-project.org/package=mmrm)
 - `brms.mmrm` 
-  - R package for Bayesian inference in MMRM, based on `brms`
+  - R package for Bayesian inference in MMRM, based on `brms` (as Stan frontend for HMC sampling)
   - See documentation [🌎](https://openpharma.github.io/brms.mmrm/)
   - Easiest to install from CRAN [🌎](https://cran.r-project.org/package=brms.mmrm)
 
 ## Why was the MMRM topic important?
 
-- MMRM is a popular analysis of longitudinal continuous outcomes in randomized clinical trials
+- MMRM is a popular analysis method for longitudinal continuous outcomes in randomized clinical trials
 - No tailored R package with sufficient capabilities/reliability
 - Also used as backbone for more recent methods such as multiple imputation
 - Have a look at Gonzalo’s presentation to learn more about `mmrm`
@@ -110,7 +111,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 ## Best practices
 
-- Includes version control, git workflow, code review, unit testing, integration tests, continuous deployment, reproducibility, package design, object oriented programming, versioning, publication, etc.
+- Includes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, traceability (news), documentation, package design, maintainability, publication, etc.
 - Workshop "Good Software Engineering Practice for R Packages" on world tour
   - Basel, Shanghai, San José, Rockville MD, Montreal [🌎](https://openpharma.github.io/workshop-r-swe-mtl/)
 - Start of video series "Statistical Software Engineering 101" [🌎](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS)
@@ -132,33 +133,37 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 - Prerequisite is getting to know each other
   - Although mostly just online, biweekly calls help a lot with this
 - Reciprocity mindset
-  - First give away something, and more will come back to you
+  - "Reciprocity means that in response to friendly actions, people are frequently much nicer and much more cooperative than predicted by the self-interest model"
+  - Personal experience: If you first give away something, more will come back to you.
 
 ## Development process
 
-- Different perspectives in discussions and code review help to optimize the user interface and thus experience
 - Important to go public as soon as possible 
   - don't wait for the product to be finished
   - you never know who else might be interested/could help
 - Version control with git
   - cornerstone of effective collaboration
+- Building software together works better than alone
+  - Different perspectives in discussions and code review help to optimize the user interface and thus experience
 
 ## Coding standards
 
 - Consistent and readable code style simplifies joint work
-- Written (!) contribution guidelines
-- Lowering the entry hurdle using developer calls
+- Written (!) contribution guidelines help
+- Lowering the entry hurdle using developer calls is important
 
 ## Robust test suite
 
-- Unit tests are essential for preventing regression and assuring quality
+- Unit and integration tests are essential for preventing regression and assuring quality
 - Especially with compiled code critical to see if package works correctly
 - Use continuous integration during development to make sure nothing breaks along the way
 
 ## Documentation
 
 - Lots of work but extremely important 
-  - often need to start with methods details write up before being able to code
+  - start with writing up the methods details
+  - think about the code structure first in a "design doc"
+  - only then put the code in the package
 - Needs to be kept up-to-date
 - Need to have examples & vignettes
   - Testing alone is not sufficient 
@@ -167,20 +172,20 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 # Long term vision
 
-## Statisticians have software engineering skills
+## Vision: Statisticians have software engineering skills
 
 - These skills are taught at university
 - Statisticians can use basic practices in their daily work ...
 - ... to ensure reproducibility of statistical analyses and research results
   
-## Innovation does not stop with publication
+## Vision: Innovation does not stop with publication
 
 - Methods research does not end when the first methods paper is published
 - Initial prototype code as paper supplement is not sufficient
 - Continue to developing open source and reliably tested software packages ...
 - ... to enable users to easily use the new methodology in their own applications
 
-## Industry develops common code base
+## Vision: Industry develops common code base
 
 - Increasingly companies work in the open source as much as possible
 - Rather than repeating similar developments internally ...
@@ -188,18 +193,21 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 # Next steps
 
-## Next steps
+## R Packages
 
 - New workstream on covariate adjustment is starting up
-- Proposed to associate also with EFSPI to emphasize global nature of the group
-- Find a new short and memorable name 
-- Ensure a strong connection to the new pan-pharma methodology group
 - Think more strategically about identifying gaps in the statistical software landscape
+- Help maintaining the CRAN Task View on Clinical Trials
 
-## Next steps (cont'd)
+## Branding and Collaboration
+
+- Find a new short and memorable name 
+- Proposed to associate also with EFSPI to emphasize global nature of the group
+- Ensure a strong connection to the new pan-pharma methodology group
+
+## Communication and Outreach
 
 - Add more content to our video series 
-- Help maintaining the CRAN Task View on Clinical Trials
 - Start a chat channel to start informal discussions within larger community
 - Organize hackathons working together on workstream packages e.g.
 
