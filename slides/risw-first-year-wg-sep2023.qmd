@@ -119,7 +119,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 - MMRM is a popular analysis method for longitudinal continuous outcomes in randomized clinical trials
 - No tailored R package with sufficient capabilities/reliability
 - Also used as backbone for more recent methods such as multiple imputation
-- We have run comparison analyses with other R packages, namely `nlme`, `glmmTMB` and `lme4` as well as SAS `PROC GLIMMIX` and have found that `mmrm` is the fastest of them and provides closes results to `PROC GLIMMIX`
+- We have run comparison analyses with other R packages, namely `nlme`, `glmmTMB` and `lme4` as well as SAS `PROC GLIMMIX` and have found that `mmrm` is the fastest of them and provides closest results to `PROC GLIMMIX`
 
 ## Best practices
 
