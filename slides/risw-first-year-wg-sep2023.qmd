@@ -50,7 +50,7 @@ Founded last year:
 - Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG) of PSI [🌎](https://www.psiweb.org/sigs-special-interest-groups/aims)
 - R Submission Working Group of R Consortium [🌎](https://rconsortium.github.io/submissions-wg/)
 - R Tables for Regulatory Submissions Working Group of R Consortium [🌎](https://rconsortium.github.io/rtrs-wg/)
-- R Certification working group of R Consortium [🌎](https://github.com/RConsortium/R-Certification-WG)
+- R Validation Hub [🌎](https://pharmar.org)
 - R Repositories WG of R Consortium [🌎](https://github.com/RConsortium/r-repositories-wg)
 
 ## WG Objectives
@@ -67,7 +67,8 @@ Founded last year:
 
 - Validation is on every one's mind when talking about open source in Pharma:
   - "Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes."
-- The [R Validation Hub](https://www.pharmar.org/) is an important working group here
+- The [R Validation Hub](https://www.pharmar.org/) is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting
+  - Develops tools that supports risk assessment of R packages
 
 ## Relation to the validation topic (cont'd)
 
@@ -123,9 +124,9 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 ## Best practices
 
-- Includes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, traceability (news), documentation, package design, maintainability, publication, etc.
+- Includes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, change log, documentation, package design, user experience, maintainability, publication, etc.
 - Workshop "Good Software Engineering Practice for R Packages" on world tour
-  - Basel, Shanghai, San José, Rockville MD (last Tuesday), Montreal (16 and 17 Oct) [🌎](https://openpharma.github.io/workshop-r-swe-mtl/)
+  - Basel, Shanghai, San José, Rockville (last Tuesday), Montreal [🌎](https://openpharma.github.io/workshop-r-swe-mtl/)
 - Start of video series "Statistical Software Engineering 101" [🌎](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS)
   - currently 2 videos, hopefully we can still produce more content
 
@@ -140,8 +141,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 ## Human factors
 
-- Mutual interest
-- Mutual trust
+- Mutual interest and mutual trust
 - Prerequisite is getting to know each other
   - Although mostly just online, biweekly calls help a lot with this
 - Reciprocity mindset
