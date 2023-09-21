@@ -2,6 +2,8 @@
 title: "Presentations"
 ---
 
+-   *First year of the Software Engineering working group*. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.
+    - [slides](slides/risw-first-year-wg-sep2023-quarto.html)
 -   *{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. JSM, 8 Aug 2023. 
     - [slides](slides/jsm-aug2023.html)
 -   *Plugging the gaps: Lessons learned from implementing the mmrm R package*. PSI, 13 Jun 2023.

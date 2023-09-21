@@ -1,0 +1,236 @@
+---
+title: "First year of the Software Engineering working group"
+subtitle: "Regulatory-Industry Statistics Workshop 2023"
+author: "Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working group"
+date: "2023/09/29"
+format: 
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+    slide-number: c/t
+    toc: true
+    toc-depth: 1
+    fontsize: 32px
+title-slide-attributes: 
+  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+  data-background-size: 20%
+  data-background-opacity: "0.5"
+  data-background-position: 98% 10%
+---
+
+```{r setup}
+#| include: false
+#| echo: false
+```
+
+# Introducing the WG
+
+## Software Engineering Working Group
+
+::: columns
+::: {.column width="70%"}
+Founded last year: 
+
+- When: 19 August 2022 - just celebrated our 1 year birthday!
+- Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP)
+- Who: 11 statisticians from 7 pharma companies developing statistical software
+- New name: `openstatsware`
+:::
+
+::: {.column width="30%"}
+![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png){height="300"}
+:::
+:::
+
+## Why a new WG?
+
+- Started with specific R-package project (more below)
+- Makes sense to stay together as a group also for other package projects
+- New focus on good engineering practices and collaborative work
+- Importance of reliable software for statistical analysis can not be underestimated
+- Be rooted in the biostatistics community (rather than statistical programming)
+
+## But there are other WGs?
+
+- Comparing Analysis Method Implementations in Software (CAMIS) of PhUSE 
+[🌎](https://advance.phuse.global/pages/viewpage.action?pageId=327874)
+- Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG) of PSI [🌎](https://www.psiweb.org/sigs-special-interest-groups/aims)
+- R Submission Working Group of R Consortium [🌎](https://rconsortium.github.io/submissions-wg/)
+- R Tables for Regulatory Submissions Working Group of R Consortium [🌎](https://rconsortium.github.io/rtrs-wg/)
+- R Validation Hub [🌎](https://pharmar.org)
+- R Repositories WG of R Consortium [🌎](https://github.com/RConsortium/r-repositories-wg)
+
+## WG Objectives
+
+- Primary: 
+  - Engineer R packages that implement important statistical methods
+  - ... to fill in gaps in the open-source statistical software landscape
+  - ... focusing on what is needed for biopharmaceutical applications
+- Secondary: 
+  - Develop and disseminate best practices for engineering high-quality open-source statistical software
+- By actively doing the statistical engineering work together, we align on best practices and can communicate these to others
+
+## Relation to the validation topic
+
+- Validation is on every one's mind when talking about open source in Pharma:
+  - "Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes."
+- The [R Validation Hub](https://www.pharmar.org/) is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting
+  - Develops tools that supports risk assessment of R packages
+
+## Relation to the validation topic (cont'd)
+
+- Base R and recommended packages are developed by the R Foundation, developed using best practices.
+- Our working group is spreading the word about best development practices such that contributed packages can achieve the same level of quality, hence aiding subsequent validation of them.
+- And we develop specific R packages with these best practices that can thus be easily validated.
+
+## Members and meetings
+
+```{r calc-stats}
+library(readr)
+library(dplyr)
+members <- read_csv("../data/members.csv") |> filter(SWE_WG_Member == 1)
+n_members <- nrow(members)
+unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
+```
+
+- Currently `r n_members` members
+  - new members are welcome! (incl. academia/regulators/etc.)
+- Currently `r length(unique_orgs)` organizations
+  - `r paste(unique_orgs, collapse = ", ")`
+- Meet every 2 weeks
+
+## Workstreams
+
+- Mixed Models for Repeated Measures (MMRM) [🌎](https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html)
+  - Develop `mmrm` (see below) to use frequentist inference in MMRM
+- Bayesian MMRM [🌎](https://rconsortium.github.io/asa-biop-swe-wg/bayesian_mmrm_R_package.html)
+  - Develop `brms.mmrm` (see below)
+- Health Technology Assessment [🌎](https://github.com/hta-pharma/)
+  - Develop open-source R tools to support HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA
+- Note: Also "just" contributing to workstreams is great!
+
+# Achievements in the first year
+
+## New R packages released to CRAN
+
+- `mmrm` 
+  - R package for frequentist inference in MMRM, based on `TMB` (which provides automatic differentiation in `C++` and R frontend)
+  - See documentation [🌎](https://openpharma.github.io/mmrm/)
+  - Easiest to install from CRAN [🌎](https://cran.r-project.org/package=mmrm)
+- `brms.mmrm` 
+  - R package for Bayesian inference in MMRM, based on `brms` (as Stan frontend for HMC sampling)
+  - See documentation [🌎](https://openpharma.github.io/brms.mmrm/)
+  - Easiest to install from CRAN [🌎](https://cran.r-project.org/package=brms.mmrm)
+
+## Why was the MMRM topic important?
+
+- MMRM is a popular analysis method for longitudinal continuous outcomes in randomized clinical trials
+- No tailored R package with sufficient capabilities/reliability
+- Also used as backbone for more recent methods such as multiple imputation
+- We have run comparison analyses with other R packages, namely `nlme`, `glmmTMB` and `lme4` as well as SAS `PROC GLIMMIX` and have found that `mmrm` is the fastest of them and provides closest results to `PROC GLIMMIX`
+
+## Best practices
+
+- Includes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, change log, documentation, package design, user experience, maintainability, publication, etc.
+- Workshop "Good Software Engineering Practice for R Packages" on world tour
+  - Basel, Shanghai, San José, Rockville (last Tuesday), Montreal [🌎](https://openpharma.github.io/workshop-r-swe-mtl/)
+- Start of video series "Statistical Software Engineering 101" [🌎](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS)
+  - currently 2 videos, hopefully we can still produce more content
+
+## Conference contributions and Publications
+
+- Dedicated sessions with discussions at ISCB, CEN, ASA/FDA workshop (now)
+- Presentations at PSI, JSM, Pharma RUG, BBS, etc. [🌎](https://rconsortium.github.io/asa-biop-swe-wg/presentations.html)
+- BIOP Report [🌎](https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/)
+- Blog [🌎](https://rconsortium.github.io/asa-biop-swe-wg/blog.html)
+
+# Ingredients for successful and sustainable collaboration
+
+## Human factors
+
+- Mutual interest and mutual trust
+- Prerequisite is getting to know each other
+  - Although mostly just online, biweekly calls help a lot with this
+- Reciprocity mindset
+  - "Reciprocity means that in response to friendly actions, people are frequently much nicer and much more cooperative than predicted by the self-interest model"
+  - Personal experience: If you first give away something, more will come back to you.
+
+## Development process
+
+- Important to go public as soon as possible 
+  - don't wait for the product to be finished
+  - you never know who else might be interested/could help
+- Version control with git
+  - cornerstone of effective collaboration
+- Building software together works better than alone
+  - Different perspectives in discussions and code review help to optimize the user interface and thus experience
+
+## Coding standards
+
+- Consistent and readable code style simplifies joint work
+- Written (!) contribution guidelines help
+- Lowering the entry hurdle using developer calls is important
+
+## Robust test suite
+
+- Unit and integration tests are essential for preventing regression and assuring quality
+- Especially with compiled code critical to see if package works correctly
+- Use continuous integration during development to make sure nothing breaks along the way
+
+## Documentation
+
+- Lots of work but extremely important 
+  - start with writing up the methods details
+  - think about the code structure first in a "design doc"
+  - only then put the code in the package
+- Needs to be kept up-to-date
+- Need to have examples & vignettes
+  - Testing alone is not sufficient 
+  - Builds trust with users
+  - Reference for developers over time
+
+# Long term vision
+
+## Vision: Statisticians have software engineering skills
+
+- These skills are taught at university
+- Statisticians can use basic practices in their daily work ...
+- ... to ensure reproducibility of statistical analyses and research results
+  
+## Vision: Innovation does not stop with publication
+
+- Methods research does not end when the first methods paper is published
+- Initial prototype code as paper supplement is not sufficient
+- Continue to developing open source and reliably tested software packages ...
+- ... to enable users to easily use the new methodology in their own applications
+
+## Vision: Industry develops common code base
+
+- Increasingly companies work in the open source as much as possible
+- Rather than repeating similar developments internally ...
+- ... to become more cost-effective and transparent towards society
+
+# Next steps
+
+## R Packages
+
+- New workstream on covariate adjustment is starting up
+- Think more strategically about identifying gaps in the statistical software landscape
+- Help maintaining the CRAN Task View on Clinical Trials
+
+## Branding and Collaboration
+
+- Publicize our new short name `openstatsware`
+- Proposed to associate also with EFSPI to emphasize global nature of the group
+- Ensure a strong connection to the new pan-pharma methodology group
+
+## Communication and Outreach
+
+- Add more content to our video series 
+- Start a chat channel to start informal discussions within larger community
+- Organize hackathons working together on workstream packages e.g.
+
+## Q&A {background-image="thank-you.jpg"}
+
+<!-- Photo by Vie Studio [link](https://www.pexels.com/photo/thank-you-lettering-on-white-surface-4439457/) -->
+
