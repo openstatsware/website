@@ -95,7 +95,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
+    "text": "First year of the Software Engineering working group. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.\n\nslides\n\n{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides]"
   },
   {
     "objectID": "people.html",
@@ -838,6 +838,174 @@
     "title": "Introducting the Software Engineering Working Group and {mmrm}",
     "section": "Thank you! Questions?",
     "text": "Thank you! Questions?"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#software-engineering-working-group",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#software-engineering-working-group",
+    "title": "First year of the Software Engineering working group",
+    "section": "Software Engineering Working Group",
+    "text": "Software Engineering Working Group\n\n\nFounded last year:\n\nWhen: 19 August 2022 - just celebrated our 1 year birthday!\nWhere: American Statistical Association (ASA) Biopharmaceutical Section (BIOP)\nWho: 11 statisticians from 7 pharma companies developing statistical software\nNew name: openstatsware"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#why-a-new-wg",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#why-a-new-wg",
+    "title": "First year of the Software Engineering working group",
+    "section": "Why a new WG?",
+    "text": "Why a new WG?\n\nStarted with specific R-package project (more below)\nMakes sense to stay together as a group also for other package projects\nNew focus on good engineering practices and collaborative work\nImportance of reliable software for statistical analysis can not be underestimated\nBe rooted in the biostatistics community (rather than statistical programming)"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#but-there-are-other-wgs",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#but-there-are-other-wgs",
+    "title": "First year of the Software Engineering working group",
+    "section": "But there are other WGs?",
+    "text": "But there are other WGs?\n\nComparing Analysis Method Implementations in Software (CAMIS) of PhUSE 🌎\nApplication and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG) of PSI 🌎\nR Submission Working Group of R Consortium 🌎\nR Tables for Regulatory Submissions Working Group of R Consortium 🌎\nR Validation Hub 🌎\nR Repositories WG of R Consortium 🌎"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#wg-objectives",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#wg-objectives",
+    "title": "First year of the Software Engineering working group",
+    "section": "WG Objectives",
+    "text": "WG Objectives\n\nPrimary:\n\nEngineer R packages that implement important statistical methods\n… to fill in gaps in the open-source statistical software landscape\n… focusing on what is needed for biopharmaceutical applications\n\nSecondary:\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#relation-to-the-validation-topic",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#relation-to-the-validation-topic",
+    "title": "First year of the Software Engineering working group",
+    "section": "Relation to the validation topic",
+    "text": "Relation to the validation topic\n\nValidation is on every one’s mind when talking about open source in Pharma:\n\n“Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes.”\n\nThe R Validation Hub is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting\n\nDevelops tools that supports risk assessment of R packages"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#relation-to-the-validation-topic-contd",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#relation-to-the-validation-topic-contd",
+    "title": "First year of the Software Engineering working group",
+    "section": "Relation to the validation topic (cont’d)",
+    "text": "Relation to the validation topic (cont’d)\n\nBase R and recommended packages are developed by the R Foundation, developed using best practices.\nOur working group is spreading the word about best development practices such that contributed packages can achieve the same level of quality, hence aiding subsequent validation of them.\nAnd we develop specific R packages with these best practices that can thus be easily validated."
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#members-and-meetings",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#members-and-meetings",
+    "title": "First year of the Software Engineering working group",
+    "section": "Members and meetings",
+    "text": "Members and meetings\n\nCurrently 38 members\n\nnew members are welcome! (incl. academia/regulators/etc.)\n\nCurrently 28 organizations\n\nAffamed, AstraZeneca, Bayer, Berry Consultants, Boehringer Ingelheim, Cytel, Denali, Edwards Lifesciences, Eli Lilly, EMD Serono, Gilead Sciences, GSK, ICON, Independent, Johnson & Johnson, Merck, Merck KGaA, MSD, Novartis, Novo Nordisk, Pfizer, R&G US, Red Door Analytics, Regeneron, Roche, RPACT, RStudio & R Consortium, Sage Therapeutics\n\nMeet every 2 weeks"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#workstreams",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#workstreams",
+    "title": "First year of the Software Engineering working group",
+    "section": "Workstreams",
+    "text": "Workstreams\n\nMixed Models for Repeated Measures (MMRM) 🌎\n\nDevelop mmrm (see below) to use frequentist inference in MMRM\n\nBayesian MMRM 🌎\n\nDevelop brms.mmrm (see below)\n\nHealth Technology Assessment 🌎\n\nDevelop open-source R tools to support HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA\n\nNote: Also “just” contributing to workstreams is great!"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#new-r-packages-released-to-cran",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#new-r-packages-released-to-cran",
+    "title": "First year of the Software Engineering working group",
+    "section": "New R packages released to CRAN",
+    "text": "New R packages released to CRAN\n\nmmrm\n\nR package for frequentist inference in MMRM, based on TMB (which provides automatic differentiation in C++ and R frontend)\nSee documentation 🌎\nEasiest to install from CRAN 🌎\n\nbrms.mmrm\n\nR package for Bayesian inference in MMRM, based on brms (as Stan frontend for HMC sampling)\nSee documentation 🌎\nEasiest to install from CRAN 🌎"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#why-was-the-mmrm-topic-important",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#why-was-the-mmrm-topic-important",
+    "title": "First year of the Software Engineering working group",
+    "section": "Why was the MMRM topic important?",
+    "text": "Why was the MMRM topic important?\n\nMMRM is a popular analysis method for longitudinal continuous outcomes in randomized clinical trials\nNo tailored R package with sufficient capabilities/reliability\nAlso used as backbone for more recent methods such as multiple imputation\nWe have run comparison analyses with other R packages, namely nlme, glmmTMB and lme4 as well as SAS PROC GLIMMIX and have found that mmrm is the fastest of them and provides closest results to PROC GLIMMIX"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#best-practices",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#best-practices",
+    "title": "First year of the Software Engineering working group",
+    "section": "Best practices",
+    "text": "Best practices\n\nIncludes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, change log, documentation, package design, user experience, maintainability, publication, etc.\nWorkshop “Good Software Engineering Practice for R Packages” on world tour\n\nBasel, Shanghai, San José, Rockville (last Tuesday), Montreal 🌎\n\nStart of video series “Statistical Software Engineering 101” 🌎\n\ncurrently 2 videos, hopefully we can still produce more content"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#conference-contributions-and-publications",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#conference-contributions-and-publications",
+    "title": "First year of the Software Engineering working group",
+    "section": "Conference contributions and Publications",
+    "text": "Conference contributions and Publications\n\nDedicated sessions with discussions at ISCB, CEN, ASA/FDA workshop (now)\nPresentations at PSI, JSM, Pharma RUG, BBS, etc. 🌎\nBIOP Report 🌎\nBlog 🌎"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#human-factors",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#human-factors",
+    "title": "First year of the Software Engineering working group",
+    "section": "Human factors",
+    "text": "Human factors\n\nMutual interest and mutual trust\nPrerequisite is getting to know each other\n\nAlthough mostly just online, biweekly calls help a lot with this\n\nReciprocity mindset\n\n“Reciprocity means that in response to friendly actions, people are frequently much nicer and much more cooperative than predicted by the self-interest model”\nPersonal experience: If you first give away something, more will come back to you."
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#development-process",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#development-process",
+    "title": "First year of the Software Engineering working group",
+    "section": "Development process",
+    "text": "Development process\n\nImportant to go public as soon as possible\n\ndon’t wait for the product to be finished\nyou never know who else might be interested/could help\n\nVersion control with git\n\ncornerstone of effective collaboration\n\nBuilding software together works better than alone\n\nDifferent perspectives in discussions and code review help to optimize the user interface and thus experience"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#coding-standards",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#coding-standards",
+    "title": "First year of the Software Engineering working group",
+    "section": "Coding standards",
+    "text": "Coding standards\n\nConsistent and readable code style simplifies joint work\nWritten (!) contribution guidelines help\nLowering the entry hurdle using developer calls is important"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#robust-test-suite",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#robust-test-suite",
+    "title": "First year of the Software Engineering working group",
+    "section": "Robust test suite",
+    "text": "Robust test suite\n\nUnit and integration tests are essential for preventing regression and assuring quality\nEspecially with compiled code critical to see if package works correctly\nUse continuous integration during development to make sure nothing breaks along the way"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#documentation",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#documentation",
+    "title": "First year of the Software Engineering working group",
+    "section": "Documentation",
+    "text": "Documentation\n\nLots of work but extremely important\n\nstart with writing up the methods details\nthink about the code structure first in a “design doc”\nonly then put the code in the package\n\nNeeds to be kept up-to-date\nNeed to have examples & vignettes\n\nTesting alone is not sufficient\nBuilds trust with users\nReference for developers over time"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#vision-statisticians-have-software-engineering-skills",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#vision-statisticians-have-software-engineering-skills",
+    "title": "First year of the Software Engineering working group",
+    "section": "Vision: Statisticians have software engineering skills",
+    "text": "Vision: Statisticians have software engineering skills\n\nThese skills are taught at university\nStatisticians can use basic practices in their daily work …\n… to ensure reproducibility of statistical analyses and research results"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#vision-innovation-does-not-stop-with-publication",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#vision-innovation-does-not-stop-with-publication",
+    "title": "First year of the Software Engineering working group",
+    "section": "Vision: Innovation does not stop with publication",
+    "text": "Vision: Innovation does not stop with publication\n\nMethods research does not end when the first methods paper is published\nInitial prototype code as paper supplement is not sufficient\nContinue to developing open source and reliably tested software packages …\n… to enable users to easily use the new methodology in their own applications"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#vision-industry-develops-common-code-base",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#vision-industry-develops-common-code-base",
+    "title": "First year of the Software Engineering working group",
+    "section": "Vision: Industry develops common code base",
+    "text": "Vision: Industry develops common code base\n\nIncreasingly companies work in the open source as much as possible\nRather than repeating similar developments internally …\n… to become more cost-effective and transparent towards society"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#r-packages",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#r-packages",
+    "title": "First year of the Software Engineering working group",
+    "section": "R Packages",
+    "text": "R Packages\n\nNew workstream on covariate adjustment is starting up\nThink more strategically about identifying gaps in the statistical software landscape\nHelp maintaining the CRAN Task View on Clinical Trials"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#branding-and-collaboration",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#branding-and-collaboration",
+    "title": "First year of the Software Engineering working group",
+    "section": "Branding and Collaboration",
+    "text": "Branding and Collaboration\n\nPublicize our new short name openstatsware\nProposed to associate also with EFSPI to emphasize global nature of the group\nEnsure a strong connection to the new pan-pharma methodology group"
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#communication-and-outreach",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#communication-and-outreach",
+    "title": "First year of the Software Engineering working group",
+    "section": "Communication and Outreach",
+    "text": "Communication and Outreach\n\nAdd more content to our video series\nStart a chat channel to start informal discussions within larger community\nOrganize hackathons working together on workstream packages e.g."
+  },
+  {
+    "objectID": "slides/risw-first-year-wg-sep2023-quarto.html#qa",
+    "href": "slides/risw-first-year-wg-sep2023-quarto.html#qa",
+    "title": "First year of the Software Engineering working group",
+    "section": "Q&A",
+    "text": "Q&A"
   },
   {
     "objectID": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
