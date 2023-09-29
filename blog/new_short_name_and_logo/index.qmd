@@ -1,0 +1,14 @@
+---
+title: "Announcing the new short name and logo"
+author: "SWE WG"
+description: We got a new short name **openstatsware** and a new logo.
+date: "2023-09-27"
+categories: [news]
+image: "sticker-new-1200.png"
+---
+
+The SWE WG got a new short name as **openstatsware**, which stands for **open**-source **stat**i**s**tical soft**ware**. The new short name reflects the objects of the WG, which are to engineer high-quality open-source statistical software and to develop and disseminate the best practices for the process. 
+
+A new logo has been created to align with the new short name. Credit to Alessandro for designing the new logo.
+
+<img src="sticker-new-1200.png" alt="Hex Sticker for ASA BIOP SWE Working Group" width="200"/>
