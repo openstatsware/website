@@ -9,8 +9,29 @@
 <link>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</link>
 <atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
-<generator>quarto-1.3.353</generator>
-<lastBuildDate>Mon, 13 Feb 2023 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.3.433</generator>
+<lastBuildDate>Wed, 27 Sep 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Announcing the new short name and logo</title>
+  <dc:creator>SWE WG</dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The SWE WG got a new short name as <strong>openstatsware</strong>, which stands for <strong>open</strong>-source <strong>stat</strong>i<strong>s</strong>tical soft<strong>ware</strong>. The new short name reflects the objects of the WG, which are to engineer high-quality open-source statistical software and to develop and disseminate the best practices for the process.</p>
+<p>A new logo has been created to align with the new short name. Credit to Alessandro for designing the new logo.</p>
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/sticker-new-1200.png" alt="Hex Sticker for ASA BIOP SWE Working Group" width="200"></p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/index.html</guid>
+  <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/sticker-new-1200.png" medium="image" type="image/png" height="167" width="144"/>
+</item>
 <item>
   <title>Workshop on good software engineering practice for R</title>
   <dc:creator>SWE WG</dc:creator>
