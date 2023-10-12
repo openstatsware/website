@@ -1,5 +1,5 @@
 ---
-title: "Introducing the Software Engineering Working Group and R Package {mmrm}"
+title: "Introducing `openstatsware` and the R Package `{mmrm}`"
 subtitle: "R/Pharma 2023 Conference"
 author: "Ya Wang on behalf of the working group"
 date: "2023/10/24"
