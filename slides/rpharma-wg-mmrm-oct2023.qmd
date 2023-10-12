@@ -18,7 +18,7 @@ format:
 
 # Introducing the Working Group
 
-## Software Engineering Working Group
+## `openstatsware`
 
 ```{r calc-stats}
 library(readr)
@@ -33,6 +33,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 - Official working group of the American Statistical Association (ASA) Biopharmaceutical Section 
   - Formed in 19 August 2022
   - Cross-industry collaboration (`r n_members` members from `r length(unique_orgs)` organizations)
+  - Full name: Software Engineering Working Group
   - Short name: `openstatsware`
   - Homepage: [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
 :::
