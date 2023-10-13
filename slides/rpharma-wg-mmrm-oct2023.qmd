@@ -1,0 +1,129 @@
+---
+title: "Introducing `openstatsware` and the R Package `{mmrm}`"
+subtitle: "R/Pharma 2023 Conference"
+author: "Ya Wang on behalf of the working group"
+date: "2023/10/24"
+format: 
+  pptx:
+    incremental: true   
+    toc: true
+    toc-depth: 1
+    toc-title: Outline
+---
+
+```{r setup}
+#| include: false
+#| echo: false
+```
+
+# Introducing the Working Group
+
+## `openstatsware`
+
+```{r calc-stats}
+library(readr)
+library(dplyr)
+members <- read_csv("../data/members.csv") |> filter(SWE_WG_Member == 1)
+n_members <- nrow(members)
+unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
+```
+
+::: columns
+::: {.column width="50%"}
+- Official working group of the American Statistical Association (ASA) Biopharmaceutical Section 
+  - Formed in 19 August 2022
+  - Cross-industry collaboration (`r n_members` members from `r length(unique_orgs)` organizations)
+  - Full name: Software Engineering Working Group
+  - Short name: `openstatsware`
+  - Homepage: [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+:::
+
+::: {.column width="50%"}
+![](../sticker/sticker-new-1200.png){height="300"}
+:::
+:::
+
+## Working Group Objectives
+
+- Primary 
+  - Engineer R packages that implement important statistical methods
+    - to fill in gaps in the open-source statistical software landscape
+    - focusing on what is needed for biopharmaceutical applications
+- Secondary 
+  - Develop and disseminate best practices for engineering high-quality open-source statistical software
+    - By actively doing the statistical engineering work together, we align on best practices and can communicate these to others
+
+## Workstreams in R Package Development
+
+- Mixed Models for Repeated Measures (MMRM) [🌎](https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html)
+  - Develop `mmrm` R package for frequentist inference in MMRM ([CRAN](https://cran.r-project.org/package=mmrm))
+- Bayesian MMRM [🌎](https://rconsortium.github.io/asa-biop-swe-wg/bayesian_mmrm_R_package.html)
+  - Develop `brms.mmrm` R package for Bayesian inference in MMRM ([CRAN](https://cran.r-project.org/package=brms.mmrm))
+- Health Technology Assessment [🌎](https://github.com/hta-pharma/)
+  - Develop open-source R tools to support HTA dossier submission across various countries
+  - Particularly topics with unmet needs in R implementation and/or related to EUnetHTA
+
+## Best Practices Dissemination
+
+- Workshop "Good Software Engineering Practice for R Packages" on world tour
+  - to teach hands-on skills and tools to engineer reliable R packages
+  - 5 events so far at Basel, Shanghai, San José, Rockville, and Montreal
+- Youtube video series "Statistical Software Engineering 101" [🌎](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS)
+  - to introduce tips and tricks for good statistical software engineering practices
+  - 2 videos so far
+
+# R Package `mmrm` {background-image="slide-background-mmrm.png"}
+
+## Motivation
+
+- MMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+- No great R package 
+  - Initially thought that the MMRM problem was solved by using `lme4` with `lmerTest`, learned that this approach failed on large data sets (slow, did not converge)
+  - `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
+  - Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom, but it did not work
+
+## Idea
+
+- We only want to fit a fixed effects model with a structured covariance matrix for each subject
+- The idea is then to use the Template Model Builder (`TMB`) directly - as it is also underlying `glmmTMB` - but code the exact model we want
+- We do this by implementing the log-likelihood in `C++` using the `TMB` provided libraries
+
+## Advantages of `TMB`
+
+- Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
+- Automatic differentiation of the log-likelihood as a function of the variance parameters
+- We get the gradient and Hessian exactly and without additional coding
+- This can be used from the R side with the `TMB` interface and plugged into optimizers
+
+## Why It's Not Just Another Package
+
+- Ongoing maintenance and support from the pharmaceutical industry
+  - 5 companies being involved in the development, on track to become standard package
+- Development using best practices as show case for high quality package
+  - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
+
+## Features of `mmrm` {.smaller}
+
+- Linear model for dependent observations within independent subjects
+- Covariance structures for the dependent observations:
+  - Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
+  - Allows group specific covariance estimates and weights
+- REML or ML estimation, using multiple optimizers if needed
+- `emmeans` interface for least square means
+- `tidymodels` for easy model fitting
+- Satterthwaite and Kenward-Roger adjustments
+- Robust sandwich estimator for covariance
+
+## Comparison with Other Software
+
+- We have run comparison analyses with other R packages, namely `nlme`, `glmmTMB` and `lme4`
+- Also compared with SAS `PROC GLIMMIX`
+- Highlights 
+  - `mmrm` has faster convergence time 
+  - `mmrm` provides closest results to `PROC GLIMMIX`
+- Detailed results at the online [comparison vignette](https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html)
+
+## Q&A {background-image="thank-you.jpg"}
+
+<!-- Photo by Vie Studio [link](https://www.pexels.com/photo/thank-you-lettering-on-white-surface-4439457/) -->
+
