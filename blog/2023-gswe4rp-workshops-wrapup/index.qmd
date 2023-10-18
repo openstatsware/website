@@ -1,0 +1,63 @@
+---
+title: "Celebrating 5 workshops on good SWE practices in 2023"
+subtitle: "Thanks to all local and `openstatsware` contributors!"
+author: "Daniel"
+description: With the last workshop this year in Montreal we achieved 5 workshops this year.
+date: "2023-10-18"
+categories: [news]
+image: "IMG_0200.JPG"
+---
+
+## Montreal workshop
+
+On Monday and Tuesday this week (16 and 17 October), Doug Kelkhoff (Roche), Phil Boileau (Analysis Group) and Daniel Sabanés Bové (Roche) held another edition of the Good Software Engineering Practices for R Packages (or short GSWEP4RP) workshop - this time in Montreal, QC, Canada. 
+
+::: {layout-nrow="2" fig-align="center"}
+![](IMG_0190.JPG){width="33%"}
+![](IMG_0192.JPG){width="33%"}
+![](IMG_0193.JPG){width="33%"}
+
+![](IMG_0200.JPG){width="100%"}
+:::
+
+With more than 33 participants this was another success for `openstatsware`!
+
+We would like to thank the McGill team which made this event possible - the workshop was part of their "McGill initiative in Computational Medicine" training series. Thanks a lot to:
+
+- Larisa Morales Soto
+- Adrien Osakwe
+- Georgette Femerling Romero
+- Kevin Liang
+- Prof. Celia M. T. Greenwood
+
+Everything worked very smoothly and it was a pleasure to visit the McGill University and engage with the curious students and faculty!
+
+As usual, the updated course materials are online under CC-BY license [here](https://openpharma.github.io/workshop-r-swe-mtl/) and the source code for all materials is available [here](https://github.com/openpharma/workshop-r-swe-mtl).
+
+## Celebrating 5 workshops in 2023
+
+This is a milestone for the `openstatsware` team, because we now have run 5 workshops just in 2023 on this topic in 4 different countries:
+
+- [10th February 2023, Basel, CH](https://kkmann.github.io/workshop-r-swe/)
+- [24th March 2023, Shanghai, CN](https://openpharma.github.io/workshop-r-swe/)
+- [20th July 2023, San José, CA, US](https://openpharma.github.io/workshop-r-swe-sf/)
+- [26th September 2023, Rockville, MD, US](https://openpharma.github.io/workshop-r-swe-md/)
+- [16th and 17th October 2023, Montréal, QC, CA](https://openpharma.github.io/workshop-r-swe-mtl/)
+
+This is part of achieving our secondary objective on disseminating best practices of software engineering into the biostatistics community.
+
+Thanks a lot to all the `openstatsware` members and friends who created the materials and presented this year:
+
+- Friedrich Pahlke
+- Kevin Kunzmann
+- Liming Li
+- Shuang Li
+- Joe Zhu
+- Matt Secrest
+- Laura Harris
+- Daniel Sjoberg
+- Andrew Bean
+- Ryan (Biju) Wang
+- Doug Kelkhoff
+- Phil Boileau
+- Daniel Sabanés Bové
