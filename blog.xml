@@ -10,7 +10,80 @@
 <atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
 <generator>quarto-1.3.433</generator>
-<lastBuildDate>Fri, 29 Sep 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 18 Oct 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Celebrating 5 workshops on good SWE practices in 2023</title>
+  <dc:creator>Daniel </dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="montreal-workshop" class="level2">
+<h2 class="anchored" data-anchor-id="montreal-workshop">Montreal workshop</h2>
+<p>On Monday and Tuesday this week (16 and 17 October), Doug Kelkhoff (Roche), Phil Boileau (Analysis Group) and Daniel Sabanés Bové (Roche) held another edition of the Good Software Engineering Practices for R Packages (or short GSWEP4RP) workshop - this time in Montreal, QC, Canada.</p>
+<div class="quarto-layout-panel" data-fig-align="center">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>With more than 33 participants this was another success for <code>openstatsware</code>!</p>
+<p>We would like to thank the McGill team which made this event possible - the workshop was part of their “McGill initiative in Computational Medicine” training series. Thanks a lot to:</p>
+<ul>
+<li>Larisa Morales Soto</li>
+<li>Adrien Osakwe</li>
+<li>Georgette Femerling Romero</li>
+<li>Kevin Liang</li>
+<li>Prof.&nbsp;Celia M. T. Greenwood</li>
+</ul>
+<p>Everything worked very smoothly and it was a pleasure to visit the McGill University and engage with the curious students and faculty!</p>
+<p>As usual, the updated course materials are online under CC-BY license <a href="https://openpharma.github.io/workshop-r-swe-mtl/">here</a> and the source code for all materials is available <a href="https://github.com/openpharma/workshop-r-swe-mtl">here</a>.</p>
+</section>
+<section id="celebrating-5-workshops-in-2023" class="level2">
+<h2 class="anchored" data-anchor-id="celebrating-5-workshops-in-2023">Celebrating 5 workshops in 2023</h2>
+<p>This is a milestone for the <code>openstatsware</code> team, because we now have run 5 workshops just in 2023 on this topic in 4 different countries:</p>
+<ul>
+<li><a href="https://kkmann.github.io/workshop-r-swe/">10th February 2023, Basel, CH</a></li>
+<li><a href="https://openpharma.github.io/workshop-r-swe/">24th March 2023, Shanghai, CN</a></li>
+<li><a href="https://openpharma.github.io/workshop-r-swe-sf/">20th July 2023, San José, CA, US</a></li>
+<li><a href="https://openpharma.github.io/workshop-r-swe-md/">26th September 2023, Rockville, MD, US</a></li>
+<li><a href="https://openpharma.github.io/workshop-r-swe-mtl/">16th and 17th October 2023, Montréal, QC, CA</a></li>
+</ul>
+<p>This is part of achieving our secondary objective on disseminating best practices of software engineering into the biostatistics community.</p>
+<p>Thanks a lot to all the <code>openstatsware</code> members and friends who created the materials and presented this year:</p>
+<ul>
+<li>Friedrich Pahlke</li>
+<li>Kevin Kunzmann</li>
+<li>Liming Li</li>
+<li>Shuang Li</li>
+<li>Joe Zhu</li>
+<li>Matt Secrest</li>
+<li>Laura Harris</li>
+<li>Daniel Sjoberg</li>
+<li>Andrew Bean</li>
+<li>Ryan (Biju) Wang</li>
+<li>Doug Kelkhoff</li>
+<li>Phil Boileau</li>
+<li>Daniel Sabanés Bové</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/index.html</guid>
+  <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" medium="image"/>
+</item>
 <item>
   <title>Considerations in developing and using open-source statistical software in Pharma</title>
   <dc:creator>Daniel </dc:creator>
