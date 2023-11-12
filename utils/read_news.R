@@ -17,7 +17,7 @@ read.news <- function(how_many = NULL, decreasing = TRUE) {
 
   # Print
   for (i in seq_len(max_news)) {
-    txt <- glue("- **{news_data$Date[i]}**: {news_data$Text[i]}")
+    txt <- glue("<p class='lead' style='font-size: 1rem;'><span style='font-weight: bold;'>{news_data$Date[i]}:</span> {news_data$Text[i]}</p>")
     print(txt)
   }
 }

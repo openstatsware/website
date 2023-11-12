@@ -73,7 +73,7 @@ $code-font-size: $font-size-base !default;
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight&display=swap";
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight&family=Fira+Code&display=swap";
 @if $web-font-path {
   @import url($web-font-path);
 }
@@ -84,4 +84,22 @@ body {
   -webkit-font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// Table
+.table>thead, .table tbody {
+  border-bottom-color: $osw-dblue;
+}
+
+.table>:not(caption)>*:not(:last-child)>* {
+  border-bottom-color: $osw-lblue;
+}
+
+// Hyperlinks
+a {
+  text-decoration-color: $osw-gold;
+}
+a:hover {
+  color: $osw-gold;
+  text-decoration: none;
 }

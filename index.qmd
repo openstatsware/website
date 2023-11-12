@@ -1,18 +1,38 @@
 ---
-title: "ASA Biopharmaceutical Section Software Engineering Working Group"
-editor_options: 
-  chunk_output_type: console
+pagetitle: "openstatsware"
 ---
 
-Welcome to the home page of the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG). To learn more about the WG see [about us](goals.qmd).
+```{=html}
+<div class="px-3 py-5 my-3 text-center d-none d-xl-block gold">
+  <span style="color: #000814; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">open</span>
+  <span style="color: #001D3D; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">stats</span>
+  <span style="color: #003566; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">ware</span>
+</div>
 
-<img src="sticker/sticker-new-1200.png" alt="Hex Sticker for ASA BIOP SWE Working Group" width="200"/>
+<div class="px-3 py-5 my-1 text-center d-xl-none">
+  <img src="sticker/openstatsware-hex-round.svg" alt="Hex Sticker for the openstatsware Working Group" width="256"/>
+</div>
 
-**Latest Updates:**
+<div class="px-3 py-5 my-1 text-center">
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">
+      Welcome to the home page of the <span style="color: #000814; font-family: 'Fira Code', monospace;">open</span><span style="color: #001D3D; font-family: 'Fira Code', monospace;">stats</span><span style="color: #003566; font-family: 'Fira Code', monospace;">ware</span> working group, formerly known as the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG).
+      To learn more about the working group see the <a href="goals.html" target=_blank>about us</a> page.
+    </p>
+  </div>
+</div>
+```
 
 ```{r}
 #| include = FALSE
 source(file = "utils/read_news.R")
+```
+
+```{=html}
+<div class="px-3 py-5 my-3">
+  <div class="text-center">
+  <h1 style="font-size: 1.5rem;">Latest news:</h1>
+  </div>
 ```
 
 ```{r}
@@ -21,4 +41,8 @@ source(file = "utils/read_news.R")
 #| results = "asis",
 #| echo = FALSE
 read.news(how_many = 3)
+```
+
+```{=html}
+</div>
 ```
