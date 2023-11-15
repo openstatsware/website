@@ -317,14 +317,6 @@ However:
 :::
 :::
 
-## Outlook
-
--   We still have major features on our backlog:
-    -   Type II and type III ANOVA tests
--   Working on comparison to other implementations
-    -   Parameter estimates, computation time, convergence, ...
--   Please let us know what is missing in `mmrm` for you! And try it out :-)
-
 ## Getting started
 
 -   `mmrm` is on CRAN - use this as a starting point:

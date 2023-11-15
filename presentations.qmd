@@ -1,7 +1,8 @@
 ---
 title: "Presentations"
 ---
-
+-   **{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. China-R Conference, 28 Nov 2023.
+    -   [slides](slides/china-R-mmrm-nov2023.html)
 -   *Introducing `openstatsware` and the R Package `{mmrm}`*. Lightning Session at ASA SSC Mini-Symposium  04 Nov 2023.
     -   [slides](slides/asa-ssc-mmrm-nov2023.html)
 -   *Introducing `openstatsware` and the R Package `{mmrm}`*. R/Pharma Conference, 24 Oct 2023.
