@@ -27,21 +27,24 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 ## Acknowledgments
 
+Authors:
+
 ::: nonincremental
 ::: columns
 ::: {.column width="50%"}
-Authors:
-
 -   Brian Matthew Lang (MSD)
 -   Christian Stock (BI)
 -   Craig Gower-Page (Roche)
 -   Dan James (AstraZeneca)
+-   Daniel Leibovitz (Roche)
 -   Daniel Sabanes Bove (Roche, lead)
 :::
 
 ::: {.column width="50%"}
+-   Daniel Sjoberg (Roche)
 -   Doug Kelkhoff (Roche)
 -   Julia Dedic (Roche)
+-   Jonathan Sidi (PinPoint Strategies)
 -   Kevin Kunzmann (BI)
 -   Ya Wang (Gilead)
 :::
@@ -84,6 +87,7 @@ Thanks to:
     -   Full name: Software Engineering Working Group
     -   Short name: `openstatsware`
     -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
+    -   We welcome new members to join!
 
 ## Working Group Objectives
 
