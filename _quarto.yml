@@ -4,15 +4,15 @@ project:
 website:
 
   title: "ASA BIOP SWE WG"
-  favicon: "sticker/openstatsware-hex-round.svg"
+  favicon: "sticker/openstatsware-hex.svg"
   site-url: "https://rconsortium.github.io/asa-biop-swe-wg"
   description: "Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)"
 
   navbar:
-    background: white
+    background: "#f8f9fa"
     pinned: true
     title: false
-    logo: "sticker/openstatsware-hex-round.svg"
+    logo: "sticker/openstatsware-hex.svg"
     left:
       - href: index.qmd
         text: "Home"

@@ -10,7 +10,7 @@ pagetitle: "openstatsware"
 </div>
 
 <div class="px-3 py-5 my-1 text-center d-xl-none">
-  <img src="sticker/openstatsware-hex-round.svg" alt="Hex Sticker for the openstatsware Working Group" width="256"/>
+  <img src="sticker/openstatsware-hex.svg" alt="Hex Sticker for the openstatsware Working Group" width="256"/>
 </div>
 
 <div class="px-3 py-5 my-1 text-center">

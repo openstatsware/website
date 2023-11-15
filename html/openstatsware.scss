@@ -54,7 +54,8 @@ $enable-rounded: false !default;
 
 // Body
 
-$body-color:    $osw-black !default;
+$body-color: $osw-black !default;
+$body-bg: $gray-100 !default;
 
 // Fonts
 
@@ -102,4 +103,15 @@ a {
 a:hover {
   color: $osw-gold;
   text-decoration: none;
+}
+
+// Titles
+.quarto-title {
+  text-align: center;
+}
+
+// Hex
+.sticker {
+  min-width: 256px;
+  max-width: 95%;
 }
