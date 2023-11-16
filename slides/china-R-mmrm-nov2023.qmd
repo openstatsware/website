@@ -1,6 +1,6 @@
 ---
 title: "Introducing `openstatsware` and the R Package `{mmrm}`"
-subtitle: "R X-AGI"
+subtitle: "China-R Conference"
 author: "Liming Li"
 date: "2023/11/28"
 format: 
@@ -79,7 +79,7 @@ Thanks to:
     -   Cons: variability in software quality
 -   Developing high-quality software is critical
 
-## Software Engineering working group (`openstatsware`)
+## Software Engineering working group (`openstatsware`) {.smaller}
 
 -   Official working group of the American Statistical Association (ASA) Biopharmaceutical Section
     -   Formed on 19 August 2022
@@ -89,7 +89,7 @@ Thanks to:
     -   Home page at [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg)
     -   We welcome new members to join!
 
-## Working Group Objectives
+## Working Group Objectives {.smaller}
 
 -   Primary
     -   Engineer R packages that implement important statistical methods
@@ -99,7 +99,7 @@ Thanks to:
     -   Develop and disseminate best practices for engineering high-quality open-source statistical software
         -   By actively doing the statistical engineering work together, we align on best practices and can communicate these to others
 
-## First Product of `openstatsware`: `mmrm`
+## First Product of `openstatsware`: `mmrm` {.smaller}
 
 -   MMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
 -   No great R package
@@ -107,7 +107,7 @@ Thanks to:
     -   `nlme` does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with `emmeans` it is only approximate
     -   Next we tried to extend `glmmTMB` to calculate Satterthwaite adjusted degrees of freedom, but it did not work
 
-## Idea
+## Idea  {.smaller}
 
 - We only want to fit a fixed effects model with a structured covariance matrix for each subject
 - The idea is then to use the Template Model Builder (`TMB`) directly 
