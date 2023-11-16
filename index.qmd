@@ -3,10 +3,10 @@ pagetitle: "openstatsware"
 ---
 
 ```{=html}
-<div class="px-3 py-5 my-3 text-center d-none d-xl-block gold">
-  <span style="color: #000814; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">open</span>
-  <span style="color: #001D3D; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">stats</span>
-  <span style="color: #003566; font-size: 4rem; font-weight: bold; font-family: 'Fira Code', monospace;">ware</span>
+<div class="px-3 py-5 my-3 text-center d-none d-xl-block">
+  <span style="color: #000814; font-size: 5rem; font-weight: 700; font-family: 'Fira Code', monospace;">open</span>
+  <span style="color: #001D3D; font-size: 5rem; font-weight: 700; font-family: 'Fira Code', monospace;">stats</span>
+  <span style="color: #003566; font-size: 5rem; font-weight: 700; font-family: 'Fira Code', monospace;">ware</span>
 </div>
 
 <div class="px-3 py-5 my-1 text-center d-xl-none">

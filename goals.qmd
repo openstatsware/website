@@ -11,3 +11,9 @@ Our goals are to:
 * **Develop good SWE practices** for engineering high-quality statistical software and promote their use in the broader Biostatistics community via public training materials.
 
 * **Communicate and collaborate** with other R software initiatives including via the [R Consortium](https://www.r-consortium.org/).
+
+```{=html}
+<div class="px-3 py-5 my-1 text-center">
+  <img class="sticker" src="sticker/openstatsware-hex.svg" alt="Hex Sticker for the openstatsware Working Group" width="384"/>
+</div>
+```

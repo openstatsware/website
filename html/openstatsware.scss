@@ -74,7 +74,7 @@ $code-font-size: $font-size-base !default;
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight&family=Fira+Code&display=swap";
+$web-font-path: "https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight&family=Fira+Code:wght@400;700&display=swap";
 @if $web-font-path {
   @import url($web-font-path);
 }
