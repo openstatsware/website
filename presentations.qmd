@@ -1,19 +1,24 @@
 ---
 title: "Presentations"
 ---
-
+-   **{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. China-R Conference, 28 Nov 2023.
+    -   [slides](slides/china-R-mmrm-nov2023.html)
+-   *Introducing `openstatsware` and the R Package `{mmrm}`*. Lightning Session at ASA SSC Mini-Symposium  04 Nov 2023.
+    -   [slides](slides/asa-ssc-mmrm-nov2023.html)
+-   *Introducing `openstatsware` and the R Package `{mmrm}`*. R/Pharma Conference, 24 Oct 2023.
+    -   [slides](slides/rpharma-wg-mmrm-oct2023-quarto.html)
 -   *First year of the Software Engineering working group*. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.
-    - [slides](slides/risw-first-year-wg-sep2023-quarto.html)
--   *{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. JSM, 8 Aug 2023. 
-    - [slides](slides/jsm-aug2023.html)
--   *Plugging the gaps: Lessons learned from implementing the mmrm R package*. PSI, 13 Jun 2023.
-    - [slides](slides/2023-psi-aims-london.html)
--   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. Pharma RUG, 31 Mar 2023.
-    - [slides](slides/pharma-rug-mmrm-mar2023.html)
+    -   [slides](slides/risw-first-year-wg-sep2023-quarto.html)
+-   *{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. JSM, 8 Aug 2023.
+    -   [slides](slides/jsm-aug2023.html)
 -   *Introduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package*. R Meetup, 21 Jul 2023.
     -   [slides](slides/r-meetup-july2023.html)
 -   *Workshop on Good Software Engineering Practice for R*. San Francisco bay area, 20 Jul 2023.
     -   [slides](https://openpharma.github.io/workshop-r-swe-sf/listing.html)
+-   *Plugging the gaps: Lessons learned from implementing the mmrm R package*. PSI, 13 Jun 2023.
+    -   [slides](slides/2023-psi-aims-london.html)
+-   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. Pharma RUG, 31 Mar 2023.
+    -   [slides](slides/pharma-rug-mmrm-mar2023.html)
 -   *Workshop on Good Software Engineering Practice for R*. Shanghai, 24 Mar 2023.
     -   [slides](https://openpharma.github.io/workshop-r-swe/listing.html)
 -   *Workshop on Good Software Engineering Practice for R*. BBS workshop, Basel, 10 Feb 2023.
@@ -28,4 +33,4 @@ title: "Presentations"
 -   *Statistical Software Engineering 101*. Video blog series on ASA BIOP Youtube channel.
     -   Unit Testing for R Developers
         -   1: The Basics \[[slides](slides/unit_testing_basic.html), [video](https://www.youtube.com/watch?v=mfLXiP4A9CA)\]
-        -   2: Advancing your skills \[[slides](slides/unit_testing_advanced.html)\]
+        -   2: Advancing your skills \[[slides](slides/unit_testing_advanced.html), [video](https://www.youtube.com/watch?v=n44Lfyt-Rio)\]

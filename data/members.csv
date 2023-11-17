@@ -1,7 +1,6 @@
 Firstname,Lastname,Affiliation,SWE_WG_Member,MMRM,HTA,bayesian_mmrm
 Alessandro,Gasparini,Red Door Analytics,1,0,0,0
 Andy,Miskell,Eli Lilly,1,0,0,0
-Becca,Krouse,GSK,1,0,0,0
 Ben,Arancibia,GSK,1,0,0,0
 Brian,Lang,MSD,1,1,0,0
 Christian,Stock,Boehringer Ingelheim,1,0,0,1
@@ -23,7 +22,7 @@ Michelle,Zhang,Affamed,1,0,0,0
 Orla,Doyle,Novartis,1,0,0,0
 Andrew,Bean,Novartis,1,0,0,1
 Terri,Johnson,Edwards Lifesciences,1,0,0,0
-Yoni,Sidi,Sage Therapeutics,1,0,0,1
+Yoni,Sidi,Pinpoint Strategies,1,1,0,1
 Vitaly,Druker,AstraZeneca,1,0,0,0
 Juliane,Manitz,EMD Serono,1,0,0,0
 Pascal,Kieslich,Merck KGaA,1,0,0,0
@@ -46,3 +45,6 @@ Rossella,Belleli,Roche,0,0,1,0
 Cedric,Revil,MSD,0,0,1,0
 Chrysostomos,Kalyvas,MSD,0,0,1,0
 Henrik,Thomsen,Novo Nordisk,1,0,0,0
+Yann,Féat,mainanalytics,1,0,0,0
+Sergio,Olmos,Sanofi,1,0,0,0
+Fan,Wu,Sanofi,1,0,0,0
