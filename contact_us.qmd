@@ -2,8 +2,6 @@
   title: "Contact Us"
 ---
 
-  To contact us, please fill out the form below:
-  
-  
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXCh0TKCb0MVIPG7r0c6QIzNhtIcNP1vDOZ3Bq7hK9bT2ZQg/viewform?embedded=true" width="680" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+To contact us, please fill out the form below:
 
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXCh0TKCb0MVIPG7r0c6QIzNhtIcNP1vDOZ3Bq7hK9bT2ZQg/viewform?embedded=true" width="680" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
