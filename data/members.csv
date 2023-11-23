@@ -15,7 +15,7 @@ Peikun,Wu,R&G US,1,0,0,0
 Ron,Yu,Gilead Sciences,1,0,0,0
 Will,Landau,Eli Lilly,1,0,0,1
 Ya,Wang,Gilead Sciences,1,1,0,0
-Liming,Li,Roche,0,1,0,0
+Liming,Li,Roche,1,1,0,0
 Julia,Dedic,Roche,0,1,0,0
 Joe,Rickert,RStudio & R Consortium,1,0,0,0
 Michelle,Zhang,Affamed,1,0,0,0
@@ -48,3 +48,4 @@ Henrik,Thomsen,Novo Nordisk,1,0,0,0
 Yann,Féat,mainanalytics,1,0,0,0
 Sergio,Olmos,Sanofi,1,0,0,0
 Fan,Wu,Sanofi,1,0,0,0
+Steven,Brooks,Boehringer Ingelheim,1,0,0,0
