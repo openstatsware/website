@@ -70,7 +70,7 @@ Thanks to:
 -   MMRM Package
     -   Why this is not "yet another package"
     -   Comparing MMRM R Package to other Implementations
--   Closing and Next Steps
+-   Get Started with `{mmrm}`!
 
 ## Context: Software Engineering in Biostatistics
 
@@ -122,8 +122,8 @@ Thanks to:
 
 -   Fast `C++` framework for defining objective functions (`Rcpp` would have been alternative interface)
 -   Automatic differentiation of the log-likelihood as a function of the variance parameters
--   Syntactic sugars to allow simple matrix calculations or operations like R
 -   We get the gradient and Hessian exactly and without additional coding
+-   Syntactic sugars to allow simple matrix calculations or operations like R
 -   This can be used from the R side with the `TMB` interface and plugged into optimizers
 
 ## Why it's not just another package
@@ -263,12 +263,12 @@ For users that need more structures, `{mmrm}` is easily extensible - let us know
 | Between/Within             |   X\*    |      X       |
 | Residual                   |   X\*    |      X       |
 | Satterthwaite              |    X     |      X       |
-| Kenward-Roger              |    X     |      X       |
-| Kenward-Roger (Linear)\*\* |    X     |      X       |
+| Kenward-Roger \*\*         |    X     |      X       |
+| Kenward-Roger (Linear)     |    X     |      X       |
 
 \*Available through `emmeans`, and ongoing work in `mmrm`.
 
-\*\*This is not identical to the KR(Lin) in `PROC MIXED`.
+\*\* Unstructured has differences compared to `PROC MIXED` because of different parameterization.
 
 ## Contrasts/LSMEANS
 
@@ -296,7 +296,7 @@ Other R packages, like `nlme`, `lme4` and `glmmTMB` can support MMRM analysis.
 However:
 
 -   Covariance structure supported is limited
--   Computaional efficiency is not satisfying
+-   Computational efficiency is not satisfying
 -   Convergence issues(especially for `lme4`)
 -   Need other(multiple) packages to support `Satterthwaite` and `Kenward-Roger` degrees of freedom, or Sandwich covariance estimator.
 -   Detailed results at the online [comparison vignette](https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html)
