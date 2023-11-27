@@ -455,7 +455,7 @@ Liming Li
 <li>Why this is not “yet another package”</li>
 <li>Comparing MMRM R Package to other Implementations</li>
 </ul></li>
-<li>Closing and Next Steps</li>
+<li>Get Started with <code>{mmrm}</code>!</li>
 </ul>
 </section>
 <section id="context-software-engineering-in-biostatistics" class="slide level2">
@@ -537,8 +537,8 @@ Liming Li
 <ul>
 <li>Fast <code>C++</code> framework for defining objective functions (<code>Rcpp</code> would have been alternative interface)</li>
 <li>Automatic differentiation of the log-likelihood as a function of the variance parameters</li>
-<li>Syntactic sugars to allow simple matrix calculations or operations like R</li>
 <li>We get the gradient and Hessian exactly and without additional coding</li>
+<li>Syntactic sugars to allow simple matrix calculations or operations like R</li>
 <li>This can be used from the R side with the <code>TMB</code> interface and plugged into optimizers</li>
 </ul>
 </section>
@@ -797,19 +797,19 @@ Liming Li
 <td style="text-align: center;">X</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Kenward-Roger</td>
+<td style="text-align: left;">Kenward-Roger **</td>
 <td style="text-align: center;">X</td>
 <td style="text-align: center;">X</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Kenward-Roger (Linear)**</td>
+<td style="text-align: left;">Kenward-Roger (Linear)</td>
 <td style="text-align: center;">X</td>
 <td style="text-align: center;">X</td>
 </tr>
 </tbody>
 </table>
 <p>*Available through <code>emmeans</code>, and ongoing work in <code>mmrm</code>.</p>
-<p>**This is not identical to the KR(Lin) in <code>PROC MIXED</code>.</p>
+<p>** Unstructured has differences compared to <code>PROC MIXED</code> because of different parameterization.</p>
 </section>
 <section id="contrastslsmeans" class="slide level2">
 <h2>Contrasts/LSMEANS</h2>
@@ -845,7 +845,7 @@ Liming Li
 <p>Other R packages, like <code>nlme</code>, <code>lme4</code> and <code>glmmTMB</code> can support MMRM analysis. However:</p>
 <ul>
 <li>Covariance structure supported is limited</li>
-<li>Computaional efficiency is not satisfying</li>
+<li>Computational efficiency is not satisfying</li>
 <li>Convergence issues(especially for <code>lme4</code>)</li>
 <li>Need other(multiple) packages to support <code>Satterthwaite</code> and <code>Kenward-Roger</code> degrees of freedom, or Sandwich covariance estimator.</li>
 <li>Detailed results at the online <a href="https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html">comparison vignette</a></li>

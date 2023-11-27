@@ -725,7 +725,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "**{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. China-R Conference, 28 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. Lightning Session at ASA SSC Mini-Symposium 04 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. R/Pharma Conference, 24 Oct 2023.\n\nslides\n\nFirst year of the Software Engineering working group. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.\n\nslides\n\n{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides, video]"
+    "text": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. China-R Conference, 28 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. Lightning Session at ASA SSC Mini-Symposium 04 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. R/Pharma Conference, 24 Oct 2023.\n\nslides\n\nFirst year of the Software Engineering working group. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.\n\nslides\n\n{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides, video]"
   },
   {
     "objectID": "hta_page.html",
@@ -1117,7 +1117,7 @@
     "href": "slides/china-R-mmrm-nov2023.html#agenda",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Agenda",
-    "text": "Agenda\n\nIntroduction and Overview of openstatsware\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nComparing MMRM R Package to other Implementations\n\nClosing and Next Steps"
+    "text": "Agenda\n\nIntroduction and Overview of openstatsware\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nComparing MMRM R Package to other Implementations\n\nGet Started with {mmrm}!"
   },
   {
     "objectID": "slides/china-R-mmrm-nov2023.html#context-software-engineering-in-biostatistics",
@@ -1159,7 +1159,7 @@
     "href": "slides/china-R-mmrm-nov2023.html#advantages-of-tmb",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Advantages of TMB",
-    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nSyntactic sugars to allow simple matrix calculations or operations like R\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nSyntactic sugars to allow simple matrix calculations or operations like R\nThis can be used from the R side with the TMB interface and plugged into optimizers"
   },
   {
     "objectID": "slides/china-R-mmrm-nov2023.html#why-its-not-just-another-package",
@@ -1222,7 +1222,7 @@
     "href": "slides/china-R-mmrm-nov2023.html#degrees-of-freedom-methods",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Degrees of Freedom Methods",
-    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through emmeans, and ongoing work in mmrm.\n**This is not identical to the KR(Lin) in PROC MIXED."
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger **\nX\nX\n\n\nKenward-Roger (Linear)\nX\nX\n\n\n\n*Available through emmeans, and ongoing work in mmrm.\n** Unstructured has differences compared to PROC MIXED because of different parameterization."
   },
   {
     "objectID": "slides/china-R-mmrm-nov2023.html#contrastslsmeans",
@@ -1236,7 +1236,7 @@
     "href": "slides/china-R-mmrm-nov2023.html#benchmarking-with-other-r-packages",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Benchmarking with other R packages",
-    "text": "Benchmarking with other R packages\nOther R packages, like nlme, lme4 and glmmTMB can support MMRM analysis. However:\n\nCovariance structure supported is limited\nComputaional efficiency is not satisfying\nConvergence issues(especially for lme4)\nNeed other(multiple) packages to support Satterthwaite and Kenward-Roger degrees of freedom, or Sandwich covariance estimator.\nDetailed results at the online comparison vignette"
+    "text": "Benchmarking with other R packages\nOther R packages, like nlme, lme4 and glmmTMB can support MMRM analysis. However:\n\nCovariance structure supported is limited\nComputational efficiency is not satisfying\nConvergence issues(especially for lme4)\nNeed other(multiple) packages to support Satterthwaite and Kenward-Roger degrees of freedom, or Sandwich covariance estimator.\nDetailed results at the online comparison vignette"
   },
   {
     "objectID": "slides/china-R-mmrm-nov2023.html#computational-efficiency",
