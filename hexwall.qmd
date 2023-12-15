@@ -1,0 +1,59 @@
+---
+title: "Untitled"
+format: html
+---
+
+```{r, echo = FALSE}
+repo    <- ifelse(is.null(getOption("repos")), getOption("CRAN"), getOption("repos"))
+tmpfile <- tempfile()
+
+fallback_repo <- 'https://cloud.r-project.org'
+download.file(paste(fallback_repo, "src/contrib/Views.rds", sep = "/"), destfile = tmpfile)
+
+all_Views      <- readRDS(tmpfile)
+ctv_clintrials <- all_Views$ClinicalTrials$packagelist$name
+
+make_cran_uri <- function(dep, endpoint = 'api.github.com'){
+  sprintf('https://%s/repos/cran/%s/contents/man/figures', endpoint, dep)
+}
+
+get_logo <- function(dep){
+  res_cran <- httr::GET(
+    url = make_cran_uri(dep),
+    httr::add_headers(
+      Authorization = sprintf('token %s',Sys.getenv('GITHUB_PAT'))
+    )
+  )
+  
+  if(httr::status_code(res_cran)=='200'){
+    man_cran <- httr::content(res_cran)
+    ret <- purrr::map_chr(man_cran, ~.x$download_url)
+    ret[!grepl('^(README|lifecycle)',basename(ret))]
+  }
+  else{
+    NA_character_
+  }
+}
+
+ctv_clintrials_logos <- ctv_clintrials |> 
+  purrr::set_names() |>
+  purrr::map(get_logo)
+
+ctv_clintrials_logos_clean <- ctv_clintrials_logos |> 
+  tibble::enframe(name = 'package', value = 'url') |>
+  tidyr::unnest(c(url)) |>
+  dplyr::filter(grepl('(adaptr|logo).png$',url))
+
+```
+
+```{r, results = "asis", echo = FALSE}
+htmltools::tags$div(
+    style = "background-color: #feeacd; border-style: solid; border-radius: 10px; border-color: #000; border-width: 1px;",
+    purrr::map2(ctv_clintrials_logos_clean$package, ctv_clintrials_logos_clean$url, ~htmltools::tags$a(
+                href = file.path("https://cran.r-project.org/web/packages",.x), 
+                htmltools::tags$img(src = .y, width = "75")
+                ))
+                )
+
+
+```
