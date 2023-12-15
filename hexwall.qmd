@@ -5,11 +5,13 @@ format: html
 
 ```{r, echo = FALSE}
 # Download Views binary file from CRAN
+tmpfile <- tempfile()
 repo <- 'https://cloud.r-project.org'
 download.file(paste(repo, "src/contrib/Views.rds", sep = "/"), destfile = tmpfile)
 
 # Get packages on the task view
 all_Views      <- readRDS(tmpfile)
+unlink(tmpfile)
 ctv_clintrials <- all_Views$ClinicalTrials$packagelist$name
 
 # Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
