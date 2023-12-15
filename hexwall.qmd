@@ -4,19 +4,21 @@ format: html
 ---
 
 ```{r, echo = FALSE}
-repo    <- ifelse(is.null(getOption("repos")), getOption("CRAN"), getOption("repos"))
-tmpfile <- tempfile()
+# Download Views binary file from CRAN
+repo <- 'https://cloud.r-project.org'
+download.file(paste(repo, "src/contrib/Views.rds", sep = "/"), destfile = tmpfile)
 
-fallback_repo <- 'https://cloud.r-project.org'
-download.file(paste(fallback_repo, "src/contrib/Views.rds", sep = "/"), destfile = tmpfile)
-
+# Get packages on the task view
 all_Views      <- readRDS(tmpfile)
 ctv_clintrials <- all_Views$ClinicalTrials$packagelist$name
 
+# Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
 make_cran_uri <- function(dep, endpoint = 'api.github.com'){
   sprintf('https://%s/repos/cran/%s/contents/man/figures', endpoint, dep)
 }
 
+# look for png files in the repos
+# need a GITHUB_PAT for multiple hits to the API
 get_logo <- function(dep){
   res_cran <- httr::GET(
     url = make_cran_uri(dep),
@@ -35,10 +37,12 @@ get_logo <- function(dep){
   }
 }
 
+# Invoke the functions
 ctv_clintrials_logos <- ctv_clintrials |> 
   purrr::set_names() |>
   purrr::map(get_logo)
 
+# Postprocessing
 ctv_clintrials_logos_clean <- ctv_clintrials_logos |> 
   tibble::enframe(name = 'package', value = 'url') |>
   tidyr::unnest(c(url)) |>
@@ -47,6 +51,7 @@ ctv_clintrials_logos_clean <- ctv_clintrials_logos |>
 ```
 
 ```{r, results = "asis", echo = FALSE}
+# Construct the wall
 htmltools::tags$div(
     style = "background-color: #feeacd; border-style: solid; border-radius: 10px; border-color: #000; border-width: 1px;",
     purrr::map2(ctv_clintrials_logos_clean$package, ctv_clintrials_logos_clean$url, ~htmltools::tags$a(
@@ -54,6 +59,4 @@ htmltools::tags$div(
                 htmltools::tags$img(src = .y, width = "75")
                 ))
                 )
-
-
 ```
