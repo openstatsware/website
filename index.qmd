@@ -17,12 +17,11 @@ pagetitle: "openstatsware"
   <div class="col-lg-6 mx-auto">
     <p class="lead">
       Welcome to the home page of the <span style="color: #000814; font-family: 'Fira Code', monospace;">open</span><span style="color: #001D3D; font-family: 'Fira Code', monospace;">stats</span><span style="color: #003566; font-family: 'Fira Code', monospace;">ware</span> working group, formerly known as the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG).
-      To learn more about the working group see the <a href="goals.html" target=_blank>about us</a> page.
+      To learn more about the working group see the <a href="goals.html" target=_blank>about us</a> page. We thank all our <a href="sponsors.html" target=_blank>sponsors</a> for their generous support.
     </p>
   </div>
 </div>
 ```
-
 ```{r}
 #| include = FALSE
 source(file = "utils/read_news.R")
@@ -34,7 +33,6 @@ source(file = "utils/read_news.R")
   <h1 style="font-size: 1.5rem;">Latest news:</h1>
   </div>
 ```
-
 ```{r}
 #| message = FALSE,
 #| warning = FALSE,
@@ -43,6 +41,4 @@ source(file = "utils/read_news.R")
 read.news(how_many = 3)
 ```
 
-```{=html}
 </div>
-```
