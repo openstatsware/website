@@ -20,9 +20,9 @@ website:
         menu:
           - href: goals.qmd
           - href: people.qmd
+          - href: sponsors.qmd
           - href: join_us.qmd
           - href: contact_us.qmd
-          - href: sponsors.qmd
       - href: news.qmd
         text: "News"
       - href: blog.qmd
