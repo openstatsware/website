@@ -2,8 +2,6 @@
   title: "Sponsors"
 ---
 
-Our sponsors:
-
 ::: {.px-3 .py-5 .my-1 .text-center}
-![BBSW Logo](media/bbswLogoDarkBg.png){.sticker alt="Logo of BBSW"}
+[![Bay Area Biotech-Pharma Statistics Workshop (BBSW)](media/bbswLogoDarkBg.png)](https://www.bbsw.org/)
 :::
