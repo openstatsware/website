@@ -12,7 +12,8 @@ download.file(paste(repo, "src/contrib/Views.rds", sep = "/"), destfile = tmpfil
 # Get packages on the task view
 all_Views      <- readRDS(tmpfile)
 unlink(tmpfile)
-ctv_clintrials <- all_Views$ClinicalTrials$packagelist$name
+ctv_clintrials <- all_Views$ClinicalTrials
+ctv_clintrials_packages <- ctv_clintrials$packagelist$name
 
 # Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
 make_cran_uri <- function(dep, endpoint = 'api.github.com'){
@@ -40,7 +41,7 @@ get_logo <- function(dep){
 }
 
 # Invoke the functions
-ctv_clintrials_logos <- ctv_clintrials |> 
+ctv_clintrials_logos <- ctv_clintrials_packages |> 
   purrr::set_names() |>
   purrr::map(get_logo)
 
@@ -50,15 +51,80 @@ ctv_clintrials_logos_clean <- ctv_clintrials_logos |>
   tidyr::unnest(c(url)) |>
   dplyr::filter(grepl('(adaptr|logo).png$',url))
 
+missing_logo <- setdiff(names(ctv_clintrials_logos), ctv_clintrials_logos_clean$package)
+missing_logo_colors <- sample(viridis::inferno(length(missing_logo)*2), length(missing_logo))
+```
+
+```{r, echo = FALSE}
+library(minisvg)
+len     <- 95
+angles  <- (seq(0, 360, 60) + 90) * pi/180
+xs      <- round(len * cos(angles) + 100, 2)
+ys      <- round(len * sin(angles) + 100, 2)
+hex     <- stag$polygon(id = 'hex', xs = xs, ys = ys)
+hex$update(stroke = '#223344', fill_opacity=0.25, stroke_width = 2)
+
+def_layer <- svg_doc(style = "display:none", width = 200, height = 200)$update(width=90, height=90)
+def_layer$add_css_url("https://fonts.googleapis.com/css?family=Abril%20Fatface")
+def_layer$add_css("
+.mainfont {
+  font-size: 17px;
+  font-family: 'Abril Fatface', sans-serif;
+  fill: #223344;
+}
+")
+def_layer$defs(hex)
+```
+
+```{r, echo = FALSE}
+def_layer$as_character()
+```
+
+
+```{r, echo = FALSE}
+mysvg <- function(nm, color){
+new_doc <- svg_doc(width = 200, height = 200)$update(width=90, height=90)
+g <- stag$g()
+g$use(href = "#hex", fill = color)
+
+text <- stag$text(
+  nm,
+  class = "mainfont",
+  x = 100, y = 100,
+  `text-anchor`="middle",
+  `alignment-baseline`="middle"
+)
+
+g$append(text)
+
+new_doc$append(g)
+new_doc$as_character()
+}
+
 ```
 
 ```{r, results = "asis", echo = FALSE}
 # Construct the wall
 htmltools::tags$div(
-    style = "background-color: #feeacd; border-style: solid; border-radius: 10px; border-color: #000; border-width: 1px;",
-    purrr::map2(ctv_clintrials_logos_clean$package, ctv_clintrials_logos_clean$url, ~htmltools::tags$a(
+    #style = "background-color: #feeacd; border-style: solid; border-radius: 10px; border-color: #000; border-width: 1px;",
+    htmltools::tagList(
+    purrr::map2(
+      ctv_clintrials_logos_clean$package, 
+      ctv_clintrials_logos_clean$url, 
+      ~htmltools::tags$a(
                 href = file.path("https://cran.r-project.org/web/packages",.x), 
+                target="_blank", 
                 htmltools::tags$img(src = .y, width = "75")
+                )),
+    purrr::map2(
+      missing_logo,
+      missing_logo_colors,
+      function(x,y){
+      htmltools::tags$a(
+                href = file.path("https://cran.r-project.org/web/packages",x),
+                target="_blank", 
+                mysvg(x, y)
+                )}
                 ))
-                )
+  )
 ```
