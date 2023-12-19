@@ -1,0 +1,7 @@
+---
+  title: "Sponsors"
+---
+
+::: {.px-3 .py-5 .my-1 .text-center}
+[![Bay Area Biotech-Pharma Statistics Workshop (BBSW)](media/bbswLogoDarkBg.png)](https://www.bbsw.org/)
+:::
