@@ -1,6 +1,7 @@
 project:
   type: website
-
+resources:
+  - CNAME
 website:
 
   title: "ASA BIOP SWE WG"
