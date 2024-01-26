@@ -11,3 +11,5 @@ listing:
 page-layout: full
 title-block-banner: true
 ---
+
+We are proudly contributing to [R-Bloggers](https://www.r-bloggers.com).

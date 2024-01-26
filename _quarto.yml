@@ -1,6 +1,7 @@
 project:
   type: website
-
+resources:
+  - CNAME
 website:
 
   title: "ASA BIOP SWE WG"
@@ -37,6 +38,21 @@ website:
     right:
       - icon: rss
         href: blog.xml
+
+  comments:
+    giscus:
+      # Reference: https://quarto.org/docs/reference/projects/books.html#giscus
+      # Also https://giscus.app/ for all options
+      repo: RConsortium/asa-biop-swe-wg
+      repo-id: "R_kgDOIEo72A"
+      category: "Ideas"
+      category-id: "DIC_kwDOIEo72M4CRqLG"
+      reactions-enabled: true
+      theme: light
+      language: en
+      loading: lazy
+      mapping: pathname
+      input-position: "top"
 
 format:
   html:
