@@ -20,15 +20,21 @@ ctv_clintrials <- all_Views$ClinicalTrials
 ctv_clintrials_packages <- ctv_clintrials$packagelist$name
 
 # Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
-make_cran_uri <- function(dep, endpoint = 'api.github.com'){
-  sprintf('https://%s/repos/cran/%s/contents/man/figures', endpoint, dep)
+make_cran_uri <- function(dep, endpoint = 'api.github.com', subdir = 'man/figures'){
+  sprintf('https://%s/repos/cran/%s/contents/%s', endpoint, dep, subdir)
 }
+
+# Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
+make_gh_uri <- function(dep, endpoint = 'api.github.com'){
+  sprintf('https://%s/repos/%s/contents', endpoint, dep)
+}
+
 
 # look for png files in the repos
 # need a GITHUB_PAT for multiple hits to the API
 get_logo <- function(dep){
   res_cran <- httr::GET(
-    url = make_cran_uri(dep),
+    url = make_cran_uri(dep, subdir = 'man/figures'),
     httr::add_headers(
       Authorization = sprintf('token %s',Sys.getenv('GITHUB_PAT'))
     )
@@ -44,18 +50,135 @@ get_logo <- function(dep){
   }
 }
 
+find_remote <- function(dep){
+    res_cran <- httr::GET(
+      url = make_cran_uri(dep, subdir = 'DESCRIPTION'),
+      httr::add_headers(
+        Authorization = sprintf('token %s',Sys.getenv('GITHUB_PAT'))
+      )
+    )
+
+  if(httr::status_code(res_cran)=='200'){
+    desc_cran <- httr::content(res_cran)
+    tf <- tempfile()
+    on.exit(unlink(tf),add = TRUE)
+    cat(rawToChar(base64enc::base64decode(desc_cran$content)),file = tf)
+    parse_desc(tf)
+  }
+  else{
+    NA_character_
+  }
+}
+
+parse_desc <- function(file){
+
+  # Try Issues URL
+  desc_bugs <- clean_key(desc::desc_get(file = file, keys = 'BugReports'))
+  uri <- grep_github(desc_bugs)
+
+  # Try Remotes URL
+  if(!length(uri)){
+
+    desc_remotes <- desc::desc_get_urls(file = file)
+    uri <- grep_github(desc_remotes)
+
+  }
+
+  uri
+}
+
+clean_key <- function(key){
+  trimws(strsplit(key,',')[[1]])
+}
+
+grep_github <- function(x){
+  gh_raw <- grep('github\\.com',x,value = TRUE)
+  gh_prefix <- gsub('^http(.*?).com/','',gh_raw)
+  gh_suffix <- gsub('issues\\/$|issues$','',gh_prefix)
+  gh_suffix <- gsub('\\/$','',gh_suffix)
+  gh_suffix
+}
+
+find_readme <- function(dep){
+  res_gh <- httr::GET(
+    url = make_gh_uri(dep),
+    httr::add_headers(
+      Authorization = sprintf('token %s',Sys.getenv('GITHUB_PAT'))
+    )
+  )
+
+  if(httr::status_code(res_gh)=='200'){
+    root_gh <- httr::content(res_gh)
+    ret <- purrr::map_chr(root_gh, function(x){
+      if(is.null(x$download_url)){
+        return(NA_character_)
+      }else(
+        x$download_url
+      )
+    })
+    
+    ret[grepl('^readme.md$',basename(ret),ignore.case = TRUE)]
+  }
+  else{
+    NA_character_
+  }
+}
+
+parse_gh_md <- function(path){
+   res_readme <- httr::GET(
+      url = path,
+      httr::add_headers(
+        Authorization = sprintf('token %s',Sys.getenv('GITHUB_PAT'))
+      )
+    )
+
+  if(httr::status_code(res_readme)=='200'){
+    readme_content <- httr::content(res_readme)
+    readme_content_split <- strsplit(readme_content,'\n')[[1]]
+    readme_content_split_lgl <- purrr::map_lgl(readme_content_split, function(x) grepl('<img(.*?)>',
+    x))
+    readme_img_tag <- readme_content_split[readme_content_split_lgl]
+    readme_img_tags <- strsplit(readme_img_tag,'\\s')
+    if(length(readme_img_tags)==0){
+      return(NA_character_)
+    }
+    readme_img_attr <- grep('^src',readme_img_tags[[1]], value = TRUE)
+    readme_img_src <- gsub("'",'',gsub('src(.*?)=','',readme_img_attr))
+    readme_img_src <- gsub('"','',readme_img_src)
+    file.path(dirname(path), readme_img_src)
+  }
+  else{
+    NA_character_
+  }
+}
+
 # Invoke the functions
-ctv_clintrials_logos <- ctv_clintrials_packages |> 
+# ctv_clintrials_logos <- ctv_clintrials_packages |> 
+#   purrr::set_names() |>
+#   purrr::map(get_logo)
+
+ctv_clintrials_remotes <- ctv_clintrials_packages |> 
   purrr::set_names() |>
-  purrr::map(get_logo)
+  purrr::map(find_remote)
+  
+ctv_clintrials_readme <- ctv_clintrials_remotes |>
+  purrr::discard(~length(.x)==0) |>
+  purrr::discard(~!grepl('/',.x)) |> #malformed repo paths
+  purrr::map(find_readme) |>
+  purrr::map(parse_gh_md)
 
 # Postprocessing
-ctv_clintrials_logos_clean <- ctv_clintrials_logos |> 
+ctv_clintrials_readme_clean <- ctv_clintrials_readme  |> 
   tibble::enframe(name = 'package', value = 'url') |>
   tidyr::unnest(c(url)) |>
-  dplyr::filter(grepl('(adaptr|logo).png$',url))
+  dplyr::filter(!is.na(url))
 
-missing_logo <- setdiff(names(ctv_clintrials_logos), ctv_clintrials_logos_clean$package)
+# ctv_clintrials_logos_clean <- ctv_clintrials_logos |> 
+#   tibble::enframe(name = 'package', value = 'url') |>
+#   tidyr::unnest(c(url)) |>
+#   dplyr::filter(grepl('(adaptr|logo).png$',url))
+
+missing_logo <- setdiff(names(ctv_clintrials_remotes), ctv_clintrials_readme_clean$package)
 missing_logo_colors <- sample(viridis::inferno(length(missing_logo)*2), length(missing_logo))
 ```
 
@@ -107,7 +230,7 @@ new_doc$as_character()
 ```{r, echo = FALSE}
 htmltools::tags$iframe(
   id="descIframe", width="100%", height="95%",
-  src = file.path("https://cran.r-project.org/web/packages",ctv_clintrials_logos_clean$package[1])
+  src = file.path("https://cran.r-project.org/web/packages",ctv_clintrials_readme_clean$package[1])
 )
 ```
 
@@ -120,8 +243,8 @@ htmltools::tags$div(
     #style = "background-color: #feeacd; border-style: solid; border-radius: 10px; border-color: #000; border-width: 1px;",
     htmltools::tagList(
     purrr::map2(
-      ctv_clintrials_logos_clean$package, 
-      ctv_clintrials_logos_clean$url, 
+      ctv_clintrials_readme_clean$package, 
+      ctv_clintrials_readme_clean$url, 
       ~htmltools::tags$img(
                 onclick=sprintf("hover('%s')",file.path("https://cran.r-project.org/web/packages",.x)),
                 src = .y, 
