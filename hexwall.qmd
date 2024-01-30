@@ -3,9 +3,8 @@ title: "TaskView Hexwall"
 format: 
   dashboard:
     orientation: columns
+    scrolling: true
 ---
-
-## Column {width=30%}
 
 ```{r, echo = FALSE}
 # Download Views binary file from CRAN
@@ -227,14 +226,16 @@ new_doc$as_character()
 
 ```
 
+## Column {width=35%}
+
 ```{r, echo = FALSE}
 htmltools::tags$iframe(
-  id="descIframe", width="100%", height="95%",
+  id="descIframe", width="100%", height="100%",
   src = file.path("https://cran.r-project.org/web/packages",ctv_clintrials_readme_clean$package[1])
 )
 ```
 
-## Column {width=60%}
+## Column {width=50%}
 
 ```{r, results="asis", echo = FALSE}
 def_layer$as_character()
