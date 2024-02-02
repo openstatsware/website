@@ -31,6 +31,8 @@ jobs:
       - name: Install GitHub dependencies
         run: remotes::install_github("coolbutuseless/minisvg")
         shell: Rscript {0}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Render Quarto Project
         run: quarto render --output-dir _site
