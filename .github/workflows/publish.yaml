@@ -24,8 +24,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Install CRAN dependencies
         run: install.packages(c("pander", "glue", "geomtextpath"), repos = "https://cloud.r-project.org")
+        shell: Rscript {0}
+
+      - name: Install GitHub dependencies
+        run: remotes::install_github("coolbutuseless/minisvg")
         shell: Rscript {0}
 
       - name: Render Quarto Project
