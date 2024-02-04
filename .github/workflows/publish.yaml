@@ -17,7 +17,7 @@ jobs:
     name: Build & Deploy
     runs-on: ubuntu-latest
     container:
-      image: rocker/tidyverse:latest
+      image: ghcr.io/insightsengineering/rstudio:latest
     permissions:
       contents: write
     steps:
