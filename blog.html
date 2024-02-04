@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,15 +101,42 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="alternate" type="application/rss+xml" title="ASA BIOP SWE WG" href="blog.xml"></head>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="alternate" type="application/rss+xml" title="ASA BIOP SWE WG" href="blog.xml" data-external="1"></head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./sticker/openstatsware-hex.svg" alt="" class="navbar-logo">
     </a>
@@ -114,78 +148,78 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">About Us</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
-    <a class="dropdown-item" href="./goals.html" rel="" target="">
+    <a class="dropdown-item" href="./goals.html">
  <span class="dropdown-text">Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./people.html" rel="" target="">
+    <a class="dropdown-item" href="./people.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sponsors.html" rel="" target="">
+    <a class="dropdown-item" href="./sponsors.html">
  <span class="dropdown-text">Sponsors</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./join_us.html" rel="" target="">
+    <a class="dropdown-item" href="./join_us.html">
  <span class="dropdown-text">Join Us</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contact_us.html" rel="" target="">
+    <a class="dropdown-item" href="./contact_us.html">
  <span class="dropdown-text">Contact Us</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./news.html" rel="" target="">
- <span class="menu-text">News</span></a>
+    <a class="nav-link" href="./news.html"> 
+<span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-task-forces" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-task-forces" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Task Forces</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-task-forces">    
         <li>
-    <a class="dropdown-item" href="./mmrm_R_package.html" rel="" target="">
+    <a class="dropdown-item" href="./mmrm_R_package.html">
  <span class="dropdown-text">MMRM R Package Development</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hta_page.html" rel="" target="">
+    <a class="dropdown-item" href="./hta_page.html">
  <span class="dropdown-text">HTA-R workstream</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./bayesian_mmrm_R_package.html" rel="" target="">
+    <a class="dropdown-item" href="./bayesian_mmrm_R_package.html">
  <span class="dropdown-text">Bayesian MMRM R Package Development</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./presentations.html" rel="" target="">
- <span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="./presentations.html"> 
+<span class="menu-text">Presentations</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -198,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -218,6 +252,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <p>We are proudly contributing to <a href="https://www.r-bloggers.com">R-Bloggers</a>.</p>
 
 
@@ -225,32 +260,30 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1697587200000" data-listing-file-modified-sort="1706638827323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1697587200000" data-listing-file-modified-sort="1707080597347" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
 <div class="thumbnail">
-<p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html"> <img src="./blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="thumbnail-image"> </a></p>
+<p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external"></a></p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">
+<p><img src="./blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="thumbnail-image"></p>
+</a><p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html">
 <h3 class="no-anchor listing-title">
-Celebrating 5 workshops on good SWE practices in 2023
+<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">Celebrating 5 workshops on good SWE practices in 2023</a>
 </h3>
 <div class="listing-subtitle">
-Thanks to all local and <code>openstatsware</code> contributors!
+<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">Thanks to all local and <code>openstatsware</code> contributors!</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html">
 <div class="listing-description">
-<p>With the last workshop this year in Montreal we achieved 5 workshops this year.</p>
+<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">With the last workshop this year in Montreal we achieved 5 workshops this year.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html">
+<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">
 <div class="listing-date">
 Oct 18, 2023
 </div>
@@ -260,32 +293,30 @@ Daniel
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1695945600000" data-listing-file-modified-sort="1706638827355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1695945600000" data-listing-file-modified-sort="1707080597379" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1506">
 <div class="thumbnail">
-<p><a href="./blog/risw2023_session/index.html"> <img src="./blog/risw2023_session/panel_photo.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/risw2023_session/index.html" class="no-external"></a></p><a href="./blog/risw2023_session/index.html" class="no-external">
+<p><img src="./blog/risw2023_session/panel_photo.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./blog/risw2023_session/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/risw2023_session/index.html">
 <h3 class="no-anchor listing-title">
-Considerations in developing and using open-source statistical software in Pharma
+<a href="./blog/risw2023_session/index.html" class="no-external">Considerations in developing and using open-source statistical software in Pharma</a>
 </h3>
 <div class="listing-subtitle">
-Summary of our session at this year’s Regulatory-Industry Statistics Workshop
+<a href="./blog/risw2023_session/index.html" class="no-external">Summary of our session at this year’s Regulatory-Industry Statistics Workshop</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/risw2023_session/index.html">
 <div class="listing-description">
-<p>We shared our working group progress and discussed with the panel and the audience challenges and next steps.</p>
+<a href="./blog/risw2023_session/index.html" class="no-external">We shared our working group progress and discussed with the panel and the audience challenges and next steps.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/risw2023_session/index.html">
+<a href="./blog/risw2023_session/index.html" class="no-external">
 <div class="listing-date">
 Sep 29, 2023
 </div>
@@ -295,32 +326,30 @@ Daniel
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1695772800000" data-listing-file-modified-sort="1706638827351" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1695772800000" data-listing-file-modified-sort="1707080597375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
 <div class="thumbnail">
-<p><a href="./blog/new_short_name_and_logo/index.html"> <img src="./blog/new_short_name_and_logo/sticker-new-1200.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a></p><a href="./blog/new_short_name_and_logo/index.html" class="no-external">
+<p><img src="./blog/new_short_name_and_logo/sticker-new-1200.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/new_short_name_and_logo/index.html">
 <h3 class="no-anchor listing-title">
-Announcing the new short name and logo
+<a href="./blog/new_short_name_and_logo/index.html" class="no-external">Announcing the new short name and logo</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/new_short_name_and_logo/index.html">
 <div class="listing-description">
-<p>We got a new short name <strong>openstatsware</strong> and a new logo.</p>
+<a href="./blog/new_short_name_and_logo/index.html" class="no-external">We got a new short name <strong>openstatsware</strong> and a new logo.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/new_short_name_and_logo/index.html">
+<a href="./blog/new_short_name_and_logo/index.html" class="no-external">
 <div class="listing-date">
 Sep 27, 2023
 </div>
@@ -330,32 +359,30 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="news" data-listing-date-sort="1676246400000" data-listing-file-modified-sort="1706638827343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="news" data-listing-date-sort="1676246400000" data-listing-file-modified-sort="1707080597367" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <div class="thumbnail">
-<p><a href="./blog/20230210-bbs-swe-course-basel/index.html"> <img src="./blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external"></a></p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">
+<p><img src="./blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html">
 <h3 class="no-anchor listing-title">
-Workshop on good software engineering practice for R
+<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Workshop on good software engineering practice for R</a>
 </h3>
 <div class="listing-subtitle">
-Teaching foundations of SWE for statisticians with R
+<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Teaching foundations of SWE for statisticians with R</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/20230210-bbs-swe-course-basel/index.html">
 <div class="listing-description">
-<p>Under the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.</p>
+<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Under the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html">
+<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">
 <div class="listing-date">
 Feb 13, 2023
 </div>
@@ -365,32 +392,30 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1668902400000" data-listing-file-modified-sort="1706638827347" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1668902400000" data-listing-file-modified-sort="1707080597375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
 <div class="thumbnail">
-<p><a href="./blog/mmrm-video-nov-2022/index.html"> <img src="./blog/mmrm-video-nov-2022/mmrm-video.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external"></a></p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">
+<p><img src="./blog/mmrm-video-nov-2022/mmrm-video.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/mmrm-video-nov-2022/index.html">
 <h3 class="no-anchor listing-title">
-Visualizing successful collaboration
+<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">Visualizing successful collaboration</a>
 </h3>
 <div class="listing-subtitle">
-A visual time lapse of six months of work on the mmrm R package
+<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">A visual time lapse of six months of work on the mmrm R package</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/mmrm-video-nov-2022/index.html">
 <div class="listing-description">
-<p>Communicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.</p>
+<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">Communicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/mmrm-video-nov-2022/index.html">
+<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">
 <div class="listing-date">
 Nov 20, 2022
 </div>
@@ -400,32 +425,30 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1706638827347" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1707080597375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
 <div class="thumbnail">
-<p><a href="./blog/biop_report/index.html"> <img src="./blog/biop_report/asa-biop.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./blog/biop_report/index.html" class="no-external"></a></p><a href="./blog/biop_report/index.html" class="no-external">
+<p><img src="./blog/biop_report/asa-biop.jpg" class="thumbnail-image"></p>
+</a><p><a href="./blog/biop_report/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/biop_report/index.html">
 <h3 class="no-anchor listing-title">
-Software Engineering in Biostatistics - Towards Improving a Critical Competence
+<a href="./blog/biop_report/index.html" class="no-external">Software Engineering in Biostatistics - Towards Improving a Critical Competence</a>
 </h3>
 <div class="listing-subtitle">
-Article introducing the SWE WG in BIOP Report
+<a href="./blog/biop_report/index.html" class="no-external">Article introducing the SWE WG in BIOP Report</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/biop_report/index.html">
 <div class="listing-description">
-<p>We wrote an article for the Biopharmaceutical Report introducing the SWE WG.</p>
+<a href="./blog/biop_report/index.html" class="no-external">We wrote an article for the Biopharmaceutical Report introducing the SWE WG.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/biop_report/index.html">
+<a href="./blog/biop_report/index.html" class="no-external">
 <div class="listing-date">
 Nov 16, 2022
 </div>
@@ -435,32 +458,30 @@ SWE WG
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1706638827355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="6" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1707080597383" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
 <div class="thumbnail">
-<p><a href="./blog/wg_announcement/index.html"> <img src="./blog/wg_announcement/sticker-1200.png" class="thumbnail-image"> </a></p>
+<p><a href="./blog/wg_announcement/index.html" class="no-external"></a></p><a href="./blog/wg_announcement/index.html" class="no-external">
+<p><img src="./blog/wg_announcement/sticker-1200.png" class="thumbnail-image"></p>
+</a><p><a href="./blog/wg_announcement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./blog/wg_announcement/index.html">
 <h3 class="no-anchor listing-title">
-New ASA BIOP working group on Software Engineering
+<a href="./blog/wg_announcement/index.html" class="no-external">New ASA BIOP working group on Software Engineering</a>
 </h3>
 <div class="listing-subtitle">
-Fostering open source code collaboration within Biostatistics
+<a href="./blog/wg_announcement/index.html" class="no-external">Fostering open source code collaboration within Biostatistics</a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./blog/wg_announcement/index.html">
 <div class="listing-description">
-<p>We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).</p>
+<a href="./blog/wg_announcement/index.html" class="no-external">We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./blog/wg_announcement/index.html">
+<a href="./blog/wg_announcement/index.html" class="no-external">
 <div class="listing-date">
 Oct 24, 2022
 </div>
@@ -554,10 +575,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -567,8 +587,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -581,6 +610,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -624,6 +772,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -649,6 +798,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -710,7 +885,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <script src="https://giscus.app/client.js" data-repo="RConsortium/asa-biop-swe-wg" data-repo-id="R_kgDOIEo72A" data-category="Ideas" data-category-id="DIC_kwDOIEo72M4CRqLG" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
 </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="light">
 </div> <!-- /content -->
+
 
 
 
