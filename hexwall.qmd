@@ -28,10 +28,17 @@ make_gh_uri <- function(dep, endpoint = 'api.github.com'){
   sprintf('https://%s/repos/%s/contents', endpoint, dep)
 }
 
+check_pat <- function(){
+  if(!nzchar(Sys.getenv('GITHUB_PAT'))){
+    message('Missing GitHub PAT!')
+  }
+}
+
 
 # look for png files in the repos
 # need a GITHUB_PAT for multiple hits to the API
 get_logo <- function(dep){
+  check_pat()
   res_cran <- httr::GET(
     url = make_cran_uri(dep, subdir = 'man/figures'),
     httr::add_headers(
@@ -45,11 +52,13 @@ get_logo <- function(dep){
     ret[!grepl('^(README|lifecycle)',basename(ret))]
   }
   else{
+    message("CRAN API Message: ", httr::status_code(res_cran))
     NA_character_
   }
 }
 
 find_remote <- function(dep){
+    check_pat()
     res_cran <- httr::GET(
       url = make_cran_uri(dep, subdir = 'DESCRIPTION'),
       httr::add_headers(
@@ -65,6 +74,7 @@ find_remote <- function(dep){
     parse_desc(tf)
   }
   else{
+    message("CRAN API Message: ", httr::status_code(res_cran))
     NA_character_
   }
 }
@@ -119,6 +129,7 @@ find_readme <- function(dep){
     ret[grepl('^readme.md$',basename(ret),ignore.case = TRUE)]
   }
   else{
+    message("GitHub API Message: ", httr::status_code(res_gh))
     NA_character_
   }
 }
@@ -147,6 +158,8 @@ parse_gh_md <- function(path){
     file.path(dirname(path), readme_img_src)
   }
   else{
+    message("README Message: ", httr::status_code(res_readme))
+    
     NA_character_
   }
 }
