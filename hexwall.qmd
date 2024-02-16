@@ -6,7 +6,14 @@ format:
     scrolling: true
 ---
 
-```{r, echo = FALSE}
+```{r}
+knitr::opts_chunk$set(
+  message = NA,
+  echo = FALSE
+  )
+```
+
+```{r Get the Task View File}
 # Download Views binary file from CRAN
 tmpfile <- tempfile()
 repo <- 'https://cloud.r-project.org'
@@ -18,6 +25,9 @@ unlink(tmpfile)
 ctv_clintrials <- all_Views$ClinicalTrials
 ctv_clintrials_packages <- ctv_clintrials$packagelist$name
 
+```
+
+```{r Compile Helper Functions}
 # Construct URI to get contents of the man/figures subdirectory on CRAN GitHub
 make_cran_uri <- function(dep, endpoint = 'api.github.com', subdir = 'man/figures'){
   sprintf('https://%s/repos/cran/%s/contents/%s', endpoint, dep, subdir)
@@ -163,12 +173,9 @@ parse_gh_md <- function(path){
     NA_character_
   }
 }
+```
 
-# Invoke the functions
-# ctv_clintrials_logos <- ctv_clintrials_packages |> 
-#   purrr::set_names() |>
-#   purrr::map(get_logo)
-
+```{r Invoke the functions}
 ctv_clintrials_remotes <- ctv_clintrials_packages |> 
   purrr::set_names() |>
   purrr::map(find_remote)
@@ -185,16 +192,16 @@ ctv_clintrials_readme_clean <- ctv_clintrials_readme  |>
   tidyr::unnest(c(url)) |>
   dplyr::filter(!is.na(url))
 
-# ctv_clintrials_logos_clean <- ctv_clintrials_logos |> 
-#   tibble::enframe(name = 'package', value = 'url') |>
-#   tidyr::unnest(c(url)) |>
-#   dplyr::filter(grepl('(adaptr|logo).png$',url))
-
-missing_logo <- setdiff(names(ctv_clintrials_remotes), ctv_clintrials_readme_clean$package)
-missing_logo_colors <- sample(viridis::inferno(length(missing_logo)*2), length(missing_logo))
+message("Non Missing logo n:", nrow(ctv_clintrials_readme_clean))
 ```
 
-```{r, echo = FALSE}
+```{r Construct list of missing logos}
+missing_logo <- setdiff(names(ctv_clintrials_remotes), ctv_clintrials_readme_clean$package)
+missing_logo_colors <- sample(viridis::inferno(length(missing_logo)*2), length(missing_logo))
+message("Missing logo n:", length(missing_logo))
+```
+
+```{r define svg}
 library(minisvg)
 len     <- 95
 angles  <- (seq(0, 360, 60) + 90) * pi/180
@@ -216,7 +223,7 @@ def_layer$defs(hex)
 ```
 
 
-```{r, echo = FALSE}
+```{r compile svg constructor function}
 mysvg <- function(nm, color){
 new_doc <- svg_doc(width = 200, height = 200)$update(width=90, height=90)
 g <- stag$g()
@@ -241,7 +248,7 @@ new_doc$as_character()
 
 ## Column {width=35%}
 
-```{r, echo = FALSE}
+```{r construct iframe}
 htmltools::tags$iframe(
   id="descIframe", width="100%", height="100%",
   src = file.path("https://cran.r-project.org/web/packages",ctv_clintrials_readme_clean$package[1])
@@ -250,7 +257,7 @@ htmltools::tags$iframe(
 
 ## Column {width=50%}
 
-```{r, results="asis", echo = FALSE}
+```{r construct hex wall, results="asis"}
 def_layer$as_character()
 # Construct the wall
 htmltools::tags$div(
