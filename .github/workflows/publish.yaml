@@ -38,6 +38,8 @@ jobs:
         run: quarto render --output-dir _site
         shell: bash
         working-directory: ${{ env.QUARTO_DIR }}
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}        
 
       - name: Publish Project
         uses: peaceiris/actions-gh-pages@v3
