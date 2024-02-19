@@ -1,0 +1,218 @@
+---
+title: "Introducing `openstatsware`"
+subtitle: "Who we are and what we build together"
+author: "Ya Wang on behalf of the working group"
+date: "2024/02/23"
+format: 
+  pptx:
+    incremental: true   
+    toc: true
+    toc-depth: 1
+    toc-title: Outline
+---
+
+```{r setup}
+#| include: false
+#| echo: false
+```
+
+# Introducing the Working Group
+
+## `openstatsware`
+
+```{r calc-stats}
+library(readr)
+library(dplyr)
+members <- read_csv("../data/members.csv") |> filter(SWE_WG_Member == 1)
+n_members <- nrow(members)
+unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
+```
+
+::: columns
+::: {.column width="50%"}
+- Official working group of the American Statistical Association (ASA) Biopharmaceutical Section 
+  - Formed in 19 August 2022
+  - Cross-industry collaboration (`r n_members` members from `r length(unique_orgs)` organizations)
+  - Full name: Software Engineering Working Group
+  - Short name: `openstatsware`
+  - Homepage: [openstatsware.org](https://www.openstatsware.org/)
+  - We welcome new members to join!
+:::
+
+::: {.column width="50%"}
+![](../sticker/openstatsware-hex-1200.png){height="300"}
+:::
+:::
+
+## Motivation
+
+- Open-source software increasing popularity in Biostatistics
+  - Rapid uptake of novel statistical methods
+  - Unprecedented opportunities for collaboration
+  - Transparency of methods and implementation
+- Variability in software quality
+  - No statistical quality assurance on open-source extension package repositories, e.g. CRAN
+  - No industry standard for assessing quality of R packages
+- **Reliable software for core statistical analysis is paramount**
+
+## Working Group Objectives
+
+- Primary 
+  - Engineer R packages that implement important statistical methods
+    - to fill in gaps in the open-source statistical software landscape
+    - focusing on what is needed for biopharmaceutical applications
+- Secondary 
+  - Develop and disseminate best practices for engineering high-quality open-source statistical software
+    - By actively doing the statistical engineering work together, we align on best practices and can communicate these to others
+
+## Workstreams in R Package Development
+
+- Mixed Models for Repeated Measures (MMRM)
+  - Develop `mmrm` R package for frequentist inference in MMRM
+- Bayesian MMRM
+  - Develop `brms.mmrm` R package for Bayesian inference in MMRM
+- Health Technology Assessment (HTA)
+  - Develop open-source R tools to be used in HTA submission
+
+## Best Practices
+
+- User interface design
+- Code readability
+- Unit and integration tests
+- Documentation
+- Version control
+- Reproducibility
+- Maintainability
+- etc.
+  
+## Best Practices Dissemination - Workshop
+
+- Workshop "Good Software Engineering Practice for R Packages" on world tour
+  - To teach hands-on skills and tools to engineer reliable R packages
+    - Topics: R package structure, engineering workflow, ensuring quality, version control, collaboration and publication, and shiny development 
+  - 5 events in 2023 at Basel, Shanghai, San José, Rockville, and Montreal
+  
+## Best Practices Dissemination - Video
+
+- Youtube video series [Statistical Software Engineering 101](https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS)
+  - To introduce tips and tricks for good statistical software engineering practices
+  - 2 videos on unit testing for R developers 
+
+# Overview of Active Workstreams
+
+## MMRM R Package Development {.smaller}
+
+- The `mmrm` R package is the first product of `openstatsware`  
+- Motivation
+  - Mixed models for repeated measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials
+  - Existing R packages are not great for one of the following reasons
+    - Model convergence issues
+    - Limited choices of covariance structures
+    - Lack of adjusted degrees of freedom methods
+    - Computational efficiency is not satisfactory
+
+## Features of `mmrm` {.smaller}
+
+- Linear model for dependent observations within independent subjects
+- Covariance structures for the dependent observations:
+  - Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential
+  - Allows group specific covariance estimates and weights
+- REML or ML estimation, using multiple optimizers if needed
+- `emmeans` interface for least square means
+- `tidymodels` for easy model fitting
+- Satterthwaite and Kenward-Roger adjustments
+- Robust sandwich estimator for covariance
+
+## Why It's Not Just Another Package
+
+- Ongoing maintenance and support from the pharmaceutical industry
+  - 5 companies being involved in the development, on track to become standard package
+- Development using best practices as show case for high quality package
+  - Thorough unit and integration tests (also comparing with SAS results) to ensure accurate results
+
+## `mmrm` on CRAN
+
+- First available on CRAN in October 2022
+- Latest update in January 2024
+- Links
+  - CRAN: [https://cran.r-project.org/package=mmrm](https://cran.r-project.org/package=mmrm)
+  - Workstream: [openstatsware.org/mmrm_R_package.html](https://www.openstatsware.org/mmrm_R_package.html)
+
+## Bayesian MMRM R Package Workstream {.smaller}
+
+- The `brms.mmrm` R package leverages `brms` to run Bayesian MMRM
+  - `brms` is a powerful and versatile package for fitting Bayesian regression models
+- Support a simplified interface and align with the best practices
+- Documentation website has a complete function reference and tutorial vignettes
+- Rigorous validation using simulation-based calibration and comparisons with the frequentist `mmrm` package on two example datasets
+
+## `brms.mmrm` on CRAN
+
+- First version available in August 2023
+- Latest update in February 2024
+- Links
+  - CRAN: [https://cran.r-project.org/package=brms.mmrm](https://cran.r-project.org/package=brms.mmrm) 
+  - Workstream: [openstatsware.org/bayesian_mmrm_R_package.html](https://www.openstatsware.org/bayesian_mmrm_R_package.html) 
+
+## HTA-R Package Workstream
+
+- Develop and maintain a collection of open-source R tools of high quality in the right format (R packages, apps, user guides) to support crucial analytic topics in HTA
+- In close collaboration with [HTA SIG in PSI/EFPSI](https://www.psiweb.org/sigs-special-interest-groups/hta) (a group of HTA SMEs with statistical background, who help to generate pipeline ideas, ensure relevance of developed tools, pilot created tools in real business setting)
+- R package under development: `maicplus`
+
+## `maicplus` R package
+- An R package to support analysis and reporting of matching-adjusted indirect comparison (MAIC) for HTA dossiers
+- Motivation
+  - Sponsors are required to submit evidence of relative effectiveness of their treatment comparing to relevant comparators that may not be included in their clinical trial, for health technology assessment (HTA) in different countries
+  - MAIC is a prevalent and well-accepted method to derive population-adjusted treatment effect in such case for two trials, one of which has Individual patient data and the other has only aggregate data
+  - There is a lack of open-source R packages following good software engineering practices for conducting and reporting MAIC analyses
+- workstream: [openstatsware.org/hta_page.html](https://www.openstatsware.org/hta_page.html) 
+
+# Lessons Learned on Best Practices
+
+## Development process
+
+- Important to go public as soon as possible 
+  - don't wait for the product to be finished
+  - you never know who else might be interested/could help
+- Version control with git
+  - cornerstone of effective collaboration
+- Building software together works better than alone
+  - Different perspectives in discussions and code review help to optimize the user interface and thus experience
+
+## Coding standards
+
+- Consistent and readable code style simplifies joint work
+- Written (!) contribution guidelines help
+- Lowering the entry hurdle using developer calls is important
+
+## Robust test suite
+
+- Unit and integration tests are essential for preventing regression and assuring quality
+- Especially with compiled code critical to see if package works correctly
+- Use continuous integration during development to make sure nothing breaks along the way
+
+## Documentation
+
+- Lots of work but extremely important 
+  - start with writing up the methods details
+  - think about the code structure first in a "design doc"
+  - only then put the code in the package
+- Needs to be kept up-to-date
+- Need to have examples & vignettes
+  - Testing alone is not sufficient 
+  - Builds trust with users
+  - Reference for developers over time
+
+# Long Term Perspective
+
+## Long Term Perspective
+
+- Software engineering is a critical competence in producing high-quality statistical software
+- A lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software
+- Improving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics
+
+## Q&A {background-image="thank-you.jpg"}
+
+<!-- Photo by Vie Studio [link](https://www.pexels.com/photo/thank-you-lettering-on-white-surface-4439457/) -->
+
