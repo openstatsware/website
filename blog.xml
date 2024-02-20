@@ -27,7 +27,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
@@ -206,7 +206,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
+<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
