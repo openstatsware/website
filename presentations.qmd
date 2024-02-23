@@ -1,6 +1,8 @@
 ---
 title: "Presentations"
 ---
+-   *Introducing `openstatsware`: Who we are and what we build together*. ASA BIOP DL Webinar, 23 Feb 2024.
+    -   [slides](slides/asa-biop-webinar-feb2024-quarto.html)
 -   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. China-R Conference, 28 Nov 2023.
     -   [slides](slides/china-R-mmrm-nov2023.html)
 -   *Introducing `openstatsware` and the R Package `{mmrm}`*. Lightning Session at ASA SSC Mini-Symposium  04 Nov 2023.

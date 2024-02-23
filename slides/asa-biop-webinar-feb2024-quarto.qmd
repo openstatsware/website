@@ -4,11 +4,13 @@ subtitle: "Who we are and what we build together"
 author: "Ya Wang on behalf of the working group and co-chair Daniel Sabanes Bove"
 date: "2024/02/23"
 format: 
-  pptx:
-    incremental: true   
+  revealjs:
+    incremental: true
+    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/openstatsware-hex-1200.png
+    slide-number: c/t
     toc: true
     toc-depth: 1
-    toc-title: Outline
+    fontsize: 32px
 ---
 
 ```{r setup}
@@ -100,7 +102,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 
 # Overview of Active Workstreams
 
-## MMRM R Package Development {.smaller}
+## MMRM R Package Development
 
 -   The `mmrm` R package is the first product of `openstatsware`\
 -   Motivation
@@ -111,7 +113,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
         -   Lack of adjusted degrees of freedom methods
         -   Computational efficiency is not satisfactory
 
-## Features of `mmrm` {.smaller}
+## Features of `mmrm`
 
 -   Linear model for dependent observations within independent subjects
 -   Covariance structures for the dependent observations:
@@ -146,7 +148,7 @@ unique_orgs <- members |> pull("Affiliation") |> unique() |> sort()
 :::
 :::
 
-## Bayesian MMRM R Package Workstream {.smaller}
+## Bayesian MMRM R Package Workstream
 
 -   The `brms.mmrm` R package leverages `brms` to run Bayesian MMRM
     -   `brms` is a powerful and versatile package for fitting Bayesian regression models
