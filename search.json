@@ -182,473 +182,557 @@
     "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
-    "href": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
-    "title": "Unit Testing for R Developers",
-    "section": "What are we going to talk about?",
-    "text": "What are we going to talk about?\n\n\n\nUnderstand the philosophy behind unit testing and how it relates to other tests\nGain more confidence in your testing framework by examining coverage"
+    "objectID": "slides/r-govys-jan2023.html#asa-biop-software-engineering-working-group-swe-wg",
+    "href": "slides/r-govys-jan2023.html#asa-biop-software-engineering-working-group-swe-wg",
+    "title": "Introducing the Software Engineering working group",
+    "section": "ASA BIOP Software Engineering working group (SWE WG)",
+    "text": "ASA BIOP Software Engineering working group (SWE WG)\n\nAn official working group of the ASA Biopharmaceutical Section\nFormed in August 2022\nCross-industry collaboration with more than 30 members from over 20 organizations\nHome page at rconsortium.github.io/asa-biop-swe-wg\nOpen for new members!"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
-    "href": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
-    "title": "Unit Testing for R Developers",
-    "section": "What is the structure of unit tests?",
-    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result.\n\n\nThe code should test a specific characteristic or functionality of the package.\nBecause if your action does too many things at once, you have to search longer for the bug."
+    "objectID": "slides/r-govys-jan2023.html#motivation",
+    "href": "slides/r-govys-jan2023.html#motivation",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Motivation",
+    "text": "Motivation\n\nImportance of reliable software for statistical analysis cannot be underestimated\nIn the past a lot of statistical analyses have been performed with proprietary software\nOpen-source software has gained increasing popularity in Biostatistics over the last two decades\n\nPros: rapid uptake of novel methods and great opportunities for collaboration and innovation\nCons: users face huge variability in software quality (reliability, efficiency and maintainability)"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
-    "href": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
-    "title": "Unit Testing for R Developers",
-    "section": "Who do you write tests for?",
-    "text": "Who do you write tests for?\nUnit testing is a method to communicate to various stakeholders the package requirements."
+    "objectID": "slides/r-govys-jan2023.html#motivation-cont",
+    "href": "slides/r-govys-jan2023.html#motivation-cont",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Motivation (con’t)",
+    "text": "Motivation (con’t)\n\nCurrent repositories (GitHub, CRAN):\n\nDo not require any statistical quality assurance\nIt’s harder to adopt packages without good documentation and maintenance\n\nDeveloping high-quality software is critical to inform clinical and regulatory decisions:\n\nGood coding practices\nReproducible outputs\nSelf-sufficient documentation"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#test-flavors",
-    "href": "slides/unit_testing_advanced.html#test-flavors",
-    "title": "Unit Testing for R Developers",
-    "section": "Test Flavors",
-    "text": "Test Flavors\nThere are different flavors of unit tests that we write:\n\nDeveloper Tests\n\nTests that help the software developer speed up and iterate over different versions\n\nQuality Assurance (QA) Tests\n\nProving that the package isn’t broken or that functions are returning the expected answers"
+    "objectID": "slides/r-govys-jan2023.html#goals",
+    "href": "slides/r-govys-jan2023.html#goals",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Goals",
+    "text": "Goals\n\nPrimary Goal: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps\nSecondary Goal: Develop and disseminate best practices for engineering high-quality open-source statistical software"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#test-flavors-contd",
-    "href": "slides/unit_testing_advanced.html#test-flavors-contd",
-    "title": "Unit Testing for R Developers",
-    "section": "Test Flavors (cont’d)",
-    "text": "Test Flavors (cont’d)\n\n\n\nDeveloper Tests\nRemove Fear of Change\n\nAssist with package design\nGuide for refactoring\n\nReduce Development Time\n\nExplain code to others\nPinpoint errors\nMinimize debugging/manual testing\n\n\nQA Tests\n\nEncode object requirements\nCatch performance degradation"
+    "objectID": "slides/r-govys-jan2023.html#swe-wg-activities",
+    "href": "slides/r-govys-jan2023.html#swe-wg-activities",
+    "title": "Introducing the Software Engineering working group",
+    "section": "SWE WG Activities",
+    "text": "SWE WG Activities\n\nFirst R package mmrm was published on CRAN in October 2022 and updated in December\n\nWe aim to establish this package as a new standard for fitting mixed models for repeated measures (MMRM)\nWe have been developing and adopting best practices for software in the mmrm package, and open sourced it at github.com/openpharma/mmrm\nCurrently under active development to add more features"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success",
-    "href": "slides/unit_testing_advanced.html#planning-tests-for-success",
-    "title": "Unit Testing for R Developers",
-    "section": "Planning tests for success",
-    "text": "Planning tests for success\n\nWrite tests to evaluate the exported behavior that the package user would invoke.\n\nSets up the ability to refactor code.\nTests will not have to be rewritten as the package iterates and improves."
+    "objectID": "slides/r-govys-jan2023.html#swe-wg-activities-cont",
+    "href": "slides/r-govys-jan2023.html#swe-wg-activities-cont",
+    "title": "Introducing the Software Engineering working group",
+    "section": "SWE WG Activities (con’t)",
+    "text": "SWE WG Activities (con’t)\n\nPrepare public training materials to disseminate best practice for software engineering in the Biostatistics community\n\nAt the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials\nOrganize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop\nYoutube series with a focus on best practices for software engineering"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success-contd",
-    "href": "slides/unit_testing_advanced.html#planning-tests-for-success-contd",
-    "title": "Unit Testing for R Developers",
-    "section": "Planning tests for success (cont’d)",
-    "text": "Planning tests for success (cont’d)\n\nWrite tests that you will not need to update or maintain because of a dependency.\n\nBecause you can’t control how other maintainers are developing packages and managing their lifecycle.\nNote: Having unit tests allows dependency changes to be detected early enough - e.g. CRAN is running reverse dependency checks before accepting new package versions"
+    "objectID": "slides/r-govys-jan2023.html#best-practices-for-software-engineering",
+    "href": "slides/r-govys-jan2023.html#best-practices-for-software-engineering",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Best Practices for Software Engineering",
+    "text": "Best Practices for Software Engineering\n\nUser interface design\nVersion control with git\nUnit and integration tests\nConsistent and readable code style\nDocumentation\nContinuous integration setup\nPublication on website and repositories\netc."
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#testing-surface-areas",
-    "href": "slides/unit_testing_advanced.html#testing-surface-areas",
-    "title": "Unit Testing for R Developers",
-    "section": "Testing surface areas",
-    "text": "Testing surface areas\n\n\n\nWhen writing unit tests for functions it is important to take into account the surface area of the tests\nIn this example we have three unit tests on stats::mean.default\nTests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure."
+    "objectID": "slides/r-govys-jan2023.html#motivation-1",
+    "href": "slides/r-govys-jan2023.html#motivation-1",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Motivation",
+    "text": "Motivation\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially thought that it was solved by using lme4 with lmerTest\nBut this approach failed on large data (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
-    "href": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
-    "title": "Unit Testing for R Developers",
-    "section": "Adding new features with a safety net",
-    "text": "Adding new features with a safety net\nWhen you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature.\nThis will serve two main purposes:\n\n\n\n\n\nCommunicate the goals of the feature to others and to yourself.\nFree to develop the idea while writing messy code and refactoring it while still controlling for the basic requirements."
+    "objectID": "slides/r-govys-jan2023.html#before-creating-a-new-package",
+    "href": "slides/r-govys-jan2023.html#before-creating-a-new-package",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Before creating a new package",
+    "text": "Before creating a new package\n\nFirst try to improve existing package\n\nHere we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom\nBut it did not work\n\nThink about long term maintenance and responsibility"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#some-strategies-for-learning",
-    "href": "slides/unit_testing_advanced.html#some-strategies-for-learning",
-    "title": "Unit Testing for R Developers",
-    "section": "Some strategies for learning",
-    "text": "Some strategies for learning\n\nPair up with experienced developer buddies.\nHelp out with refactoring or features on GitHub repositories:\n\nDevelopers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.\nThe process of merging a pull request will teach you hands on.\n\nClone repositories of packages you are familiar with:\n\nRun the tests you find there.\nYou will learn a lot about testing, coding and strategies."
+    "objectID": "slides/r-govys-jan2023.html#mmrm-package-overview",
+    "href": "slides/r-govys-jan2023.html#mmrm-package-overview",
+    "title": "Introducing the Software Engineering working group",
+    "section": "mmrm Package overview",
+    "text": "mmrm Package overview\n\nLinear model for dependent observations within independent subjects\nMultiple covariance structures available for the dependent observations\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means, tidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
-    "href": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
-    "title": "Unit Testing for R Developers",
-    "section": "What can and should be unit tested?",
-    "text": "What can and should be unit tested?\n\nScript\n\nSingle files with functions can have unit tests\n\nPackages\n\nThis is the standard object to write tests for\n\nShiny apps\n\nShiny app UI and reactivity can be tested\n\nData derivation\n\nTesting data preprocessing pipelines for expected characteristics of columns"
+    "objectID": "slides/r-govys-jan2023.html#why-its-not-just-another-package",
+    "href": "slides/r-govys-jan2023.html#why-its-not-just-another-package",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Why it’s not just another package",
+    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
-    "href": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
-    "title": "Unit Testing for R Developers",
-    "section": "Overview of unit testing frameworks",
-    "text": "Overview of unit testing frameworks\n\nscript/packages: testthat, tinytest, box, Runit\nshiny apps: shinytest2, reactor, crrry\ndata: pointblank, assertr, validate, dataReporter\nplots: vdiffr"
+    "objectID": "slides/r-govys-jan2023.html#covariance-structures",
+    "href": "slides/r-govys-jan2023.html#covariance-structures",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Covariance structures",
+    "text": "Covariance structures\n\n\n\n\n\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#testing-plot-functions",
-    "href": "slides/unit_testing_advanced.html#testing-plot-functions",
-    "title": "Unit Testing for R Developers",
-    "section": "Testing plot functions",
-    "text": "Testing plot functions\n\nvdiffr package allows to save vector graphics file of the expected plot outcome\nworks for both base plots as well as ggplots\nBeware of false positive test failures though\n\noperating systems can lead to slightly different plot outcomes\nrequires manual visual checks"
+    "objectID": "slides/r-govys-jan2023.html#degrees-of-freedom-methods",
+    "href": "slides/r-govys-jan2023.html#degrees-of-freedom-methods",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Degrees of Freedom Methods",
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not equivalent to the KR2 setting in PROC MIXED"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#testing-plot-functions-contd",
-    "href": "slides/unit_testing_advanced.html#testing-plot-functions-contd",
-    "title": "Unit Testing for R Developers",
-    "section": "Testing plot functions (cont’d)",
-    "text": "Testing plot functions (cont’d)\n\nAlternative for ggplot:\n\nuse ggplot2::layer_data() function to extract layer information\nuse that for comparisons in tests instead of vector graphics"
+    "objectID": "slides/r-govys-jan2023.html#contrastslsmeans",
+    "href": "slides/r-govys-jan2023.html#contrastslsmeans",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Contrasts/LSMEANS",
+    "text": "Contrasts/LSMEANS\nContrasts and least square means estimates are available in mmrm using:\n\ndf_1d, df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does."
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#communicating-tests-coverage",
-    "href": "slides/unit_testing_advanced.html#communicating-tests-coverage",
-    "title": "Unit Testing for R Developers",
-    "section": "Communicating Tests: Coverage",
-    "text": "Communicating Tests: Coverage\n\ncovr\n\nR package that evaluates the % of lines of code that are tested\nUse covr::package_coverage() to analyze current package coverage\n\ncovrpage\n\nR package that summarizes covr statistics into simple reports that can be shared\nUse covrpage::covrpage() to create the report page"
+    "objectID": "slides/r-govys-jan2023.html#demo",
+    "href": "slides/r-govys-jan2023.html#demo",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Demo",
+    "text": "Demo"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#mapping-the-logic",
-    "href": "slides/unit_testing_advanced.html#mapping-the-logic",
-    "title": "Unit Testing for R Developers",
-    "section": "Mapping the Logic",
-    "text": "Mapping the Logic"
+    "objectID": "slides/r-govys-jan2023.html#long-term-perspective",
+    "href": "slides/r-govys-jan2023.html#long-term-perspective",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Long term perspective",
+    "text": "Long term perspective\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#summary",
-    "href": "slides/unit_testing_advanced.html#summary",
-    "title": "Unit Testing for R Developers",
-    "section": "Summary",
-    "text": "Summary\n\nPhilosophy of testing:\n\nAggregate of all tests should cover the whole functionality\nBut each test on its own should be specific and only have small surface\nDeveloper vs. Quality Assurance Tests\nNot just R packages: also scripts, Shiny apps, data\n\nHow to communicate test coverage:\n\nUse covr to calculate coverage\nUse covrpage to create a summary report"
+    "objectID": "slides/r-govys-jan2023.html#new-packages-coming-up",
+    "href": "slides/r-govys-jan2023.html#new-packages-coming-up",
+    "title": "Introducing the Software Engineering working group",
+    "section": "New packages coming up",
+    "text": "New packages coming up\n\nsasr\nHTA packages\nBayesian MMRM"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#outlook-automating-tests",
-    "href": "slides/unit_testing_advanced.html#outlook-automating-tests",
-    "title": "Unit Testing for R Developers",
-    "section": "Outlook: Automating Tests",
-    "text": "Outlook: Automating Tests\n\n\nWhen developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests."
+    "objectID": "slides/r-govys-jan2023.html#thank-you-questions",
+    "href": "slides/r-govys-jan2023.html#thank-you-questions",
+    "title": "Introducing the Software Engineering working group",
+    "section": "Thank you! Questions?",
+    "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
-    "href": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
-    "title": "Unit Testing for R Developers",
-    "section": "Brought to you by the Software Engineering Working Group",
-    "text": "Brought to you by the Software Engineering Working Group\n\n\n\n\n\n\nrconsortium.github.io/asa-biop-swe-wg"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#acknowledgments",
-    "href": "slides/china-R-mmrm-nov2023.html#acknowledgments",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#openstatsware",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#openstatsware",
     "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nAuthors:\n\n\n\n\nBrian Matthew Lang (MSD)\nChristian Stock (BI)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Leibovitz (Roche)\nDaniel Sabanes Bove (Roche, lead)\n\n\n\nDaniel Sjoberg (Roche)\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nJonathan Sidi (PinPoint Strategies)\nKevin Kunzmann (BI)\nYa Wang (Gilead)"
+    "section": "openstatsware",
+    "text": "openstatsware\n\n\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
   },
   {
-    "objectID": "slides/china-R-mmrm-nov2023.html#acknowledgments-1",
-    "href": "slides/china-R-mmrm-nov2023.html#acknowledgments-1",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\n\nThanks to:\n\nBen Bolker (McMaster University)\nDavide Garolini (Roche)\nDinakar Kulkarni (Roche)\nGonzalo Duran Pacheco (Roche)\nSoftware Engineering working group (openstatsware)"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#agenda",
-    "href": "slides/china-R-mmrm-nov2023.html#agenda",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Agenda",
-    "text": "Agenda\n\nIntroduction and Overview of openstatsware\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nComparing MMRM R Package to other Implementations\n\nGet Started with {mmrm}!"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#context-software-engineering-in-biostatistics",
-    "href": "slides/china-R-mmrm-nov2023.html#context-software-engineering-in-biostatistics",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Context: Software Engineering in Biostatistics",
-    "text": "Context: Software Engineering in Biostatistics\n\nOpen-source software has gained increasing popularity in Biostatistics\n\nPros: rapid uptake of novel statistical methods, unprecedented opportunities for collaboration\nCons: variability in software quality\n\nDeveloping high-quality software is critical"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#software-engineering-working-group-openstatsware",
-    "href": "slides/china-R-mmrm-nov2023.html#software-engineering-working-group-openstatsware",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Software Engineering working group (openstatsware)",
-    "text": "Software Engineering working group (openstatsware)\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHome page at rconsortium.github.io/asa-biop-swe-wg\nWe welcome new members to join!"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#working-group-objectives",
-    "href": "slides/china-R-mmrm-nov2023.html#working-group-objectives",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#working-group-objectives",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#working-group-objectives",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Working Group Objectives",
     "text": "Working Group Objectives\n\nPrimary\n\nEngineer R packages that implement important statistical methods\n\nto fill in gaps in the open-source statistical software landscape\nfocusing on what is needed for biopharmaceutical applications\n\n\nSecondary\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
   },
   {
-    "objectID": "slides/china-R-mmrm-nov2023.html#first-product-of-openstatsware-mmrm",
-    "href": "slides/china-R-mmrm-nov2023.html#first-product-of-openstatsware-mmrm",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#workstreams-in-r-package-development",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#workstreams-in-r-package-development",
     "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "First Product of openstatsware: mmrm",
-    "text": "First Product of openstatsware: mmrm\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+    "section": "Workstreams in R Package Development",
+    "text": "Workstreams in R Package Development\n\nMixed Models for Repeated Measures (MMRM) 🌎\n\nDevelop mmrm R package for frequentist inference in MMRM (CRAN)\n\nBayesian MMRM 🌎\n\nDevelop brms.mmrm R package for Bayesian inference in MMRM (CRAN)\n\nHealth Technology Assessment 🌎\n\nDevelop open-source R tools to support HTA dossier submission across various countries\nParticularly topics with unmet needs in R implementation and/or related to EUnetHTA"
   },
   {
-    "objectID": "slides/china-R-mmrm-nov2023.html#idea",
-    "href": "slides/china-R-mmrm-nov2023.html#idea",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#motivation",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#motivation",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Motivation",
+    "text": "Motivation\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+  },
+  {
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#idea",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#idea",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Idea",
     "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly\n\nas it is also underlying glmmTMB\nbut code the exact model we want\n\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries\nProvide an R solution that\n\nhas fast convergence times\ngenerates estimates closest to SAS"
   },
   {
-    "objectID": "slides/china-R-mmrm-nov2023.html#advantages-of-tmb",
-    "href": "slides/china-R-mmrm-nov2023.html#advantages-of-tmb",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#advantages-of-tmb",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#advantages-of-tmb",
     "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Advantages of TMB",
-    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nSyntactic sugars to allow simple matrix calculations or operations like R\nThis can be used from the R side with the TMB interface and plugged into optimizers"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#why-its-not-just-another-package",
-    "href": "slides/china-R-mmrm-nov2023.html#why-its-not-just-another-package",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Why it’s not just another package",
-    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#highlighted-features-of-mmrm",
-    "href": "slides/china-R-mmrm-nov2023.html#highlighted-features-of-mmrm",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Highlighted Features of mmrm",
-    "text": "Highlighted Features of mmrm\n\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nHypothesis Testing:\n\nemmeans interface for least square means\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance\n\nIntegrations and extentions\n\ntidymodels builtin parsnip engine and recipes for streamlined model fitting workflows\nteal, tern, rtables integration for post processing and reporting\nSupport conditional mean prediction and simulation\nAlso used in rbmi for conditional mean imputation!"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#comparison-with-other-software",
-    "href": "slides/china-R-mmrm-nov2023.html#comparison-with-other-software",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Comparison with Other Software",
-    "text": "Comparison with Other Software\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLMMIX procedures.\n\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compares the PROC MIXED procedure to the {mmrm} package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nCovariance structures\n\n\n\nCovariance Estimators\nDegrees of Freedom\nContrasts"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#documentation",
-    "href": "slides/china-R-mmrm-nov2023.html#documentation",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Documentation",
-    "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#unit-testing",
-    "href": "slides/china-R-mmrm-nov2023.html#unit-testing",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Unit Testing",
-    "text": "Unit Testing\n\nUnit tests in {mmrm} are transparent, compared to PROC MIXED.\nUses the testthat framework with covr to communicate the testing coverage.\nUnit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\n\nNote\n\n\nThe integration tests in {mmrm} are set to a tolerance of 10e^-3 when compared to SAS outputs."
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-structures",
-    "href": "slides/china-R-mmrm-nov2023.html#covariance-structures",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Covariance structures",
-    "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structures, {mmrm} is easily extensible - let us know via feature requests in the GitHub repository."
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-structures-details",
-    "href": "slides/china-R-mmrm-nov2023.html#covariance-structures-details",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Covariance structures details",
-    "text": "Covariance structures details\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-estimators",
-    "href": "slides/china-R-mmrm-nov2023.html#covariance-estimators",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Covariance Estimators",
-    "text": "Covariance Estimators\n\n\n\nCovariance estimators\n{mmrm}\nPROC MIXED\n\n\n\n\nAsymptotic\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nEmpirical\nX\nX\n\n\nJackknife\nX\n\n\n\nBias-Reduced Linearization\nX"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#degrees-of-freedom-methods",
-    "href": "slides/china-R-mmrm-nov2023.html#degrees-of-freedom-methods",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Degrees of Freedom Methods",
-    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger **\nX\nX\n\n\nKenward-Roger (Linear)\nX\nX\n\n\n\n*Available through emmeans, and ongoing work in mmrm.\n** Unstructured has differences compared to PROC MIXED because of different parameterization."
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#contrastslsmeans",
-    "href": "slides/china-R-mmrm-nov2023.html#contrastslsmeans",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Contrasts/LSMEANS",
-    "text": "Contrasts/LSMEANS\nContrasts and least square (LS) means estimates are available in mmrm using\n\n\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does.\n\n\n\n\n\n\n\n\nNote\n\n\nThese are comparable to the LSMEANS statement in PROC MIXED."
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#benchmarking-with-other-r-packages",
-    "href": "slides/china-R-mmrm-nov2023.html#benchmarking-with-other-r-packages",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Benchmarking with other R packages",
-    "text": "Benchmarking with other R packages\nOther R packages, like nlme, lme4 and glmmTMB can support MMRM analysis. However:\n\nCovariance structure supported is limited\nComputational efficiency is not satisfying\nConvergence issues(especially for lme4)\nNeed other(multiple) packages to support Satterthwaite and Kenward-Roger degrees of freedom, or Sandwich covariance estimator.\nDetailed results at the online comparison vignette"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#computational-efficiency",
-    "href": "slides/china-R-mmrm-nov2023.html#computational-efficiency",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Computational Efficiency",
-    "text": "Computational Efficiency\nmmrm not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#differences-with-sas",
-    "href": "slides/china-R-mmrm-nov2023.html#differences-with-sas",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Differences with SAS",
-    "text": "Differences with SAS\n{mmrm} has small difference from SAS"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#getting-started",
-    "href": "slides/china-R-mmrm-nov2023.html#getting-started",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Getting started",
-    "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
-  },
-  {
-    "objectID": "slides/china-R-mmrm-nov2023.html#thank-you-questions",
-    "href": "slides/china-R-mmrm-nov2023.html#thank-you-questions",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Thank you! Questions?",
-    "text": "Thank you! Questions?"
-  },
-  {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
-    "title": "mmrm",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\n\n\n\nAuthors:\n\nKevin Kunzmann (Boehringer Ingelheim)\nBrian Matthew Lang (MSD)\nYa Wang (Gilead)\nJulia Dedic (Roche)\nDoug Kelkhoff (Roche)\nLiming Li (Roche)\n\n\nThanks to:\n\nBen Bolker (McMaster University)\nSoftware Engineering working group (SWE WG)\nGonzalo Duran Pacheco (Roche)\nCraig Gower-Page (Roche)\nDinakar Kulkarni (Roche)\nDavide Garolini (Roche)"
-  },
-  {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
-    "title": "mmrm",
-    "section": "Motivation",
-    "text": "Motivation\n\n2 years ago, we thought we had solved the MMRM problem, using lme4 and lmerTest\nHowever in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
-  },
-  {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#idea",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#idea",
-    "title": "mmrm",
-    "section": "Idea",
-    "text": "Idea\n\nBecause glmmTMB is always using a random effects representation, we cannot have a real unstructured model (uses \\(\\sigma = \\varepsilon &gt; 0\\) trick)\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
-  },
-  {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
-    "title": "mmrm",
     "section": "Advantages of TMB",
     "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
   },
   {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
-    "title": "mmrm",
-    "section": "Cross-industry collaboration",
-    "text": "Cross-industry collaboration\n\nWe created an initial prototype quickly and open sourced it on github.com/openpharma/mmrm\nIn parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R (crucial gap in toolbox so far)\nThis was the start of the Software Engineering working group (SWE WG)\n\nRead more at rconsortium.github.io/asa-biop-swe-wg\nOfficial working group of the ASA Biopharmaceutical section"
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#why-its-not-just-another-package",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#why-its-not-just-another-package",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Why It’s Not Just Another Package",
+    "text": "Why It’s Not Just Another Package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests to ensure accurate results\nIn depth documentation of methods, functionality and comparison to other packages and languages\n\nnlme, glmmTMB, lme4, SAS PROC GLMMIX"
   },
   {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#features",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#features",
-    "title": "mmrm",
-    "section": "Features",
-    "text": "Features\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\nSatterthwaite adjusted degrees of freedom"
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#highlighted-features-of-mmrm",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#highlighted-features-of-mmrm",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Highlighted Features of mmrm",
+    "text": "Highlighted Features of mmrm\n\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nHypothesis Testing:\n\nemmeans interface for least square means\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance\n\n\nIntegrations and extentions\n\ntidymodels builtin parsnip engine and recipes for streamlined model fitting workflows\nteal, tern, rtables integration for post processing and reporting"
   },
   {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
-    "title": "mmrm",
-    "section": "Getting started",
-    "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#comparison-with-other-software",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#comparison-with-other-software",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Comparison with Other Software",
+    "text": "Comparison with Other Software\n\nWe have run comparison analyses with other R packages, namely nlme, glmmTMB and lme4\nAlso compared with SAS PROC GLIMMIX\nHighlights\n\nmmrm has faster convergence time\nmmrm provides closest results to PROC GLIMMIX\n\nDetailed results at the online comparison vignette"
   },
   {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
-    "title": "mmrm",
+    "objectID": "slides/asa-ssc-mmrm-nov2023.html#qa",
+    "href": "slides/asa-ssc-mmrm-nov2023.html#qa",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Q&A",
+    "text": "Q&A"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#openstatsware",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#openstatsware",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "openstatsware",
+    "text": "openstatsware\n\n\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#working-group-objectives",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#working-group-objectives",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Working Group Objectives",
+    "text": "Working Group Objectives\n\nPrimary\n\nEngineer R packages that implement important statistical methods\n\nto fill in gaps in the open-source statistical software landscape\nfocusing on what is needed for biopharmaceutical applications\n\n\nSecondary\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#workstreams-in-r-package-development",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#workstreams-in-r-package-development",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Workstreams in R Package Development",
+    "text": "Workstreams in R Package Development\n\nMixed Models for Repeated Measures (MMRM) 🌎\n\nDevelop mmrm R package for frequentist inference in MMRM (CRAN)\n\nBayesian MMRM 🌎\n\nDevelop brms.mmrm R package for Bayesian inference in MMRM (CRAN)\n\nHealth Technology Assessment 🌎\n\nDevelop open-source R tools to support HTA dossier submission across various countries\nParticularly topics with unmet needs in R implementation and/or related to EUnetHTA"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#best-practices-dissemination",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#best-practices-dissemination",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Best Practices Dissemination",
+    "text": "Best Practices Dissemination\n\nWorkshop “Good Software Engineering Practice for R Packages” on world tour\n\nto teach hands-on skills and tools to engineer reliable R packages\n5 events so far at Basel, Shanghai, San José, Rockville, and Montreal\n\nYoutube video series “Statistical Software Engineering 101” 🌎\n\nto introduce tips and tricks for good statistical software engineering practices\n2 videos so far"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#motivation",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#motivation",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Motivation",
+    "text": "Motivation\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#idea",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#idea",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Idea",
+    "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#advantages-of-tmb",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#advantages-of-tmb",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Advantages of TMB",
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#why-its-not-just-another-package",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#why-its-not-just-another-package",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Why It’s Not Just Another Package",
+    "text": "Why It’s Not Just Another Package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#features-of-mmrm",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#features-of-mmrm",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Features of mmrm",
+    "text": "Features of mmrm\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#comparison-with-other-software",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#comparison-with-other-software",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Comparison with Other Software",
+    "text": "Comparison with Other Software\n\nWe have run comparison analyses with other R packages, namely nlme, glmmTMB and lme4\nAlso compared with SAS PROC GLIMMIX\nHighlights\n\nmmrm has faster convergence time\nmmrm provides closest results to PROC GLIMMIX\n\nDetailed results at the online comparison vignette"
+  },
+  {
+    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#qa",
+    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#qa",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Q&A",
+    "text": "Q&A"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#outline",
+    "href": "slides/jsm-aug2023.html#outline",
+    "title": "{mmrm}",
+    "section": "Outline",
+    "text": "Outline\n\nIntroduction to SWE WG\nMotivation: why do we need a package for MMRM?\nmmrm Package\n\nWhy this is not “yet another package”\nComparing mmrm package to SAS\nBenchmarking with other R packages\n\nClosing and next steps"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#software-engineering-working-group-swe-wg",
+    "href": "slides/jsm-aug2023.html#software-engineering-working-group-swe-wg",
+    "title": "{mmrm}",
+    "section": "Software Engineering working group (SWE WG)",
+    "text": "Software Engineering working group (SWE WG)\n\nOfficial working group of the ASA Biopharmaceutical Section\n\nFormed in August 2022\nCross-industry collaboration (&gt;35 members from &gt;25 organizations)\n\nGoal\n\nEngineer selected R packages to fill in gaps in the open-source statistical software landscape\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#motivation-why-do-we-need-a-package-for-mmrm",
+    "href": "slides/jsm-aug2023.html#motivation-why-do-we-need-a-package-for-mmrm",
+    "title": "{mmrm}",
+    "section": "Motivation: why do we need a package for MMRM",
+    "text": "Motivation: why do we need a package for MMRM\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#idea",
+    "href": "slides/jsm-aug2023.html#idea",
+    "title": "{mmrm}",
+    "section": "Idea",
+    "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#advantages-of-tmb",
+    "href": "slides/jsm-aug2023.html#advantages-of-tmb",
+    "title": "{mmrm}",
+    "section": "Advantages of TMB",
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#why-its-not-just-another-package",
+    "href": "slides/jsm-aug2023.html#why-its-not-just-another-package",
+    "title": "{mmrm}",
+    "section": "Why it’s not just another package",
+    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#features-of-mmrm",
+    "href": "slides/jsm-aug2023.html#features-of-mmrm",
+    "title": "{mmrm}",
+    "section": "Features of mmrm",
+    "text": "Features of mmrm\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#comparing-sas-and-r",
+    "href": "slides/jsm-aug2023.html#comparing-sas-and-r",
+    "title": "{mmrm}",
+    "section": "Comparing SAS and R",
+    "text": "Comparing SAS and R\n\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compare the PROC MIXED procedure to the mmrm package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nEstimation Methods\n\n\n\nCovariance Structures\nDegrees of Freedom\nContrasts"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#documentation",
+    "href": "slides/jsm-aug2023.html#documentation",
+    "title": "{mmrm}",
+    "section": "Documentation",
+    "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#unit-testing",
+    "href": "slides/jsm-aug2023.html#unit-testing",
+    "title": "{mmrm}",
+    "section": "Unit Testing",
+    "text": "Unit Testing\n\nUnit tests in mmrm are transparent, compared to PROC MIXED.\nUses the testthat framework with covr to communicate the testing coverage.\nUnit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\n\nNote\n\n\nThe integration tests in mmrm are set to a tolerance of 10e^-3 when compared to SAS outputs."
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#estimation-methods",
+    "href": "slides/jsm-aug2023.html#estimation-methods",
+    "title": "{mmrm}",
+    "section": "Estimation Methods",
+    "text": "Estimation Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nML\nX\nX\n\n\nREML\nX\nX"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#covariance-structures",
+    "href": "slides/jsm-aug2023.html#covariance-structures",
+    "title": "{mmrm}",
+    "section": "Covariance structures",
+    "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structures, mmrm is easily extensible - let us know via feature requests in the GitHub repository."
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#covariance-structures-details",
+    "href": "slides/jsm-aug2023.html#covariance-structures-details",
+    "title": "{mmrm}",
+    "section": "Covariance structures details",
+    "text": "Covariance structures details\n\n\n\n\n\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#degrees-of-freedom-methods",
+    "href": "slides/jsm-aug2023.html#degrees-of-freedom-methods",
+    "title": "{mmrm}",
+    "section": "Degrees of Freedom Methods",
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not identical to the KR(Lin) in PROC MIXED"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#contrastslsmeans",
+    "href": "slides/jsm-aug2023.html#contrastslsmeans",
+    "title": "{mmrm}",
+    "section": "Contrasts/LSMEANS",
+    "text": "Contrasts/LSMEANS\nContrasts and least square means estimates are available in mmrm using:\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does."
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#benchmarking-with-other-r-packages",
+    "href": "slides/jsm-aug2023.html#benchmarking-with-other-r-packages",
+    "title": "{mmrm}",
+    "section": "Benchmarking with other R packages",
+    "text": "Benchmarking with other R packages\n\nCompared mmrm::mmrm with nlme::gls, lme4::lmer, glmmTMB::glmmTMB\nHighlights\n\nmmrm has faster convergence time\n\nUsing FEV dataset as an example, mmrm took ~50 ms, while lmer ~200 ms, gls and glmmTMB &gt;600 ms\n\nmmrm and gls estimates have smaller differences from SAS PROC MIXED estimates\nmmrm and gls are more resilient to missingness\n\nDetailed results at the online comparison vignette"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#impact-of-mmrm",
+    "href": "slides/jsm-aug2023.html#impact-of-mmrm",
+    "title": "{mmrm}",
+    "section": "Impact of mmrm",
+    "text": "Impact of mmrm\n\nCRAN downloads: 382 in the last week (7/31/2023 – 8/6/2023)\n\nhttps://cran.r-project.org/web/packages/mmrm/\n\nGitHub repository: 60 stars as of 8/7/2023\n\nhttps://github.com/openpharma/mmrm"
+  },
+  {
+    "objectID": "slides/jsm-aug2023.html#outlook",
+    "href": "slides/jsm-aug2023.html#outlook",
+    "title": "{mmrm}",
     "section": "Outlook",
-    "text": "Outlook\n\nWe still have major features on our backlog:\n\nKenward-Roger (improved variance-covariance matrix, degrees of freedom)\nRobust sandwich estimator for covariance matrix (important when not using unstructured covariance)\nType II and type III ANOVA tests\n\nWorking on comparison to other implementations\n\nParameter estimates, computation time, convergence, …\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
+    "text": "Outlook\n\nWe still have major features on our backlog\n\nType II and type III ANOVA tests\n\nCRAN version 0.3 is coming soon\n\nAdd argument covariance, different covariance estimators (empirical, empirical Jackknife, empirical bias-reduced), predict method, etc\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
   },
   {
-    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
-    "href": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
-    "title": "mmrm",
+    "objectID": "slides/jsm-aug2023.html#thank-you-questions",
+    "href": "slides/jsm-aug2023.html#thank-you-questions",
+    "title": "{mmrm}",
     "section": "Thank you! Questions?",
     "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#package-authors",
-    "href": "slides/2023-psi-aims-london.html#package-authors",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Package Authors:",
-    "text": "Package Authors:\n\n\n\nBrian Matthew Lang (MSD)\nChristian Stock (Boehringer-Ingelheim)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Sabanes Bove (Roche, lead)\n\n\n\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nKevin Kunzmann (Boehringer-Ingelheim)\nLiming Li (Roche)\nYa Wang (Gilead)\n\n\n\nAcknowledgments & thanks to:\nBen Bolker (McMaster University), Davide Garolini (Roche), Dinakar Kulkarni (Roche), Gonzalo Duran Pacheco (Roche), ASA BIOP Software Engineering working group (SWE WG)"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#openstatsware",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#openstatsware",
+    "title": "Introducing openstatsware",
+    "section": "openstatsware",
+    "text": "openstatsware\n\n\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHomepage: openstatsware.org\nWe welcome new members to join!"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#agenda",
-    "href": "slides/2023-psi-aims-london.html#agenda",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Agenda",
-    "text": "Agenda\n\nOverview of Open Source in Biostatistics\nCase Study: {mmrm} Package\n\nMixed Models for Repeated Measures - Why bother?\nWhy this is not “yet another package”\n\nLessons Learned\nNext Steps"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#motivation",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#motivation",
+    "title": "Introducing openstatsware",
+    "section": "Motivation",
+    "text": "Motivation\n\nOpen-source software increasing popularity in Biostatistics\n\nRapid uptake of novel statistical methods\nUnprecedented opportunities for collaboration\nTransparency of methods and implementation\n\nVariability in software quality\n\nNo statistical quality assurance on open-source extension package repositories, e.g. CRAN\nNo industry standard for assessing quality of R packages\n\nReliable software for core statistical analysis is paramount"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#open-source-in-biostatistics",
-    "href": "slides/2023-psi-aims-london.html#open-source-in-biostatistics",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Open Source in Biostatistics",
-    "text": "Open Source in Biostatistics\n\nOpen-source software increasing popularity in Biostatistics\nRapid uptake of novel statistical methods\nUnprecedented opportunities for collaboration\nTransparency of methods and implementation\nVariability in software quality\nNo statistical quality assurance on open-source extension package repositories, e.g. CRAN\nNo industry standard for assessing quality of R packages\nReliable software for core statistical analysis is paramount"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#working-group-objectives",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#working-group-objectives",
+    "title": "Introducing openstatsware",
+    "section": "Working Group Objectives",
+    "text": "Working Group Objectives\n\nPrimary\n\nEngineer R packages that implement important statistical methods\n\nto fill in gaps in the open-source statistical software landscape\nfocusing on what is needed for biopharmaceutical applications\n\n\nSecondary\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#the-asa-biop-swe-working-group",
-    "href": "slides/2023-psi-aims-london.html#the-asa-biop-swe-working-group",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "The ASA BIOP SWE Working Group",
-    "text": "The ASA BIOP SWE Working Group\n\nIdea: form industry working group to identify and fill gaps in R package landscape with reliable implementations of crucial methods\nASA Biopharmaceutical section software engineering working group (ASA BIOP SWE WG)\nFoster good coding practices for easier maintenance, review. and transparency:\n\nVersion control for traceability and structured change management\nSelf-sufficient high-quality documentation\nCode style standards for easier review\nExtensive unit testing and CI/CD for test-driven development\nReproducible outputs, especially for stochastic algorithms"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#workstreams-in-r-package-development",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#workstreams-in-r-package-development",
+    "title": "Introducing openstatsware",
+    "section": "Workstreams in R Package Development",
+    "text": "Workstreams in R Package Development\n\nMixed Models for Repeated Measures (MMRM)\n\nDevelop mmrm R package for frequentist inference in MMRM\n\nBayesian MMRM\n\nDevelop brms.mmrm R package for Bayesian inference in MMRM\n\nHealth Technology Assessment (HTA)\n\nDevelop open-source R tools to be used in HTA submission"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#why-do-we-need-a-package-for-mmrms",
-    "href": "slides/2023-psi-aims-london.html#why-do-we-need-a-package-for-mmrms",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Why do we need a package for MMRMs?",
-    "text": "Why do we need a package for MMRMs?\n\nMMRM popular for longitudinal continuous outcomes in randomized clinical trials\nThink about long term maintenance and responsibility!\nTry to improve existing package\n\nextend glmmTMB with Satterthwaite adjusted degrees of freedom\nnot feasible: glmmTMB only random effects representation, no real unstructured model\n\nNo tailored R package with sufficient capabilities/reliability\nlme4 + lmerTest: fails on large data sets (slow, convergence issues)\nnlme: no Satterthwaite adjusted degrees of freedom, convergence issues, only approximate emmeans"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices",
+    "title": "Introducing openstatsware",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nUser interface design\nCode readability\nUnit and integration tests\nDocumentation\nVersion control\nReproducibility\nMaintainability\netc."
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#case-study-the-mmrm-package",
-    "href": "slides/2023-psi-aims-london.html#case-study-the-mmrm-package",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Case Study: The {mmrm} Package",
-    "text": "Case Study: The {mmrm} Package\n\nLinear model for dependent observations within independent subjects\nMultiple covariance structures for the dependent observations\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments for degrees of freedom\nDesigned for needs of pharma applications from ground up\nOngoing maintenance and support from the pharma industry\n\n5 companies involved in the development\nambition to become standard package within the field"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices-dissemination---workshop",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices-dissemination---workshop",
+    "title": "Introducing openstatsware",
+    "section": "Best Practices Dissemination - Workshop",
+    "text": "Best Practices Dissemination - Workshop\n\nWorkshop “Good Software Engineering Practice for R Packages” on world tour\n\nTo teach hands-on skills and tools to engineer reliable R packages\n\nTopics: R package structure, engineering workflow, ensuring quality, version control, collaboration and publication, and shiny development\n\n5 events in 2023 at Basel, Shanghai, San José, Rockville, and Montreal"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#how-we-develop-mmrm",
-    "href": "slides/2023-psi-aims-london.html#how-we-develop-mmrm",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "How we develop {mmrm}",
-    "text": "How we develop {mmrm}\n\nCreated initial prototype quickly, open-sourced on github.com/openpharma/mmrm\nIn parallel, assembled multiple other companies with shared interest in reliable MMRM for R\n\\(\\leadsto\\) Start of Software Engineering working group (SWE WG), with &gt;35 members from &gt;25 organizations \nFocus on core issues and aim for frequent releases of new features instead of waiting for perfect state\nDo not compromise quality on the way, rather less done well\nRegular online developer calls to align next steps"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices-dissemination---video",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#best-practices-dissemination---video",
+    "title": "Introducing openstatsware",
+    "section": "Best Practices Dissemination - Video",
+    "text": "Best Practices Dissemination - Video\n\nYoutube video series Statistical Software Engineering 101\n\nTo introduce tips and tricks for good statistical software engineering practices\n2 videos on unit testing for R developers"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#getting-started-with-mmrm",
-    "href": "slides/2023-psi-aims-london.html#getting-started-with-mmrm",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Getting started with {mmrm}",
-    "text": "Getting started with {mmrm}\n\n{mmrm} is on CRAN - use this as a starting point:\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#mmrm-r-package-development",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#mmrm-r-package-development",
+    "title": "Introducing openstatsware",
+    "section": "MMRM R Package Development",
+    "text": "MMRM R Package Development\n\nThe mmrm R package is the first product of openstatsware\n\nMotivation\n\nMixed models for repeated measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nExisting R packages are not great for one of the following reasons\n\nModel convergence issues\nLimited choices of covariance structures\nLack of adjusted degrees of freedom methods\nComputational efficiency is not satisfactory"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#comparing-mmrm-and-sas",
-    "href": "slides/2023-psi-aims-london.html#comparing-mmrm-and-sas",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Comparing {mmrm} and SAS",
-    "text": "Comparing {mmrm} and SAS\nComparison to de-facto gold standard in SAS with PROC MIXED:\n\n\n{mmrm}\n\nDocumentation: Available online\nTesting: Transparent + coverage\nCovariance structures: 10 non-spatial covariance structures\nFocus on population marginal models\n\n\nPROC MIXED\n\nDocumentation: Available online\nTesting: Hidden\nCovariance structures: 23 non-spatial covariance structures\nMarginal and individual level random effects"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#features-of-mmrm",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#features-of-mmrm",
+    "title": "Introducing openstatsware",
+    "section": "Features of mmrm",
+    "text": "Features of mmrm\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#deviation-from-sas",
-    "href": "slides/2023-psi-aims-london.html#deviation-from-sas",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Deviation from SAS",
-    "text": "Deviation from SAS\n\nnegligible differences from SAS in (non-representative) set of examples\n{mmrm} orders of magnitude closer than {glmmTMB} or {nlme}"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#why-its-not-just-another-package",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#why-its-not-just-another-package",
+    "title": "Introducing openstatsware",
+    "section": "Why It’s Not Just Another Package",
+    "text": "Why It’s Not Just Another Package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#speed",
-    "href": "slides/2023-psi-aims-london.html#speed",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Speed",
-    "text": "Speed\n\n{mmrm} fast due to C++ code via template model builder (TMB) library\n{mmrm} uses efficient automatic gradients for the ML/REML objective"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#mmrm-on-cran",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#mmrm-on-cran",
+    "title": "Introducing openstatsware",
+    "section": "mmrm on CRAN",
+    "text": "mmrm on CRAN\n\n\n\nFirst available on CRAN in October 2022\nLatest update in January 2024\nLinks\n\nCRAN: https://cran.r-project.org/package=mmrm\nWorkstream: openstatsware.org/mmrm_R_package.html"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#lessons-learned-best-practices",
-    "href": "slides/2023-psi-aims-london.html#lessons-learned-best-practices",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Lessons Learned: Best Practices",
-    "text": "Lessons Learned: Best Practices\n\nUser interface design (function names etc.)\n\nDifficult to get right\nSpend enough time on making it convenient/familiar\n\nTesting:\n\nUnit tests are essential for preventing regression and assuring quality\nUse continuous integration to catch errors early\n\nDocumentation:\n\nLots of work but extremely important\nNeeds to be kept up-to-date\nTesting alone is not sufficient - also use example & vignettes for building trust with users"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#bayesian-mmrm-r-package-workstream",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#bayesian-mmrm-r-package-workstream",
+    "title": "Introducing openstatsware",
+    "section": "Bayesian MMRM R Package Workstream",
+    "text": "Bayesian MMRM R Package Workstream\n\nThe brms.mmrm R package leverages brms to run Bayesian MMRM\n\nbrms is a powerful and versatile package for fitting Bayesian regression models\n\nSupport a simplified interface and align with the best practices\nDocumentation website has a complete function reference and tutorial vignettes\nRigorous validation using simulation-based calibration and comparisons with the frequentist mmrm package on two example datasets"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#lessons-learned-collaboration",
-    "href": "slides/2023-psi-aims-london.html#lessons-learned-collaboration",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Lessons Learned: Collaboration",
-    "text": "Lessons Learned: Collaboration\n\nImportant to go public as soon as possible - you never know who else might be interested/could help\nVersion control with git: cornerstone of effective collaboration\nAgree on standards:\n\nConsistent and readable code style: transparency and easier collaboration\nHow to contribute: Written (!) contribution guidelines + lowering the entry hurdle using developer calls\n\nLeverage network of developers in companies to get feedback from real projects as soon as possible\nEmphasize importance of non-coding contributions like documentation"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#brms.mmrm-on-cran",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#brms.mmrm-on-cran",
+    "title": "Introducing openstatsware",
+    "section": "brms.mmrm on CRAN",
+    "text": "brms.mmrm on CRAN\n\nFirst version available in August 2023\nLatest update in February 2024\nLinks\n\nCRAN: https://cran.r-project.org/package=brms.mmrm\nWorkstream: openstatsware.org/bayesian_mmrm_R_package.html"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#long-term-perspective-next-steps",
-    "href": "slides/2023-psi-aims-london.html#long-term-perspective-next-steps",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Long Term Perspective & Next Steps",
-    "text": "Long Term Perspective & Next Steps\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics\nContinue to highlight and support cross-industry collaboration through, e.g.: Phuse, R Consortium, openpharma\nPublicize existing open source projects, e.g.: admiral, rtables, Bayesian mmrm"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#hta-r-package-workstream",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#hta-r-package-workstream",
+    "title": "Introducing openstatsware",
+    "section": "HTA-R Package Workstream",
+    "text": "HTA-R Package Workstream\n\nDevelop and maintain a collection of open-source R tools of high quality in the right format (R packages, apps, user guides) to support crucial analytic topics in HTA\nIn close collaboration with HTA SIG in PSI/EFPSI (a group of HTA SMEs with statistical background, who help to generate pipeline ideas, ensure relevance of developed tools, pilot created tools in real business setting)\nR package under development: maicplus"
   },
   {
-    "objectID": "slides/2023-psi-aims-london.html#thank-you-questions",
-    "href": "slides/2023-psi-aims-london.html#thank-you-questions",
-    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
-    "section": "Thank you! Questions?",
-    "text": "Thank you! Questions?"
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#maicplus-r-package",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#maicplus-r-package",
+    "title": "Introducing openstatsware",
+    "section": "maicplus R package",
+    "text": "maicplus R package\n\nAn R package to support analysis and reporting of matching-adjusted indirect comparison (MAIC) for HTA dossiers\nMotivation\n\nSponsors are required to submit evidence of relative effectiveness of their treatment comparing to relevant comparators that may not be included in their clinical trial, for health technology assessment (HTA) in different countries\nMAIC is a prevalent and well-accepted method to derive population-adjusted treatment effect in such case for two trials, one of which has Individual patient data and the other has only aggregate data\nThere is a lack of open-source R packages following good software engineering practices for conducting and reporting MAIC analyses\n\nworkstream: openstatsware.org/hta_page.html"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#development-process",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#development-process",
+    "title": "Introducing openstatsware",
+    "section": "Development process",
+    "text": "Development process\n\nImportant to go public as soon as possible\n\ndon’t wait for the product to be finished\nyou never know who else might be interested/could help\n\nVersion control with git\n\ncornerstone of effective collaboration\n\nBuilding software together works better than alone\n\nDifferent perspectives in discussions and code review help to optimize the user interface and thus experience"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#coding-standards",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#coding-standards",
+    "title": "Introducing openstatsware",
+    "section": "Coding standards",
+    "text": "Coding standards\n\nConsistent and readable code style simplifies joint work\nWritten (!) contribution guidelines help\nLowering the entry hurdle using developer calls is important"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#robust-test-suite",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#robust-test-suite",
+    "title": "Introducing openstatsware",
+    "section": "Robust test suite",
+    "text": "Robust test suite\n\nUnit and integration tests are essential for preventing regression and assuring quality\nEspecially with compiled code critical to see if package works correctly\nUse continuous integration during development to make sure nothing breaks along the way"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#documentation",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#documentation",
+    "title": "Introducing openstatsware",
+    "section": "Documentation",
+    "text": "Documentation\n\nLots of work but extremely important\n\nstart with writing up the methods details\nthink about the code structure first in a “design doc”\nonly then put the code in the package\n\nNeeds to be kept up-to-date\nNeed to have examples & vignettes\n\nTesting alone is not sufficient\nBuilds trust with users\nReference for developers over time"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#long-term-perspective-1",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#long-term-perspective-1",
+    "title": "Introducing openstatsware",
+    "section": "Long Term Perspective",
+    "text": "Long Term Perspective\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics"
+  },
+  {
+    "objectID": "slides/asa-biop-webinar-feb2024-quarto.html#qa",
+    "href": "slides/asa-biop-webinar-feb2024-quarto.html#qa",
+    "title": "Introducing openstatsware",
+    "section": "Q&A",
+    "text": "Q&A"
   },
   {
     "objectID": "slides/unit_testing_basic.html#what-are-we-going-to-talk-about",
@@ -816,7 +900,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. China-R Conference, 28 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. Lightning Session at ASA SSC Mini-Symposium 04 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. R/Pharma Conference, 24 Oct 2023.\n\nslides\n\nFirst year of the Software Engineering working group. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.\n\nslides\n\n{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides, video]"
+    "text": "Introducing openstatsware: Who we are and what we build together. ASA BIOP DL Webinar, 23 Feb 2024.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. China-R Conference, 28 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. Lightning Session at ASA SSC Mini-Symposium 04 Nov 2023.\n\nslides\n\nIntroducing openstatsware and the R Package {mmrm}. R/Pharma Conference, 24 Oct 2023.\n\nslides\n\nFirst year of the Software Engineering working group. Regulatory-Industry Statistics Workshop 2023, 29 Sep 2023.\n\nslides\n\n{mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures. JSM, 8 Aug 2023.\n\nslides\n\nIntroduction to the ASA BIOP Software Engineering Working Group and the {mmrm} Package. R Meetup, 21 Jul 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. San Francisco bay area, 20 Jul 2023.\n\nslides\n\nPlugging the gaps: Lessons learned from implementing the mmrm R package. PSI, 13 Jun 2023.\n\nslides\n\n{mmrm}: an Open Source R Package for Mixed Model Repeated Measures. Pharma RUG, 31 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. Shanghai, 24 Mar 2023.\n\nslides\n\nWorkshop on Good Software Engineering Practice for R. BBS workshop, Basel, 10 Feb 2023.\n\nslides\n\nIntroducing the Software Engineering working group and {mmrm}. R/Adoption Series Webinar, 26 Jan 2023.\n\nslides\n\nIntroducing the Software Engineering working group: Who we are and what we build together. R Govys Meetup, 19 Jan 2023.\n\nslides\n\nStatistical software for continuous longitudinal endpoints: Introducing the R package mmrm. Joint EFSPI & BBS virtual event - Addressing intercurrent events: Treatment policy and hypothetical strategies (day 1), 8 Dec 2022.\n\nslides\nrecording (35:00)\n\nStatistical Software Engineering 101. Video blog series on ASA BIOP Youtube channel.\n\nUnit Testing for R Developers\n\n1: The Basics [slides, video]\n2: Advancing your skills [slides, video]"
   },
   {
     "objectID": "sponsors.html",
@@ -1246,410 +1330,473 @@
     "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#outline",
-    "href": "slides/jsm-aug2023.html#outline",
-    "title": "{mmrm}",
-    "section": "Outline",
-    "text": "Outline\n\nIntroduction to SWE WG\nMotivation: why do we need a package for MMRM?\nmmrm Package\n\nWhy this is not “yet another package”\nComparing mmrm package to SAS\nBenchmarking with other R packages\n\nClosing and next steps"
+    "objectID": "slides/2023-psi-aims-london.html#package-authors",
+    "href": "slides/2023-psi-aims-london.html#package-authors",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Package Authors:",
+    "text": "Package Authors:\n\n\n\nBrian Matthew Lang (MSD)\nChristian Stock (Boehringer-Ingelheim)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Sabanes Bove (Roche, lead)\n\n\n\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nKevin Kunzmann (Boehringer-Ingelheim)\nLiming Li (Roche)\nYa Wang (Gilead)\n\n\n\nAcknowledgments & thanks to:\nBen Bolker (McMaster University), Davide Garolini (Roche), Dinakar Kulkarni (Roche), Gonzalo Duran Pacheco (Roche), ASA BIOP Software Engineering working group (SWE WG)"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#software-engineering-working-group-swe-wg",
-    "href": "slides/jsm-aug2023.html#software-engineering-working-group-swe-wg",
-    "title": "{mmrm}",
-    "section": "Software Engineering working group (SWE WG)",
-    "text": "Software Engineering working group (SWE WG)\n\nOfficial working group of the ASA Biopharmaceutical Section\n\nFormed in August 2022\nCross-industry collaboration (&gt;35 members from &gt;25 organizations)\n\nGoal\n\nEngineer selected R packages to fill in gaps in the open-source statistical software landscape\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
+    "objectID": "slides/2023-psi-aims-london.html#agenda",
+    "href": "slides/2023-psi-aims-london.html#agenda",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Agenda",
+    "text": "Agenda\n\nOverview of Open Source in Biostatistics\nCase Study: {mmrm} Package\n\nMixed Models for Repeated Measures - Why bother?\nWhy this is not “yet another package”\n\nLessons Learned\nNext Steps"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#motivation-why-do-we-need-a-package-for-mmrm",
-    "href": "slides/jsm-aug2023.html#motivation-why-do-we-need-a-package-for-mmrm",
-    "title": "{mmrm}",
-    "section": "Motivation: why do we need a package for MMRM",
-    "text": "Motivation: why do we need a package for MMRM\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+    "objectID": "slides/2023-psi-aims-london.html#open-source-in-biostatistics",
+    "href": "slides/2023-psi-aims-london.html#open-source-in-biostatistics",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Open Source in Biostatistics",
+    "text": "Open Source in Biostatistics\n\nOpen-source software increasing popularity in Biostatistics\nRapid uptake of novel statistical methods\nUnprecedented opportunities for collaboration\nTransparency of methods and implementation\nVariability in software quality\nNo statistical quality assurance on open-source extension package repositories, e.g. CRAN\nNo industry standard for assessing quality of R packages\nReliable software for core statistical analysis is paramount"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#idea",
-    "href": "slides/jsm-aug2023.html#idea",
-    "title": "{mmrm}",
-    "section": "Idea",
-    "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+    "objectID": "slides/2023-psi-aims-london.html#the-asa-biop-swe-working-group",
+    "href": "slides/2023-psi-aims-london.html#the-asa-biop-swe-working-group",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "The ASA BIOP SWE Working Group",
+    "text": "The ASA BIOP SWE Working Group\n\nIdea: form industry working group to identify and fill gaps in R package landscape with reliable implementations of crucial methods\nASA Biopharmaceutical section software engineering working group (ASA BIOP SWE WG)\nFoster good coding practices for easier maintenance, review. and transparency:\n\nVersion control for traceability and structured change management\nSelf-sufficient high-quality documentation\nCode style standards for easier review\nExtensive unit testing and CI/CD for test-driven development\nReproducible outputs, especially for stochastic algorithms"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#advantages-of-tmb",
-    "href": "slides/jsm-aug2023.html#advantages-of-tmb",
-    "title": "{mmrm}",
-    "section": "Advantages of TMB",
-    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+    "objectID": "slides/2023-psi-aims-london.html#why-do-we-need-a-package-for-mmrms",
+    "href": "slides/2023-psi-aims-london.html#why-do-we-need-a-package-for-mmrms",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Why do we need a package for MMRMs?",
+    "text": "Why do we need a package for MMRMs?\n\nMMRM popular for longitudinal continuous outcomes in randomized clinical trials\nThink about long term maintenance and responsibility!\nTry to improve existing package\n\nextend glmmTMB with Satterthwaite adjusted degrees of freedom\nnot feasible: glmmTMB only random effects representation, no real unstructured model\n\nNo tailored R package with sufficient capabilities/reliability\nlme4 + lmerTest: fails on large data sets (slow, convergence issues)\nnlme: no Satterthwaite adjusted degrees of freedom, convergence issues, only approximate emmeans"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#why-its-not-just-another-package",
-    "href": "slides/jsm-aug2023.html#why-its-not-just-another-package",
-    "title": "{mmrm}",
-    "section": "Why it’s not just another package",
-    "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
+    "objectID": "slides/2023-psi-aims-london.html#case-study-the-mmrm-package",
+    "href": "slides/2023-psi-aims-london.html#case-study-the-mmrm-package",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Case Study: The {mmrm} Package",
+    "text": "Case Study: The {mmrm} Package\n\nLinear model for dependent observations within independent subjects\nMultiple covariance structures for the dependent observations\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments for degrees of freedom\nDesigned for needs of pharma applications from ground up\nOngoing maintenance and support from the pharma industry\n\n5 companies involved in the development\nambition to become standard package within the field"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#features-of-mmrm",
-    "href": "slides/jsm-aug2023.html#features-of-mmrm",
-    "title": "{mmrm}",
-    "section": "Features of mmrm",
-    "text": "Features of mmrm\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance"
+    "objectID": "slides/2023-psi-aims-london.html#how-we-develop-mmrm",
+    "href": "slides/2023-psi-aims-london.html#how-we-develop-mmrm",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "How we develop {mmrm}",
+    "text": "How we develop {mmrm}\n\nCreated initial prototype quickly, open-sourced on github.com/openpharma/mmrm\nIn parallel, assembled multiple other companies with shared interest in reliable MMRM for R\n\\(\\leadsto\\) Start of Software Engineering working group (SWE WG), with &gt;35 members from &gt;25 organizations \nFocus on core issues and aim for frequent releases of new features instead of waiting for perfect state\nDo not compromise quality on the way, rather less done well\nRegular online developer calls to align next steps"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#comparing-sas-and-r",
-    "href": "slides/jsm-aug2023.html#comparing-sas-and-r",
-    "title": "{mmrm}",
-    "section": "Comparing SAS and R",
-    "text": "Comparing SAS and R\n\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLM procedures.\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compare the PROC MIXED procedure to the mmrm package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nEstimation Methods\n\n\n\nCovariance Structures\nDegrees of Freedom\nContrasts"
+    "objectID": "slides/2023-psi-aims-london.html#getting-started-with-mmrm",
+    "href": "slides/2023-psi-aims-london.html#getting-started-with-mmrm",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Getting started with {mmrm}",
+    "text": "Getting started with {mmrm}\n\n{mmrm} is on CRAN - use this as a starting point:\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#documentation",
-    "href": "slides/jsm-aug2023.html#documentation",
-    "title": "{mmrm}",
-    "section": "Documentation",
-    "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
+    "objectID": "slides/2023-psi-aims-london.html#comparing-mmrm-and-sas",
+    "href": "slides/2023-psi-aims-london.html#comparing-mmrm-and-sas",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Comparing {mmrm} and SAS",
+    "text": "Comparing {mmrm} and SAS\nComparison to de-facto gold standard in SAS with PROC MIXED:\n\n\n{mmrm}\n\nDocumentation: Available online\nTesting: Transparent + coverage\nCovariance structures: 10 non-spatial covariance structures\nFocus on population marginal models\n\n\nPROC MIXED\n\nDocumentation: Available online\nTesting: Hidden\nCovariance structures: 23 non-spatial covariance structures\nMarginal and individual level random effects"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#unit-testing",
-    "href": "slides/jsm-aug2023.html#unit-testing",
-    "title": "{mmrm}",
-    "section": "Unit Testing",
-    "text": "Unit Testing\n\nUnit tests in mmrm are transparent, compared to PROC MIXED.\nUses the testthat framework with covr to communicate the testing coverage.\nUnit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\n\nNote\n\n\nThe integration tests in mmrm are set to a tolerance of 10e^-3 when compared to SAS outputs."
+    "objectID": "slides/2023-psi-aims-london.html#deviation-from-sas",
+    "href": "slides/2023-psi-aims-london.html#deviation-from-sas",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Deviation from SAS",
+    "text": "Deviation from SAS\n\nnegligible differences from SAS in (non-representative) set of examples\n{mmrm} orders of magnitude closer than {glmmTMB} or {nlme}"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#estimation-methods",
-    "href": "slides/jsm-aug2023.html#estimation-methods",
-    "title": "{mmrm}",
-    "section": "Estimation Methods",
-    "text": "Estimation Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nML\nX\nX\n\n\nREML\nX\nX"
+    "objectID": "slides/2023-psi-aims-london.html#speed",
+    "href": "slides/2023-psi-aims-london.html#speed",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Speed",
+    "text": "Speed\n\n{mmrm} fast due to C++ code via template model builder (TMB) library\n{mmrm} uses efficient automatic gradients for the ML/REML objective"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#covariance-structures",
-    "href": "slides/jsm-aug2023.html#covariance-structures",
-    "title": "{mmrm}",
-    "section": "Covariance structures",
-    "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structures, mmrm is easily extensible - let us know via feature requests in the GitHub repository."
+    "objectID": "slides/2023-psi-aims-london.html#lessons-learned-best-practices",
+    "href": "slides/2023-psi-aims-london.html#lessons-learned-best-practices",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Lessons Learned: Best Practices",
+    "text": "Lessons Learned: Best Practices\n\nUser interface design (function names etc.)\n\nDifficult to get right\nSpend enough time on making it convenient/familiar\n\nTesting:\n\nUnit tests are essential for preventing regression and assuring quality\nUse continuous integration to catch errors early\n\nDocumentation:\n\nLots of work but extremely important\nNeeds to be kept up-to-date\nTesting alone is not sufficient - also use example & vignettes for building trust with users"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#covariance-structures-details",
-    "href": "slides/jsm-aug2023.html#covariance-structures-details",
-    "title": "{mmrm}",
-    "section": "Covariance structures details",
-    "text": "Covariance structures details\n\n\n\n\n\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+    "objectID": "slides/2023-psi-aims-london.html#lessons-learned-collaboration",
+    "href": "slides/2023-psi-aims-london.html#lessons-learned-collaboration",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Lessons Learned: Collaboration",
+    "text": "Lessons Learned: Collaboration\n\nImportant to go public as soon as possible - you never know who else might be interested/could help\nVersion control with git: cornerstone of effective collaboration\nAgree on standards:\n\nConsistent and readable code style: transparency and easier collaboration\nHow to contribute: Written (!) contribution guidelines + lowering the entry hurdle using developer calls\n\nLeverage network of developers in companies to get feedback from real projects as soon as possible\nEmphasize importance of non-coding contributions like documentation"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#degrees-of-freedom-methods",
-    "href": "slides/jsm-aug2023.html#degrees-of-freedom-methods",
-    "title": "{mmrm}",
-    "section": "Degrees of Freedom Methods",
-    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not identical to the KR(Lin) in PROC MIXED"
+    "objectID": "slides/2023-psi-aims-london.html#long-term-perspective-next-steps",
+    "href": "slides/2023-psi-aims-london.html#long-term-perspective-next-steps",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
+    "section": "Long Term Perspective & Next Steps",
+    "text": "Long Term Perspective & Next Steps\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics\nContinue to highlight and support cross-industry collaboration through, e.g.: Phuse, R Consortium, openpharma\nPublicize existing open source projects, e.g.: admiral, rtables, Bayesian mmrm"
   },
   {
-    "objectID": "slides/jsm-aug2023.html#contrastslsmeans",
-    "href": "slides/jsm-aug2023.html#contrastslsmeans",
-    "title": "{mmrm}",
-    "section": "Contrasts/LSMEANS",
-    "text": "Contrasts/LSMEANS\nContrasts and least square means estimates are available in mmrm using:\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does."
-  },
-  {
-    "objectID": "slides/jsm-aug2023.html#benchmarking-with-other-r-packages",
-    "href": "slides/jsm-aug2023.html#benchmarking-with-other-r-packages",
-    "title": "{mmrm}",
-    "section": "Benchmarking with other R packages",
-    "text": "Benchmarking with other R packages\n\nCompared mmrm::mmrm with nlme::gls, lme4::lmer, glmmTMB::glmmTMB\nHighlights\n\nmmrm has faster convergence time\n\nUsing FEV dataset as an example, mmrm took ~50 ms, while lmer ~200 ms, gls and glmmTMB &gt;600 ms\n\nmmrm and gls estimates have smaller differences from SAS PROC MIXED estimates\nmmrm and gls are more resilient to missingness\n\nDetailed results at the online comparison vignette"
-  },
-  {
-    "objectID": "slides/jsm-aug2023.html#impact-of-mmrm",
-    "href": "slides/jsm-aug2023.html#impact-of-mmrm",
-    "title": "{mmrm}",
-    "section": "Impact of mmrm",
-    "text": "Impact of mmrm\n\nCRAN downloads: 382 in the last week (7/31/2023 – 8/6/2023)\n\nhttps://cran.r-project.org/web/packages/mmrm/\n\nGitHub repository: 60 stars as of 8/7/2023\n\nhttps://github.com/openpharma/mmrm"
-  },
-  {
-    "objectID": "slides/jsm-aug2023.html#outlook",
-    "href": "slides/jsm-aug2023.html#outlook",
-    "title": "{mmrm}",
-    "section": "Outlook",
-    "text": "Outlook\n\nWe still have major features on our backlog\n\nType II and type III ANOVA tests\n\nCRAN version 0.3 is coming soon\n\nAdd argument covariance, different covariance estimators (empirical, empirical Jackknife, empirical bias-reduced), predict method, etc\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
-  },
-  {
-    "objectID": "slides/jsm-aug2023.html#thank-you-questions",
-    "href": "slides/jsm-aug2023.html#thank-you-questions",
-    "title": "{mmrm}",
+    "objectID": "slides/2023-psi-aims-london.html#thank-you-questions",
+    "href": "slides/2023-psi-aims-london.html#thank-you-questions",
+    "title": "Plugging the gaps: Lessons learned from implementing the mmrm R package",
     "section": "Thank you! Questions?",
     "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#openstatsware",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#openstatsware",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "openstatsware",
-    "text": "openstatsware\n\n\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#acknowledgments",
+    "title": "mmrm",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\n\n\nAuthors:\n\nKevin Kunzmann (Boehringer Ingelheim)\nBrian Matthew Lang (MSD)\nYa Wang (Gilead)\nJulia Dedic (Roche)\nDoug Kelkhoff (Roche)\nLiming Li (Roche)\n\n\nThanks to:\n\nBen Bolker (McMaster University)\nSoftware Engineering working group (SWE WG)\nGonzalo Duran Pacheco (Roche)\nCraig Gower-Page (Roche)\nDinakar Kulkarni (Roche)\nDavide Garolini (Roche)"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#working-group-objectives",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#working-group-objectives",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Working Group Objectives",
-    "text": "Working Group Objectives\n\nPrimary\n\nEngineer R packages that implement important statistical methods\n\nto fill in gaps in the open-source statistical software landscape\nfocusing on what is needed for biopharmaceutical applications\n\n\nSecondary\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
-  },
-  {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#workstreams-in-r-package-development",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#workstreams-in-r-package-development",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Workstreams in R Package Development",
-    "text": "Workstreams in R Package Development\n\nMixed Models for Repeated Measures (MMRM) 🌎\n\nDevelop mmrm R package for frequentist inference in MMRM (CRAN)\n\nBayesian MMRM 🌎\n\nDevelop brms.mmrm R package for Bayesian inference in MMRM (CRAN)\n\nHealth Technology Assessment 🌎\n\nDevelop open-source R tools to support HTA dossier submission across various countries\nParticularly topics with unmet needs in R implementation and/or related to EUnetHTA"
-  },
-  {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#best-practices-dissemination",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#best-practices-dissemination",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Best Practices Dissemination",
-    "text": "Best Practices Dissemination\n\nWorkshop “Good Software Engineering Practice for R Packages” on world tour\n\nto teach hands-on skills and tools to engineer reliable R packages\n5 events so far at Basel, Shanghai, San José, Rockville, and Montreal\n\nYoutube video series “Statistical Software Engineering 101” 🌎\n\nto introduce tips and tricks for good statistical software engineering practices\n2 videos so far"
-  },
-  {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#motivation",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#motivation",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#motivation",
+    "title": "mmrm",
     "section": "Motivation",
-    "text": "Motivation\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
+    "text": "Motivation\n\n2 years ago, we thought we had solved the MMRM problem, using lme4 and lmerTest\nHowever in March this year, Gonzalo and Julia told us the bad news: this approach failed on their Ophthalmology data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#idea",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#idea",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#idea",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#idea",
+    "title": "mmrm",
     "section": "Idea",
-    "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
+    "text": "Idea\n\nBecause glmmTMB is always using a random effects representation, we cannot have a real unstructured model (uses \\(\\sigma = \\varepsilon &gt; 0\\) trick)\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly - as it is also underlying glmmTMB - but code the exact model we want\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#advantages-of-tmb",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#advantages-of-tmb",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#advantages-of-tmb",
+    "title": "mmrm",
     "section": "Advantages of TMB",
     "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#why-its-not-just-another-package",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#why-its-not-just-another-package",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Why It’s Not Just Another Package",
-    "text": "Why It’s Not Just Another Package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#cross-industry-collaboration",
+    "title": "mmrm",
+    "section": "Cross-industry collaboration",
+    "text": "Cross-industry collaboration\n\nWe created an initial prototype quickly and open sourced it on github.com/openpharma/mmrm\nIn parallel we assembled multiple other companies - many of them had also struggled to implement MMRM in R (crucial gap in toolbox so far)\nThis was the start of the Software Engineering working group (SWE WG)\n\nRead more at rconsortium.github.io/asa-biop-swe-wg\nOfficial working group of the ASA Biopharmaceutical section"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#features-of-mmrm",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#features-of-mmrm",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Features of mmrm",
-    "text": "Features of mmrm\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\ntidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#features",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#features",
+    "title": "mmrm",
+    "section": "Features",
+    "text": "Features\n\nLinear model for dependent observations within independent subjects\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means\nSatterthwaite adjusted degrees of freedom"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#comparison-with-other-software",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#comparison-with-other-software",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Comparison with Other Software",
-    "text": "Comparison with Other Software\n\nWe have run comparison analyses with other R packages, namely nlme, glmmTMB and lme4\nAlso compared with SAS PROC GLIMMIX\nHighlights\n\nmmrm has faster convergence time\nmmrm provides closest results to PROC GLIMMIX\n\nDetailed results at the online comparison vignette"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#getting-started",
+    "title": "mmrm",
+    "section": "Getting started",
+    "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
   },
   {
-    "objectID": "slides/rpharma-wg-mmrm-oct2023-quarto.html#qa",
-    "href": "slides/rpharma-wg-mmrm-oct2023-quarto.html#qa",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Q&A",
-    "text": "Q&A"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#outlook",
+    "title": "mmrm",
+    "section": "Outlook",
+    "text": "Outlook\n\nWe still have major features on our backlog:\n\nKenward-Roger (improved variance-covariance matrix, degrees of freedom)\nRobust sandwich estimator for covariance matrix (important when not using unstructured covariance)\nType II and type III ANOVA tests\n\nWorking on comparison to other implementations\n\nParameter estimates, computation time, convergence, …\n\nPlease let us know what is missing in mmrm for you! And try it out :-)"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#openstatsware",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#openstatsware",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "openstatsware",
-    "text": "openstatsware\n\n\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHomepage: rconsortium.github.io/asa-biop-swe-wg"
+    "objectID": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
+    "href": "slides/bbs-efspi-mmrm-dec2022.html#thank-you-questions",
+    "title": "mmrm",
+    "section": "Thank you! Questions?",
+    "text": "Thank you! Questions?"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#working-group-objectives",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#working-group-objectives",
+    "objectID": "slides/china-R-mmrm-nov2023.html#acknowledgments",
+    "href": "slides/china-R-mmrm-nov2023.html#acknowledgments",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nAuthors:\n\n\n\n\nBrian Matthew Lang (MSD)\nChristian Stock (BI)\nCraig Gower-Page (Roche)\nDan James (AstraZeneca)\nDaniel Leibovitz (Roche)\nDaniel Sabanes Bove (Roche, lead)\n\n\n\nDaniel Sjoberg (Roche)\nDoug Kelkhoff (Roche)\nJulia Dedic (Roche)\nJonathan Sidi (PinPoint Strategies)\nKevin Kunzmann (BI)\nYa Wang (Gilead)"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#acknowledgments-1",
+    "href": "slides/china-R-mmrm-nov2023.html#acknowledgments-1",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\n\nThanks to:\n\nBen Bolker (McMaster University)\nDavide Garolini (Roche)\nDinakar Kulkarni (Roche)\nGonzalo Duran Pacheco (Roche)\nSoftware Engineering working group (openstatsware)"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#agenda",
+    "href": "slides/china-R-mmrm-nov2023.html#agenda",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroduction and Overview of openstatsware\nMixed Models for Repeated Measures - Why is it a Problem?\nMMRM Package\n\nWhy this is not “yet another package”\nComparing MMRM R Package to other Implementations\n\nGet Started with {mmrm}!"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#context-software-engineering-in-biostatistics",
+    "href": "slides/china-R-mmrm-nov2023.html#context-software-engineering-in-biostatistics",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Context: Software Engineering in Biostatistics",
+    "text": "Context: Software Engineering in Biostatistics\n\nOpen-source software has gained increasing popularity in Biostatistics\n\nPros: rapid uptake of novel statistical methods, unprecedented opportunities for collaboration\nCons: variability in software quality\n\nDeveloping high-quality software is critical"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#software-engineering-working-group-openstatsware",
+    "href": "slides/china-R-mmrm-nov2023.html#software-engineering-working-group-openstatsware",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Software Engineering working group (openstatsware)",
+    "text": "Software Engineering working group (openstatsware)\n\nOfficial working group of the American Statistical Association (ASA) Biopharmaceutical Section\n\nFormed on 19 August 2022\nCross-industry collaboration (51 members from 33 organizations)\nFull name: Software Engineering Working Group\nShort name: openstatsware\nHome page at rconsortium.github.io/asa-biop-swe-wg\nWe welcome new members to join!"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#working-group-objectives",
+    "href": "slides/china-R-mmrm-nov2023.html#working-group-objectives",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Working Group Objectives",
     "text": "Working Group Objectives\n\nPrimary\n\nEngineer R packages that implement important statistical methods\n\nto fill in gaps in the open-source statistical software landscape\nfocusing on what is needed for biopharmaceutical applications\n\n\nSecondary\n\nDevelop and disseminate best practices for engineering high-quality open-source statistical software\n\nBy actively doing the statistical engineering work together, we align on best practices and can communicate these to others"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#workstreams-in-r-package-development",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#workstreams-in-r-package-development",
+    "objectID": "slides/china-R-mmrm-nov2023.html#first-product-of-openstatsware-mmrm",
+    "href": "slides/china-R-mmrm-nov2023.html#first-product-of-openstatsware-mmrm",
     "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Workstreams in R Package Development",
-    "text": "Workstreams in R Package Development\n\nMixed Models for Repeated Measures (MMRM) 🌎\n\nDevelop mmrm R package for frequentist inference in MMRM (CRAN)\n\nBayesian MMRM 🌎\n\nDevelop brms.mmrm R package for Bayesian inference in MMRM (CRAN)\n\nHealth Technology Assessment 🌎\n\nDevelop open-source R tools to support HTA dossier submission across various countries\nParticularly topics with unmet needs in R implementation and/or related to EUnetHTA"
+    "section": "First Product of openstatsware: mmrm",
+    "text": "First Product of openstatsware: mmrm\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#motivation",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#motivation",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Motivation",
-    "text": "Motivation\n\nMMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R package\n\nInitially thought that the MMRM problem was solved by using lme4 with lmerTest, learned that this approach failed on large data sets (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate\nNext we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom, but it did not work"
-  },
-  {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#idea",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#idea",
+    "objectID": "slides/china-R-mmrm-nov2023.html#idea",
+    "href": "slides/china-R-mmrm-nov2023.html#idea",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Idea",
     "text": "Idea\n\nWe only want to fit a fixed effects model with a structured covariance matrix for each subject\nThe idea is then to use the Template Model Builder (TMB) directly\n\nas it is also underlying glmmTMB\nbut code the exact model we want\n\nWe do this by implementing the log-likelihood in C++ using the TMB provided libraries\nProvide an R solution that\n\nhas fast convergence times\ngenerates estimates closest to SAS"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#advantages-of-tmb",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#advantages-of-tmb",
+    "objectID": "slides/china-R-mmrm-nov2023.html#advantages-of-tmb",
+    "href": "slides/china-R-mmrm-nov2023.html#advantages-of-tmb",
     "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Advantages of TMB",
-    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nThis can be used from the R side with the TMB interface and plugged into optimizers"
+    "text": "Advantages of TMB\n\nFast C++ framework for defining objective functions (Rcpp would have been alternative interface)\nAutomatic differentiation of the log-likelihood as a function of the variance parameters\nWe get the gradient and Hessian exactly and without additional coding\nSyntactic sugars to allow simple matrix calculations or operations like R\nThis can be used from the R side with the TMB interface and plugged into optimizers"
   },
   {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#why-its-not-just-another-package",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#why-its-not-just-another-package",
+    "objectID": "slides/china-R-mmrm-nov2023.html#why-its-not-just-another-package",
+    "href": "slides/china-R-mmrm-nov2023.html#why-its-not-just-another-package",
     "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Why It’s Not Just Another Package",
-    "text": "Why It’s Not Just Another Package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests to ensure accurate results\nIn depth documentation of methods, functionality and comparison to other packages and languages\n\nnlme, glmmTMB, lme4, SAS PROC GLMMIX"
-  },
-  {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#highlighted-features-of-mmrm",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#highlighted-features-of-mmrm",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Highlighted Features of mmrm",
-    "text": "Highlighted Features of mmrm\n\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nHypothesis Testing:\n\nemmeans interface for least square means\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance\n\n\nIntegrations and extentions\n\ntidymodels builtin parsnip engine and recipes for streamlined model fitting workflows\nteal, tern, rtables integration for post processing and reporting"
-  },
-  {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#comparison-with-other-software",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#comparison-with-other-software",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Comparison with Other Software",
-    "text": "Comparison with Other Software\n\nWe have run comparison analyses with other R packages, namely nlme, glmmTMB and lme4\nAlso compared with SAS PROC GLIMMIX\nHighlights\n\nmmrm has faster convergence time\nmmrm provides closest results to PROC GLIMMIX\n\nDetailed results at the online comparison vignette"
-  },
-  {
-    "objectID": "slides/asa-ssc-mmrm-nov2023.html#qa",
-    "href": "slides/asa-ssc-mmrm-nov2023.html#qa",
-    "title": "Introducing openstatsware and the R Package {mmrm}",
-    "section": "Q&A",
-    "text": "Q&A"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#asa-biop-software-engineering-working-group-swe-wg",
-    "href": "slides/r-govys-jan2023.html#asa-biop-software-engineering-working-group-swe-wg",
-    "title": "Introducing the Software Engineering working group",
-    "section": "ASA BIOP Software Engineering working group (SWE WG)",
-    "text": "ASA BIOP Software Engineering working group (SWE WG)\n\nAn official working group of the ASA Biopharmaceutical Section\nFormed in August 2022\nCross-industry collaboration with more than 30 members from over 20 organizations\nHome page at rconsortium.github.io/asa-biop-swe-wg\nOpen for new members!"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#motivation",
-    "href": "slides/r-govys-jan2023.html#motivation",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Motivation",
-    "text": "Motivation\n\nImportance of reliable software for statistical analysis cannot be underestimated\nIn the past a lot of statistical analyses have been performed with proprietary software\nOpen-source software has gained increasing popularity in Biostatistics over the last two decades\n\nPros: rapid uptake of novel methods and great opportunities for collaboration and innovation\nCons: users face huge variability in software quality (reliability, efficiency and maintainability)"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#motivation-cont",
-    "href": "slides/r-govys-jan2023.html#motivation-cont",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Motivation (con’t)",
-    "text": "Motivation (con’t)\n\nCurrent repositories (GitHub, CRAN):\n\nDo not require any statistical quality assurance\nIt’s harder to adopt packages without good documentation and maintenance\n\nDeveloping high-quality software is critical to inform clinical and regulatory decisions:\n\nGood coding practices\nReproducible outputs\nSelf-sufficient documentation"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#goals",
-    "href": "slides/r-govys-jan2023.html#goals",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Goals",
-    "text": "Goals\n\nPrimary Goal: Collaborate to engineer R packages that implement important statistical methods to fill in critical gaps\nSecondary Goal: Develop and disseminate best practices for engineering high-quality open-source statistical software"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#swe-wg-activities",
-    "href": "slides/r-govys-jan2023.html#swe-wg-activities",
-    "title": "Introducing the Software Engineering working group",
-    "section": "SWE WG Activities",
-    "text": "SWE WG Activities\n\nFirst R package mmrm was published on CRAN in October 2022 and updated in December\n\nWe aim to establish this package as a new standard for fitting mixed models for repeated measures (MMRM)\nWe have been developing and adopting best practices for software in the mmrm package, and open sourced it at github.com/openpharma/mmrm\nCurrently under active development to add more features"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#swe-wg-activities-cont",
-    "href": "slides/r-govys-jan2023.html#swe-wg-activities-cont",
-    "title": "Introducing the Software Engineering working group",
-    "section": "SWE WG Activities (con’t)",
-    "text": "SWE WG Activities (con’t)\n\nPrepare public training materials to disseminate best practice for software engineering in the Biostatistics community\n\nAt the beginning of February, a face-to-face workshop will take place in Basel, Switzerland with a focus on open-source software for clinical trials\nOrganize conference sessions with a focus on statistical software engineering at CEN, JSM and ASA/FDA Workshop\nYoutube series with a focus on best practices for software engineering"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#best-practices-for-software-engineering",
-    "href": "slides/r-govys-jan2023.html#best-practices-for-software-engineering",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Best Practices for Software Engineering",
-    "text": "Best Practices for Software Engineering\n\nUser interface design\nVersion control with git\nUnit and integration tests\nConsistent and readable code style\nDocumentation\nContinuous integration setup\nPublication on website and repositories\netc."
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#motivation-1",
-    "href": "slides/r-govys-jan2023.html#motivation-1",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Motivation",
-    "text": "Motivation\n\nMixed Models for Repeated Measures (MMRM) is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials\nNo great R Package - initially thought that it was solved by using lme4 with lmerTest\nBut this approach failed on large data (slow, did not converge)\nnlme does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with emmeans it is only approximate"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#before-creating-a-new-package",
-    "href": "slides/r-govys-jan2023.html#before-creating-a-new-package",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Before creating a new package",
-    "text": "Before creating a new package\n\nFirst try to improve existing package\n\nHere we tried to extend glmmTMB to calculate Satterthwaite adjusted degrees of freedom\nBut it did not work\n\nThink about long term maintenance and responsibility"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#mmrm-package-overview",
-    "href": "slides/r-govys-jan2023.html#mmrm-package-overview",
-    "title": "Introducing the Software Engineering working group",
-    "section": "mmrm Package overview",
-    "text": "mmrm Package overview\n\nLinear model for dependent observations within independent subjects\nMultiple covariance structures available for the dependent observations\nREML or ML estimation, using multiple optimizers if needed\nemmeans interface for least square means, tidymodels for easy model fitting\nSatterthwaite and Kenward-Roger adjustments"
-  },
-  {
-    "objectID": "slides/r-govys-jan2023.html#why-its-not-just-another-package",
-    "href": "slides/r-govys-jan2023.html#why-its-not-just-another-package",
-    "title": "Introducing the Software Engineering working group",
     "section": "Why it’s not just another package",
     "text": "Why it’s not just another package\n\nOngoing maintenance and support from the pharmaceutical industry\n\n5 companies being involved in the development, on track to become standard package\n\nDevelopment using best practices as show case for high quality package\n\nThorough unit and integration tests (also comparing with SAS results) to ensure accurate results"
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#covariance-structures",
-    "href": "slides/r-govys-jan2023.html#covariance-structures",
-    "title": "Introducing the Software Engineering working group",
+    "objectID": "slides/china-R-mmrm-nov2023.html#highlighted-features-of-mmrm",
+    "href": "slides/china-R-mmrm-nov2023.html#highlighted-features-of-mmrm",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Highlighted Features of mmrm",
+    "text": "Highlighted Features of mmrm\n\nCovariance structures for the dependent observations:\n\nUnstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential\nAllows group specific covariance estimates and weights\n\nHypothesis Testing:\n\nemmeans interface for least square means\nSatterthwaite and Kenward-Roger adjustments\nRobust sandwich estimator for covariance\n\nIntegrations and extentions\n\ntidymodels builtin parsnip engine and recipes for streamlined model fitting workflows\nteal, tern, rtables integration for post processing and reporting\nSupport conditional mean prediction and simulation\nAlso used in rbmi for conditional mean imputation!"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#comparison-with-other-software",
+    "href": "slides/china-R-mmrm-nov2023.html#comparison-with-other-software",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Comparison with Other Software",
+    "text": "Comparison with Other Software\nTo run an MMRM model in SAS it is recommended to use either the PROC MIXED or PROC GLMMIX procedures.\n\nLess model assumptions are applied in PROC MIXED, primarily how one treats missingness.\nWe will compares the PROC MIXED procedure to the {mmrm} package in the following attributes:\n\n\n\n\nDocumentation\nUnit Testing\nCovariance structures\n\n\n\nCovariance Estimators\nDegrees of Freedom\nContrasts"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#documentation",
+    "href": "slides/china-R-mmrm-nov2023.html#documentation",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Documentation",
+    "text": "Documentation\nBoth languages have online documentation of the technical details of the estimation and degrees of freedom methods and the different covariance structures available.\n\n\n{mmrm}\n\nPROC MIXED\n\n\n\n\n\nHomepage\nUsage\nEstimation\nCovariance Structures\nDegrees of Freedom KR/Satterthwaite\n\n\n\nHomepage\nUsage\nTheory\nCovariance Structures\nDegrees of Freedom"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#unit-testing",
+    "href": "slides/china-R-mmrm-nov2023.html#unit-testing",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Unit Testing",
+    "text": "Unit Testing\n\nUnit tests in {mmrm} are transparent, compared to PROC MIXED.\nUses the testthat framework with covr to communicate the testing coverage.\nUnit tests can be found in the GitHub repository under ./tests.\n\n\n\n\n\n\n\nNote\n\n\nThe integration tests in {mmrm} are set to a tolerance of 10e^-3 when compared to SAS outputs."
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-structures",
+    "href": "slides/china-R-mmrm-nov2023.html#covariance-structures",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Covariance structures",
-    "text": "Covariance structures\n\n\n\n\n\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+    "text": "Covariance structures\n\n\n\nSAS has 23 non-spatial covariance structures, while mmrm has 10.\n\n9 structures intersect with SAS\nAnte-dependence (homogeneous) is only in the mmrm package.\n\nSAS has 14 spatial covariance structures compared to the spatial exponential one available in mmrm.\n\n\n\n\n\n\n\n\nTip\n\n\nFor users that need more structures, {mmrm} is easily extensible - let us know via feature requests in the GitHub repository."
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#degrees-of-freedom-methods",
-    "href": "slides/r-govys-jan2023.html#degrees-of-freedom-methods",
-    "title": "Introducing the Software Engineering working group",
+    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-structures-details",
+    "href": "slides/china-R-mmrm-nov2023.html#covariance-structures-details",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Covariance structures details",
+    "text": "Covariance structures details\n\n\n\nCovariance structures\n{mmrm}\nPROC MIXED\n\n\n\n\nUnstructured (Unweighted/Weighted)\nX/X\nX/X\n\n\nToeplitz (hetero/homo)\nX/X\nX/X\n\n\nCompound symmetry (hetero/homo)\nX/X\nX/X\n\n\nAuto-regressive (hetero/homo)\nX/X\nX/X\n\n\nAnte-dependence (hetero/homo)\nX/X\nX\n\n\nSpatial exponential\nX\nX"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#covariance-estimators",
+    "href": "slides/china-R-mmrm-nov2023.html#covariance-estimators",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Covariance Estimators",
+    "text": "Covariance Estimators\n\n\n\nCovariance estimators\n{mmrm}\nPROC MIXED\n\n\n\n\nAsymptotic\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nEmpirical\nX\nX\n\n\nJackknife\nX\n\n\n\nBias-Reduced Linearization\nX"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#degrees-of-freedom-methods",
+    "href": "slides/china-R-mmrm-nov2023.html#degrees-of-freedom-methods",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Degrees of Freedom Methods",
-    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger\nX\nX\n\n\nKenward-Roger (Linear)**\nX\nX\n\n\n\n*Available through the emmeans package.\n**This is not equivalent to the KR2 setting in PROC MIXED"
+    "text": "Degrees of Freedom Methods\n\n\n\nMethod\n{mmrm}\nPROC MIXED\n\n\n\n\nContain\nX*\nX\n\n\nBetween/Within\nX*\nX\n\n\nResidual\nX*\nX\n\n\nSatterthwaite\nX\nX\n\n\nKenward-Roger **\nX\nX\n\n\nKenward-Roger (Linear)\nX\nX\n\n\n\n*Available through emmeans, and ongoing work in mmrm.\n** Unstructured has differences compared to PROC MIXED because of different parameterization."
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#contrastslsmeans",
-    "href": "slides/r-govys-jan2023.html#contrastslsmeans",
-    "title": "Introducing the Software Engineering working group",
+    "objectID": "slides/china-R-mmrm-nov2023.html#contrastslsmeans",
+    "href": "slides/china-R-mmrm-nov2023.html#contrastslsmeans",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Contrasts/LSMEANS",
-    "text": "Contrasts/LSMEANS\nContrasts and least square means estimates are available in mmrm using:\n\ndf_1d, df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does."
+    "text": "Contrasts/LSMEANS\nContrasts and least square (LS) means estimates are available in mmrm using\n\n\n\nmmrm::df_1d, mmrm::df_md\nS3 method that is compatible with emmeans\nLS means difference can be produced through emmeans (pairs method)\nDegrees of freedom method is passed from mmrm to emmeans\nBy default PROC MIXED and mmrm do not adjust for multiplicity, whereas emmeans does.\n\n\n\n\n\n\n\n\nNote\n\n\nThese are comparable to the LSMEANS statement in PROC MIXED."
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#demo",
-    "href": "slides/r-govys-jan2023.html#demo",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Demo",
-    "text": "Demo"
+    "objectID": "slides/china-R-mmrm-nov2023.html#benchmarking-with-other-r-packages",
+    "href": "slides/china-R-mmrm-nov2023.html#benchmarking-with-other-r-packages",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Benchmarking with other R packages",
+    "text": "Benchmarking with other R packages\nOther R packages, like nlme, lme4 and glmmTMB can support MMRM analysis. However:\n\nCovariance structure supported is limited\nComputational efficiency is not satisfying\nConvergence issues(especially for lme4)\nNeed other(multiple) packages to support Satterthwaite and Kenward-Roger degrees of freedom, or Sandwich covariance estimator.\nDetailed results at the online comparison vignette"
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#long-term-perspective",
-    "href": "slides/r-govys-jan2023.html#long-term-perspective",
-    "title": "Introducing the Software Engineering working group",
-    "section": "Long term perspective",
-    "text": "Long term perspective\n\nSoftware engineering is a critical competence in producing high-quality statistical software\nA lot of work needs to be done regarding the establishment, dissemination and adoption of best practices for engineering open-source software\nImproving the way software engineering is done will help improve the efficiency, reliability and innovation within Biostatistics"
+    "objectID": "slides/china-R-mmrm-nov2023.html#computational-efficiency",
+    "href": "slides/china-R-mmrm-nov2023.html#computational-efficiency",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Computational Efficiency",
+    "text": "Computational Efficiency\nmmrm not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)"
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#new-packages-coming-up",
-    "href": "slides/r-govys-jan2023.html#new-packages-coming-up",
-    "title": "Introducing the Software Engineering working group",
-    "section": "New packages coming up",
-    "text": "New packages coming up\n\nsasr\nHTA packages\nBayesian MMRM"
+    "objectID": "slides/china-R-mmrm-nov2023.html#differences-with-sas",
+    "href": "slides/china-R-mmrm-nov2023.html#differences-with-sas",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Differences with SAS",
+    "text": "Differences with SAS\n{mmrm} has small difference from SAS"
   },
   {
-    "objectID": "slides/r-govys-jan2023.html#thank-you-questions",
-    "href": "slides/r-govys-jan2023.html#thank-you-questions",
-    "title": "Introducing the Software Engineering working group",
+    "objectID": "slides/china-R-mmrm-nov2023.html#getting-started",
+    "href": "slides/china-R-mmrm-nov2023.html#getting-started",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
+    "section": "Getting started",
+    "text": "Getting started\n\nmmrm is on CRAN - use this as a starting point:\n\n\n\ninstall.packages(\"mmrm\")\nlibrary(mmrm)\nfit &lt;- mmrm(\n  formula = FEV1 ~ RACE + SEX + ARMCD * AVISIT + us(AVISIT | USUBJID),\n  data = fev_data\n)\nsummary(fit)\nlibrary(emmeans)\nemmeans(fit, ~ ARMCD | AVISIT)\n\n\nVisit openpharma.github.io/mmrm for detailed docs including vignettes\nConsider tern.mmrm for high-level clinical reporting interface, incl. standard tables and graphs"
+  },
+  {
+    "objectID": "slides/china-R-mmrm-nov2023.html#thank-you-questions",
+    "href": "slides/china-R-mmrm-nov2023.html#thank-you-questions",
+    "title": "Introducing openstatsware and the R Package {mmrm}",
     "section": "Thank you! Questions?",
     "text": "Thank you! Questions?"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
+    "href": "slides/unit_testing_advanced.html#what-are-we-going-to-talk-about",
+    "title": "Unit Testing for R Developers",
+    "section": "What are we going to talk about?",
+    "text": "What are we going to talk about?\n\n\n\nUnderstand the philosophy behind unit testing and how it relates to other tests\nGain more confidence in your testing framework by examining coverage"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
+    "href": "slides/unit_testing_advanced.html#what-is-the-structure-of-unit-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "What is the structure of unit tests?",
+    "text": "What is the structure of unit tests?\n\nSetup: Set up the inputs for the test.\nCompute: Compute the result which will be tested.\nExpect: Define the expected result.\nCompare: Compare the actual with the expected result.\n\n\nThe code should test a specific characteristic or functionality of the package.\nBecause if your action does too many things at once, you have to search longer for the bug."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
+    "href": "slides/unit_testing_advanced.html#who-do-you-write-tests-for",
+    "title": "Unit Testing for R Developers",
+    "section": "Who do you write tests for?",
+    "text": "Who do you write tests for?\nUnit testing is a method to communicate to various stakeholders the package requirements."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#test-flavors",
+    "href": "slides/unit_testing_advanced.html#test-flavors",
+    "title": "Unit Testing for R Developers",
+    "section": "Test Flavors",
+    "text": "Test Flavors\nThere are different flavors of unit tests that we write:\n\nDeveloper Tests\n\nTests that help the software developer speed up and iterate over different versions\n\nQuality Assurance (QA) Tests\n\nProving that the package isn’t broken or that functions are returning the expected answers"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#test-flavors-contd",
+    "href": "slides/unit_testing_advanced.html#test-flavors-contd",
+    "title": "Unit Testing for R Developers",
+    "section": "Test Flavors (cont’d)",
+    "text": "Test Flavors (cont’d)\n\n\n\nDeveloper Tests\nRemove Fear of Change\n\nAssist with package design\nGuide for refactoring\n\nReduce Development Time\n\nExplain code to others\nPinpoint errors\nMinimize debugging/manual testing\n\n\nQA Tests\n\nEncode object requirements\nCatch performance degradation"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success",
+    "href": "slides/unit_testing_advanced.html#planning-tests-for-success",
+    "title": "Unit Testing for R Developers",
+    "section": "Planning tests for success",
+    "text": "Planning tests for success\n\nWrite tests to evaluate the exported behavior that the package user would invoke.\n\nSets up the ability to refactor code.\nTests will not have to be rewritten as the package iterates and improves."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#planning-tests-for-success-contd",
+    "href": "slides/unit_testing_advanced.html#planning-tests-for-success-contd",
+    "title": "Unit Testing for R Developers",
+    "section": "Planning tests for success (cont’d)",
+    "text": "Planning tests for success (cont’d)\n\nWrite tests that you will not need to update or maintain because of a dependency.\n\nBecause you can’t control how other maintainers are developing packages and managing their lifecycle.\nNote: Having unit tests allows dependency changes to be detected early enough - e.g. CRAN is running reverse dependency checks before accepting new package versions"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#testing-surface-areas",
+    "href": "slides/unit_testing_advanced.html#testing-surface-areas",
+    "title": "Unit Testing for R Developers",
+    "section": "Testing surface areas",
+    "text": "Testing surface areas\n\n\n\nWhen writing unit tests for functions it is important to take into account the surface area of the tests\nIn this example we have three unit tests on stats::mean.default\nTests B and C have large surface areas, if they fail you will still need to investigate the cause of their failure."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
+    "href": "slides/unit_testing_advanced.html#adding-new-features-with-a-safety-net",
+    "title": "Unit Testing for R Developers",
+    "section": "Adding new features with a safety net",
+    "text": "Adding new features with a safety net\nWhen you are developing new features in a package make sure to prepare the area with unit tests for the expected behavior of the feature.\nThis will serve two main purposes:\n\n\n\n\n\nCommunicate the goals of the feature to others and to yourself.\nFree to develop the idea while writing messy code and refactoring it while still controlling for the basic requirements."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#some-strategies-for-learning",
+    "href": "slides/unit_testing_advanced.html#some-strategies-for-learning",
+    "title": "Unit Testing for R Developers",
+    "section": "Some strategies for learning",
+    "text": "Some strategies for learning\n\nPair up with experienced developer buddies.\nHelp out with refactoring or features on GitHub repositories:\n\nDevelopers usually list what they are working on and are happy to get an extra pair of hands to tackle issues.\nThe process of merging a pull request will teach you hands on.\n\nClone repositories of packages you are familiar with:\n\nRun the tests you find there.\nYou will learn a lot about testing, coding and strategies."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
+    "href": "slides/unit_testing_advanced.html#what-can-and-should-be-unit-tested",
+    "title": "Unit Testing for R Developers",
+    "section": "What can and should be unit tested?",
+    "text": "What can and should be unit tested?\n\nScript\n\nSingle files with functions can have unit tests\n\nPackages\n\nThis is the standard object to write tests for\n\nShiny apps\n\nShiny app UI and reactivity can be tested\n\nData derivation\n\nTesting data preprocessing pipelines for expected characteristics of columns"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
+    "href": "slides/unit_testing_advanced.html#overview-of-unit-testing-frameworks",
+    "title": "Unit Testing for R Developers",
+    "section": "Overview of unit testing frameworks",
+    "text": "Overview of unit testing frameworks\n\nscript/packages: testthat, tinytest, box, Runit\nshiny apps: shinytest2, reactor, crrry\ndata: pointblank, assertr, validate, dataReporter\nplots: vdiffr"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#testing-plot-functions",
+    "href": "slides/unit_testing_advanced.html#testing-plot-functions",
+    "title": "Unit Testing for R Developers",
+    "section": "Testing plot functions",
+    "text": "Testing plot functions\n\nvdiffr package allows to save vector graphics file of the expected plot outcome\nworks for both base plots as well as ggplots\nBeware of false positive test failures though\n\noperating systems can lead to slightly different plot outcomes\nrequires manual visual checks"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#testing-plot-functions-contd",
+    "href": "slides/unit_testing_advanced.html#testing-plot-functions-contd",
+    "title": "Unit Testing for R Developers",
+    "section": "Testing plot functions (cont’d)",
+    "text": "Testing plot functions (cont’d)\n\nAlternative for ggplot:\n\nuse ggplot2::layer_data() function to extract layer information\nuse that for comparisons in tests instead of vector graphics"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#communicating-tests-coverage",
+    "href": "slides/unit_testing_advanced.html#communicating-tests-coverage",
+    "title": "Unit Testing for R Developers",
+    "section": "Communicating Tests: Coverage",
+    "text": "Communicating Tests: Coverage\n\ncovr\n\nR package that evaluates the % of lines of code that are tested\nUse covr::package_coverage() to analyze current package coverage\n\ncovrpage\n\nR package that summarizes covr statistics into simple reports that can be shared\nUse covrpage::covrpage() to create the report page"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#mapping-the-logic",
+    "href": "slides/unit_testing_advanced.html#mapping-the-logic",
+    "title": "Unit Testing for R Developers",
+    "section": "Mapping the Logic",
+    "text": "Mapping the Logic"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#summary",
+    "href": "slides/unit_testing_advanced.html#summary",
+    "title": "Unit Testing for R Developers",
+    "section": "Summary",
+    "text": "Summary\n\nPhilosophy of testing:\n\nAggregate of all tests should cover the whole functionality\nBut each test on its own should be specific and only have small surface\nDeveloper vs. Quality Assurance Tests\nNot just R packages: also scripts, Shiny apps, data\n\nHow to communicate test coverage:\n\nUse covr to calculate coverage\nUse covrpage to create a summary report"
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#outlook-automating-tests",
+    "href": "slides/unit_testing_advanced.html#outlook-automating-tests",
+    "title": "Unit Testing for R Developers",
+    "section": "Outlook: Automating Tests",
+    "text": "Outlook: Automating Tests\n\n\nWhen developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests."
+  },
+  {
+    "objectID": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
+    "href": "slides/unit_testing_advanced.html#brought-to-you-by-the-software-engineering-working-group",
+    "title": "Unit Testing for R Developers",
+    "section": "Brought to you by the Software Engineering Working Group",
+    "text": "Brought to you by the Software Engineering Working Group\n\n\n\n\n\n\nrconsortium.github.io/asa-biop-swe-wg"
   },
   {
     "objectID": "slides/r-meetup-july2023.html#asa-biop-software-engineering-working-group-swe-wg",
