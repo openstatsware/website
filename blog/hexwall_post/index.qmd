@@ -1,0 +1,8 @@
+---
+title: "Announcing the Package Hexwall"
+subtitle: "Interactive webpage representing the Clinical Trial CRAN Task View"
+author: "Yoni Sidi"
+description: Initial version of the CRAN task view hex wall.
+date: "2024-03-05"
+categories: [news]
+---
