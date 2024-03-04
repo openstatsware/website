@@ -6,7 +6,7 @@ format:
     scrolling: true
 ---
 
-```{r}
+```{r, echo = FALSE}
 knitr::opts_chunk$set(
   message = NA,
   echo = FALSE
