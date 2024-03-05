@@ -35,6 +35,8 @@ website:
           - href: bayesian_mmrm_R_package.qmd
       - href: presentations.qmd
         text: "Presentations"
+      - href: hexwall.qmd
+        text: "TaskView Hexwall"
     right:
       - icon: rss
         href: blog.xml
