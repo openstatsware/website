@@ -1,0 +1,55 @@
+---
+title: "openstatsguide"
+subtitle: "version 0.1"
+date: "10 Mar 2024"
+---
+
+We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity".
+
+```{r echo=FALSE}
+glue_or_drop <- function(doc, img) {
+  if (identical(doc, "")) {
+    NULL
+  } else {
+    htmltools::tags$td(
+      htmltools::tags$details(
+        htmltools::tags$summary(
+          htmltools::tags$img(src = img, height = 20)
+        ),
+        doc
+      )
+    )
+  }
+}
+guide_table <- function(r = "", python = "", julia = "") {
+  contents <- htmltools::tags$html(
+    glue_or_drop(r, "https://www.r-project.org/logo/Rlogo.svg"),
+    glue_or_drop(python, "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"),
+    glue_or_drop(julia, "https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg"),
+    sep = "\n"
+  )
+  htmltools::tags$table(
+    style = htmltools::css(
+      width = '100%'
+    ),
+    htmltools::tags$tbody(contents)
+  )
+}
+```
+
+## Documentation
+  
+1.  Use **in-line comments** next to functions, classes and other objects to generate their corresponding documentation.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("roxygen2", href = "https://roxygen2.r-lib.org/"),
+      python = htmltools::a("docstrings", href = "https://peps.python.org/pep-0257/"),
+      julia = htmltools::a("docstrings", href = "https://docs.julialang.org/en/v1/manual/documentation/")
+    )
+    ```
+
+1.  Do also **document internal functions** and classes for maintenance by future developers.
+
+1.  Add **code comments** for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.
+
