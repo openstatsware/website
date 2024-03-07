@@ -9,7 +9,7 @@
 <link>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</link>
 <atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
-<generator>quarto-1.4.549</generator>
+<generator>quarto-1.4.550</generator>
 <lastBuildDate>Tue, 05 Mar 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Announcing the Packages Hexwall</title>
@@ -26,23 +26,24 @@
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 44 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="hgguegiego" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#hgguegiego table {
+<div>
+<div id="jgvxmohutp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#jgvxmohutp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hgguegiego thead, #hgguegiego tbody, #hgguegiego tfoot, #hgguegiego tr, #hgguegiego td, #hgguegiego th {
+#jgvxmohutp thead, #jgvxmohutp tbody, #jgvxmohutp tfoot, #jgvxmohutp tr, #jgvxmohutp td, #jgvxmohutp th {
   border-style: none;
 }
 
-#hgguegiego p {
+#jgvxmohutp p {
   margin: 0;
   padding: 0;
 }
 
-#hgguegiego .gt_table {
+#jgvxmohutp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -68,12 +69,12 @@
   border-left-color: #D3D3D3;
 }
 
-#hgguegiego .gt_caption {
+#jgvxmohutp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hgguegiego .gt_title {
+#jgvxmohutp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -85,7 +86,7 @@
   border-bottom-width: 0;
 }
 
-#hgguegiego .gt_subtitle {
+#jgvxmohutp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -97,7 +98,7 @@
   border-top-width: 0;
 }
 
-#hgguegiego .gt_heading {
+#jgvxmohutp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -109,13 +110,13 @@
   border-right-color: #D3D3D3;
 }
 
-#hgguegiego .gt_bottom_border {
+#jgvxmohutp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hgguegiego .gt_col_headings {
+#jgvxmohutp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -130,7 +131,7 @@
   border-right-color: #D3D3D3;
 }
 
-#hgguegiego .gt_col_heading {
+#jgvxmohutp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -150,7 +151,7 @@
   overflow-x: hidden;
 }
 
-#hgguegiego .gt_column_spanner_outer {
+#jgvxmohutp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -162,15 +163,15 @@
   padding-right: 4px;
 }
 
-#hgguegiego .gt_column_spanner_outer:first-child {
+#jgvxmohutp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hgguegiego .gt_column_spanner_outer:last-child {
+#jgvxmohutp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hgguegiego .gt_column_spanner {
+#jgvxmohutp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -182,11 +183,11 @@
   width: 100%;
 }
 
-#hgguegiego .gt_spanner_row {
+#jgvxmohutp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hgguegiego .gt_group_heading {
+#jgvxmohutp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -212,7 +213,7 @@
   text-align: left;
 }
 
-#hgguegiego .gt_empty_group_heading {
+#jgvxmohutp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -227,15 +228,15 @@
   vertical-align: middle;
 }
 
-#hgguegiego .gt_from_md > :first-child {
+#jgvxmohutp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hgguegiego .gt_from_md > :last-child {
+#jgvxmohutp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hgguegiego .gt_row {
+#jgvxmohutp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -254,7 +255,7 @@
   overflow-x: hidden;
 }
 
-#hgguegiego .gt_stub {
+#jgvxmohutp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -267,7 +268,7 @@
   padding-right: 5px;
 }
 
-#hgguegiego .gt_stub_row_group {
+#jgvxmohutp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -281,15 +282,15 @@
   vertical-align: top;
 }
 
-#hgguegiego .gt_row_group_first td {
+#jgvxmohutp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hgguegiego .gt_row_group_first th {
+#jgvxmohutp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hgguegiego .gt_summary_row {
+#jgvxmohutp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -299,16 +300,16 @@
   padding-right: 5px;
 }
 
-#hgguegiego .gt_first_summary_row {
+#jgvxmohutp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hgguegiego .gt_first_summary_row.thick {
+#jgvxmohutp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hgguegiego .gt_last_summary_row {
+#jgvxmohutp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -318,7 +319,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#hgguegiego .gt_grand_summary_row {
+#jgvxmohutp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -328,7 +329,7 @@
   padding-right: 5px;
 }
 
-#hgguegiego .gt_first_grand_summary_row {
+#jgvxmohutp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -338,7 +339,7 @@
   border-top-color: #D3D3D3;
 }
 
-#hgguegiego .gt_last_grand_summary_row_top {
+#jgvxmohutp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -348,11 +349,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#hgguegiego .gt_striped {
+#jgvxmohutp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hgguegiego .gt_table_body {
+#jgvxmohutp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -361,7 +362,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#hgguegiego .gt_footnotes {
+#jgvxmohutp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -375,7 +376,7 @@
   border-right-color: #D3D3D3;
 }
 
-#hgguegiego .gt_footnote {
+#jgvxmohutp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -384,7 +385,7 @@
   padding-right: 5px;
 }
 
-#hgguegiego .gt_sourcenotes {
+#jgvxmohutp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -398,7 +399,7 @@
   border-right-color: #D3D3D3;
 }
 
-#hgguegiego .gt_sourcenote {
+#jgvxmohutp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -406,63 +407,63 @@
   padding-right: 5px;
 }
 
-#hgguegiego .gt_left {
+#jgvxmohutp .gt_left {
   text-align: left;
 }
 
-#hgguegiego .gt_center {
+#jgvxmohutp .gt_center {
   text-align: center;
 }
 
-#hgguegiego .gt_right {
+#jgvxmohutp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hgguegiego .gt_font_normal {
+#jgvxmohutp .gt_font_normal {
   font-weight: normal;
 }
 
-#hgguegiego .gt_font_bold {
+#jgvxmohutp .gt_font_bold {
   font-weight: bold;
 }
 
-#hgguegiego .gt_font_italic {
+#jgvxmohutp .gt_font_italic {
   font-style: italic;
 }
 
-#hgguegiego .gt_super {
+#jgvxmohutp .gt_super {
   font-size: 65%;
 }
 
-#hgguegiego .gt_footnote_marks {
+#jgvxmohutp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hgguegiego .gt_asterisk {
+#jgvxmohutp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hgguegiego .gt_indent_1 {
+#jgvxmohutp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hgguegiego .gt_indent_2 {
+#jgvxmohutp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hgguegiego .gt_indent_3 {
+#jgvxmohutp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hgguegiego .gt_indent_4 {
+#jgvxmohutp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hgguegiego .gt_indent_5 {
+#jgvxmohutp .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -573,7 +574,7 @@
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Finance/">Empirical Finance</a></td>
 <td class="gt_row gt_left" headers="maintainers">Dirk Eddelbuettel</td>
-<td class="gt_row gt_right" headers="last_update">2024-01-16</td>
+<td class="gt_row gt_right" headers="last_update">2024-03-05</td>
 <td class="gt_row gt_right" headers="n_pkg">155</td>
 </tr>
 <tr class="odd">
@@ -616,7 +617,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MetaAnalysis/">Meta-Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Michael Dewey, Wolfgang Viechtbauer</td>
 <td class="gt_row gt_right" headers="last_update">2024-01-09</td>
-<td class="gt_row gt_right" headers="n_pkg">181</td>
+<td class="gt_row gt_right" headers="n_pkg">182</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MissingData/">Missing Data</a></td>
@@ -750,6 +751,7 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="clinical-trials-task-view" class="level2">
 <h2 class="anchored" data-anchor-id="clinical-trials-task-view">Clinical Trials task view</h2>
@@ -803,7 +805,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
+<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
@@ -982,7 +984,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
