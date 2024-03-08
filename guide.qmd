@@ -4,7 +4,12 @@ subtitle: "version 0.1"
 date: "10 Mar 2024"
 ---
 
-We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity".
+We encourage developers of statistical software packages to follow this minimum set of good practices. 
+They can be easily remembered with the mnemonic bridge sentence:
+
+> "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity" 
+
+While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
 
 ```{r echo=FALSE}
 glue_or_drop <- function(doc, img) {
@@ -38,6 +43,8 @@ guide_table <- function(r = "", python = "", julia = "") {
 ```
 
 ## Documentation
+
+Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.
   
 1.  Use **in-line comments** next to functions, classes and other objects to generate their corresponding documentation.
 
@@ -53,3 +60,119 @@ guide_table <- function(r = "", python = "", julia = "") {
 
 1.  Add **code comments** for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.
 
+## Vignettes
+
+Vignettes are documents that complement the object documentation by providing a comprehensive and long-form overview of your package's functionality from a user point of view, with particular emphasis on the connection to the statistical approaches.
+
+1.  Provide an **introduction vignette** that introduces the package to new users, such that they have an easy entry point for getting started. Make sure to include code examples and automatically compile the vignette to ensure reproducibility.
+
+1.  Include **deep dive vignettes** that go into depth on specific use cases, functionalities or underlying theory, in particular describing the underlying statistical methodology and how it is implemented in the package.
+
+1.  Host your vignettes on a **dedicated website**, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("pkgdown", href = "https://pkgdown.r-lib.org/"),
+      python = htmltools::a("Sphinx", href = "https://www.sphinx-doc.org/en/master/"),
+      julia = htmltools::a("Documenter", href = "https://documenter.juliadocs.org/")
+    )
+    ```
+
+## Tests
+
+Tests are a fundamental safety net and development tool to ensure that your package works as expected, both during development as well as on user systems.
+
+1.  Write **unit tests** for all functions and classes in your package, to ensure that all building blocks work correctly on their own ("white box" testing). Expect to rewrite tests for internal code when you refactor it.
+
+1.  Write **functional tests** for all user facing functionality ("black box" testing). These tests ensure that the user API is stable when refactoring internal code.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("testthat", href = "https://testthat.r-lib.org/"),
+      python = htmltools::a("pytest", href = "https://pytest.org/"),
+      julia = htmltools::a("Test", href = "https://docs.julialang.org/en/v1/stdlib/Test/")
+    )
+    ```
+
+1.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("covr", href = "https://covr.r-lib.org/"),
+      python = htmltools::a("Coverage.py", href = "https://coverage.readthedocs.io/"),
+      julia = htmltools::a("Coverage.jl", href = "https://github.com/JuliaCI/Coverage.jl")
+    )
+    ```
+
+## Functions
+
+Function definitions should be short, simple and enforce argument types with assertions.
+
+1.  Write **short functions** with less than 50 lines of code for a single and well-defined purpose, with **few arguments**, and low cyclomatic complexity, in order to reduce the risk of bugs, simplify writing tests and ensure that you can maintain them.
+
+1.  Use **type hints** or types to explain to the user which argument of the function expects which type of input.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("roxytypes", href = "https://openpharma.github.io/roxytypes/"),
+      python = htmltools::a("typing", href = "https://docs.python.org/3/library/typing.html"),
+      julia = htmltools::a("types", href = "https://docs.julialang.org/en/v1/manual/types/")
+    )
+    ```
+
+1.  Enforce types and other expected properties of function arguments with **assertions**, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("checkmate", href = "https://mllg.github.io/checkmate/"),
+      python = htmltools::a("assertpy", href = "https://pypi.org/project/assertpy/"),
+      julia = htmltools::a("ArgCheck.jl", href = "https://github.com/jw3126/ArgCheck.jl")
+    )
+    ```
+
+## Style
+
+A consistent and readable code style that is language idiomatic should be used and enforced by style checks.
+
+1.  Use **language idiomatic** code and follow the **"clean code" rules** (use descriptive and meaningful names, prefer simpler over more complex code, avoid duplication of code, regularly refactor code), while allowing for exceptions only where needed.
+
+1.  Use a **formatting tool** to automatically implement a consistent and readable code format.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("styler", href = "https://styler.r-lib.org/"),
+      python = htmltools::a("Autopep8", href = "https://pypi.org/project/autopep8/"),
+      julia = htmltools::a("JuliaFormatter.jl", href = "https://domluna.github.io/JuliaFormatter.jl/")
+    )
+    ```
+
+1.  Use a **style checking** tool to enforce a consistent and readable code style.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::a("lintr", href = "https://lintr.r-lib.org/"),
+      python = htmltools::a("Pylint", href = "https://pypi.org/project/pylint/"),
+      julia = htmltools::p("Enabled in VScode via", htmltools::a("StaticLint.jl", href = "https://github.com/julia-vscode/StaticLint.jl"))
+    )
+    ```
+
+## Life cycle
+
+Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.
+
+1.  **Reduce dependencies** to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.
+
+1.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
+
+    ```{r results="asis", echo=FALSE}
+    guide_table(
+      r = htmltools::p(
+        htmltools::a("lifecycle", href = "https://cran.r-project.org/web/packages/lifecycle/index.html"),
+        htmltools::a("fledge", href = "https://fledge.cynkra.com/")
+      ),
+      python = htmltools::a("deprecation", href = "https://deprecation.readthedocs.io/"),
+      julia = htmltools::a("workflow", href = "https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/")
+    )
+    ```
+
+1.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
