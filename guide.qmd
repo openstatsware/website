@@ -1,13 +1,14 @@
 ---
 title: "openstatsguide"
-subtitle: "version 0.1"
+subtitle: "version 0.0-1"
 date: "10 Mar 2024"
 ---
 
-We encourage developers of statistical software packages to follow this minimum set of good practices. 
-They can be easily remembered with the mnemonic bridge sentence:
+*Note: This is a beta release of "openstatsguide" to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.*
 
-> "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity" 
+We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence:
+
+> "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity"
 
 While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
 
@@ -45,7 +46,7 @@ guide_table <- function(r = "", python = "", julia = "") {
 ## Documentation
 
 Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.
-  
+
 1.  Use **in-line comments** next to functions, classes and other objects to generate their corresponding documentation.
 
     ```{r results="asis", echo=FALSE}
@@ -56,9 +57,9 @@ Documentation is important for both users and developers to understand all objec
     )
     ```
 
-1.  Do also **document internal functions** and classes for maintenance by future developers.
+2.  Do also **document internal functions** and classes for maintenance by future developers.
 
-1.  Add **code comments** for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.
+3.  Add **code comments** for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.
 
 ## Vignettes
 
@@ -66,9 +67,9 @@ Vignettes are documents that complement the object documentation by providing a 
 
 1.  Provide an **introduction vignette** that introduces the package to new users, such that they have an easy entry point for getting started. Make sure to include code examples and automatically compile the vignette to ensure reproducibility.
 
-1.  Include **deep dive vignettes** that go into depth on specific use cases, functionalities or underlying theory, in particular describing the underlying statistical methodology and how it is implemented in the package.
+2.  Include **deep dive vignettes** that go into depth on specific use cases, functionalities or underlying theory, in particular describing the underlying statistical methodology and how it is implemented in the package.
 
-1.  Host your vignettes on a **dedicated website**, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.
+3.  Host your vignettes on a **dedicated website**, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -84,7 +85,7 @@ Tests are a fundamental safety net and development tool to ensure that your pack
 
 1.  Write **unit tests** for all functions and classes in your package, to ensure that all building blocks work correctly on their own ("white box" testing). Expect to rewrite tests for internal code when you refactor it.
 
-1.  Write **functional tests** for all user facing functionality ("black box" testing). These tests ensure that the user API is stable when refactoring internal code.
+2.  Write **functional tests** for all user facing functionality ("black box" testing). These tests ensure that the user API is stable when refactoring internal code.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -94,7 +95,7 @@ Tests are a fundamental safety net and development tool to ensure that your pack
     )
     ```
 
-1.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
+3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -110,7 +111,7 @@ Function definitions should be short, simple and enforce argument types with ass
 
 1.  Write **short functions** with less than 50 lines of code for a single and well-defined purpose, with **few arguments**, and low cyclomatic complexity, in order to reduce the risk of bugs, simplify writing tests and ensure that you can maintain them.
 
-1.  Use **type hints** or types to explain to the user which argument of the function expects which type of input.
+2.  Use **type hints** or types to explain to the user which argument of the function expects which type of input.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -120,7 +121,7 @@ Function definitions should be short, simple and enforce argument types with ass
     )
     ```
 
-1.  Enforce types and other expected properties of function arguments with **assertions**, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.
+3.  Enforce types and other expected properties of function arguments with **assertions**, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -136,7 +137,7 @@ A consistent and readable code style that is language idiomatic should be used a
 
 1.  Use **language idiomatic** code and follow the **"clean code" rules** (use descriptive and meaningful names, prefer simpler over more complex code, avoid duplication of code, regularly refactor code), while allowing for exceptions only where needed.
 
-1.  Use a **formatting tool** to automatically implement a consistent and readable code format.
+2.  Use a **formatting tool** to automatically implement a consistent and readable code format.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -146,7 +147,7 @@ A consistent and readable code style that is language idiomatic should be used a
     )
     ```
 
-1.  Use a **style checking** tool to enforce a consistent and readable code style.
+3.  Use a **style checking** tool to enforce a consistent and readable code style.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -162,7 +163,7 @@ Life cycle management is simplified by reducing dependencies, and should compris
 
 1.  **Reduce dependencies** to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.
 
-1.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
+2.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
     ```{r results="asis", echo=FALSE}
     guide_table(
@@ -175,4 +176,5 @@ Life cycle management is simplified by reducing dependencies, and should compris
     )
     ```
 
-1.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+3.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+
