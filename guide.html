@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" sep="
+"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-03-10">
 
-<title>ASA BIOP SWE WG - Blog</title>
+<title>ASA BIOP SWE WG - openstatsguide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./sticker/openstatsware-hex.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,72 +68,14 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="alternate" type="application/rss+xml" title="ASA BIOP SWE WG" href="blog.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -183,7 +125,7 @@ window.Quarto = {
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -228,311 +170,392 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(8)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link active" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#vignettes" id="toc-vignettes" class="nav-link" data-scroll-target="#vignettes">Vignettes</a></li>
+  <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
+  <li><a href="#life-cycle" id="toc-life-cycle" class="nav-link" data-scroll-target="#life-cycle">Life cycle</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">openstatsguide</h1>
+<p class="subtitle lead">version 0.0-1</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 10, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
-<p>We are proudly contributing to <a href="https://www.r-bloggers.com">R-Bloggers</a>.</p>
+</header>
 
 
+<p><em>Note: This is a beta release of “openstatsguide” to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.</em></p>
+<p>We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence:</p>
+<blockquote class="blockquote">
+<p>“<strong>D</strong>evelopers <strong>V</strong>alue <strong>T</strong>ests <strong>F</strong>or <strong>S</strong>oftware <strong>L</strong>ongevity”</p>
+</blockquote>
+<p>While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.</p>
+<section id="documentation" class="level2">
+<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
+<p>Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.</p>
+<ol type="1">
+<li><p>Use <strong>in-line comments</strong> next to functions, classes and other objects to generate their corresponding documentation.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://roxygen2.r-lib.org/">roxygen2</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://peps.python.org/pep-0257/">docstrings</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://docs.julialang.org/en/v1/manual/documentation/">docstrings</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+<li><p>Do also <strong>document internal functions</strong> and classes for maintenance by future developers.</p></li>
+<li><p>Add <strong>code comments</strong> for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.</p></li>
+</ol>
+</section>
+<section id="vignettes" class="level2">
+<h2 class="anchored" data-anchor-id="vignettes">Vignettes</h2>
+<p>Vignettes are documents that complement the object documentation by providing a comprehensive and long-form overview of your package’s functionality from a user point of view, with particular emphasis on the connection to the statistical approaches.</p>
+<ol type="1">
+<li><p>Provide an <strong>introduction vignette</strong> that introduces the package to new users, such that they have an easy entry point for getting started. Make sure to include code examples and automatically compile the vignette to ensure reproducibility.</p></li>
+<li><p>Include <strong>deep dive vignettes</strong> that go into depth on specific use cases, functionalities or underlying theory, in particular describing the underlying statistical methodology and how it is implemented in the package.</p></li>
+<li><p>Host your vignettes on a <strong>dedicated website</strong>, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://pkgdown.r-lib.org/">pkgdown</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://www.sphinx-doc.org/en/master/">Sphinx</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://documenter.juliadocs.org/">Documenter</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+</ol>
+</section>
+<section id="tests" class="level2">
+<h2 class="anchored" data-anchor-id="tests">Tests</h2>
+<p>Tests are a fundamental safety net and development tool to ensure that your package works as expected, both during development as well as on user systems.</p>
+<ol type="1">
+<li><p>Write <strong>unit tests</strong> for all functions and classes in your package, to ensure that all building blocks work correctly on their own (“white box” testing). Expect to rewrite tests for internal code when you refactor it.</p></li>
+<li><p>Write <strong>functional tests</strong> for all user facing functionality (“black box” testing). These tests ensure that the user API is stable when refactoring internal code.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://testthat.r-lib.org/">testthat</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://pytest.org/">pytest</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://docs.julialang.org/en/v1/stdlib/Test/">Test</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+<li><p>In addition, ensure a <strong>good coverage</strong> of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://covr.r-lib.org/">covr</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://coverage.readthedocs.io/">Coverage.py</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://github.com/JuliaCI/Coverage.jl">Coverage.jl</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+</ol>
+</section>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>Function definitions should be short, simple and enforce argument types with assertions.</p>
+<ol type="1">
+<li><p>Write <strong>short functions</strong> with less than 50 lines of code for a single and well-defined purpose, with <strong>few arguments</strong>, and low cyclomatic complexity, in order to reduce the risk of bugs, simplify writing tests and ensure that you can maintain them.</p></li>
+<li><p>Use <strong>type hints</strong> or types to explain to the user which argument of the function expects which type of input.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://openpharma.github.io/roxytypes/">roxytypes</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://docs.python.org/3/library/typing.html">typing</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://docs.julialang.org/en/v1/manual/types/">types</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+<li><p>Enforce types and other expected properties of function arguments with <strong>assertions</strong>, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://mllg.github.io/checkmate/">checkmate</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://pypi.org/project/assertpy/">assertpy</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://github.com/jw3126/ArgCheck.jl">ArgCheck.jl</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+</ol>
+</section>
+<section id="style" class="level2">
+<h2 class="anchored" data-anchor-id="style">Style</h2>
+<p>A consistent and readable code style that is language idiomatic should be used and enforced by style checks.</p>
+<ol type="1">
+<li><p>Use <strong>language idiomatic</strong> code and follow the <strong>“clean code” rules</strong> (use descriptive and meaningful names, prefer simpler over more complex code, avoid duplication of code, regularly refactor code), while allowing for exceptions only where needed.</p></li>
+<li><p>Use a <strong>formatting tool</strong> to automatically implement a consistent and readable code format.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://styler.r-lib.org/">styler</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://pypi.org/project/autopep8/">Autopep8</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://domluna.github.io/JuliaFormatter.jl/">JuliaFormatter.jl</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+<li><p>Use a <strong>style checking</strong> tool to enforce a consistent and readable code style.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<a href="https://lintr.r-lib.org/">lintr</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://pypi.org/project/pylint/">Pylint</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<p>
+Enabled in VScode via
+<a href="https://github.com/julia-vscode/StaticLint.jl">StaticLint.jl</a>
+</p>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+</ol>
+</section>
+<section id="life-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="life-cycle">Life cycle</h2>
+<p>Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.</p>
+<ol type="1">
+<li><p><strong>Reduce dependencies</strong> to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.</p></li>
+<li><p>Give clear information to users about changes in the package API via maintaining the <strong>change log</strong> and first <strong>deprecating functionality</strong> before removing it.</p>
+<table style="width:100%;">
+<tbody>
+
+<tr><td>
+<details>
+<summary>
+<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
+</summary>
+<p>
+<a href="https://cran.r-project.org/web/packages/lifecycle/index.html">lifecycle</a>
+<a href="https://fledge.cynkra.com/">fledge</a>
+</p>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
+</summary>
+<a href="https://deprecation.readthedocs.io/">deprecation</a>
+</details>
+</td>
+<td>
+<details>
+<summary>
+<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
+</summary>
+<a href="https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/">workflow</a>
+</details>
+</td>
+
+</tr></tbody>
+</table></li>
+<li><p>Use a <strong>central repository</strong> for version control, collecting and resolving issues, and managing releases. Include the publication of a <strong>contributing guide</strong> to help onboard new developers and enable community contributions.</p></li>
+</ol>
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1709596800000" data-listing-file-modified-sort="1710101180248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="741">
-<div class="thumbnail">
-<p><a href="./blog/hexwall_post/index.html" class="no-external"></a></p><a href="./blog/hexwall_post/index.html" class="no-external">
-<p><img src="./blog/hexwall_post/hexwall_logo.svg" class="thumbnail-image"></p>
-</a><p><a href="./blog/hexwall_post/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/hexwall_post/index.html" class="no-external">Announcing the Packages Hexwall</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/hexwall_post/index.html" class="no-external">Interactive exploration of the Clinical Trials CRAN Task View</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/hexwall_post/index.html" class="no-external">The CRAN tasks views are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 44 of task views spanning…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/hexwall_post/index.html" class="no-external">
-<div class="listing-date">
-Mar 5, 2024
-</div>
-<div class="listing-author">
-Yoni
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1697587200000" data-listing-file-modified-sort="1710101180224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
-<div class="thumbnail">
-<p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external"></a></p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">
-<p><img src="./blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="thumbnail-image"></p>
-</a><p><a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">Celebrating 5 workshops on good SWE practices in 2023</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">Thanks to all local and <code>openstatsware</code> contributors!</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">With the last workshop this year in Montreal we achieved 5 workshops this year.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/2023-gswe4rp-workshops-wrapup/index.html" class="no-external">
-<div class="listing-date">
-Oct 18, 2023
-</div>
-<div class="listing-author">
-Daniel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1695945600000" data-listing-file-modified-sort="1710101180252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1506">
-<div class="thumbnail">
-<p><a href="./blog/risw2023_session/index.html" class="no-external"></a></p><a href="./blog/risw2023_session/index.html" class="no-external">
-<p><img src="./blog/risw2023_session/panel_photo.jpeg" class="thumbnail-image"></p>
-</a><p><a href="./blog/risw2023_session/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/risw2023_session/index.html" class="no-external">Considerations in developing and using open-source statistical software in Pharma</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/risw2023_session/index.html" class="no-external">Summary of our session at this year’s Regulatory-Industry Statistics Workshop</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/risw2023_session/index.html" class="no-external">We shared our working group progress and discussed with the panel and the audience challenges and next steps.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/risw2023_session/index.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2023
-</div>
-<div class="listing-author">
-Daniel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="news" data-listing-date-sort="1695772800000" data-listing-file-modified-sort="1710101180252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<div class="thumbnail">
-<p><a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a></p><a href="./blog/new_short_name_and_logo/index.html" class="no-external">
-<p><img src="./blog/new_short_name_and_logo/sticker-new-1200.png" class="thumbnail-image"></p>
-</a><p><a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/new_short_name_and_logo/index.html" class="no-external">Announcing the new short name and logo</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/new_short_name_and_logo/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/new_short_name_and_logo/index.html" class="no-external">We got a new short name <strong>openstatsware</strong> and a new logo.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/new_short_name_and_logo/index.html" class="no-external">
-<div class="listing-date">
-Sep 27, 2023
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1676246400000" data-listing-file-modified-sort="1710101180244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<div class="thumbnail">
-<p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external"></a></p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">
-<p><img src="./blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" class="thumbnail-image"></p>
-</a><p><a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Workshop on good software engineering practice for R</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Teaching foundations of SWE for statisticians with R</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">Under the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/20230210-bbs-swe-course-basel/index.html" class="no-external">
-<div class="listing-date">
-Feb 13, 2023
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1668902400000" data-listing-file-modified-sort="1710101180248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195">
-<div class="thumbnail">
-<p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external"></a></p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">
-<p><img src="./blog/mmrm-video-nov-2022/mmrm-video.png" class="thumbnail-image"></p>
-</a><p><a href="./blog/mmrm-video-nov-2022/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">Visualizing successful collaboration</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">A visual time lapse of six months of work on the mmrm R package</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">Communicating the benefit of open collaboration can be hard - we used the “gource” tool to create a video based on the repository history of the mmrm R package.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/mmrm-video-nov-2022/index.html" class="no-external">
-<div class="listing-date">
-Nov 20, 2022
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="news" data-listing-date-sort="1668556800000" data-listing-file-modified-sort="1710101180248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="115">
-<div class="thumbnail">
-<p><a href="./blog/biop_report/index.html" class="no-external"></a></p><a href="./blog/biop_report/index.html" class="no-external">
-<p><img src="./blog/biop_report/asa-biop.jpg" class="thumbnail-image"></p>
-</a><p><a href="./blog/biop_report/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/biop_report/index.html" class="no-external">Software Engineering in Biostatistics - Towards Improving a Critical Competence</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/biop_report/index.html" class="no-external">Article introducing the SWE WG in BIOP Report</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/biop_report/index.html" class="no-external">We wrote an article for the Biopharmaceutical Report introducing the SWE WG.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/biop_report/index.html" class="no-external">
-<div class="listing-date">
-Nov 16, 2022
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="news" data-listing-date-sort="1666569600000" data-listing-file-modified-sort="1710101180256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="thumbnail">
-<p><a href="./blog/wg_announcement/index.html" class="no-external"></a></p><a href="./blog/wg_announcement/index.html" class="no-external">
-<p><img src="./blog/wg_announcement/sticker-1200.png" class="thumbnail-image"></p>
-</a><p><a href="./blog/wg_announcement/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/wg_announcement/index.html" class="no-external">New ASA BIOP working group on Software Engineering</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blog/wg_announcement/index.html" class="no-external">Fostering open source code collaboration within Biostatistics</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./blog/wg_announcement/index.html" class="no-external">We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blog/wg_announcement/index.html" class="no-external">
-<div class="listing-date">
-Oct 24, 2022
-</div>
-<div class="listing-author">
-SWE WG
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
