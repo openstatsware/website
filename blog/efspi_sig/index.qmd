@@ -1,0 +1,19 @@
+---
+title: "openstatsware is now an official EFSPI SIG!"
+author: "Daniel"
+subtitle: Announcing the membership in the EFSPI family
+description: openstatsware is now an official EFSPI Special Interest Group (SIG), in addition to being an ASA BIOP scientific working group.
+date: "2024-03-11"
+categories: [news]
+image: "efspi_logo_square.jpeg"
+---
+
+[EFSPI](https://www.efspi.org/), the European Federation of Statisticians in the Pharmaceutical Industry, is the major European organization in Biopharmaceutical Statistics. The corresponding [European Special Interest Groups (SIGs)](https://www.psiweb.org/sigs-special-interest-groups/sigs) are jointly sponsored by EFSPI and [PSI](https://www.psiweb.org/), which is a member of EFSPI itself.
+
+We are proud and happy to announce that after a long application process, openstatsware is now also an official EFSPI SIG! The corresponding web site is [here](https://www.psiweb.org/sigs-special-interest-groups/software-engineering) and links to our central home page [openstatsware.org](https://openstatsware.org) such that we only need to maintain the latter on a frequent basis.
+
+As many of the openstatsware members and their companies are based in Europe, the association with EFSPI emphasizes nicely the European pillar of openstatsware. We will also continue to organize conference sessions, work shops etc. in Europe.
+
+The new association does fit well with the existing ASA BIOP association of openstatsware. In fact, there are other working groups that are associated with both ASA BIOP and EFSPI (e.g. [Oncology Estimands](http://www.oncoestimand.org)). openstatsware continues to be a global working group across continents and countries.
+
+We are looking forward to the strenghtened collaboration with other EFSPI SIGs and corresponding events in Europe!
