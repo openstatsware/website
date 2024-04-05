@@ -41,6 +41,7 @@ website:
       - icon: rss
         href: blog.xml
 
+  # Giscus comments:
   comments:
     giscus:
       # Reference: https://quarto.org/docs/reference/projects/books.html#giscus
