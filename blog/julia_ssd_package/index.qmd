@@ -1,0 +1,22 @@
+---
+title: "First Julia package from openstatsware"
+author: "Daniel"
+subtitle: Announcing Bayesian Safety Signal Detection package
+description: "`SafetySignalDetection.jl` is our first Julia package, please try it out!"
+date: "2024-04-08"
+categories: [news]
+image: "julia.svg"
+---
+
+We are happy to announce the first Julia package from `openstatsware`: please welcome [`SafetySignalDetection.jl`](https://openpharma.github.io/SafetySignalDetection.jl/). This package implements Bayesian safety signal detection as proposed by [Brock et al. (2023)](https://openpharma.github.io/SafetySignalDetection.jl/stable/#Brock:2023) using the [Turing.jl](https://github.com/TuringLang/Turing.jl) framework. Please have a look at the corresponding [introduction](https://openpharma.github.io/SafetySignalDetection.jl/stable/introduction/) to learn more.
+
+We successfully added the package today to the official Julia registry ([link](https://github.com/JuliaRegistries/General/blob/master/S/SafetySignalDetection/Package.toml)), such that you can easily install it in Julia using:
+
+```julia
+using Pkg
+Pkg.add("SafetySignalDetection")
+```
+
+The corresponding [workstream](../../ssd_package.qmd) is open for new members who are interested in further developing the package, e.g. adding methodological variations etc.
+
+And if you are interested in a presentation about why Julia is interesting for implementing statistical software, don't miss the [PSI webinar on 17th April](https://www.psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all)!

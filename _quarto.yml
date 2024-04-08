@@ -28,11 +28,12 @@ website:
         text: "News"
       - href: blog.qmd
         text: "Blog"
-      - text: "Task Forces"
+      - text: "Workstreams"
         menu:
           - href: mmrm_R_package.qmd
           - href: hta_page.qmd
           - href: bayesian_mmrm_R_package.qmd
+          - href: ssd_package.qmd
       - href: presentations.qmd
         text: "Presentations"
       - href: hexwall.qmd

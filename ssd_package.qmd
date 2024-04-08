@@ -1,0 +1,15 @@
+---
+title: "Bayesian Safety Signal Detection Julia Package"
+---
+
+**Lead**: Daniel Sabanes Bove (Roche)
+
+**Objective**: To develop a Julia package for Bayesian Safety Signal Detection based on the [Brock et al (2021)](https://doi.org/10.1002/pst.2278) method.
+
+```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.R", sep = ""))
+read.members("SSD")
+```
+
+To learn more about the Julia package visit [openpharma.github.io/SafetySignalDetection.jl](https://openpharma.github.io/SafetySignalDetection.jl/).
