@@ -9,8 +9,43 @@
 <link>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</link>
 <atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
-<generator>quarto-1.4.551</generator>
-<lastBuildDate>Mon, 11 Mar 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.553</generator>
+<lastBuildDate>Mon, 08 Apr 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>First Julia package from openstatsware published</title>
+  <dc:creator>Daniel </dc:creator>
+  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We are happy to announce the first Julia package from <code>openstatsware</code>: please welcome <a href="https://openpharma.github.io/SafetySignalDetection.jl/"><code>SafetySignalDetection.jl</code></a>. This package implements Bayesian safety signal detection as proposed by <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/#Brock:2023">Brock et al.&nbsp;(2023)</a> using the <a href="https://github.com/TuringLang/Turing.jl">Turing.jl</a> framework. Please have a look at the corresponding <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/introduction/">introduction</a> to learn more.</p>
+<p>We successfully added the package today to the official Julia registry (<a href="https://github.com/JuliaRegistries/General/blob/master/S/SafetySignalDetection/Package.toml">link</a>), such that you can easily install it in Julia using:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">using</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Pkg</span></span>
+<span id="cb1-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">Pkg</span>.<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">add</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
+<p>The corresponding <a href="../../ssd_package.html">workstream</a> is open for new members who are interested in further developing the package, e.g.&nbsp;adding methodological variations etc.</p>
+<p>And if you are interested in a presentation about why Julia is interesting for implementing statistical software, don’t miss the <a href="https://www.psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all">PSI webinar on 17th April</a>!</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/</guid>
+  <pubDate>Mon, 08 Apr 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/julia.svg" medium="image" type="image/svg+xml"/>
+</item>
 <item>
   <title>openstatsware is now an official EFSPI SIG!</title>
   <dc:creator>Daniel </dc:creator>
@@ -51,23 +86,23 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="ulkhikfaov" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#ulkhikfaov table {
+<div id="bykqtiikpq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#bykqtiikpq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ulkhikfaov thead, #ulkhikfaov tbody, #ulkhikfaov tfoot, #ulkhikfaov tr, #ulkhikfaov td, #ulkhikfaov th {
+#bykqtiikpq thead, #bykqtiikpq tbody, #bykqtiikpq tfoot, #bykqtiikpq tr, #bykqtiikpq td, #bykqtiikpq th {
   border-style: none;
 }
 
-#ulkhikfaov p {
+#bykqtiikpq p {
   margin: 0;
   padding: 0;
 }
 
-#ulkhikfaov .gt_table {
+#bykqtiikpq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -93,12 +128,12 @@
   border-left-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_caption {
+#bykqtiikpq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ulkhikfaov .gt_title {
+#bykqtiikpq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -110,7 +145,7 @@
   border-bottom-width: 0;
 }
 
-#ulkhikfaov .gt_subtitle {
+#bykqtiikpq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -122,7 +157,7 @@
   border-top-width: 0;
 }
 
-#ulkhikfaov .gt_heading {
+#bykqtiikpq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -134,13 +169,13 @@
   border-right-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_bottom_border {
+#bykqtiikpq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_col_headings {
+#bykqtiikpq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -155,7 +190,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_col_heading {
+#bykqtiikpq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -175,7 +210,7 @@
   overflow-x: hidden;
 }
 
-#ulkhikfaov .gt_column_spanner_outer {
+#bykqtiikpq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -187,15 +222,15 @@
   padding-right: 4px;
 }
 
-#ulkhikfaov .gt_column_spanner_outer:first-child {
+#bykqtiikpq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ulkhikfaov .gt_column_spanner_outer:last-child {
+#bykqtiikpq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ulkhikfaov .gt_column_spanner {
+#bykqtiikpq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -207,11 +242,11 @@
   width: 100%;
 }
 
-#ulkhikfaov .gt_spanner_row {
+#bykqtiikpq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ulkhikfaov .gt_group_heading {
+#bykqtiikpq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -237,7 +272,7 @@
   text-align: left;
 }
 
-#ulkhikfaov .gt_empty_group_heading {
+#bykqtiikpq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -252,15 +287,15 @@
   vertical-align: middle;
 }
 
-#ulkhikfaov .gt_from_md > :first-child {
+#bykqtiikpq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ulkhikfaov .gt_from_md > :last-child {
+#bykqtiikpq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ulkhikfaov .gt_row {
+#bykqtiikpq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -279,7 +314,7 @@
   overflow-x: hidden;
 }
 
-#ulkhikfaov .gt_stub {
+#bykqtiikpq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -292,7 +327,7 @@
   padding-right: 5px;
 }
 
-#ulkhikfaov .gt_stub_row_group {
+#bykqtiikpq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -306,15 +341,15 @@
   vertical-align: top;
 }
 
-#ulkhikfaov .gt_row_group_first td {
+#bykqtiikpq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ulkhikfaov .gt_row_group_first th {
+#bykqtiikpq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ulkhikfaov .gt_summary_row {
+#bykqtiikpq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -324,16 +359,16 @@
   padding-right: 5px;
 }
 
-#ulkhikfaov .gt_first_summary_row {
+#bykqtiikpq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_first_summary_row.thick {
+#bykqtiikpq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ulkhikfaov .gt_last_summary_row {
+#bykqtiikpq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -343,7 +378,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_grand_summary_row {
+#bykqtiikpq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -353,7 +388,7 @@
   padding-right: 5px;
 }
 
-#ulkhikfaov .gt_first_grand_summary_row {
+#bykqtiikpq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -363,7 +398,7 @@
   border-top-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_last_grand_summary_row_top {
+#bykqtiikpq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -373,11 +408,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_striped {
+#bykqtiikpq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ulkhikfaov .gt_table_body {
+#bykqtiikpq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -386,7 +421,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_footnotes {
+#bykqtiikpq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -400,7 +435,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_footnote {
+#bykqtiikpq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -409,7 +444,7 @@
   padding-right: 5px;
 }
 
-#ulkhikfaov .gt_sourcenotes {
+#bykqtiikpq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -423,7 +458,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ulkhikfaov .gt_sourcenote {
+#bykqtiikpq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -431,63 +466,63 @@
   padding-right: 5px;
 }
 
-#ulkhikfaov .gt_left {
+#bykqtiikpq .gt_left {
   text-align: left;
 }
 
-#ulkhikfaov .gt_center {
+#bykqtiikpq .gt_center {
   text-align: center;
 }
 
-#ulkhikfaov .gt_right {
+#bykqtiikpq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ulkhikfaov .gt_font_normal {
+#bykqtiikpq .gt_font_normal {
   font-weight: normal;
 }
 
-#ulkhikfaov .gt_font_bold {
+#bykqtiikpq .gt_font_bold {
   font-weight: bold;
 }
 
-#ulkhikfaov .gt_font_italic {
+#bykqtiikpq .gt_font_italic {
   font-style: italic;
 }
 
-#ulkhikfaov .gt_super {
+#bykqtiikpq .gt_super {
   font-size: 65%;
 }
 
-#ulkhikfaov .gt_footnote_marks {
+#bykqtiikpq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ulkhikfaov .gt_asterisk {
+#bykqtiikpq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ulkhikfaov .gt_indent_1 {
+#bykqtiikpq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ulkhikfaov .gt_indent_2 {
+#bykqtiikpq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ulkhikfaov .gt_indent_3 {
+#bykqtiikpq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ulkhikfaov .gt_indent_4 {
+#bykqtiikpq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ulkhikfaov .gt_indent_5 {
+#bykqtiikpq .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -527,7 +562,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/CausalInference/">Causal Inference</a></td>
 <td class="gt_row gt_left" headers="maintainers">Imke Mayer, Pan Zhao, Noah Greifer, Nick Huntington-Klein, Julie Josse</td>
 <td class="gt_row gt_right" headers="last_update">2023-08-04</td>
-<td class="gt_row gt_right" headers="n_pkg">156</td>
+<td class="gt_row gt_right" headers="n_pkg">155</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ChemPhys/">Chemometrics and Computational Physics</a></td>
@@ -623,7 +658,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Hydrology/">Hydrological Data and Modeling</a></td>
 <td class="gt_row gt_left" headers="maintainers">Sam Albers, Ilaria Prosdocimi</td>
 <td class="gt_row gt_right" headers="last_update">2024-03-08</td>
-<td class="gt_row gt_right" headers="n_pkg">131</td>
+<td class="gt_row gt_right" headers="n_pkg">130</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MachineLearning/">Machine Learning &amp; Statistical Learning</a></td>

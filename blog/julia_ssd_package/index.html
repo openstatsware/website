@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Daniel">
+<meta name="dcterms.date" content="2024-04-08">
+<meta name="description" content="SafetySignalDetection.jl is our first Julia package, please try it out!">
 
-<title>ASA BIOP SWE WG - MMRM R Package Development</title>
+<title>ASA BIOP SWE WG - First Julia package from openstatsware published</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +23,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./sticker/openstatsware-hex.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../sticker/openstatsware-hex.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,12 +110,12 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./sticker/openstatsware-hex.svg" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../sticker/openstatsware-hex.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -88,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -97,33 +134,33 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
-    <a class="dropdown-item" href="./goals.html">
+    <a class="dropdown-item" href="../../goals.html">
  <span class="dropdown-text">Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./people.html">
+    <a class="dropdown-item" href="../../people.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sponsors.html">
+    <a class="dropdown-item" href="../../sponsors.html">
  <span class="dropdown-text">Sponsors</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./join_us.html">
+    <a class="dropdown-item" href="../../join_us.html">
  <span class="dropdown-text">Join Us</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./contact_us.html">
+    <a class="dropdown-item" href="../../contact_us.html">
  <span class="dropdown-text">Contact Us</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./news.html"> 
+    <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -132,35 +169,35 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-workstreams">    
         <li>
-    <a class="dropdown-item" href="./mmrm_R_package.html">
+    <a class="dropdown-item" href="../../mmrm_R_package.html">
  <span class="dropdown-text">MMRM R Package Development</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./hta_page.html">
+    <a class="dropdown-item" href="../../hta_page.html">
  <span class="dropdown-text">HTA-R workstream</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./bayesian_mmrm_R_package.html">
+    <a class="dropdown-item" href="../../bayesian_mmrm_R_package.html">
  <span class="dropdown-text">Bayesian MMRM R Package Development</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ssd_package.html">
+    <a class="dropdown-item" href="../../ssd_package.html">
  <span class="dropdown-text">Bayesian Safety Signal Detection Julia Package</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./presentations.html"> 
+    <a class="nav-link" href="../../presentations.html"> 
 <span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./hexwall.html"> 
+    <a class="nav-link" href="../../hexwall.html"> 
 <span class="menu-text">TaskView Hexwall</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -172,88 +209,62 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">First Julia package from <code>openstatsware</code> published</h1>
+            <p class="subtitle lead">Announcing Bayesian Safety Signal Detection package</p>
+                  <div>
+        <div class="description">
+          <code>SafetySignalDetection.jl</code> is our first Julia package, please try it out!
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Daniel </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 8, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">MMRM R Package Development</h1>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
 
 
-</header>
-
-
-<p><strong>Lead</strong>: Daniel Sabanes Bove (Roche)</p>
-<p><strong>Objective</strong>: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">First Name</th>
-<th style="text-align: left;">Last Name</th>
-<th style="text-align: left;">Affiliation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Brian</td>
-<td style="text-align: left;">Lang</td>
-<td style="text-align: left;">MSD</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Daniel</td>
-<td style="text-align: left;">Leibovitz</td>
-<td style="text-align: left;">Independent</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Daniel</td>
-<td style="text-align: left;">Sabanés Bové</td>
-<td style="text-align: left;">Roche</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Julia</td>
-<td style="text-align: left;">Dedic</td>
-<td style="text-align: left;">Roche</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Kevin</td>
-<td style="text-align: left;">Kunzmann</td>
-<td style="text-align: left;">Boehringer Ingelheim</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Liming</td>
-<td style="text-align: left;">Li</td>
-<td style="text-align: left;">Roche</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ya</td>
-<td style="text-align: left;">Wang</td>
-<td style="text-align: left;">Gilead Sciences</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Yoni</td>
-<td style="text-align: left;">Sidi</td>
-<td style="text-align: left;">Pinpoint Strategies</td>
-</tr>
-</tbody>
-</table>
-<p>To learn more about the MMRM R package visit <a href="https://openpharma.github.io/mmrm/">openpharma.github.io/mmrm</a>.</p>
+<p>We are happy to announce the first Julia package from <code>openstatsware</code>: please welcome <a href="https://openpharma.github.io/SafetySignalDetection.jl/"><code>SafetySignalDetection.jl</code></a>. This package implements Bayesian safety signal detection as proposed by <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/#Brock:2023">Brock et al.&nbsp;(2023)</a> using the <a href="https://github.com/TuringLang/Turing.jl">Turing.jl</a> framework. Please have a look at the corresponding <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/introduction/">introduction</a> to learn more.</p>
+<p>We successfully added the package today to the official Julia registry (<a href="https://github.com/JuliaRegistries/General/blob/master/S/SafetySignalDetection/Package.toml">link</a>), such that you can easily install it in Julia using:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">add</span>(<span class="st">"SafetySignalDetection"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The corresponding <a href="../../ssd_package.html">workstream</a> is open for new members who are interested in further developing the package, e.g.&nbsp;adding methodological variations etc.</p>
+<p>And if you are interested in a presentation about why Julia is interesting for implementing statistical software, don’t miss the <a href="https://www.psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all">PSI webinar on 17th April</a>!</p>
 
 
 
