@@ -1,5 +1,5 @@
 ---
-title: "First Julia package from openstatsware"
+title: "First Julia package from `openstatsware` published"
 author: "Daniel"
 subtitle: Announcing Bayesian Safety Signal Detection package
 description: "`SafetySignalDetection.jl` is our first Julia package, please try it out!"
