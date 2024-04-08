@@ -1,70 +1,70 @@
-Firstname,Lastname,Affiliation,SWE_WG_Member,MMRM,HTA,bayesian_mmrm
-Alessandro,Gasparini,Red Door Analytics,1,0,0,0
-Andy,Miskell,Eli Lilly,1,0,0,0
-Ben,Arancibia,GSK,1,0,0,0
-Brian,Lang,MSD,1,1,0,0
-Christian,Stock,Boehringer Ingelheim,1,0,0,1
-Daniel,Leibovitz,Independent,1,1,0,1
-Daniel,Sabanés Bové,Roche,1,1,0,0
-Dong,Xi,Gilead Sciences,1,0,0,0
-Friedrich,Pahlke,RPACT,1,0,0,0
-Jian,Wang,Eli Lilly,1,0,0,0
-Keaven,Anderson,Merck,1,0,0,0
-Kevin,Kunzmann,Boehringer Ingelheim,1,1,0,1
-Peikun,Wu,R&G US,1,0,0,0
-Ron,Yu,Gilead Sciences,1,0,0,0
-Will,Landau,Eli Lilly,1,0,0,1
-Ya,Wang,Gilead Sciences,1,1,0,0
-Liming,Li,Roche,1,1,0,0
-Julia,Dedic,Roche,0,1,0,0
-Joe,Rickert,RStudio & R Consortium,1,0,0,0
-Michelle,Zhang,Affamed,1,0,0,0
-Orla,Doyle,Novartis,1,0,0,0
-Andrew,Bean,Novartis,1,0,0,1
-Terri,Johnson,Edwards Lifesciences,1,0,0,0
-Yoni,Sidi,Pinpoint Strategies,1,1,0,1
-Vitaly,Druker,AstraZeneca,1,0,0,0
-Juliane,Manitz,EMD Serono,1,0,0,0
-Pascal,Kieslich,Merck KGaA,1,0,0,0
-Songgu,Xie,Regeneron,1,0,0,0
-Ryan,Wang,Johnson & Johnson,1,0,0,0
-Gregory,Chen,MSD,1,0,1,0
-Laura,Harris,Denali,1,0,0,0
-Colombe,Chappey,Pfizer,1,0,0,0
-Martin,Kappler,Cytel,1,0,0,0
-Pravin,Madhavan,Berry Consultants,1,0,0,0
-Nick,Berry,Berry Consultants,1,0,0,0
-Quang,Nguyen,Regeneron,1,0,0,0
-Wilmar,Igl,ICON,1,0,0,0
-Clara,Beck,Bayer,1,0,0,0
-Issac,Gravestock,Roche,0,0,1,0
-Christos,Kokaliaris,Roche,0,0,1,0
-Michael,Seo,Roche,0,0,1,0
-Miranta,Antoniou,Roche,0,0,1,0
-Rossella,Belleli,Roche,0,0,1,0
-Cedric,Revil,MSD,0,0,1,0
-Chrysostomos,Kalyvas,MSD,0,0,1,0
-Henrik,Thomsen,Novo Nordisk,1,0,0,0
-Yann,Féat,mainanalytics,1,0,0,0
-Sergio,Olmos,Sanofi,1,0,0,0
-Fan,Wu,Sanofi,1,0,0,0
-Peng,Zhang,CIMS Global,1,0,0,0
-Elias Laurin,Meyer,Berry Consultants,1,0,0,0
-Michał,Majka,Erste Group,1,0,0,0
-Lorin,Towle-Miller,GSK,1,0,0,0
-Nils,Penard,UCB,1,0,0,0
-Marianne,Grinberg,UCB,1,0,0,0
-Kristian,Brock,AstraZeneca,1,0,0,0
-Jeffrey,Long,GSK,1,0,0,0
-Serene,Jiang,Johnson & Johnson,1,0,0,0
-Lars,Andersen,RPACT,1,0,0,0
-Christian Haargaard,Olsen,Novo Nordisk,0,0,1,0
-Simon,Clancy,Novo Nordisk,0,0,1,0
-Thomas,Maltesen,Novo Nordisk,0,0,1,0
-Matthew,Phelps,Novo Nordisk,0,0,1,0
-Nicolai Skov,Johnsen,Novo Nordisk,0,0,1,0
-Keovilay,Chanthavinout,Roche,0,0,1,0
-Rajesh,Hagalwadi,MaxisIT,1,0,0,0
-Kamil,Sijko,Transition Technologies Science,1,0,0,0
-Claudia,Carlucci,Daiichi Sankyo,1,0,1,0
-Sergei,Krivtov,Daiichi Sankyo,1,0,1,0
+Firstname,Lastname,Affiliation,SWE_WG_Member,MMRM,HTA,bayesian_mmrm,SSD
+Alessandro,Gasparini,Red Door Analytics,1,0,0,0,0
+Andy,Miskell,Eli Lilly,1,0,0,0,0
+Ben,Arancibia,GSK,1,0,0,0,0
+Brian,Lang,MSD,1,1,0,0,0
+Christian,Stock,Boehringer Ingelheim,1,0,0,1,0
+Daniel,Leibovitz,Independent,1,1,0,1,0
+Daniel,Sabanés Bové,Roche,1,1,0,0,1
+Dong,Xi,Gilead Sciences,1,0,0,0,0
+Friedrich,Pahlke,RPACT,1,0,0,0,0
+Jian,Wang,Eli Lilly,1,0,0,0,0
+Keaven,Anderson,Merck,1,0,0,0,0
+Kevin,Kunzmann,Boehringer Ingelheim,1,1,0,1,0
+Peikun,Wu,R&G US,1,0,0,0,0
+Ron,Yu,Gilead Sciences,1,0,0,0,0
+Will,Landau,Eli Lilly,1,0,0,1,0
+Ya,Wang,Gilead Sciences,1,1,0,0,0
+Liming,Li,Roche,1,1,0,0,0
+Julia,Dedic,Roche,0,1,0,0,0
+Joe,Rickert,RStudio & R Consortium,1,0,0,0,0
+Michelle,Zhang,Affamed,1,0,0,0,0
+Orla,Doyle,Novartis,1,0,0,0,0
+Andrew,Bean,Novartis,1,0,0,1,0
+Terri,Johnson,Edwards Lifesciences,1,0,0,0,0
+Yoni,Sidi,Pinpoint Strategies,1,1,0,1,0
+Vitaly,Druker,AstraZeneca,1,0,0,0,0
+Juliane,Manitz,EMD Serono,1,0,0,0,0
+Pascal,Kieslich,Merck KGaA,1,0,0,0,0
+Songgu,Xie,Regeneron,1,0,0,0,0
+Ryan,Wang,Johnson & Johnson,1,0,0,0,0
+Gregory,Chen,MSD,1,0,1,0,0
+Laura,Harris,Denali,1,0,0,0,0
+Colombe,Chappey,Pfizer,1,0,0,0,0
+Martin,Kappler,Cytel,1,0,0,0,0
+Pravin,Madhavan,Berry Consultants,1,0,0,0,0
+Nick,Berry,Berry Consultants,1,0,0,0,0
+Quang,Nguyen,Regeneron,1,0,0,0,0
+Wilmar,Igl,ICON,1,0,0,0,0
+Clara,Beck,Bayer,1,0,0,0,0
+Issac,Gravestock,Roche,0,0,1,0,0
+Christos,Kokaliaris,Roche,0,0,1,0,0
+Michael,Seo,Roche,0,0,1,0,0
+Miranta,Antoniou,Roche,0,0,1,0,0
+Rossella,Belleli,Roche,0,0,1,0,0
+Cedric,Revil,MSD,0,0,1,0,0
+Chrysostomos,Kalyvas,MSD,0,0,1,0,0
+Henrik,Thomsen,Novo Nordisk,1,0,0,0,0
+Yann,Féat,mainanalytics,1,0,0,0,0
+Sergio,Olmos,Sanofi,1,0,0,0,0
+Fan,Wu,Sanofi,1,0,0,0,0
+Peng,Zhang,CIMS Global,1,0,0,0,0
+Elias Laurin,Meyer,Berry Consultants,1,0,0,0,0
+Michał,Majka,Erste Group,1,0,0,0,0
+Lorin,Towle-Miller,GSK,1,0,0,0,0
+Nils,Penard,UCB,1,0,0,0,0
+Marianne,Grinberg,UCB,1,0,0,0,0
+Kristian,Brock,AstraZeneca,1,0,0,0,1
+Jeffrey,Long,GSK,1,0,0,0,0
+Serene,Jiang,Johnson & Johnson,1,0,0,0,0
+Lars,Andersen,RPACT,1,0,0,0,0
+Christian Haargaard,Olsen,Novo Nordisk,0,0,1,0,0
+Simon,Clancy,Novo Nordisk,0,0,1,0,0
+Thomas,Maltesen,Novo Nordisk,0,0,1,0,0
+Matthew,Phelps,Novo Nordisk,0,0,1,0,0
+Nicolai Skov,Johnsen,Novo Nordisk,0,0,1,0,0
+Keovilay,Chanthavinout,Roche,0,0,1,0,0
+Rajesh,Hagalwadi,MaxisIT,1,0,0,0,0
+Kamil,Sijko,Transition Technologies Science,1,0,0,0,0
+Claudia,Carlucci,Daiichi Sankyo,1,0,1,0,0
+Sergei,Krivtov,Daiichi Sankyo,1,0,1,0,0
