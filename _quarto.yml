@@ -39,6 +39,8 @@ website:
       - href: hexwall.qmd
         text: "TaskView Hexwall"
     right:
+      - icon: github
+        href: https://github.com/RConsortium/asa-biop-swe-wg
       - icon: rss
         href: blog.xml
 
