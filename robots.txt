@@ -1,1 +1,1 @@
-Sitemap: https://rconsortium.github.io/asa-biop-swe-wg/sitemap.xml
+Sitemap: www.openstatsware.org/sitemap.xml

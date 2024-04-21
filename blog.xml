@@ -5,16 +5,16 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>ASA BIOP SWE WG</title>
-<link>https://rconsortium.github.io/asa-biop-swe-wg/blog.html</link>
-<atom:link href="https://rconsortium.github.io/asa-biop-swe-wg/blog.xml" rel="self" type="application/rss+xml"/>
-<description>Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)</description>
+<title>openstatsware</title>
+<link>www.openstatsware.org/blog.html</link>
+<atom:link href="www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Website for the `openstatsware&#39; Working Group</description>
 <generator>quarto-1.4.553</generator>
 <lastBuildDate>Mon, 08 Apr 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>First Julia package from openstatsware published</title>
   <dc:creator>Daniel </dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/</link>
+  <link>www.openstatsware.org/blog/julia_ssd_package/</link>
   <description><![CDATA[ 
 
 
@@ -42,14 +42,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/</guid>
+  <guid>www.openstatsware.org/blog/julia_ssd_package/</guid>
   <pubDate>Mon, 08 Apr 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/julia_ssd_package/julia.svg" medium="image" type="image/svg+xml"/>
+  <media:content url="www.openstatsware.org/blog/julia_ssd_package/julia.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>openstatsware is now an official EFSPI SIG!</title>
   <dc:creator>Daniel </dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/efspi_sig/</link>
+  <link>www.openstatsware.org/blog/efspi_sig/</link>
   <description><![CDATA[ 
 
 
@@ -66,14 +66,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/efspi_sig/</guid>
+  <guid>www.openstatsware.org/blog/efspi_sig/</guid>
   <pubDate>Mon, 11 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/efspi_sig/efspi_logo_square.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="www.openstatsware.org/blog/efspi_sig/efspi_logo_square.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Announcing the Packages Hexwall</title>
   <dc:creator>Yoni </dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/hexwall_post/</link>
+  <link>www.openstatsware.org/blog/hexwall_post/</link>
   <description><![CDATA[ 
 
 
@@ -86,23 +86,23 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="bykqtiikpq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#bykqtiikpq table {
+<div id="yofhorqjgt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#yofhorqjgt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bykqtiikpq thead, #bykqtiikpq tbody, #bykqtiikpq tfoot, #bykqtiikpq tr, #bykqtiikpq td, #bykqtiikpq th {
+#yofhorqjgt thead, #yofhorqjgt tbody, #yofhorqjgt tfoot, #yofhorqjgt tr, #yofhorqjgt td, #yofhorqjgt th {
   border-style: none;
 }
 
-#bykqtiikpq p {
+#yofhorqjgt p {
   margin: 0;
   padding: 0;
 }
 
-#bykqtiikpq .gt_table {
+#yofhorqjgt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -128,12 +128,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-left-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_caption {
+#yofhorqjgt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bykqtiikpq .gt_title {
+#yofhorqjgt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -145,7 +145,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-width: 0;
 }
 
-#bykqtiikpq .gt_subtitle {
+#yofhorqjgt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -157,7 +157,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-width: 0;
 }
 
-#bykqtiikpq .gt_heading {
+#yofhorqjgt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -169,13 +169,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_bottom_border {
+#yofhorqjgt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_col_headings {
+#yofhorqjgt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -190,7 +190,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_col_heading {
+#yofhorqjgt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -210,7 +210,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#bykqtiikpq .gt_column_spanner_outer {
+#yofhorqjgt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -222,15 +222,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 4px;
 }
 
-#bykqtiikpq .gt_column_spanner_outer:first-child {
+#yofhorqjgt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bykqtiikpq .gt_column_spanner_outer:last-child {
+#yofhorqjgt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bykqtiikpq .gt_column_spanner {
+#yofhorqjgt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -242,11 +242,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   width: 100%;
 }
 
-#bykqtiikpq .gt_spanner_row {
+#yofhorqjgt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bykqtiikpq .gt_group_heading {
+#yofhorqjgt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -272,7 +272,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   text-align: left;
 }
 
-#bykqtiikpq .gt_empty_group_heading {
+#yofhorqjgt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -287,15 +287,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: middle;
 }
 
-#bykqtiikpq .gt_from_md > :first-child {
+#yofhorqjgt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bykqtiikpq .gt_from_md > :last-child {
+#yofhorqjgt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bykqtiikpq .gt_row {
+#yofhorqjgt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -314,7 +314,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#bykqtiikpq .gt_stub {
+#yofhorqjgt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -327,7 +327,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bykqtiikpq .gt_stub_row_group {
+#yofhorqjgt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -341,15 +341,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: top;
 }
 
-#bykqtiikpq .gt_row_group_first td {
+#yofhorqjgt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bykqtiikpq .gt_row_group_first th {
+#yofhorqjgt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bykqtiikpq .gt_summary_row {
+#yofhorqjgt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -359,16 +359,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bykqtiikpq .gt_first_summary_row {
+#yofhorqjgt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_first_summary_row.thick {
+#yofhorqjgt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bykqtiikpq .gt_last_summary_row {
+#yofhorqjgt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -378,7 +378,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_grand_summary_row {
+#yofhorqjgt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -388,7 +388,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bykqtiikpq .gt_first_grand_summary_row {
+#yofhorqjgt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -398,7 +398,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_last_grand_summary_row_top {
+#yofhorqjgt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -408,11 +408,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_striped {
+#yofhorqjgt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bykqtiikpq .gt_table_body {
+#yofhorqjgt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -421,7 +421,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_footnotes {
+#yofhorqjgt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -435,7 +435,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_footnote {
+#yofhorqjgt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -444,7 +444,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bykqtiikpq .gt_sourcenotes {
+#yofhorqjgt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -458,7 +458,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bykqtiikpq .gt_sourcenote {
+#yofhorqjgt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -466,63 +466,63 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bykqtiikpq .gt_left {
+#yofhorqjgt .gt_left {
   text-align: left;
 }
 
-#bykqtiikpq .gt_center {
+#yofhorqjgt .gt_center {
   text-align: center;
 }
 
-#bykqtiikpq .gt_right {
+#yofhorqjgt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bykqtiikpq .gt_font_normal {
+#yofhorqjgt .gt_font_normal {
   font-weight: normal;
 }
 
-#bykqtiikpq .gt_font_bold {
+#yofhorqjgt .gt_font_bold {
   font-weight: bold;
 }
 
-#bykqtiikpq .gt_font_italic {
+#yofhorqjgt .gt_font_italic {
   font-style: italic;
 }
 
-#bykqtiikpq .gt_super {
+#yofhorqjgt .gt_super {
   font-size: 65%;
 }
 
-#bykqtiikpq .gt_footnote_marks {
+#yofhorqjgt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bykqtiikpq .gt_asterisk {
+#yofhorqjgt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bykqtiikpq .gt_indent_1 {
+#yofhorqjgt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bykqtiikpq .gt_indent_2 {
+#yofhorqjgt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bykqtiikpq .gt_indent_3 {
+#yofhorqjgt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bykqtiikpq .gt_indent_4 {
+#yofhorqjgt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bykqtiikpq .gt_indent_5 {
+#yofhorqjgt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -549,20 +549,20 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Agriculture/">Agricultural Science</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julia Piaskowski, Adam Sparks, Adrian Correndo</td>
-<td class="gt_row gt_right" headers="last_update">2024-03-06</td>
-<td class="gt_row gt_right" headers="n_pkg">163</td>
+<td class="gt_row gt_right" headers="last_update">2024-04-19</td>
+<td class="gt_row gt_right" headers="n_pkg">166</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Bayesian/">Bayesian Inference</a></td>
 <td class="gt_row gt_left" headers="maintainers">Jong Hee Park, Michela Cameletti, Xun Pang, Kevin M. Quinn</td>
 <td class="gt_row gt_right" headers="last_update">2023-07-17</td>
-<td class="gt_row gt_right" headers="n_pkg">198</td>
+<td class="gt_row gt_right" headers="n_pkg">195</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/CausalInference/">Causal Inference</a></td>
 <td class="gt_row gt_left" headers="maintainers">Imke Mayer, Pan Zhao, Noah Greifer, Nick Huntington-Klein, Julie Josse</td>
 <td class="gt_row gt_right" headers="last_update">2023-08-04</td>
-<td class="gt_row gt_right" headers="n_pkg">155</td>
+<td class="gt_row gt_right" headers="n_pkg">152</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ChemPhys/">Chemometrics and Computational Physics</a></td>
@@ -574,13 +574,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ClinicalTrials/">Clinical Trial Design, Monitoring, and Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ed Zhang, W. G. Zhang, R. G. Zhang</td>
 <td class="gt_row gt_right" headers="last_update">2021-12-29</td>
-<td class="gt_row gt_right" headers="n_pkg">56</td>
+<td class="gt_row gt_right" headers="n_pkg">55</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Cluster/">Cluster Analysis &amp; Finite Mixture Models</a></td>
 <td class="gt_row gt_left" headers="maintainers">Friedrich Leisch, Bettina Gruen</td>
-<td class="gt_row gt_right" headers="last_update">2024-04-02</td>
-<td class="gt_row gt_right" headers="n_pkg">104</td>
+<td class="gt_row gt_right" headers="last_update">2024-04-12</td>
+<td class="gt_row gt_right" headers="n_pkg">105</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Databases/">Databases with R</a></td>
@@ -598,13 +598,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Distributions/">Probability Distributions</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang, Patrice Kiener, Bruce J. Swihart</td>
 <td class="gt_row gt_right" headers="last_update">2024-03-13</td>
-<td class="gt_row gt_right" headers="n_pkg">301</td>
+<td class="gt_row gt_right" headers="n_pkg">299</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Econometrics/">Econometrics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Achim Zeileis, Grant McDermott, Kevin Tappe</td>
 <td class="gt_row gt_right" headers="last_update">2023-08-08</td>
-<td class="gt_row gt_right" headers="n_pkg">156</td>
+<td class="gt_row gt_right" headers="n_pkg">153</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Environmetrics/">Analysis of Ecological and Environmental Data</a></td>
@@ -622,7 +622,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ExperimentalDesign/">Design of Experiments (DoE) &amp; Analysis of Experimental Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ulrike Groemping, Tyler Morgan-Wall</td>
 <td class="gt_row gt_right" headers="last_update">2023-04-05</td>
-<td class="gt_row gt_right" headers="n_pkg">103</td>
+<td class="gt_row gt_right" headers="n_pkg">102</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ExtremeValue/">Extreme Value Analysis</a></td>
@@ -652,7 +652,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/HighPerformanceComputing/">High-Performance and Parallel Computing with R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Dirk Eddelbuettel</td>
 <td class="gt_row gt_right" headers="last_update">2024-01-29</td>
-<td class="gt_row gt_right" headers="n_pkg">93</td>
+<td class="gt_row gt_right" headers="n_pkg">92</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Hydrology/">Hydrological Data and Modeling</a></td>
@@ -682,13 +682,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MissingData/">Missing Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix</td>
 <td class="gt_row gt_right" headers="last_update">2024-01-29</td>
-<td class="gt_row gt_right" headers="n_pkg">273</td>
+<td class="gt_row gt_right" headers="n_pkg">270</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MixedModels/">Mixed, Multilevel, and Hierarchical Models in R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ben Bolker, Julia Piaskowski, Emi Tanaka, Phillip Alday, Wolfgang Viechtbauer</td>
 <td class="gt_row gt_right" headers="last_update">2022-10-31</td>
-<td class="gt_row gt_right" headers="n_pkg">158</td>
+<td class="gt_row gt_right" headers="n_pkg">155</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ModelDeployment">Model Deployment with R</a></td>
@@ -711,26 +711,26 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/OfficialStatistics/">Official Statistics &amp; Survey Statistics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Matthias Templ, Alexander Kowarik, Tobias Schoch</td>
-<td class="gt_row gt_right" headers="last_update">2023-09-20</td>
-<td class="gt_row gt_right" headers="n_pkg">136</td>
+<td class="gt_row gt_right" headers="last_update">2024-04-09</td>
+<td class="gt_row gt_right" headers="n_pkg">137</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Omics/">Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Aubert, Toby Dylan Hocking, Nathalie Vialaneix</td>
 <td class="gt_row gt_right" headers="last_update">2024-04-04</td>
-<td class="gt_row gt_right" headers="n_pkg">256</td>
+<td class="gt_row gt_right" headers="n_pkg">254</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Optimization/">Optimization and Mathematical Programming</a></td>
 <td class="gt_row gt_left" headers="maintainers">Florian Schwendinger, Hans W. Borchers</td>
 <td class="gt_row gt_right" headers="last_update">2024-03-17</td>
-<td class="gt_row gt_right" headers="n_pkg">139</td>
+<td class="gt_row gt_right" headers="n_pkg">138</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Pharmacokinetics/">Analysis of Pharmacokinetic Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Bill Denney</td>
 <td class="gt_row gt_right" headers="last_update">2022-12-05</td>
-<td class="gt_row gt_right" headers="n_pkg">45</td>
+<td class="gt_row gt_right" headers="n_pkg">43</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Phylogenetics/">Phylogenetics</a></td>
@@ -772,13 +772,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/SportsAnalytics/">Sports Analytics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Benjamin S. Baumer, Quang Nguyen, Gregory J. Matthews</td>
 <td class="gt_row gt_right" headers="last_update">2023-04-06</td>
-<td class="gt_row gt_right" headers="n_pkg">73</td>
+<td class="gt_row gt_right" headers="n_pkg">72</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Survival/">Survival Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Arthur Allignol, Aurelien Latouche</td>
 <td class="gt_row gt_right" headers="last_update">2023-09-10</td>
-<td class="gt_row gt_right" headers="n_pkg">222</td>
+<td class="gt_row gt_right" headers="n_pkg">221</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/TeachingStatistics/">Teaching Statistics</a></td>
@@ -802,7 +802,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/WebTechnologies/">Web Technologies and Services</a></td>
 <td class="gt_row gt_left" headers="maintainers">Mauricio Vargas Sepulveda, Will Beasley</td>
 <td class="gt_row gt_right" headers="last_update">2023-02-18</td>
-<td class="gt_row gt_right" headers="n_pkg">188</td>
+<td class="gt_row gt_right" headers="n_pkg">187</td>
 </tr>
 </tbody>
 </table>
@@ -844,14 +844,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/hexwall_post/</guid>
+  <guid>www.openstatsware.org/blog/hexwall_post/</guid>
   <pubDate>Tue, 05 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/hexwall_post/hexwall_logo.svg" medium="image" type="image/svg+xml"/>
+  <media:content url="www.openstatsware.org/blog/hexwall_post/hexwall_logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>Celebrating 5 workshops on good SWE practices in 2023</title>
   <dc:creator>Daniel </dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/</link>
+  <link>www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</link>
   <description><![CDATA[ 
 
 
@@ -864,15 +864,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
+<p><img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="img-fluid" style="width:100.0%"></p>
+<p><img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 </div>
@@ -921,14 +921,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/</guid>
+  <guid>www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</guid>
   <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" medium="image"/>
+  <media:content url="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" medium="image"/>
 </item>
 <item>
   <title>Considerations in developing and using open-source statistical software in Pharma</title>
   <dc:creator>Daniel </dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/risw2023_session/</link>
+  <link>www.openstatsware.org/blog/risw2023_session/</link>
   <description><![CDATA[ 
 
 
@@ -959,7 +959,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="panel-discussion">Panel discussion</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/risw2023_session/panel_photo.jpeg" class="img-fluid figure-img"></p>
+<p><img src="www.openstatsware.org/blog/risw2023_session/panel_photo.jpeg" class="img-fluid figure-img"></p>
 <figcaption>Panel discussion</figcaption>
 </figure>
 </div>
@@ -992,7 +992,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <p>The last question was whether extensive computing (e.g.&nbsp;cloud based sponsor submissions) could be handled during an FDA statistical review. Paul mentioned that unfortunately cloud based solutions are not currently compatible with security and other regulatory requirements. However, statistical reviewers have access to an FDA HPC environment, but the access process is not trivial, and can be time intensive.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/risw2023_session/panel_photo_2.jpg" class="img-fluid figure-img"></p>
+<p><img src="www.openstatsware.org/blog/risw2023_session/panel_photo_2.jpg" class="img-fluid figure-img"></p>
 <figcaption>Panel discussion</figcaption>
 </figure>
 </div>
@@ -1003,14 +1003,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/risw2023_session/</guid>
+  <guid>www.openstatsware.org/blog/risw2023_session/</guid>
   <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/risw2023_session/panel_photo.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="www.openstatsware.org/blog/risw2023_session/panel_photo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Announcing the new short name and logo</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/</link>
+  <link>www.openstatsware.org/blog/new_short_name_and_logo/</link>
   <description><![CDATA[ 
 
 
@@ -1019,20 +1019,20 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
 <p>The SWE WG got a new short name as <strong>openstatsware</strong>, which stands for <strong>open</strong>-source <strong>stat</strong>i<strong>s</strong>tical soft<strong>ware</strong>. The new short name reflects the objects of the WG, which are to engineer high-quality open-source statistical software and to develop and disseminate the best practices for the process.</p>
 <p>A new logo has been created to align with the new short name. Credit to Alessandro for designing the new logo.</p>
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/sticker-new-1200.png" alt="Hex Sticker for ASA BIOP SWE Working Group" width="200"></p>
+<p><img src="www.openstatsware.org/blog/new_short_name_and_logo/sticker-new-1200.png" alt="Hex Sticker for ASA BIOP SWE Working Group" width="200"></p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/</guid>
+  <guid>www.openstatsware.org/blog/new_short_name_and_logo/</guid>
   <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/new_short_name_and_logo/sticker-new-1200.png" medium="image" type="image/png" height="167" width="144"/>
+  <media:content url="www.openstatsware.org/blog/new_short_name_and_logo/sticker-new-1200.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 <item>
   <title>Workshop on good software engineering practice for R</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/</link>
+  <link>www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</link>
   <description><![CDATA[ 
 
 
@@ -1046,18 +1046,18 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Friedrich.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Friedrich.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/Kevin.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Kevin.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/testing.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/testing.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
 </div>
@@ -1070,14 +1070,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/</guid>
+  <guid>www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</guid>
   <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Visualizing successful collaboration</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/</link>
+  <link>www.openstatsware.org/blog/mmrm-video-nov-2022/</link>
   <description><![CDATA[ 
 
 
@@ -1095,14 +1095,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/</guid>
+  <guid>www.openstatsware.org/blog/mmrm-video-nov-2022/</guid>
   <pubDate>Sun, 20 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/mmrm-video-nov-2022/mmrm-video.png" medium="image" type="image/png" height="113" width="144"/>
+  <media:content url="www.openstatsware.org/blog/mmrm-video-nov-2022/mmrm-video.png" medium="image" type="image/png" height="113" width="144"/>
 </item>
 <item>
   <title>Software Engineering in Biostatistics - Towards Improving a Critical Competence</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/</link>
+  <link>www.openstatsware.org/blog/biop_report/</link>
   <description><![CDATA[ 
 
 
@@ -1116,14 +1116,14 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/</guid>
+  <guid>www.openstatsware.org/blog/biop_report/</guid>
   <pubDate>Wed, 16 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/asa-biop.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="www.openstatsware.org/blog/biop_report/asa-biop.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>New ASA BIOP working group on Software Engineering</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/</link>
+  <link>www.openstatsware.org/blog/wg_announcement/</link>
   <description><![CDATA[ 
 
 
@@ -1142,9 +1142,9 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
  ]]></description>
   <category>news</category>
-  <guid>https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/</guid>
+  <guid>www.openstatsware.org/blog/wg_announcement/</guid>
   <pubDate>Mon, 24 Oct 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://rconsortium.github.io/asa-biop-swe-wg/blog/wg_announcement/sticker-1200.png" medium="image" type="image/png" height="167" width="144"/>
+  <media:content url="www.openstatsware.org/blog/wg_announcement/sticker-1200.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 </channel>
 </rss>
