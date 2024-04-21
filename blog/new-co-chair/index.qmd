@@ -10,7 +10,7 @@ image: "openstatsware-hex-300.png"
 Hi everyone,
 
 Alessandro here.
-I am writing to announce that later this year I am taking up the role of co-chair for the `openstatsware` working group.
+I am writing to announce that I am taking up the role of co-chair for the `openstatsware` working group.
 This is motivated by Daniel relocating to Taiwan, thus we felt we needed a person located in the European region to take up the role (I am based in Sweden).
 
 Let me quickly introduce myself: my name is Alessandro Gasparini, and I am currently a senior biostatistician and software developer at [Red Door Analytics](https://reddooranalytics.se) in Stockholm, Sweden.
