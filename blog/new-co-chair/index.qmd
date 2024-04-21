@@ -2,7 +2,7 @@
 title: "New European Working Group Co-Chair"
 subtitle: "Announcing a new working group co-chair in the European region"
 author: "Alessandro"
-date: "2024-04-19"
+date: "2024-04-21"
 categories: [news]
 image: "openstatsware-hex-300.png"
 ---
