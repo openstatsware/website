@@ -115,3 +115,13 @@ a:hover {
   min-width: 256px;
   max-width: 95%;
 }
+
+// Code in titles
+.quarto-title, .quarto-post {
+  code {
+    background: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}

@@ -1,18 +1,1 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <defs>
-    <pattern id="p5" width="34.6410161513775" height="60" patternTransform="rotate(0 0 0)" patternUnits="userSpaceOnUse">
-      <rect width="100%" height="100%" style="fill:#ffffff; fill-opacity:1; stroke:none;" />
-      <g style="stroke:#345678; stroke-width:3.2; stroke-opacity:1;">
-        <line x1="17.3205080756888" y1="10" x2="0" y2="20" />
-        <line x1="17.3205080756888" y1="10" x2="34.6410161513775" y2="20" />
-        <line x1="17.3205080756888" y1="50" x2="0" y2="40" />
-        <line x1="17.3205080756888" y1="50" x2="34.6410161513775" y2="40" />
-        <line x1="17.3205080756888" y1="0" x2="17.3205080756888" y2="10" />
-        <line x1="17.3205080756888" y1="50" x2="17.3205080756888" y2="60" />
-        <line x1="0" y1="20" x2="0" y2="40" />
-        <line x1="34.6410161513775" y1="20" x2="34.6410161513775" y2="40" />
-      </g>
-    </pattern>
-  </defs>
-  <polygon points="100,200 13.4,150 13.4,50 100,0 186.6,50 186.6,150 100,200" id="hex" stroke="#c0c0c0" fill="url(#p5)" />
-</svg>
+<svg height="200" viewBox="0 0 200 200" width="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><pattern id="a" height="60" patternUnits="userSpaceOnUse" width="34.641016"><rect fill="#fff" height="100%" width="100%"/><g stroke="#345678" stroke-width="3.2"><path d="m17.320508 10-17.320508 10"/><path d="m17.320508 10 17.320508 10"/><path d="m17.320508 50-17.320508-10"/><path d="m17.320508 50 17.320508-10"/><path d="m17.320508 0v10"/><path d="m17.320508 50v10"/><path d="m0 20v20"/><path d="m34.641016 20v20"/></g></pattern><path d="m100 200-86.6-50v-100l86.6-50 86.6 50v100z" fill="url(#a)" stroke="#c0c0c0"/></svg>

@@ -4,10 +4,10 @@ resources:
   - CNAME
 website:
 
-  title: "ASA BIOP SWE WG"
+  title: "openstatsware"
   favicon: "sticker/openstatsware-hex.svg"
-  site-url: "https://rconsortium.github.io/asa-biop-swe-wg"
-  description: "Website for the American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Software Engineering Working Group (SWE WG)"
+  site-url: "www.openstatsware.org"
+  description: "Website for the `openstatsware' Working Group"
 
   navbar:
     background: "#f8f9fa"
@@ -28,16 +28,19 @@ website:
         text: "News"
       - href: blog.qmd
         text: "Blog"
-      - text: "Task Forces"
+      - text: "Workstreams"
         menu:
           - href: mmrm_R_package.qmd
           - href: hta_page.qmd
           - href: bayesian_mmrm_R_package.qmd
+          - href: ssd_package.qmd
       - href: presentations.qmd
         text: "Presentations"
       - href: hexwall.qmd
         text: "TaskView Hexwall"
     right:
+      - icon: github
+        href: https://github.com/RConsortium/asa-biop-swe-wg
       - icon: rss
         href: blog.xml
 
