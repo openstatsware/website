@@ -1,0 +1,19 @@
+---
+title: "New European Working Group Co-Chair"
+subtitle: "Announcing a new working group co-chair in the European region"
+author: "Alessandro"
+date: "2024-04-21"
+categories: [news]
+image: "openstatsware-hex-300.png"
+---
+
+Hi everyone,
+
+Alessandro here.
+I am writing to announce that I am taking up the role of co-chair for the `openstatsware` working group.
+This is motivated by Daniel relocating to Taiwan, thus we felt we needed a person located in the European region to take up the role (I am based in Sweden).
+
+Let me quickly introduce myself: my name is Alessandro Gasparini, and I am currently a senior biostatistician and software developer at [Red Door Analytics](https://reddooranalytics.se) in Stockholm, Sweden.
+I am trained as a biostatistician, but have been writing code (in a variety of languages) for over a decade now; you can read more about me and my background [here](https://www.ellessenne.xyz).
+
+Daniel and Ya have done a fantastic job leading the working group so far and I look forward to further contributing to the goals of the working group.

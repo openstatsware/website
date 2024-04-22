@@ -8,6 +8,7 @@
 
   * Ya Wang (Gilead)
 
+  * Alessandro Gasparini (Red Door Analytics)
 
 **Members:**
 
