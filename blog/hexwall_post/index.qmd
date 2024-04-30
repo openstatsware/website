@@ -3,7 +3,7 @@ title: "Announcing the Packages Hexwall"
 subtitle: "Interactive exploration of the Clinical Trials CRAN Task View"
 author: "Yoni"
 date: "2024-03-05"
-categories: [news]
+categories: [news, R]
 image: hexwall_logo.svg
 ---
 

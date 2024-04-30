@@ -4,7 +4,7 @@ subtitle: "Teaching foundations of SWE for statisticians with R"
 author: "SWE WG"
 description: Under the umbrella of the Basel Biometric Society, Daniel, Friedrich, and Kevin organized a one-day workshop on good SWE practice in R.
 date: "2023-02-13"
-categories: [news]
+categories: [news, R]
 image: "topics_and_people.jpg"
 ---
 

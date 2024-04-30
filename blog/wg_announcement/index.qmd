@@ -4,7 +4,7 @@ author: "SWE WG"
 subtitle: Fostering open source code collaboration within Biostatistics
 description: We are officially announcing the new ASA BIOP scientific working group on Software Engineering (SWE WG).
 date: "2022-10-24"
-categories: [news]
+categories: [news, R]
 image: "sticker-1200.png"
 ---
 
