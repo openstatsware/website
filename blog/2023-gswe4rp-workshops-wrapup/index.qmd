@@ -4,7 +4,7 @@ subtitle: "Thanks to all local and `openstatsware` contributors!"
 author: "Daniel"
 description: With the last workshop this year in Montreal we achieved 5 workshops this year.
 date: "2023-10-18"
-categories: [news]
+categories: [news, R]
 image: "IMG_0200.JPG"
 ---
 
