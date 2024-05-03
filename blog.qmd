@@ -7,7 +7,9 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
-  feed: true
+  feed:
+    categories: 
+      - R
 page-layout: full
 title-block-banner: true
 ---
