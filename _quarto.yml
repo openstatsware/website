@@ -6,7 +6,7 @@ website:
 
   title: "openstatsware"
   favicon: "sticker/openstatsware-hex.svg"
-  site-url: "www.openstatsware.org"
+  site-url: "https://www.openstatsware.org"
   description: "Website for the `openstatsware' Working Group"
 
   navbar:
