@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>openstatsware</title>
-<link>www.openstatsware.org/blog.html#category=R</link>
-<atom:link href="www.openstatsware.org/blog-r.xml" rel="self" type="application/rss+xml"/>
+<link>https://www.openstatsware.org/blog.html#category=R</link>
+<atom:link href="https://www.openstatsware.org/blog-r.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
 <generator>quarto-1.4.553</generator>
 <lastBuildDate>Tue, 05 Mar 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Announcing the Packages Hexwall</title>
   <dc:creator>Yoni </dc:creator>
-  <link>www.openstatsware.org/blog/hexwall_post/</link>
+  <link>https://www.openstatsware.org/blog/hexwall_post/</link>
   <description><![CDATA[ 
 
 
@@ -27,23 +27,23 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="ooetqyghqy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#ooetqyghqy table {
+<div id="lqqejtfiza" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#lqqejtfiza table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ooetqyghqy thead, #ooetqyghqy tbody, #ooetqyghqy tfoot, #ooetqyghqy tr, #ooetqyghqy td, #ooetqyghqy th {
+#lqqejtfiza thead, #lqqejtfiza tbody, #lqqejtfiza tfoot, #lqqejtfiza tr, #lqqejtfiza td, #lqqejtfiza th {
   border-style: none;
 }
 
-#ooetqyghqy p {
+#lqqejtfiza p {
   margin: 0;
   padding: 0;
 }
 
-#ooetqyghqy .gt_table {
+#lqqejtfiza .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -69,12 +69,12 @@
   border-left-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_caption {
+#lqqejtfiza .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ooetqyghqy .gt_title {
+#lqqejtfiza .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -86,7 +86,7 @@
   border-bottom-width: 0;
 }
 
-#ooetqyghqy .gt_subtitle {
+#lqqejtfiza .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -98,7 +98,7 @@
   border-top-width: 0;
 }
 
-#ooetqyghqy .gt_heading {
+#lqqejtfiza .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -110,13 +110,13 @@
   border-right-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_bottom_border {
+#lqqejtfiza .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_col_headings {
+#lqqejtfiza .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -131,7 +131,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_col_heading {
+#lqqejtfiza .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -151,7 +151,7 @@
   overflow-x: hidden;
 }
 
-#ooetqyghqy .gt_column_spanner_outer {
+#lqqejtfiza .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -163,15 +163,15 @@
   padding-right: 4px;
 }
 
-#ooetqyghqy .gt_column_spanner_outer:first-child {
+#lqqejtfiza .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ooetqyghqy .gt_column_spanner_outer:last-child {
+#lqqejtfiza .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ooetqyghqy .gt_column_spanner {
+#lqqejtfiza .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -183,11 +183,11 @@
   width: 100%;
 }
 
-#ooetqyghqy .gt_spanner_row {
+#lqqejtfiza .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ooetqyghqy .gt_group_heading {
+#lqqejtfiza .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -213,7 +213,7 @@
   text-align: left;
 }
 
-#ooetqyghqy .gt_empty_group_heading {
+#lqqejtfiza .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -228,15 +228,15 @@
   vertical-align: middle;
 }
 
-#ooetqyghqy .gt_from_md > :first-child {
+#lqqejtfiza .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ooetqyghqy .gt_from_md > :last-child {
+#lqqejtfiza .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ooetqyghqy .gt_row {
+#lqqejtfiza .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -255,7 +255,7 @@
   overflow-x: hidden;
 }
 
-#ooetqyghqy .gt_stub {
+#lqqejtfiza .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -268,7 +268,7 @@
   padding-right: 5px;
 }
 
-#ooetqyghqy .gt_stub_row_group {
+#lqqejtfiza .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -282,15 +282,15 @@
   vertical-align: top;
 }
 
-#ooetqyghqy .gt_row_group_first td {
+#lqqejtfiza .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ooetqyghqy .gt_row_group_first th {
+#lqqejtfiza .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ooetqyghqy .gt_summary_row {
+#lqqejtfiza .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -300,16 +300,16 @@
   padding-right: 5px;
 }
 
-#ooetqyghqy .gt_first_summary_row {
+#lqqejtfiza .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_first_summary_row.thick {
+#lqqejtfiza .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ooetqyghqy .gt_last_summary_row {
+#lqqejtfiza .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -319,7 +319,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_grand_summary_row {
+#lqqejtfiza .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -329,7 +329,7 @@
   padding-right: 5px;
 }
 
-#ooetqyghqy .gt_first_grand_summary_row {
+#lqqejtfiza .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -339,7 +339,7 @@
   border-top-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_last_grand_summary_row_top {
+#lqqejtfiza .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -349,11 +349,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_striped {
+#lqqejtfiza .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ooetqyghqy .gt_table_body {
+#lqqejtfiza .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -362,7 +362,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_footnotes {
+#lqqejtfiza .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -376,7 +376,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_footnote {
+#lqqejtfiza .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -385,7 +385,7 @@
   padding-right: 5px;
 }
 
-#ooetqyghqy .gt_sourcenotes {
+#lqqejtfiza .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -399,7 +399,7 @@
   border-right-color: #D3D3D3;
 }
 
-#ooetqyghqy .gt_sourcenote {
+#lqqejtfiza .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -407,63 +407,63 @@
   padding-right: 5px;
 }
 
-#ooetqyghqy .gt_left {
+#lqqejtfiza .gt_left {
   text-align: left;
 }
 
-#ooetqyghqy .gt_center {
+#lqqejtfiza .gt_center {
   text-align: center;
 }
 
-#ooetqyghqy .gt_right {
+#lqqejtfiza .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ooetqyghqy .gt_font_normal {
+#lqqejtfiza .gt_font_normal {
   font-weight: normal;
 }
 
-#ooetqyghqy .gt_font_bold {
+#lqqejtfiza .gt_font_bold {
   font-weight: bold;
 }
 
-#ooetqyghqy .gt_font_italic {
+#lqqejtfiza .gt_font_italic {
   font-style: italic;
 }
 
-#ooetqyghqy .gt_super {
+#lqqejtfiza .gt_super {
   font-size: 65%;
 }
 
-#ooetqyghqy .gt_footnote_marks {
+#lqqejtfiza .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ooetqyghqy .gt_asterisk {
+#lqqejtfiza .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ooetqyghqy .gt_indent_1 {
+#lqqejtfiza .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ooetqyghqy .gt_indent_2 {
+#lqqejtfiza .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ooetqyghqy .gt_indent_3 {
+#lqqejtfiza .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ooetqyghqy .gt_indent_4 {
+#lqqejtfiza .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ooetqyghqy .gt_indent_5 {
+#lqqejtfiza .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -659,7 +659,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Omics/">Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Aubert, Toby Dylan Hocking, Nathalie Vialaneix</td>
 <td class="gt_row gt_right" headers="last_update">2024-04-04</td>
-<td class="gt_row gt_right" headers="n_pkg">254</td>
+<td class="gt_row gt_right" headers="n_pkg">253</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Optimization/">Optimization and Mathematical Programming</a></td>
@@ -786,14 +786,14 @@
  ]]></description>
   <category>news</category>
   <category>R</category>
-  <guid>www.openstatsware.org/blog/hexwall_post/</guid>
+  <guid>https://www.openstatsware.org/blog/hexwall_post/</guid>
   <pubDate>Tue, 05 Mar 2024 00:00:00 GMT</pubDate>
-  <media:content url="www.openstatsware.org/blog/hexwall_post/hexwall_logo.svg" medium="image" type="image/svg+xml"/>
+  <media:content url="https://www.openstatsware.org/blog/hexwall_post/hexwall_logo.svg" medium="image" type="image/svg+xml"/>
 </item>
 <item>
   <title>Celebrating 5 workshops on good SWE practices in 2023</title>
   <dc:creator>Daniel </dc:creator>
-  <link>www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</link>
+  <link>https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</link>
   <description><![CDATA[ 
 
 
@@ -809,12 +809,12 @@
 <div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<p><img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="img-fluid" style="width:100.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" class="img-fluid" style="width:100.0%"></p>
 </div>
 </div>
 </div>
@@ -864,14 +864,14 @@
  ]]></description>
   <category>news</category>
   <category>R</category>
-  <guid>www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</guid>
+  <guid>https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/</guid>
   <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
-  <media:content url="www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" medium="image"/>
+  <media:content url="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0200.JPG" medium="image"/>
 </item>
 <item>
   <title>Workshop on good software engineering practice for R</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</link>
+  <link>https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</link>
   <description><![CDATA[ 
 
 
@@ -882,21 +882,21 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
+<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Friedrich.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Friedrich.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Kevin.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Kevin.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/testing.jpg" class="img-fluid" style="width:50.0%"></p>
+<p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/testing.jpg" class="img-fluid" style="width:50.0%"></p>
 </div>
 </div>
 </div>
@@ -910,14 +910,14 @@
  ]]></description>
   <category>news</category>
   <category>R</category>
-  <guid>www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</guid>
+  <guid>https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/</guid>
   <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
-  <media:content url="www.openstatsware.org/blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/topics_and_people.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Visualizing successful collaboration</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>www.openstatsware.org/blog/mmrm-video-nov-2022/</link>
+  <link>https://www.openstatsware.org/blog/mmrm-video-nov-2022/</link>
   <description><![CDATA[ 
 
 
@@ -936,14 +936,14 @@
  ]]></description>
   <category>news</category>
   <category>R</category>
-  <guid>www.openstatsware.org/blog/mmrm-video-nov-2022/</guid>
+  <guid>https://www.openstatsware.org/blog/mmrm-video-nov-2022/</guid>
   <pubDate>Sun, 20 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="www.openstatsware.org/blog/mmrm-video-nov-2022/mmrm-video.png" medium="image" type="image/png" height="113" width="144"/>
+  <media:content url="https://www.openstatsware.org/blog/mmrm-video-nov-2022/mmrm-video.png" medium="image" type="image/png" height="113" width="144"/>
 </item>
 <item>
   <title>New ASA BIOP working group on Software Engineering</title>
   <dc:creator>SWE WG</dc:creator>
-  <link>www.openstatsware.org/blog/wg_announcement/</link>
+  <link>https://www.openstatsware.org/blog/wg_announcement/</link>
   <description><![CDATA[ 
 
 
@@ -963,9 +963,9 @@
  ]]></description>
   <category>news</category>
   <category>R</category>
-  <guid>www.openstatsware.org/blog/wg_announcement/</guid>
+  <guid>https://www.openstatsware.org/blog/wg_announcement/</guid>
   <pubDate>Mon, 24 Oct 2022 00:00:00 GMT</pubDate>
-  <media:content url="www.openstatsware.org/blog/wg_announcement/sticker-1200.png" medium="image" type="image/png" height="167" width="144"/>
+  <media:content url="https://www.openstatsware.org/blog/wg_announcement/sticker-1200.png" medium="image" type="image/png" height="167" width="144"/>
 </item>
 </channel>
 </rss>

@@ -1,1 +1,1 @@
-Sitemap: www.openstatsware.org/sitemap.xml
+Sitemap: https://www.openstatsware.org/sitemap.xml
