@@ -9,7 +9,7 @@
 <link>https://www.openstatsware.org/blog.html</link>
 <atom:link href="https://www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
-<generator>quarto-1.4.553</generator>
+<generator>quarto-1.4.554</generator>
 <lastBuildDate>Sun, 21 Apr 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>New European Working Group Co-Chair</title>
@@ -109,23 +109,23 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="lqqejtfiza" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#lqqejtfiza table {
+<div id="ridmcsuwsh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#ridmcsuwsh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lqqejtfiza thead, #lqqejtfiza tbody, #lqqejtfiza tfoot, #lqqejtfiza tr, #lqqejtfiza td, #lqqejtfiza th {
+#ridmcsuwsh thead, #ridmcsuwsh tbody, #ridmcsuwsh tfoot, #ridmcsuwsh tr, #ridmcsuwsh td, #ridmcsuwsh th {
   border-style: none;
 }
 
-#lqqejtfiza p {
+#ridmcsuwsh p {
   margin: 0;
   padding: 0;
 }
 
-#lqqejtfiza .gt_table {
+#ridmcsuwsh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -151,12 +151,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-left-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_caption {
+#ridmcsuwsh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lqqejtfiza .gt_title {
+#ridmcsuwsh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -168,7 +168,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-width: 0;
 }
 
-#lqqejtfiza .gt_subtitle {
+#ridmcsuwsh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -180,7 +180,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-width: 0;
 }
 
-#lqqejtfiza .gt_heading {
+#ridmcsuwsh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -192,13 +192,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_bottom_border {
+#ridmcsuwsh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_col_headings {
+#ridmcsuwsh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -213,7 +213,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_col_heading {
+#ridmcsuwsh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -233,7 +233,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#lqqejtfiza .gt_column_spanner_outer {
+#ridmcsuwsh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -245,15 +245,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 4px;
 }
 
-#lqqejtfiza .gt_column_spanner_outer:first-child {
+#ridmcsuwsh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lqqejtfiza .gt_column_spanner_outer:last-child {
+#ridmcsuwsh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lqqejtfiza .gt_column_spanner {
+#ridmcsuwsh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -265,11 +265,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   width: 100%;
 }
 
-#lqqejtfiza .gt_spanner_row {
+#ridmcsuwsh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lqqejtfiza .gt_group_heading {
+#ridmcsuwsh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -295,7 +295,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   text-align: left;
 }
 
-#lqqejtfiza .gt_empty_group_heading {
+#ridmcsuwsh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -310,15 +310,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: middle;
 }
 
-#lqqejtfiza .gt_from_md > :first-child {
+#ridmcsuwsh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lqqejtfiza .gt_from_md > :last-child {
+#ridmcsuwsh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lqqejtfiza .gt_row {
+#ridmcsuwsh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -337,7 +337,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#lqqejtfiza .gt_stub {
+#ridmcsuwsh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -350,7 +350,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#lqqejtfiza .gt_stub_row_group {
+#ridmcsuwsh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -364,15 +364,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: top;
 }
 
-#lqqejtfiza .gt_row_group_first td {
+#ridmcsuwsh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lqqejtfiza .gt_row_group_first th {
+#ridmcsuwsh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lqqejtfiza .gt_summary_row {
+#ridmcsuwsh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -382,16 +382,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#lqqejtfiza .gt_first_summary_row {
+#ridmcsuwsh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_first_summary_row.thick {
+#ridmcsuwsh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lqqejtfiza .gt_last_summary_row {
+#ridmcsuwsh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -401,7 +401,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_grand_summary_row {
+#ridmcsuwsh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -411,7 +411,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#lqqejtfiza .gt_first_grand_summary_row {
+#ridmcsuwsh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -421,7 +421,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_last_grand_summary_row_top {
+#ridmcsuwsh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,11 +431,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_striped {
+#ridmcsuwsh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lqqejtfiza .gt_table_body {
+#ridmcsuwsh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -444,7 +444,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_footnotes {
+#ridmcsuwsh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -458,7 +458,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_footnote {
+#ridmcsuwsh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -467,7 +467,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#lqqejtfiza .gt_sourcenotes {
+#ridmcsuwsh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -481,7 +481,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#lqqejtfiza .gt_sourcenote {
+#ridmcsuwsh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -489,63 +489,63 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#lqqejtfiza .gt_left {
+#ridmcsuwsh .gt_left {
   text-align: left;
 }
 
-#lqqejtfiza .gt_center {
+#ridmcsuwsh .gt_center {
   text-align: center;
 }
 
-#lqqejtfiza .gt_right {
+#ridmcsuwsh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lqqejtfiza .gt_font_normal {
+#ridmcsuwsh .gt_font_normal {
   font-weight: normal;
 }
 
-#lqqejtfiza .gt_font_bold {
+#ridmcsuwsh .gt_font_bold {
   font-weight: bold;
 }
 
-#lqqejtfiza .gt_font_italic {
+#ridmcsuwsh .gt_font_italic {
   font-style: italic;
 }
 
-#lqqejtfiza .gt_super {
+#ridmcsuwsh .gt_super {
   font-size: 65%;
 }
 
-#lqqejtfiza .gt_footnote_marks {
+#ridmcsuwsh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lqqejtfiza .gt_asterisk {
+#ridmcsuwsh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lqqejtfiza .gt_indent_1 {
+#ridmcsuwsh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lqqejtfiza .gt_indent_2 {
+#ridmcsuwsh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lqqejtfiza .gt_indent_3 {
+#ridmcsuwsh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lqqejtfiza .gt_indent_4 {
+#ridmcsuwsh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lqqejtfiza .gt_indent_5 {
+#ridmcsuwsh .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -710,8 +710,8 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MixedModels/">Mixed, Multilevel, and Hierarchical Models in R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ben Bolker, Julia Piaskowski, Emi Tanaka, Phillip Alday, Wolfgang Viechtbauer</td>
-<td class="gt_row gt_right" headers="last_update">2022-10-31</td>
-<td class="gt_row gt_right" headers="n_pkg">156</td>
+<td class="gt_row gt_right" headers="last_update">2024-05-06</td>
+<td class="gt_row gt_right" headers="n_pkg">168</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ModelDeployment">Model Deployment with R</a></td>
@@ -741,7 +741,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Omics/">Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Aubert, Toby Dylan Hocking, Nathalie Vialaneix</td>
 <td class="gt_row gt_right" headers="last_update">2024-04-04</td>
-<td class="gt_row gt_right" headers="n_pkg">253</td>
+<td class="gt_row gt_right" headers="n_pkg">251</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Optimization/">Optimization and Mathematical Programming</a></td>
@@ -783,7 +783,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Spatial/">Analysis of Spatial Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Roger Bivand, Jakub Nowosad</td>
 <td class="gt_row gt_right" headers="last_update">2024-02-21</td>
-<td class="gt_row gt_right" headers="n_pkg">196</td>
+<td class="gt_row gt_right" headers="n_pkg">197</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/SpatioTemporal/">Handling and Analyzing Spatio-Temporal Data</a></td>
