@@ -4,6 +4,10 @@ subtitle: "Minimum Viable Good Practices for High Quality Statistical Software P
 author: "0.0-2"
 author-title: "Version"
 date: "31 May 2024"
+bibliography: references.bib
+nocite: |
+  @*
+csl: computational-statistics.csl
 ---
 
 *Note: This is a beta release of "openstatsguide" to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.*
