@@ -1,16 +1,28 @@
 ---
 title: "openstatsguide"
-subtitle: "version 0.0-1"
-date: "10 Mar 2024"
+subtitle: "Minimum Viable Good Practices for High Quality Statistical Software Packages"
+author: "0.0-2"
+author-title: "Version"
+date: "31 May 2024"
 ---
 
 *Note: This is a beta release of "openstatsguide" to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.*
 
-We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence:
+# Scope
+
+We encourage developers of statistical software packages to follow this minimum set of good practices around:
+
+> "**D**ocumentation, **V**ignettes, **T**ests, **F**unctions, **S**tyle, **L**ife cycle"
+
+These keywords can be easily remembered with the mnemonic bridge sentence:
 
 > "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity"
 
-While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
+While the recommendations are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
+
+This guide primarily addresses developers of statistical packages. Users interested in assessing the quality of existing statistical packages will find complementary "validation" focused resources valuable, as listed in [References](#references).
+
+# Recommendations
 
 ```{r echo=FALSE}
 glue_or_drop <- function(doc, img) {
@@ -177,4 +189,6 @@ Life cycle management is simplified by reducing dependencies, and should compris
     ```
 
 3.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+
+# References
 
