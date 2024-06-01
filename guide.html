@@ -7,7 +7,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-03-10">
+<meta name="author" content="0.0-2">
+<meta name="dcterms.date" content="2024-05-31">
 
 <title>openstatsware - openstatsguide</title>
 <style>
@@ -22,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -187,12 +207,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link active" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#scope" id="toc-scope" class="nav-link active" data-scroll-target="#scope">Scope</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a>
+  <ul class="collapse">
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
   <li><a href="#vignettes" id="toc-vignettes" class="nav-link" data-scroll-target="#vignettes">Vignettes</a></li>
   <li><a href="#tests" id="toc-tests" class="nav-link" data-scroll-target="#tests">Tests</a></li>
   <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
   <li><a href="#style" id="toc-style" class="nav-link" data-scroll-target="#style">Style</a></li>
   <li><a href="#life-cycle" id="toc-life-cycle" class="nav-link" data-scroll-target="#life-cycle">Life cycle</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -202,18 +227,24 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">openstatsguide</h1>
-<p class="subtitle lead">version 0.0-1</p>
+<p class="subtitle lead">Minimum Viable Good Practices for High Quality Statistical Software Packages</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Version</div>
+    <div class="quarto-title-meta-contents">
+             <p>0.0-2 </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 10, 2024</p>
+      <p class="date">May 31, 2024</p>
     </div>
   </div>
   
@@ -226,11 +257,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><em>Note: This is a beta release of “openstatsguide” to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.</em></p>
-<p>We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence:</p>
+<section id="scope" class="level1">
+<h1>Scope</h1>
+<p>We encourage developers of statistical software packages to follow this minimum set of good practices around:</p>
+<blockquote class="blockquote">
+<p>“<strong>D</strong>ocumentation, <strong>V</strong>ignettes, <strong>T</strong>ests, <strong>F</strong>unctions, <strong>S</strong>tyle, <strong>L</strong>ife cycle”</p>
+</blockquote>
+<p>These keywords can be easily remembered with the mnemonic bridge sentence:</p>
 <blockquote class="blockquote">
 <p>“<strong>D</strong>evelopers <strong>V</strong>alue <strong>T</strong>ests <strong>F</strong>or <strong>S</strong>oftware <strong>L</strong>ongevity”</p>
 </blockquote>
-<p>While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.</p>
+<p>While the recommendations are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.</p>
+<p>This guide primarily addresses developers of statistical packages. Users interested in assessing the quality of existing statistical packages will find complementary “validation” focused resources valuable, as listed in <a href="#references">References</a>.</p>
+</section>
+<section id="recommendations" class="level1">
+<h1>Recommendations</h1>
 <section id="documentation" class="level2">
 <h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
 <p>Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.</p>
@@ -560,11 +601,47 @@ Enabled in VScode via
 </table></li>
 <li><p>Use a <strong>central repository</strong> for version control, collecting and resolving issues, and managing releases. Include the publication of a <strong>contributing guide</strong> to help onboard new developers and enable community contributions.</p></li>
 </ol>
+</section>
+</section>
+<section id="references" class="level1">
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-pharmar_2020" class="csl-entry" role="listitem">
+Manitz J, Nicholls A, Bargo P, et al (2020) <a href="https://www.pharmar.org/white-paper/">A risk-based approach for assessing <span>R</span> package accuracy within a validated infrastructure</a>
+</div>
+<div id="ref-ropensci_statsoftware_2021" class="csl-entry" role="listitem">
+Padgham M, Salmon M, Ross N, et al (2021) <a href="https://doi.org/10.5281/zenodo.5556756"><span class="nocase">rOpenSci</span> statistical software peer review</a>
+</div>
+<div id="ref-carpentries_2023" class="csl-entry" role="listitem">
+Rodriguez-Sanchez P, Vreede B, Boer L de (2023) <a href="https://carpentries-incubator.github.io/lesson-R-packaging/">A software carpentries lesson on <span>R</span> packaging</a>
+</div>
+<div id="ref-ropensci_devguide_2024" class="csl-entry" role="listitem">
+rOpenSci, Anderson B, Chamberlain S, et al (2024) <a href="https://doi.org/10.5281/zenodo.10797633"><span class="nocase">rOpenSci Packages: Development, Maintenance, and Peer Review</span></a>
+</div>
+<div id="ref-gswe4rp_2024" class="csl-entry" role="listitem">
+Sabanés Bové D, Pahlke F, Kunzmann K, et al (2024) <a href="https://rconis.github.io/workshop-r-swe-zrh/">Good software engineering practice for <span>R</span> packages</a>
+</div>
+<div id="ref-sabanes_2023" class="csl-entry" role="listitem">
+Sabanés Bové D, Seibold H, Boulesteix A-L, et al (2023) <a href="https://arxiv.org/abs/2301.11791">Improving software engineering in biostatistics: Challenges and opportunities</a>
+</div>
+<div id="ref-wickham_design" class="csl-entry" role="listitem">
+Wickham H <a href="https://design.tidyverse.org/">Tidy design principles</a>
+</div>
+<div id="ref-wickham_2023" class="csl-entry" role="listitem">
+Wickham H, Bryan J (2023) <a href="https://r-pkgs.org/">R packages: Organize, test, document, and share your code</a>, 2nd edn. <span>O’Reilly Media, Inc.</span>
+</div>
+<div id="ref-usethis_2024" class="csl-entry" role="listitem">
+Wickham H, Bryan J, Barrett M, Teucher A (2024) <a href="https://usethis.r-lib.org"><span class="nocase">usethis</span>: Automate package and project setup</a>
+</div>
+<div id="ref-validation_2024" class="csl-entry" role="listitem">
+Wikipedia contributors (2024) <a href="https://en.wikipedia.org/w/index.php?title=Software_verification_and_validation&amp;oldid=1220844793">Software verification and validation — <span>Wikipedia</span><span>,</span> the free encyclopedia</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
