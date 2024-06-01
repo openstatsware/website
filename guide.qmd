@@ -1,45 +1,61 @@
 ---
 title: "openstatsguide"
-subtitle: "version 0.0-1"
-date: "10 Mar 2024"
+subtitle: "Minimum Viable Good Practices for High Quality Statistical Software Packages"
+author: "0.0-2"
+author-title: "Version"
+date: "31 May 2024"
+bibliography: references.bib
+nocite: |
+  @*
+csl: computational-statistics.csl
 ---
 
 *Note: This is a beta release of "openstatsguide" to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.*
 
-We encourage developers of statistical software packages to follow this minimum set of good practices. They can be easily remembered with the mnemonic bridge sentence:
+# Scope
+
+We encourage developers of statistical software packages to follow this minimum set of good practices around:
+
+> "**D**ocumentation, **V**ignettes, **T**ests, **F**unctions, **S**tyle, **L**ife cycle"
+
+These keywords can be easily remembered with the mnemonic bridge sentence:
 
 > "**D**evelopers **V**alue **T**ests **F**or **S**oftware **L**ongevity"
 
-While these principles are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
+While the recommendations are rather generic, we focus on functional programming languages and give links to implementations in R, Python and Julia.
+
+This guide primarily addresses developers of statistical packages. Users interested in assessing the quality of existing statistical packages will find complementary "validation" focused resources valuable, as listed in [References](#references).
+
+# Recommendations
 
 ```{r echo=FALSE}
 glue_or_drop <- function(doc, img) {
-  if (identical(doc, "")) {
-    NULL
-  } else {
-    htmltools::tags$td(
-      htmltools::tags$details(
-        htmltools::tags$summary(
-          htmltools::tags$img(src = img, height = 20)
-        ),
-        doc
-      )
-    )
-  }
+    if (identical(doc, "")) {
+        NULL
+    } else {
+        htmltools::tags$td(
+            htmltools::tags$details(
+                htmltools::tags$summary(
+                    htmltools::tags$img(src = img, height = 20)
+                ),
+                doc
+            )
+        )
+    }
 }
 guide_table <- function(r = "", python = "", julia = "") {
-  contents <- htmltools::tags$html(
-    glue_or_drop(r, "https://www.r-project.org/logo/Rlogo.svg"),
-    glue_or_drop(python, "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"),
-    glue_or_drop(julia, "https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg"),
-    sep = "\n"
-  )
-  htmltools::tags$table(
-    style = htmltools::css(
-      width = '100%'
-    ),
-    htmltools::tags$tbody(contents)
-  )
+    contents <- htmltools::tags$html(
+        glue_or_drop(r, "https://www.r-project.org/logo/Rlogo.svg"),
+        glue_or_drop(python, "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"),
+        glue_or_drop(julia, "https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg"),
+        sep = "\n"
+    )
+    htmltools::tags$table(
+        style = htmltools::css(
+            width = "100%"
+        ),
+        htmltools::tags$tbody(contents)
+    )
 }
 ```
 
@@ -50,11 +66,11 @@ Documentation is important for both users and developers to understand all objec
 1.  Use **in-line comments** next to functions, classes and other objects to generate their corresponding documentation.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("roxygen2", href = "https://roxygen2.r-lib.org/"),
-      python = htmltools::a("docstrings", href = "https://peps.python.org/pep-0257/"),
-      julia = htmltools::a("docstrings", href = "https://docs.julialang.org/en/v1/manual/documentation/")
-    )
+guide_table(
+    r = htmltools::a("roxygen2", href = "https://roxygen2.r-lib.org/"),
+    python = htmltools::a("docstrings", href = "https://peps.python.org/pep-0257/"),
+    julia = htmltools::a("docstrings", href = "https://docs.julialang.org/en/v1/manual/documentation/")
+)
     ```
 
 2.  Do also **document internal functions** and classes for maintenance by future developers.
@@ -72,11 +88,11 @@ Vignettes are documents that complement the object documentation by providing a 
 3.  Host your vignettes on a **dedicated website**, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("pkgdown", href = "https://pkgdown.r-lib.org/"),
-      python = htmltools::a("Sphinx", href = "https://www.sphinx-doc.org/en/master/"),
-      julia = htmltools::a("Documenter", href = "https://documenter.juliadocs.org/")
-    )
+guide_table(
+    r = htmltools::a("pkgdown", href = "https://pkgdown.r-lib.org/"),
+    python = htmltools::a("Sphinx", href = "https://www.sphinx-doc.org/en/master/"),
+    julia = htmltools::a("Documenter", href = "https://documenter.juliadocs.org/")
+)
     ```
 
 ## Tests
@@ -88,21 +104,21 @@ Tests are a fundamental safety net and development tool to ensure that your pack
 2.  Write **functional tests** for all user facing functionality ("black box" testing). These tests ensure that the user API is stable when refactoring internal code.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("testthat", href = "https://testthat.r-lib.org/"),
-      python = htmltools::a("pytest", href = "https://pytest.org/"),
-      julia = htmltools::a("Test", href = "https://docs.julialang.org/en/v1/stdlib/Test/")
-    )
+guide_table(
+    r = htmltools::a("testthat", href = "https://testthat.r-lib.org/"),
+    python = htmltools::a("pytest", href = "https://pytest.org/"),
+    julia = htmltools::a("Test", href = "https://docs.julialang.org/en/v1/stdlib/Test/")
+)
     ```
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("covr", href = "https://covr.r-lib.org/"),
-      python = htmltools::a("Coverage.py", href = "https://coverage.readthedocs.io/"),
-      julia = htmltools::a("Coverage.jl", href = "https://github.com/JuliaCI/Coverage.jl")
-    )
+guide_table(
+    r = htmltools::a("covr", href = "https://covr.r-lib.org/"),
+    python = htmltools::a("Coverage.py", href = "https://coverage.readthedocs.io/"),
+    julia = htmltools::a("Coverage.jl", href = "https://github.com/JuliaCI/Coverage.jl")
+)
     ```
 
 ## Functions
@@ -114,21 +130,21 @@ Function definitions should be short, simple and enforce argument types with ass
 2.  Use **type hints** or types to explain to the user which argument of the function expects which type of input.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("roxytypes", href = "https://openpharma.github.io/roxytypes/"),
-      python = htmltools::a("typing", href = "https://docs.python.org/3/library/typing.html"),
-      julia = htmltools::a("types", href = "https://docs.julialang.org/en/v1/manual/types/")
-    )
+guide_table(
+    r = htmltools::a("roxytypes", href = "https://openpharma.github.io/roxytypes/"),
+    python = htmltools::a("typing", href = "https://docs.python.org/3/library/typing.html"),
+    julia = htmltools::a("types", href = "https://docs.julialang.org/en/v1/manual/types/")
+)
     ```
 
 3.  Enforce types and other expected properties of function arguments with **assertions**, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("checkmate", href = "https://mllg.github.io/checkmate/"),
-      python = htmltools::a("assertpy", href = "https://pypi.org/project/assertpy/"),
-      julia = htmltools::a("ArgCheck.jl", href = "https://github.com/jw3126/ArgCheck.jl")
-    )
+guide_table(
+    r = htmltools::a("checkmate", href = "https://mllg.github.io/checkmate/"),
+    python = htmltools::a("assertpy", href = "https://pypi.org/project/assertpy/"),
+    julia = htmltools::a("ArgCheck.jl", href = "https://github.com/jw3126/ArgCheck.jl")
+)
     ```
 
 ## Style
@@ -140,21 +156,21 @@ A consistent and readable code style that is language idiomatic should be used a
 2.  Use a **formatting tool** to automatically implement a consistent and readable code format.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("styler", href = "https://styler.r-lib.org/"),
-      python = htmltools::a("Autopep8", href = "https://pypi.org/project/autopep8/"),
-      julia = htmltools::a("JuliaFormatter.jl", href = "https://domluna.github.io/JuliaFormatter.jl/")
-    )
+guide_table(
+    r = htmltools::a("styler", href = "https://styler.r-lib.org/"),
+    python = htmltools::a("Autopep8", href = "https://pypi.org/project/autopep8/"),
+    julia = htmltools::a("JuliaFormatter.jl", href = "https://domluna.github.io/JuliaFormatter.jl/")
+)
     ```
 
 3.  Use a **style checking** tool to enforce a consistent and readable code style.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::a("lintr", href = "https://lintr.r-lib.org/"),
-      python = htmltools::a("Pylint", href = "https://pypi.org/project/pylint/"),
-      julia = htmltools::p("Enabled in VScode via", htmltools::a("StaticLint.jl", href = "https://github.com/julia-vscode/StaticLint.jl"))
-    )
+guide_table(
+    r = htmltools::a("lintr", href = "https://lintr.r-lib.org/"),
+    python = htmltools::a("Pylint", href = "https://pypi.org/project/pylint/"),
+    julia = htmltools::p("Enabled in VScode via", htmltools::a("StaticLint.jl", href = "https://github.com/julia-vscode/StaticLint.jl"))
+)
     ```
 
 ## Life cycle
@@ -166,15 +182,17 @@ Life cycle management is simplified by reducing dependencies, and should compris
 2.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
     ```{r results="asis", echo=FALSE}
-    guide_table(
-      r = htmltools::p(
+guide_table(
+    r = htmltools::p(
         htmltools::a("lifecycle", href = "https://cran.r-project.org/web/packages/lifecycle/index.html"),
         htmltools::a("fledge", href = "https://fledge.cynkra.com/")
-      ),
-      python = htmltools::a("deprecation", href = "https://deprecation.readthedocs.io/"),
-      julia = htmltools::a("workflow", href = "https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/")
-    )
+    ),
+    python = htmltools::a("deprecation", href = "https://deprecation.readthedocs.io/"),
+    julia = htmltools::a("workflow", href = "https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/")
+)
     ```
 
 3.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+
+# References
 
