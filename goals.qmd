@@ -2,7 +2,7 @@
   title: "Goals"
 ---
 
-`openstatsware` is a scientific working group of the [American Statistical Association (ASA) Biopharmaceutical section (BIOP)](https://community.amstat.org/biop/home).
+<span style="color: #000814; font-family: 'Fira Code', monospace; font-weight: bold;">open</span><span style="color: #001D3D; font-family: 'Fira Code', monospace; font-weight: bold;">stats</span><span style="color: #003566; font-family: 'Fira Code', monospace; font-weight: bold;">ware</span> is a [scientific working group](https://community.amstat.org/biop/workinggroups/swe-wg) of the [American Statistical Association (ASA) Biopharmaceutical section (BIOP)](https://community.amstat.org/biop/home) and a [European Special Interest Group (SIG)](https://www.psiweb.org/sigs-special-interest-groups/software-engineering) sponsored by [Statisticians in the Pharmaceutical Industry (PSI)](https://www.psiweb.org/about-us) and the [European Federation of Statisticians in the Pharmaceutical Industry (EFSPI)](https://efspi.org/).
 
 Our goals are to:
 
