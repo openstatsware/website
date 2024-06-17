@@ -59,6 +59,30 @@ guide_table <- function(r = "", python = "", julia = "") {
 }
 ```
 
+## Design 
+
+Before you begin coding it is often valuable to spend time designing and planning your package in collaboration with the target user. This can also help you define the scope of your first release ensuring that you are working on high-value features and enabling developers to focus. 
+
+::: {.panel-tabset}
+
+## Wireframing
+
+Wireframing involves creating a rough drawing of the user-interface of a webpage or application. Popular tools include:  
+[figma](https://www.figma.com/design/)
+
+
+## Diagrams
+Unified Modeling Language (UML)is a way to visually represent the architecture, structure and behaviour or your package. UML diagrams can be drawn programmically in tools such as:   
+[mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+
+
+## Project Management
+Defining your minimum viable product, i.e. the scope of your first release will help developers focus and also give an opportunity to validate your understanding of the problem with your target user group.   
+[github](https://github.com/features/issues)
+[JIRA](https://www.atlassian.com/software/jira)
+
+:::
+
 ## Documentation
 
 Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.
@@ -72,6 +96,22 @@ guide_table(
     julia = htmltools::a("docstrings", href = "https://docs.julialang.org/en/v1/manual/documentation/")
 )
     ```
+
+::: {.panel-tabset}
+
+## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
+
+[roxygen2](https://roxygen2.r-lib.org/)
+
+## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
+
+[docstrings](https://peps.python.org/pep-0257/)
+
+## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
+
+[docstrings](https://docs.julialang.org/en/v1/manual/documentation/)
+
+:::
 
 2.  Do also **document internal functions** and classes for maintenance by future developers.
 
@@ -95,6 +135,22 @@ guide_table(
 )
     ```
 
+::: {.panel-tabset}
+
+## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
+
+[pkgdown](https://pkgdown.r-lib.org/)
+
+## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
+
+[Sphinx](https://www.sphinx-doc.org/en/master/)
+
+## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
+
+[Documenter](https://documenter.juliadocs.org/)
+
+:::
+
 ## Tests
 
 Tests are a fundamental safety net and development tool to ensure that your package works as expected, both during development as well as on user systems.
@@ -110,6 +166,22 @@ guide_table(
     julia = htmltools::a("Test", href = "https://docs.julialang.org/en/v1/stdlib/Test/")
 )
     ```
+
+::: {.panel-tabset}
+
+## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
+
+[testthat](https://testthat.r-lib.org/)
+
+## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
+
+[pytest](https://pytest.org/)
+
+## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
+
+[Test](https://docs.julialang.org/en/v1/stdlib/Test/)
+
+:::   
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
@@ -146,6 +218,25 @@ guide_table(
     julia = htmltools::a("ArgCheck.jl", href = "https://github.com/jw3126/ArgCheck.jl")
 )
     ```
+
+## Dependency Management
+Packages will typically reference other packages to import pre-existing functionality. These dependencies are moving targets, i.e. they are periodically updated. Therefore package dependencies should be proactively managed. 
+
+::: {.panel-tabset}
+
+## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
+
+[renv](https://cran.r-project.org/web/packages/renv/index.html)
+
+## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
+
+[conda](https://conda.io/projects/conda/en/latest/index.html)
+
+## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
+
+[Pkg.jl](https://pkgdocs.julialang.org/v1/)
+
+:::
 
 ## Style
 
