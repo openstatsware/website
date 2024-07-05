@@ -1,6 +1,8 @@
 ---
 title: "Presentations"
 ---
+-   *`{mmrm}`: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. useR! 2024, 9 Jul 2024.
+    -   [slides](slides/user-2024-mmrm-jul2024.html)
 -   *Introducing `openstatsware`: Who we are and what we build together*. ASA BIOP DL Webinar, 23 Feb 2024.
     -   [slides](slides/asa-biop-webinar-feb2024-quarto.html)
 -   *{mmrm}: an Open Source R Package for Mixed Model Repeated Measures*. China-R Conference, 28 Nov 2023.
