@@ -10,7 +10,7 @@ format:
     incremental: false
     logo: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
     slide-number: c/t
-    fontsize: 32px
+    fontsize: 24px
 title-slide-attributes: 
   data-background-image: https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png
   data-background-size: 20%
