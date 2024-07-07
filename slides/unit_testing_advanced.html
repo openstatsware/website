@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.53">
 
   <meta name="author" content="Jonathan Sidi, Daniel Sabanes Bove">
-  <title>openstatsware - Unit Testing for R Developers</title>
+  <title>openstatsware – Unit Testing for R Developers</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -349,8 +349,7 @@ Jonathan Sidi, Daniel Sabanes Bove
 </ul>
 </div><div class="column" style="width:60%;">
 <p><img data-src="https://media.giphy.com/media/26gsxJfJgIyYXNoD6/giphy.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="what-is-the-structure-of-unit-tests" class="slide level2">
 <h2>What is the structure of unit tests?</h2>
@@ -407,8 +406,7 @@ Jonathan Sidi, Daniel Sabanes Bove
 <li>Encode object requirements</li>
 <li>Catch performance degradation</li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="planning-tests-for-success" class="slide level2">
@@ -442,8 +440,7 @@ Jonathan Sidi, Daniel Sabanes Bove
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="test_flow_mean.png" style="width:75.0%"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="adding-new-features-with-a-safety-net" class="slide level2">
 <h2>Adding new features with a safety net</h2>
@@ -457,8 +454,7 @@ Jonathan Sidi, Daniel Sabanes Bove
 <li class="fragment"><strong>Communicate the goals</strong> of the feature to others and to yourself.</li>
 <li class="fragment"><strong>Free to develop</strong> the idea while writing messy code and refactoring it while still controlling for the basic requirements.</li>
 </ol>
-</div>
-</div>
+</div></div>
 </section>
 <section id="some-strategies-for-learning" class="slide level2">
 <h2>Some strategies for learning</h2>
@@ -572,8 +568,7 @@ Jonathan Sidi, Daniel Sabanes Bove
 <p>When developing through a version control platform like GitHub, GitLab, Bitbucket you can automatically run your tests through CI/CD for each commit or when working with other developers via pull requests.</p>
 </div><div class="column" style="width:35%;">
 <p><img data-src="https://media.giphy.com/media/0DYipdNqJ5n4GYATKL/giphy.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="brought-to-you-by-the-software-engineering-working-group" class="slide level2">
 <h2>Brought to you by the Software Engineering Working Group</h2>
@@ -873,18 +868,7 @@ Jonathan Sidi, Daniel Sabanes Bove
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -916,7 +900,29 @@ Jonathan Sidi, Daniel Sabanes Bove
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/www\.openstatsware\.org");
@@ -924,7 +930,7 @@ Jonathan Sidi, Daniel Sabanes Bove
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

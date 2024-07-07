@@ -9,11 +9,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.53">
 
   <meta name="author" content="Liming Li">
   <meta name="dcterms.date" content="2023-11-28">
-  <title>openstatsware - Introducing openstatsware and the R Package {mmrm}</title>
+  <title>openstatsware – Introducing openstatsware and the R Package {mmrm}</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -44,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -72,7 +72,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -86,7 +86,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -429,8 +429,7 @@ Liming Li
 <li>Kevin Kunzmann (BI)</li>
 <li>Ya Wang (Gilead)</li>
 </ul>
-</div>
-</div>
+</div></div>
 </div>
 </section>
 <section id="acknowledgments-1" class="slide level2">
@@ -599,8 +598,7 @@ Liming Li
 <li>Degrees of Freedom</li>
 <li>Contrasts</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
@@ -610,8 +608,7 @@ Liming Li
 <p><code>{mmrm}</code></p>
 </div><div class="column" style="width:50%;">
 <p><code>PROC MIXED</code></p>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -629,8 +626,7 @@ Liming Li
 <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type">Covariance Structures</a></li>
 <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm">Degrees of Freedom</a></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="unit-testing" class="slide level2">
 <h2>Unit Testing</h2>
@@ -680,12 +676,11 @@ Liming Li
 </div>
 </div>
 <p><img data-src="https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="covariance-structures-details" class="slide level2">
 <h2>Covariance structures details</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Covariance structures</th>
@@ -729,7 +724,7 @@ Liming Li
 </section>
 <section id="covariance-estimators" class="slide level2">
 <h2>Covariance Estimators</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Covariance estimators</th>
@@ -768,7 +763,7 @@ Liming Li
 </section>
 <section id="degrees-of-freedom-methods" class="slide level2">
 <h2>Degrees of Freedom Methods</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -838,8 +833,7 @@ Liming Li
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="benchmarking-with-other-r-packages" class="slide level2">
 <h2>Benchmarking with other R packages</h2>
@@ -865,8 +859,7 @@ Liming Li
 <p><img data-src="estimate_diff.png"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="sd_diff.png"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="getting-started" class="slide level2">
 <h2>Getting started</h2>
@@ -898,8 +891,7 @@ Liming Li
 <p><img data-src="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" height="500"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png" height="500"></p>
-</div>
-</div>
+</div></div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png" class="slide-logo"></p>
@@ -1188,18 +1180,7 @@ Liming Li
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1231,7 +1212,29 @@ Liming Li
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/www\.openstatsware\.org");
@@ -1239,7 +1242,7 @@ Liming Li
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

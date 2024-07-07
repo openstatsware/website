@@ -11,9 +11,9 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.53">
 
-  <meta name="author" content="Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working group">
-  <meta name="dcterms.date" content="2023-09-29">
-  <title>openstatsware – First year of the Software Engineering working group</title>
+  <meta name="author" content="Daniel Sabanés Bové">
+  <meta name="dcterms.date" content="2024-07-09">
+  <title>openstatsware – {mmrm}: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,6 +31,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -327,332 +392,394 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png" data-background-opacity="0.5" data-background-position="98% 10%" data-background-size="20%" class="quarto-title-block center">
-  <h1 class="title">First year of the Software Engineering working group</h1>
-  <p class="subtitle">Regulatory-Industry Statistics Workshop 2023</p>
+<section id="title-slide" data-background-image="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" data-background-position="90% 90%" data-background-size="20%" class="quarto-title-block center">
+  <h1 class="title"><code>{mmrm}</code>: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures</h1>
+  <p class="subtitle">useR! 2024</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working group 
+Daniel Sabanés Bové 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            RCONIS
+          </p>
+    </div>
 </div>
 
-  <p class="date">2023-09-29</p>
-</section><section id="TOC">
-<nav role="doc-toc"> 
-<h2 id="toc-title">Table of contents</h2>
-<ul>
-<li class="fragment"><a href="#/introducing-the-wg" id="/toc-introducing-the-wg">Introducing the WG</a></li>
-<li class="fragment"><a href="#/achievements-in-the-first-year" id="/toc-achievements-in-the-first-year">Achievements in the first year</a></li>
-<li class="fragment"><a href="#/ingredients-for-successful-and-sustainable-collaboration" id="/toc-ingredients-for-successful-and-sustainable-collaboration">Ingredients for successful and sustainable collaboration</a></li>
-<li class="fragment"><a href="#/long-term-vision" id="/toc-long-term-vision">Long term vision</a></li>
-<li class="fragment"><a href="#/next-steps" id="/toc-next-steps">Next steps</a></li>
-</ul>
-</nav>
+  <p class="date">July 9, 2024</p>
 </section>
-<section>
-<section id="introducing-the-wg" class="title-slide slide level1 center">
-<h1>Introducing the WG</h1>
-
-</section>
-<section id="software-engineering-working-group" class="slide level2">
-<h2>Software Engineering Working Group</h2>
+<section id="acknowledgments" class="slide level2">
+<h2>Acknowledgments</h2>
+<p>Thanks to all other authors of <code>{mmrm}</code>:</p>
+<div>
 <div class="columns">
-<div class="column" style="width:70%;">
-<p>Founded last year:</p>
+<div class="column" style="width:50%;">
 <ul>
-<li class="fragment">When: 19 August 2022 - just celebrated our 1 year birthday!</li>
-<li class="fragment">Where: American Statistical Association (ASA) Biopharmaceutical Section (BIOP)</li>
-<li class="fragment">Who: 11 statisticians from 7 pharma companies developing statistical software</li>
-<li class="fragment">New name: <code>openstatsware</code></li>
+<li>Brian Matthew Lang (MSD)</li>
+<li>Christian Stock (Boehringer)</li>
+<li>Dan James (AstraZeneca)</li>
+<li>Daniel Leibovitz (Roche)</li>
+<li>Daniel Sjoberg (Roche)</li>
+<li>Doug Kelkhoff (Roche)</li>
 </ul>
-</div><div class="column" style="width:30%;">
-<p><img data-src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png" height="300"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Julia Dedic (Roche)</li>
+<li>Jonathan Sidi (Sanofi)</li>
+<li>Kevin Kunzmann (Boehringer)</li>
+<li>Liming Li (Roche)</li>
+<li>Ya Wang (Gilead)</li>
+</ul>
 </div></div>
+</div>
 </section>
-<section id="why-a-new-wg" class="slide level2">
-<h2>Why a new WG?</h2>
+<section id="acknowledgments-1" class="slide level2">
+<h2>Acknowledgments</h2>
+<div>
+<p>Thanks for discussions and contributions from:</p>
 <ul>
-<li class="fragment">Started with specific R-package project (more below)</li>
-<li class="fragment">Makes sense to stay together as a group also for other package projects</li>
-<li class="fragment">New focus on good engineering practices and collaborative work</li>
-<li class="fragment">Importance of reliable software for statistical analysis can not be underestimated</li>
-<li class="fragment">Be rooted in the biostatistics community (rather than statistical programming)</li>
+<li>Ben Bolker (McMaster University)</li>
+<li>Davide Garolini (Roche)</li>
+<li>Craig Gower-Page (Roche)</li>
+<li>Dinakar Kulkarni (Roche)</li>
+<li>Gonzalo Duran Pacheco (Roche)</li>
+<li>Members of <code>openstatsware</code></li>
+</ul>
+</div>
+</section>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
+<ul>
+<li>Prelude: <code>openstatsware</code></li>
+<li>Interlude: Mixed Models for Repeated Measures and <code>{mmrm}</code></li>
+<li>Finale: Ingredients for Successful Collaborations</li>
 </ul>
 </section>
-<section id="but-there-are-other-wgs" class="slide level2">
-<h2>But there are other WGs?</h2>
-<ul>
-<li class="fragment">Comparing Analysis Method Implementations in Software (CAMIS) of PhUSE <a href="https://advance.phuse.global/pages/viewpage.action?pageId=327874">🌎</a></li>
-<li class="fragment">Application and Implementation of Methodologies in Statistics (AIMS) Special Interest Group (SIG) of PSI <a href="https://www.psiweb.org/sigs-special-interest-groups/aims">🌎</a></li>
-<li class="fragment">R Submission Working Group of R Consortium <a href="https://rconsortium.github.io/submissions-wg/">🌎</a></li>
-<li class="fragment">R Tables for Regulatory Submissions Working Group of R Consortium <a href="https://rconsortium.github.io/rtrs-wg/">🌎</a></li>
-<li class="fragment">R Validation Hub <a href="https://pharmar.org">🌎</a></li>
-<li class="fragment">R Repositories WG of R Consortium <a href="https://github.com/RConsortium/r-repositories-wg">🌎</a></li>
-</ul>
-</section>
-<section id="wg-objectives" class="slide level2">
-<h2>WG Objectives</h2>
-<ul>
-<li class="fragment">Primary:
-<ul>
-<li class="fragment">Engineer R packages that implement important statistical methods</li>
-<li class="fragment">… to fill in gaps in the open-source statistical software landscape</li>
-<li class="fragment">… focusing on what is needed for biopharmaceutical applications</li>
-</ul></li>
-<li class="fragment">Secondary:
-<ul>
-<li class="fragment">Develop and disseminate best practices for engineering high-quality open-source statistical software</li>
-</ul></li>
-<li class="fragment">By actively doing the statistical engineering work together, we align on best practices and can communicate these to others</li>
-</ul>
-</section>
-<section id="relation-to-the-validation-topic" class="slide level2">
-<h2>Relation to the validation topic</h2>
-<ul>
-<li class="fragment">Validation is on every one’s mind when talking about open source in Pharma:
-<ul>
-<li class="fragment">“Establishing documented evidence which provides a high degree of assurance (accuracy) that a specific process consistently (reproducibility) produces a product meeting its predetermined specifications (traceability) and quality attributes.”</li>
-</ul></li>
-<li class="fragment">The <a href="https://www.pharmar.org/">R Validation Hub</a> is a collaboration to support the adoption of R within a biopharmaceutical regulatory setting
-<ul>
-<li class="fragment">Develops tools that supports risk assessment of R packages</li>
-</ul></li>
-</ul>
-</section>
-<section id="relation-to-the-validation-topic-contd" class="slide level2">
-<h2>Relation to the validation topic (cont’d)</h2>
-<ul>
-<li class="fragment">Base R and recommended packages are developed by the R Foundation, developed using best practices.</li>
-<li class="fragment">Our working group is spreading the word about best development practices such that contributed packages can achieve the same level of quality, hence aiding subsequent validation of them.</li>
-<li class="fragment">And we develop specific R packages with these best practices that can thus be easily validated.</li>
-</ul>
-</section>
-<section id="members-and-meetings" class="slide level2">
-<h2>Members and meetings</h2>
-<ul>
-<li class="fragment">Currently 56 members
-<ul>
-<li class="fragment">new members are welcome! (incl.&nbsp;academia/regulators/etc.)</li>
-</ul></li>
-<li class="fragment">Currently 35 organizations
-<ul>
-<li class="fragment">Affamed, AstraZeneca, Bayer, Berry Consultants, Boehringer Ingelheim, CIMS Global, Cytel, Daiichi Sankyo, Denali, Edwards Lifesciences, Eli Lilly, EMD Serono, Erste Group, Gilead Sciences, GSK, ICON, Independent, Johnson &amp; Johnson, mainanalytics, MaxisIT, Merck, Merck KGaA, MSD, Novartis, Novo Nordisk, Pfizer, R&amp;G US, Red Door Analytics, Regeneron, Roche, RPACT, RStudio &amp; R Consortium, Sanofi, Transition Technologies Science, UCB</li>
-</ul></li>
-<li class="fragment">Meet every 2 weeks</li>
-</ul>
-</section>
-<section id="workstreams" class="slide level2">
-<h2>Workstreams</h2>
-<ul>
-<li class="fragment">Mixed Models for Repeated Measures (MMRM) <a href="https://rconsortium.github.io/asa-biop-swe-wg/mmrm_R_package.html">🌎</a>
-<ul>
-<li class="fragment">Develop <code>mmrm</code> (see below) to use frequentist inference in MMRM</li>
-</ul></li>
-<li class="fragment">Bayesian MMRM <a href="https://rconsortium.github.io/asa-biop-swe-wg/bayesian_mmrm_R_package.html">🌎</a>
-<ul>
-<li class="fragment">Develop <code>brms.mmrm</code> (see below)</li>
-</ul></li>
-<li class="fragment">Health Technology Assessment <a href="https://github.com/hta-pharma/">🌎</a>
-<ul>
-<li class="fragment">Develop open-source R tools to support HTA dossier submission across various countries, particularly the topics with unmet needs in R implementation and/or related to EUnetHTA</li>
-</ul></li>
-<li class="fragment">Note: Also “just” contributing to workstreams is great!</li>
-</ul>
-</section></section>
 <section>
-<section id="achievements-in-the-first-year" class="title-slide slide level1 center">
-<h1>Achievements in the first year</h1>
+<section id="prelude-openstatsware" class="title-slide slide level1 center">
+<h1>Prelude: <code>openstatsware</code></h1>
 
 </section>
-<section id="new-r-packages-released-to-cran" class="slide level2">
-<h2>New R packages released to CRAN</h2>
+<section id="openstatsware" class="slide level2">
+<h2><code>openstatsware</code></h2>
 <ul>
-<li class="fragment"><code>mmrm</code>
-<ul>
-<li class="fragment">R package for frequentist inference in MMRM, based on <code>TMB</code> (which provides automatic differentiation in <code>C++</code> and R frontend)</li>
-<li class="fragment">See documentation <a href="https://openpharma.github.io/mmrm/">🌎</a></li>
-<li class="fragment">Easiest to install from CRAN <a href="https://cran.r-project.org/package=mmrm">🌎</a></li>
-</ul></li>
-<li class="fragment"><code>brms.mmrm</code>
-<ul>
-<li class="fragment">R package for Bayesian inference in MMRM, based on <code>brms</code> (as Stan frontend for HMC sampling)</li>
-<li class="fragment">See documentation <a href="https://openpharma.github.io/brms.mmrm/">🌎</a></li>
-<li class="fragment">Easiest to install from CRAN <a href="https://cran.r-project.org/package=brms.mmrm">🌎</a></li>
-</ul></li>
+<li>Formed on 19 August 2022, affiliated with American Statistical Association (ASA) as well as European Federation of Statisticians in the Pharma Industry (EFSPI)</li>
+<li>Cross pharma industry collaboration (56 members from 35 organizations)</li>
+<li>Homepage at <a href="https://openstatsware.org">openstatsware.org</a></li>
+<li>We welcome new members to join!</li>
 </ul>
 </section>
-<section id="why-was-the-mmrm-topic-important" class="slide level2">
-<h2>Why was the MMRM topic important?</h2>
+<section id="working-group-objectives" class="slide level2">
+<h2>Working Group Objectives</h2>
 <ul>
-<li class="fragment">MMRM is a popular analysis method for longitudinal continuous outcomes in randomized clinical trials</li>
-<li class="fragment">No tailored R package with sufficient capabilities/reliability</li>
-<li class="fragment">Also used as backbone for more recent methods such as multiple imputation</li>
-<li class="fragment">We have run comparison analyses with other R packages, namely <code>nlme</code>, <code>glmmTMB</code> and <code>lme4</code> as well as SAS <code>PROC GLIMMIX</code> and have found that <code>mmrm</code> is the fastest of them and provides closest results to <code>PROC GLIMMIX</code></li>
-</ul>
-</section>
-<section id="best-practices" class="slide level2">
-<h2>Best practices</h2>
+<li>Primary
 <ul>
-<li class="fragment">Includes version control, git workflow, code review, unit/integration testing, continuous integration/delivery (ci/cd), reproducibility, change log, documentation, package design, user experience, maintainability, publication, etc.</li>
-<li class="fragment">Workshop “Good Software Engineering Practice for R Packages” on world tour
+<li>Engineer R packages that implement important statistical methods
 <ul>
-<li class="fragment">Basel, Shanghai, San José, Rockville (last Tuesday), Montreal <a href="https://openpharma.github.io/workshop-r-swe-mtl/">🌎</a></li>
+<li>to fill in gaps in the open-source statistical software landscape</li>
+<li>focusing on what is needed for biopharmaceutical applications</li>
 </ul></li>
-<li class="fragment">Start of video series “Statistical Software Engineering 101” <a href="https://www.youtube.com/playlist?list=PL848NFA2PWgCR35n02yn1ZV7JqSu3NMxS">🌎</a>
-<ul>
-<li class="fragment">currently 2 videos, hopefully we can still produce more content</li>
 </ul></li>
-</ul>
-</section>
-<section id="conference-contributions-and-publications" class="slide level2">
-<h2>Conference contributions and Publications</h2>
+<li>Secondary
 <ul>
-<li class="fragment">Dedicated sessions with discussions at ISCB, CEN, ASA/FDA workshop (now)</li>
-<li class="fragment">Presentations at PSI, JSM, Pharma RUG, BBS, etc. <a href="https://rconsortium.github.io/asa-biop-swe-wg/presentations.html">🌎</a></li>
-<li class="fragment">BIOP Report <a href="https://rconsortium.github.io/asa-biop-swe-wg/blog/biop_report/">🌎</a></li>
-<li class="fragment">Blog <a href="https://rconsortium.github.io/asa-biop-swe-wg/blog.html">🌎</a></li>
+<li>Develop and disseminate best practices for engineering high-quality open-source statistical software
+<ul>
+<li>By actively doing the statistical engineering work together, we align on best practices and can communicate these to others</li>
+<li>See my virtual presentation about <code>openstatsguide</code> and the corresponding poster tomorrow!</li>
+</ul></li>
+</ul></li>
 </ul>
 </section></section>
 <section>
-<section id="ingredients-for-successful-and-sustainable-collaboration" class="title-slide slide level1 center">
-<h1>Ingredients for successful and sustainable collaboration</h1>
+<section id="interlude-mixed-models-for-repeated-measures-and-mmrm" class="title-slide slide level1 center">
+<h1>Interlude: Mixed Models for Repeated Measures and <code>{mmrm}</code></h1>
+
+</section>
+<section id="what-is-a-mmrm" class="slide level2">
+<h2>What is a MMRM?</h2>
+<ul>
+<li>MMRM is a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials</li>
+<li>For each subject <span class="math inline">\(i\)</span> we observe a vector <span class="math display">\[
+Y_i = (y_{i1}, \dotsc, y_{im_i})^\top \in \mathbb{R}^{m_i}
+\]</span></li>
+<li>Use a design matrix <span class="math inline">\(X_i \in \mathbb{R}^{m_i \times p}\)</span></li>
+<li>Use a corresponding coefficient vector <span class="math inline">\(\beta \in \mathbb{R}^{p}\)</span></li>
+<li>Assume that the observations are multivariate normal distributed: <span class="math display">\[
+Y_i \sim N(X_i\beta, \Sigma_i)
+\]</span> where the covariance matrix <span class="math inline">\(\Sigma_i \in \mathbb{R}^{m_i \times m_i}\)</span> is derived by subsetting the overall covariance matrix <span class="math inline">\(\Sigma \in \mathbb{R}^{m \times m}\)</span> appropriately</li>
+</ul>
+</section>
+<section id="covariance-model-and-estimation" class="slide level2">
+<h2>Covariance model and Estimation</h2>
+<ul>
+<li>The symmetric and positive definite covariance matrix <span class="math inline">\(\Sigma\)</span> is parametrized by a vector of variance parameters <span class="math inline">\(\theta = (\theta_1, \dotsc, \theta_k)^\top\)</span></li>
+<li>There are many different choices for how to model the covariance matrix and correspondingly <span class="math inline">\(\theta\)</span> has different interpretations, e.g.:
+<ul>
+<li>Unstructured, Toeplitz, AR1, compound symmetry, ante-dependence, spatial exponential</li>
+<li>Group specific covariance estimates and weights</li>
+</ul></li>
+<li>Estimation is performed
+<ul>
+<li>(sometimes) via maximum likelihood (ML) inference, maximizing the joint log-likelihood of <span class="math inline">\((\beta, \theta)\)</span> or</li>
+<li>(usually) via integrating out <span class="math inline">\(\beta\)</span> from the likelihood and maximizing for <span class="math inline">\(\theta\)</span> (restricted ML, REML)</li>
+</ul></li>
+</ul>
+</section>
+<section id="existing-r-packages-and-tried-solutions" class="slide level2">
+<h2>Existing R Packages and Tried Solutions</h2>
+<ul>
+<li>One challenge is that we need to use “adjusted” degrees of freedom for t- or F-test statistics
+<ul>
+<li>because of the covariance parameter estimation and data sets are usually unbalanced</li>
+<li>Typical Satterthwaite or Kenward-Roger adjustment methods</li>
+</ul></li>
+<li>Initially thought that the MMRM problem was solved by using <code>lme4</code> with <code>lmerTest</code>, learned that this approach failed on large data sets (slow, did not converge)</li>
+<li><code>nlme</code> does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with <code>emmeans</code> it is only approximate</li>
+<li>Next we tried to extend <code>glmmTMB</code> to calculate Satterthwaite adjusted degrees of freedom, but it did not work</li>
+</ul>
+</section>
+<section id="new-idea" class="slide level2">
+<h2>New Idea</h2>
+<ul>
+<li>We only want to fit a fixed effects model with a structured covariance matrix for each subject</li>
+<li>The idea is then to use the Template Model Builder (<code>TMB</code>) directly
+<ul>
+<li>as it is also underlying <code>glmmTMB</code></li>
+<li>but code the exact model we want</li>
+</ul></li>
+<li>We do this by implementing the log-likelihood in <code>C++</code> using the <code>TMB</code> provided libraries</li>
+<li>Provide an R solution that
+<ul>
+<li>has fast convergence times</li>
+<li>generates estimates closest to (previous) “gold standard” implementation (<code>SAS</code>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="advantages-of-tmb" class="slide level2">
+<h2>Advantages of <code>TMB</code></h2>
+<ul>
+<li>Fast <code>C++</code> framework for defining objective functions (<code>Rcpp</code> would have been alternative interface)</li>
+<li>Automatic differentiation of the log-likelihood as a function of the variance parameters</li>
+<li>We get the gradient and Hessian exactly and without additional coding</li>
+<li>Syntactic sugars to allow simple matrix calculations or operations like R</li>
+<li>This can be used from the R side with the <code>TMB</code> interface and plugged into optimizers</li>
+</ul>
+</section>
+<section id="why-its-not-just-another-package" class="slide level2">
+<h2>Why it’s not just another package</h2>
+<ul>
+<li>Ongoing maintenance and support from the pharmaceutical industry
+<ul>
+<li>5 companies being involved in the funding, on track to become standard package</li>
+</ul></li>
+<li>Development using best practices as show case for high quality package
+<ul>
+<li>Thorough and transparent unit and integration <a href="https://github.com/openpharma/mmrm/tree/main/tests/testthat">tests</a> to ensure accurate results</li>
+<li>The integration tests in <code>{mmrm}</code> are set to a tolerance of <span class="math inline">\(10^{-3}\)</span> when compared to SAS outputs.</li>
+<li>Uses the <code>testthat</code> framework with <code>covr</code> to communicate the testing coverage</li>
+</ul></li>
+</ul>
+</section>
+<section id="highlighted-features-of-mmrm" class="slide level2">
+<h2>Highlighted Features of <code>mmrm</code></h2>
+<ul>
+<li><strong>Hypothesis Testing</strong>:
+<ul>
+<li><code>emmeans</code> interface for least square means</li>
+<li>Satterthwaite and Kenward-Roger adjustments</li>
+<li>Robust sandwich estimator for covariance</li>
+</ul></li>
+<li><strong>Integrations and extentions</strong>
+<ul>
+<li><code>tidymodels</code> builtin parsnip engine and recipes for streamlined model fitting workflows</li>
+<li><code>teal</code>, <code>tern</code>, <code>rtables</code> integration for post processing and reporting</li>
+<li>Support conditional mean prediction and simulation</li>
+<li>Also used in <code>rbmi</code> for conditional mean imputation!</li>
+</ul></li>
+</ul>
+</section>
+<section id="computational-efficiency" class="slide level2">
+<h2>Computational Efficiency</h2>
+<p><code>mmrm</code> not only supports multiple covariance structure, it also has good efficiency (due to fast implementations in C++)</p>
+<table class="caption-top">
+<caption>Comparison of convergence times (ms) for example (<a href="https://openpharma.github.io/mmrm/latest/articles/mmrm_review_methods.html#fev-data-1">source</a>)</caption>
+<thead>
+<tr class="header">
+<th>Implementation</th>
+<th>Median</th>
+<th>First Quartile</th>
+<th>Third Quartile</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mmrm</code></td>
+<td>56.15</td>
+<td>55.76</td>
+<td>56.30</td>
+</tr>
+<tr class="even">
+<td><code>PROC GLIMMIX</code></td>
+<td>100.00</td>
+<td>100.00</td>
+<td>100.00</td>
+</tr>
+<tr class="odd">
+<td><code>lmer</code></td>
+<td>247.02</td>
+<td>245.25</td>
+<td>257.46</td>
+</tr>
+<tr class="even">
+<td><code>gls</code></td>
+<td>687.63</td>
+<td>683.50</td>
+<td>692.45</td>
+</tr>
+<tr class="odd">
+<td><code>glmmTMB</code></td>
+<td>715.90</td>
+<td>708.70</td>
+<td>721.57</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differences-with-sas" class="slide level2">
+<h2>Differences with SAS</h2>
+<p><code>{mmrm}</code> has small difference from SAS</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="mmrm-review-treatment-fev-1.png" style="height:100.0%"></p>
+<figcaption>Marginal mean treatment effects for each visit (<a href="https://openpharma.github.io/mmrm/v0.3.12/articles/mmrm_review_methods.html#fev-data-2">source</a>)</figcaption>
+</figure>
+</div>
+</section>
+<section id="impact-of-mmrm" class="slide level2">
+<h2>Impact of <code>mmrm</code></h2>
+<ul>
+<li><p>CRAN downloads: 3922 per month in the last month</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/mmrm/">https://cran.r-project.org/web/packages/mmrm/</a></li>
+</ul></li>
+<li><p>GitHub repository: 101 stars as of 4th July 2024</p>
+<ul>
+<li><a href="https://github.com/openpharma/mmrm">https://github.com/openpharma/mmrm</a></li>
+</ul></li>
+<li><p>Quite a lot of questions on StackOverflow (and internal similar question boards)</p></li>
+<li><p>Most important features have been implemented by now, but definitely open for feature requests and grateful for any bug reports!</p></li>
+</ul>
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<ul>
+<li><code>mmrm</code> is on CRAN - use this as a starting point:</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">install.packages</span>(<span class="st">"mmrm"</span>)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(mmrm)</span>
+<span id="cb1-3"><a></a>fit <span class="ot">&lt;-</span> <span class="fu">mmrm</span>(</span>
+<span id="cb1-4"><a></a>  <span class="at">formula =</span> FEV1 <span class="sc">~</span> RACE <span class="sc">+</span> SEX <span class="sc">+</span> ARMCD <span class="sc">*</span> AVISIT <span class="sc">+</span> <span class="fu">us</span>(AVISIT <span class="sc">|</span> USUBJID),</span>
+<span id="cb1-5"><a></a>  <span class="at">data =</span> fev_data</span>
+<span id="cb1-6"><a></a>)</span>
+<span id="cb1-7"><a></a><span class="fu">summary</span>(fit)</span>
+<span id="cb1-8"><a></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb1-9"><a></a><span class="fu">emmeans</span>(fit, <span class="sc">~</span> ARMCD <span class="sc">|</span> AVISIT)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Visit <a href="https://openpharma.github.io/mmrm/">openpharma.github.io/mmrm</a> for detailed docs including vignettes
+<ul>
+<li>In particular the <a href="https://openpharma.github.io/mmrm/main/articles/mmrm_review_methods.html">comparison vignette</a></li>
+</ul></li>
+<li>Consider <a href="https://insightsengineering.github.io/tern.mmrm/main/">tern.mmrm</a> for high-level clinical reporting interface, incl.&nbsp;standard tables and graphs</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="finale-ingredients-for-successful-and-sustainable-collaboration" class="title-slide slide level1 center">
+<h1>Finale: Ingredients for successful and sustainable collaboration</h1>
 
 </section>
 <section id="human-factors" class="slide level2">
 <h2>Human factors</h2>
 <ul>
-<li class="fragment">Mutual interest and mutual trust</li>
-<li class="fragment">Prerequisite is getting to know each other
+<li>Mutual interest and trust</li>
+<li>Prerequisite is getting to know each other
 <ul>
-<li class="fragment">Although mostly just online, biweekly calls help a lot with this</li>
+<li>Although mostly just online, biweekly calls help a lot with this</li>
 </ul></li>
-<li class="fragment">Reciprocity mindset
+<li>Reciprocity mindset
 <ul>
-<li class="fragment">“Reciprocity means that in response to friendly actions, people are frequently much nicer and much more cooperative than predicted by the self-interest model”</li>
-<li class="fragment">Personal experience: If you first give away something, more will come back to you.</li>
+<li>“Reciprocity means that in response to friendly actions, people are frequently much nicer and much more cooperative than predicted by the self-interest model”</li>
+<li>Personal experience: If you first give away something, more will come back to you.</li>
 </ul></li>
 </ul>
 </section>
 <section id="development-process" class="slide level2">
 <h2>Development process</h2>
 <ul>
-<li class="fragment">Important to go public as soon as possible
+<li>Important to go public as soon as possible
 <ul>
-<li class="fragment">don’t wait for the product to be finished</li>
-<li class="fragment">you never know who else might be interested/could help</li>
+<li>don’t wait for the product to be finished</li>
+<li>you never know who else might be interested/could help</li>
 </ul></li>
-<li class="fragment">Version control with git
+<li>Version control with git
 <ul>
-<li class="fragment">cornerstone of effective collaboration</li>
+<li>cornerstone of effective collaboration</li>
 </ul></li>
-<li class="fragment">Building software together works better than alone
+<li>Building software together works better than alone
 <ul>
-<li class="fragment">Different perspectives in discussions and code review help to optimize the user interface and thus experience</li>
+<li>Different perspectives in discussions and code review help to optimize the user interface and thus experience</li>
 </ul></li>
 </ul>
 </section>
 <section id="coding-standards" class="slide level2">
 <h2>Coding standards</h2>
 <ul>
-<li class="fragment">Consistent and readable code style simplifies joint work</li>
-<li class="fragment">Written (!) contribution guidelines help</li>
-<li class="fragment">Lowering the entry hurdle using developer calls is important</li>
+<li>Consistent and readable code style simplifies joint work</li>
+<li>Written (!) contribution guidelines help</li>
+<li>Lowering the entry hurdle using developer calls is important</li>
 </ul>
 </section>
 <section id="robust-test-suite" class="slide level2">
 <h2>Robust test suite</h2>
 <ul>
-<li class="fragment">Unit and integration tests are essential for preventing regression and assuring quality</li>
-<li class="fragment">Especially with compiled code critical to see if package works correctly</li>
-<li class="fragment">Use continuous integration during development to make sure nothing breaks along the way</li>
+<li>Unit and integration tests are essential for preventing regression and assuring quality</li>
+<li>Especially with compiled code critical to see if package works correctly</li>
+<li>Use continuous integration during development to make sure nothing breaks along the way</li>
 </ul>
 </section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
 <ul>
-<li class="fragment">Lots of work but extremely important
+<li>Lots of work but extremely important
 <ul>
-<li class="fragment">start with writing up the methods details</li>
-<li class="fragment">think about the code structure first in a “design doc”</li>
-<li class="fragment">only then put the code in the package</li>
+<li>start with writing up the methods details</li>
+<li>think about the code structure first in a “design doc”</li>
+<li>only then put the code in the package</li>
 </ul></li>
-<li class="fragment">Needs to be kept up-to-date</li>
-<li class="fragment">Need to have examples &amp; vignettes
+<li>Needs to be kept up-to-date</li>
+<li>Need to have examples &amp; vignettes
 <ul>
-<li class="fragment">Testing alone is not sufficient</li>
-<li class="fragment">Builds trust with users</li>
-<li class="fragment">Reference for developers over time</li>
+<li>Testing alone is not sufficient</li>
+<li>Builds trust with users</li>
+<li>Reference for developers over time</li>
 </ul></li>
 </ul>
-</section></section>
-<section>
-<section id="long-term-vision" class="title-slide slide level1 center">
-<h1>Long term vision</h1>
-
 </section>
-<section id="vision-statisticians-have-software-engineering-skills" class="slide level2">
-<h2>Vision: Statisticians have software engineering skills</h2>
-<ul>
-<li class="fragment">These skills are taught at university</li>
-<li class="fragment">Statisticians can use basic practices in their daily work …</li>
-<li class="fragment">… to ensure reproducibility of statistical analyses and research results</li>
-</ul>
-</section>
-<section id="vision-innovation-does-not-stop-with-publication" class="slide level2">
-<h2>Vision: Innovation does not stop with publication</h2>
-<ul>
-<li class="fragment">Methods research does not end when the first methods paper is published</li>
-<li class="fragment">Initial prototype code as paper supplement is not sufficient</li>
-<li class="fragment">Continue to developing open source and reliably tested software packages …</li>
-<li class="fragment">… to enable users to easily use the new methodology in their own applications</li>
-</ul>
-</section>
-<section id="vision-industry-develops-common-code-base" class="slide level2">
-<h2>Vision: Industry develops common code base</h2>
-<ul>
-<li class="fragment">Increasingly companies work in the open source as much as possible</li>
-<li class="fragment">Rather than repeating similar developments internally …</li>
-<li class="fragment">… to become more cost-effective and transparent towards society</li>
-</ul>
-</section></section>
-<section>
-<section id="next-steps" class="title-slide slide level1 center">
-<h1>Next steps</h1>
-
-</section>
-<section id="r-packages" class="slide level2">
-<h2>R Packages</h2>
-<ul>
-<li class="fragment">New workstream on covariate adjustment is starting up</li>
-<li class="fragment">Think more strategically about identifying gaps in the statistical software landscape</li>
-<li class="fragment">Help maintaining the CRAN Task View on Clinical Trials</li>
-</ul>
-</section>
-<section id="branding-and-collaboration" class="slide level2">
-<h2>Branding and Collaboration</h2>
-<ul>
-<li class="fragment">Publicize our new short name <code>openstatsware</code></li>
-<li class="fragment">Proposed to associate also with EFSPI to emphasize global nature of the group</li>
-<li class="fragment">Ensure a strong connection to the new pan-pharma methodology group</li>
-</ul>
-</section>
-<section id="communication-and-outreach" class="slide level2">
-<h2>Communication and Outreach</h2>
-<ul>
-<li class="fragment">Add more content to our video series</li>
-<li class="fragment">Start a chat channel to start informal discussions within larger community</li>
-<li class="fragment">Organize hackathons working together on workstream packages e.g.</li>
-</ul>
-</section>
-<section id="qa" class="slide level2" data-background-image="thank-you.jpg">
-<h2>Q&amp;A</h2>
-<!-- Photo by Vie Studio [link](https://www.pexels.com/photo/thank-you-lettering-on-white-surface-4439457/) -->
+<section id="thank-you-questions" class="slide level2">
+<h2>Thank you! Questions?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" height="500"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png" height="500"></p>
+</div></div>
 
 <div class="quarto-auto-generated-content">
-<p><img src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png" class="slide-logo"></p>
+<p><img src="https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>

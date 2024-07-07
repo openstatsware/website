@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.5.53">
 
   <meta name="author" content="Ben Arancibia and Yoni Sidi">
-  <title>openstatsware - Introducting the Software Engineering Working Group and {mmrm}</title>
+  <title>openstatsware – Introducting the Software Engineering Working Group and {mmrm}</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -417,8 +417,7 @@ Ben Arancibia and Yoni Sidi
 <li><code>nlme</code> does not give Satterthwaite adjusted degrees of freedom, has convergence issues, and with <code>emmeans</code> it is only approximate</li>
 <li>tried to extend <code>glmmTMB</code> to calculate Satterthwaite adjusted degrees of freedom</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="before-creating-a-new-package" class="slide level2">
 <h2>Before creating a new package</h2>
@@ -476,8 +475,7 @@ Ben Arancibia and Yoni Sidi
 <li>Degrees of Freedom</li>
 <li>Contrasts</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="documentation" class="slide level2">
 <h2>Documentation</h2>
@@ -487,8 +485,7 @@ Ben Arancibia and Yoni Sidi
 <p><code>{mmrm}</code></p>
 </div><div class="column" style="width:50%;">
 <p><code>PROC MIXED</code></p>
-</div>
-</div>
+</div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -506,8 +503,7 @@ Ben Arancibia and Yoni Sidi
 <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax14.htm#statug.mixed.repeatedstmt_type">Covariance Structures</a></li>
 <li><a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mixed_syntax10.htm#statug.mixed.modelstmt_ddfm">Degrees of Freedom</a></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="unit-testing" class="slide level2">
 <h2>Unit Testing</h2>
@@ -528,7 +524,7 @@ Ben Arancibia and Yoni Sidi
 </section>
 <section id="estimation-methods" class="slide level2">
 <h2>Estimation Methods</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -577,12 +573,11 @@ Ben Arancibia and Yoni Sidi
 </div>
 </div>
 <p><img data-src="https://media.giphy.com/media/3o7ZeTmU77UlPyeR2w/giphy.gif"></p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="covariance-structures-details" class="slide level2">
 <h2>Covariance structures details</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Covariance structures</th>
@@ -626,7 +621,7 @@ Ben Arancibia and Yoni Sidi
 </section>
 <section id="degrees-of-freedom-methods" class="slide level2">
 <h2>Degrees of Freedom Methods</h2>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;">Method</th>
@@ -696,8 +691,7 @@ Ben Arancibia and Yoni Sidi
 </div>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section>
 <section id="swe-wg-long-term-perspective" class="slide level2">
 <h2>SWE WG Long Term Perspective</h2>
@@ -746,8 +740,7 @@ Ben Arancibia and Yoni Sidi
 <p><img data-src="https://github.com/openpharma/mmrm/raw/main/man/figures/logo.png" height="500"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" height="500"></p>
-</div>
-</div>
+</div></div>
 
 <div class="quarto-auto-generated-content">
 <p><img src="https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png" class="slide-logo"></p>
@@ -998,18 +991,7 @@ Ben Arancibia and Yoni Sidi
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1041,7 +1023,29 @@ Ben Arancibia and Yoni Sidi
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/www\.openstatsware\.org");
@@ -1049,7 +1053,7 @@ Ben Arancibia and Yoni Sidi
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
