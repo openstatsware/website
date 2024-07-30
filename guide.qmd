@@ -59,29 +59,6 @@ guide_table <- function(r = "", python = "", julia = "") {
 }
 ```
 
-## Design 
-
-Before you begin coding it is often valuable to spend time designing and planning your package in collaboration with the target user. This can also help you define the scope of your first release ensuring that you are working on high-value features and enabling developers to focus. 
-
-::: {.panel-tabset}
-
-## Wireframing
-
-Wireframing involves creating a rough drawing of the user-interface of a webpage or application. Popular tools include:  
-[figma](https://www.figma.com/design/)
-
-
-## Diagrams
-Unified Modeling Language (UML)is a way to visually represent the architecture, structure and behaviour or your package. UML diagrams can be drawn programmically in tools such as:   
-[mermaid](https://mermaid.js.org/syntax/classDiagram.html)
-
-
-## Project Management
-Defining your minimum viable product, i.e. the scope of your first release will help developers focus and also give an opportunity to validate your understanding of the problem with your target user group.   
-[github](https://github.com/features/issues)
-[JIRA](https://www.atlassian.com/software/jira)
-
-:::
 
 ## Documentation
 
@@ -219,24 +196,7 @@ guide_table(
 )
     ```
 
-## Dependency Management
-Packages will typically reference other packages to import pre-existing functionality. These dependencies are moving targets, i.e. they are periodically updated. Therefore package dependencies should be proactively managed. 
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[renv](https://cran.r-project.org/web/packages/renv/index.html)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[conda](https://conda.io/projects/conda/en/latest/index.html)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Pkg.jl](https://pkgdocs.julialang.org/v1/)
-
-:::
 
 ## Style
 
@@ -268,7 +228,27 @@ guide_table(
 
 Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.
 
+### Dependency Management
 1.  **Reduce dependencies** to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.
+
+
+2. **Use tools that track dependencies and their versions** as these are moving targets, i.e. they are periodically updated. Insufficient dependency management is a common reason for "it doesn't work on my computer" errors. 
+
+::: {.panel-tabset}
+
+## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
+
+[renv](https://cran.r-project.org/web/packages/renv/index.html)
+
+## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
+
+[conda](https://conda.io/projects/conda/en/latest/index.html)
+
+## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
+
+[Pkg.jl](https://pkgdocs.julialang.org/v1/)
+
+:::
 
 2.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
