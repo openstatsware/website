@@ -1,9 +1,9 @@
 ---
 title: "openstatsguide"
 subtitle: "Minimum Viable Good Practices for High Quality Statistical Software Packages"
-author: "0.0-2"
+author: "0.0-3"
 author-title: "Version"
-date: "31 May 2024"
+date: "23 Aug 2024"
 bibliography: references.bib
 nocite: |
   @*
