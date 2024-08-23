@@ -74,21 +74,7 @@ guide_table(
 )
     ```
 
-::: {.panel-tabset}
 
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[roxygen2](https://roxygen2.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[docstrings](https://peps.python.org/pep-0257/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[docstrings](https://docs.julialang.org/en/v1/manual/documentation/)
-
-:::
 
 2.  Do also **document internal functions** and classes for maintenance by future developers.
 
@@ -112,21 +98,7 @@ guide_table(
 )
     ```
 
-::: {.panel-tabset}
 
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[pkgdown](https://pkgdown.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[Sphinx](https://www.sphinx-doc.org/en/master/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Documenter](https://documenter.juliadocs.org/)
-
-:::
 
 ## Tests
 
@@ -144,21 +116,7 @@ guide_table(
 )
     ```
 
-::: {.panel-tabset}
 
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[testthat](https://testthat.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[pytest](https://pytest.org/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Test](https://docs.julialang.org/en/v1/stdlib/Test/)
-
-:::   
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
@@ -228,29 +186,14 @@ guide_table(
 
 Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.
 
-### Dependency Management
+
 1.  **Reduce dependencies** to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.
 
 
-2. **Use tools that track dependencies and their versions** as these are moving targets, i.e. they are periodically updated. Insufficient dependency management is a common reason for "it doesn't work on my computer" errors. 
+2. **Ensure that you track dependencies and pin their versions** so if another developer contributes then they can use the same environment to produce consistent results and behaviours. This could be tracked using more system level approaches like configuring a snapshot date in the package repository to language-specific tools that generate a file that tracks dependencies and versions that serves as a source of truth for all packages developers. 
 
-::: {.panel-tabset}
 
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[renv](https://cran.r-project.org/web/packages/renv/index.html)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[conda](https://conda.io/projects/conda/en/latest/index.html)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Pkg.jl](https://pkgdocs.julialang.org/v1/)
-
-:::
-
-2.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
+3.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
     ```{r results="asis", echo=FALSE}
 guide_table(
@@ -263,7 +206,7 @@ guide_table(
 )
     ```
 
-3.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+4.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
 
 # References
 
