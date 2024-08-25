@@ -3,12 +3,12 @@
 "><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="0.0-2">
-<meta name="dcterms.date" content="2024-05-31">
+<meta name="author" content="0.0-3">
+<meta name="dcterms.date" content="2024-08-23">
 
 <title>openstatsguide – openstatsware</title>
 <style>
@@ -237,14 +237,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Version</div>
     <div class="quarto-title-meta-contents">
-             <p>0.0-2 </p>
+             <p>0.0-3 </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 31, 2024</p>
+      <p class="date">August 23, 2024</p>
     </div>
   </div>
   
@@ -565,6 +565,7 @@ Enabled in VScode via
 <p>Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.</p>
 <ol type="1">
 <li><p><strong>Reduce dependencies</strong> to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.</p></li>
+<li><p><strong>Ensure that you track dependencies and pin their versions</strong> so if another developer contributes then they can use the same environment to produce consistent results and behaviours. This could be tracked using more system level approaches like configuring a snapshot date in the package repository to language-specific tools that generate a file that tracks dependencies and versions that serves as a source of truth for all packages developers.</p></li>
 <li><p>Give clear information to users about changes in the package API via maintaining the <strong>change log</strong> and first <strong>deprecating functionality</strong> before removing it.</p>
 <table style="width:100%;">
 <tbody>
