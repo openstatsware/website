@@ -1,9 +1,9 @@
 ---
 title: "openstatsguide"
 subtitle: "Minimum Viable Good Practices for High Quality Statistical Software Packages"
-author: "0.0-2"
+author: "0.0-3"
 author-title: "Version"
-date: "31 May 2024"
+date: "23 Aug 2024"
 bibliography: references.bib
 nocite: |
   @*
@@ -59,6 +59,7 @@ guide_table <- function(r = "", python = "", julia = "") {
 }
 ```
 
+
 ## Documentation
 
 Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.
@@ -72,6 +73,8 @@ guide_table(
     julia = htmltools::a("docstrings", href = "https://docs.julialang.org/en/v1/manual/documentation/")
 )
     ```
+
+
 
 2.  Do also **document internal functions** and classes for maintenance by future developers.
 
@@ -95,6 +98,8 @@ guide_table(
 )
     ```
 
+
+
 ## Tests
 
 Tests are a fundamental safety net and development tool to ensure that your package works as expected, both during development as well as on user systems.
@@ -110,6 +115,8 @@ guide_table(
     julia = htmltools::a("Test", href = "https://docs.julialang.org/en/v1/stdlib/Test/")
 )
     ```
+
+
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
@@ -147,6 +154,8 @@ guide_table(
 )
     ```
 
+
+
 ## Style
 
 A consistent and readable code style that is language idiomatic should be used and enforced by style checks.
@@ -177,9 +186,14 @@ guide_table(
 
 Life cycle management is simplified by reducing dependencies, and should comprise a central code repository.
 
+
 1.  **Reduce dependencies** to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.
 
-2.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
+
+2. **Ensure that you track dependencies and pin their versions** so if another developer contributes then they can use the same environment to produce consistent results and behaviours. This could be tracked using more system level approaches like configuring a snapshot date in the package repository to language-specific tools that generate a file that tracks dependencies and versions that serves as a source of truth for all packages developers. 
+
+
+3.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
     ```{r results="asis", echo=FALSE}
 guide_table(
@@ -192,7 +206,7 @@ guide_table(
 )
     ```
 
-3.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
+4.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
 
 # References
 
