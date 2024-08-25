@@ -1,9 +1,9 @@
 ---
 title: "openstatsguide"
 subtitle: "Minimum Viable Good Practices for High Quality Statistical Software Packages"
-author: "0.0-2"
+author: "0.0-3"
 author-title: "Version"
-date: "31 May 2024"
+date: "23 Aug 2024"
 bibliography: references.bib
 nocite: |
   @*
@@ -29,6 +29,7 @@ This guide primarily addresses developers of statistical packages. Users interes
 # Recommendations
 
 
+
 ## Documentation
 
 Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.
@@ -50,6 +51,8 @@ Documentation is important for both users and developers to understand all objec
 [docstrings](https://docs.julialang.org/en/v1/manual/documentation/)
 
 :::
+
+
 
 
 
@@ -85,6 +88,8 @@ Vignettes are documents that complement the object documentation by providing a 
 
 
 
+
+
 ## Tests
 
 Tests are a fundamental safety net and development tool to ensure that your package works as expected, both during development as well as on user systems.
@@ -109,6 +114,8 @@ Tests are a fundamental safety net and development tool to ensure that your pack
 [Test](https://docs.julialang.org/en/v1/stdlib/Test/)
 
 :::   
+
+
 
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
@@ -172,6 +179,8 @@ Function definitions should be short, simple and enforce argument types with ass
 [ArgCheck.jl](https://github.com/jw3126/ArgCheck.jl)
 
 :::  
+
+
 
 
 ## Style
