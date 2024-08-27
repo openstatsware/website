@@ -9,4 +9,4 @@ There are multiple ways to get involved with `openstatsware`:
 
 -   Join as a workstream member, who actively contributes to one or several workstream(s).
 
-If you are interested to join `openstatsware`, please contact us: [Daniel Sabanes Bove](mailto:daniel@rconis.com), [Ya Wang](mailto:ya.wang10@gilead.com) or [Alessandro Gasparini](alessandro.gasparini@reddooranalytics.se)
+If you are interested to join `openstatsware`, please contact us: [Daniel Sabanes Bove](mailto:daniel@rconis.com), [Ya Wang](mailto:ya.wang10@gilead.com) or [Alessandro Gasparini](alessandro.gasparini@reddooranalytics.se).
