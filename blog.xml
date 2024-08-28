@@ -10,7 +10,52 @@
 <atom:link href="https://www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
 <generator>quarto-1.5.56</generator>
-<lastBuildDate>Sun, 21 Apr 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>openstatsware at UseR!2024</title>
+  <dc:creator>Daniel, Wilmar, Yann, Friedrich, Joseph</dc:creator>
+  <link>https://www.openstatsware.org/blog/user-2024/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The first in-person UseR! conference after the Covid pandemic took place between 8 and 11 July 2024 in Salzburg, Austria. Hosted by Roche and the Ludwig-Maximilians-Universität München (Munich) with support by the R Consortium and Linux Foundation, this event brought together about 500 in person attendees as well as virtual participants and presenters. See <a href="https://events.linuxfoundation.org/user/">here</a> for the conference website which also links to the conference <a href="https://userconf2024.sched.com/">agenda</a> (includes slides for download, where made available by the presenters) and free <a href="https://www.youtube.com/c/useRConference_global">recordings</a>. See also UseR! talks <a href="https://ropensci.org/blog/2024/07/19/news-july-2024/">assembled by <code>rOpenSci</code></a>.</p>
+<p>From <code>openstatsware</code> attended:</p>
+<ul>
+<li>Daniel Sabanés Bové (RCONIS)</li>
+<li>Friedrich Pahlke (RCONIS)</li>
+<li>Gregory Chen (MSD)</li>
+<li>Joseph Rickert (R Consortium)</li>
+<li>Lars Andersen (Boehringer Ingelheim)</li>
+<li>Sergio Olmos (Sanofi)</li>
+<li>Will Landau (Lilly)</li>
+<li>Wilmar Igl (ICON)</li>
+<li>Yann Féat (mainanalytics)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.openstatsware.org/blog/user-2024/sergio_slide.jpg" class="img-fluid figure-img"></p>
+<figcaption>Sergio’s presentation</figcaption>
+</figure>
+</div>
+<p>Here a couple of them will state their highlights from the conference and summarize their contribution to the conference.</p>
+<p>Joseph: “The UseR! 2024 conference, which was organized by the R Foundation, Roche, and the Ludwig-Maximilians-Universität München, and financed by the R Consortium was the first in-person event since 2019. It provided a much needed opportunity for R users to establish friendships and meet face-to-face with luminaries from the R world including Kurt Hornik, Uwe Ligges, and Simon Urbanek from the R Core Group and CRAN and Peter Dalgaard,Tomas Kalibera, Martin Mächler, Luke Tierney from the R Core Group, and Hadley Wickham and others from his development team at Posit.”</p>
+<p>Wilmar: “I attended my 1st UseR! conference in 2024 to present a personal project to promote civil participation in political decision-making based on R/Shiny technology. The fact that this talk was accepted illustrates the openness of the community and the wide range of potential applications of R and affiliated open-source technologies in society. The conference covered a wide range of other topics in data science and statistics with too many (personal) highlights to mention. The UseR! conference was also special for me because it allowed me to meet many colleagues in real life, whom I have been meeting up with virtually over the last year. Finally, one cannot write about the UseR! conference without mentioning the special vibe of a friendly, inclusive and fun environment, where you can also rub shoulders with long-time champions and rising stars of the R community. UseR! will definitely be on the list of top conferences for the years to come!”</p>
+<p>Yann: “The energy at this conference was incredible. It brought together famous contributors to the R ecosystem and newcomers around topics that are important to me, such as software engineering, statistics, data visualization, reproducibility, etc. This made for interesting and diverse presentations, and more stimulating discussions than one can count. I myself had the opportunity to present the work of the R Validation Hub’s <a href="https://github.com/pharmaR/regulatory-r-repo-wg/">Regulatory R Package Repository</a>, and it was a pleasure to exchange ideas on this topic in person. I look forward to future UseR! conferences!”</p>
+<p>Daniel: “I almost can’t believe it, but indeed this was the first UseR! conference I attended. I feel honored to have been part of the organizing and program committee, so I contributed a tiny part to the overall conference organization. It was absolutely amazing to meet so many R community members in person, many of whom I knew by name or video already. Also it was very special to have many R core members mixing with the crowd, giving comments, asking questions, reminding us how R was born in keynote presentations. I really hope that there will be another UseR! conference soon (not just in 5 years) and that I will be able to attend it again. This time, I gave an <a href="https://rconis.github.io/user2024-tutorial-gswep/"><code>openstatsware</code> workshop</a> on good software engineering practice for R packages together with Friedrich, presented the <a href="https://userconf2024.sched.com/event/1c8uB/mmrm-a-robust-and-comprehensive-r-package-for-implementing-mixed-models-for-repeated-measures-daniel-sabanes-bove-rconis"><code>{mmrm}</code> package</a> built by <code>openstatsware</code>, and got feedback on the <code>openstatsguide</code> by <code>openstatsware</code> in the <a href="../../slides/openstatsguide-poster.pdf">poster</a> session. It was great to bring in so much <code>openstatsware</code> to UseR! 2024 😁”</p>
+<p>Friedrich: “Attending the UseR! 2024 conference in Salzburg was a truly enriching experience. This event marked my first in-person UseR! conference, and it exceeded all my expectations. The conference provided an incredible platform for learning and connecting with fellow R enthusiasts. It was especially rewarding to co-lead a 3.5-hour tutorial on ‘Good Software Engineering Practice for R Packages’ alongside Daniel Sabanés Bové. Our session focused on equipping participants with essential tools and techniques for developing robust and reliable R packages, which was met with great enthusiasm. In addition to the tutorial, I had the opportunity to present on ‘Engineering a Reliable R Package for Regulatory Use Using <code>{rpact}</code> as an Example.’ This talk gave me the chance to highlight the six-year journey of developing the <a href="https://rpact-com.github.io/rpact/"><code>{rpact}</code> package</a>, a tool crucial for confirmatory adaptive clinical trials. I discussed how our validation framework, inspired by GAMP 5 principles, has been instrumental in achieving high levels of automation and reliability, ensuring compliance with stringent regulatory standards. As a co-founder of <a href="https://rconis.com">RCONIS</a>, our new joint venture that also sponsored the conference, it was an honor to contribute to this fantastic event. Beyond my official roles, I also enjoyed capturing memorable moments as the conference photographer. The entire experience left me eagerly anticipating future UseR! conferences and the continued growth of the R community.”</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <category>R</category>
+  <guid>https://www.openstatsware.org/blog/user-2024/</guid>
+  <pubDate>Wed, 28 Aug 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://www.openstatsware.org/blog/user-2024/sergio_slide.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>New European Working Group Co-Chair</title>
   <dc:creator>Alessandro </dc:creator>
@@ -108,23 +153,23 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 44 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="bzoqvixind" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#bzoqvixind table {
+<div id="xqriknocdq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#xqriknocdq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bzoqvixind thead, #bzoqvixind tbody, #bzoqvixind tfoot, #bzoqvixind tr, #bzoqvixind td, #bzoqvixind th {
+#xqriknocdq thead, #xqriknocdq tbody, #xqriknocdq tfoot, #xqriknocdq tr, #xqriknocdq td, #xqriknocdq th {
   border-style: none;
 }
 
-#bzoqvixind p {
+#xqriknocdq p {
   margin: 0;
   padding: 0;
 }
 
-#bzoqvixind .gt_table {
+#xqriknocdq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -150,12 +195,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-left-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_caption {
+#xqriknocdq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bzoqvixind .gt_title {
+#xqriknocdq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -167,7 +212,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-width: 0;
 }
 
-#bzoqvixind .gt_subtitle {
+#xqriknocdq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -179,7 +224,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-width: 0;
 }
 
-#bzoqvixind .gt_heading {
+#xqriknocdq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -191,13 +236,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_bottom_border {
+#xqriknocdq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_col_headings {
+#xqriknocdq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -212,7 +257,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_col_heading {
+#xqriknocdq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -232,7 +277,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#bzoqvixind .gt_column_spanner_outer {
+#xqriknocdq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -244,15 +289,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 4px;
 }
 
-#bzoqvixind .gt_column_spanner_outer:first-child {
+#xqriknocdq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bzoqvixind .gt_column_spanner_outer:last-child {
+#xqriknocdq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bzoqvixind .gt_column_spanner {
+#xqriknocdq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -264,11 +309,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   width: 100%;
 }
 
-#bzoqvixind .gt_spanner_row {
+#xqriknocdq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bzoqvixind .gt_group_heading {
+#xqriknocdq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -294,7 +339,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   text-align: left;
 }
 
-#bzoqvixind .gt_empty_group_heading {
+#xqriknocdq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -309,15 +354,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: middle;
 }
 
-#bzoqvixind .gt_from_md > :first-child {
+#xqriknocdq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bzoqvixind .gt_from_md > :last-child {
+#xqriknocdq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bzoqvixind .gt_row {
+#xqriknocdq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -336,7 +381,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#bzoqvixind .gt_stub {
+#xqriknocdq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -349,7 +394,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bzoqvixind .gt_stub_row_group {
+#xqriknocdq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -363,15 +408,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: top;
 }
 
-#bzoqvixind .gt_row_group_first td {
+#xqriknocdq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bzoqvixind .gt_row_group_first th {
+#xqriknocdq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bzoqvixind .gt_summary_row {
+#xqriknocdq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -381,16 +426,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bzoqvixind .gt_first_summary_row {
+#xqriknocdq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_first_summary_row.thick {
+#xqriknocdq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bzoqvixind .gt_last_summary_row {
+#xqriknocdq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -400,7 +445,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_grand_summary_row {
+#xqriknocdq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -410,7 +455,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bzoqvixind .gt_first_grand_summary_row {
+#xqriknocdq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -420,7 +465,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_last_grand_summary_row_top {
+#xqriknocdq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -430,11 +475,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_striped {
+#xqriknocdq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bzoqvixind .gt_table_body {
+#xqriknocdq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -443,7 +488,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_footnotes {
+#xqriknocdq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -457,7 +502,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_footnote {
+#xqriknocdq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -466,7 +511,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bzoqvixind .gt_sourcenotes {
+#xqriknocdq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -480,7 +525,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#bzoqvixind .gt_sourcenote {
+#xqriknocdq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -488,72 +533,72 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#bzoqvixind .gt_left {
+#xqriknocdq .gt_left {
   text-align: left;
 }
 
-#bzoqvixind .gt_center {
+#xqriknocdq .gt_center {
   text-align: center;
 }
 
-#bzoqvixind .gt_right {
+#xqriknocdq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bzoqvixind .gt_font_normal {
+#xqriknocdq .gt_font_normal {
   font-weight: normal;
 }
 
-#bzoqvixind .gt_font_bold {
+#xqriknocdq .gt_font_bold {
   font-weight: bold;
 }
 
-#bzoqvixind .gt_font_italic {
+#xqriknocdq .gt_font_italic {
   font-style: italic;
 }
 
-#bzoqvixind .gt_super {
+#xqriknocdq .gt_super {
   font-size: 65%;
 }
 
-#bzoqvixind .gt_footnote_marks {
+#xqriknocdq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bzoqvixind .gt_asterisk {
+#xqriknocdq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bzoqvixind .gt_indent_1 {
+#xqriknocdq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bzoqvixind .gt_indent_2 {
+#xqriknocdq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bzoqvixind .gt_indent_3 {
+#xqriknocdq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bzoqvixind .gt_indent_4 {
+#xqriknocdq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bzoqvixind .gt_indent_5 {
+#xqriknocdq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bzoqvixind .katex-display {
+#xqriknocdq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bzoqvixind div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xqriknocdq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
