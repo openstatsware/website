@@ -6,7 +6,6 @@
 
 # Quarto
 /.quarto/
-*.pdf
 _cache
 cache
 *_cache
