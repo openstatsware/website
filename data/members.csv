@@ -5,7 +5,7 @@ Ben,Arancibia,GSK,1,0,0,0,0
 Brian,Lang,MSD,1,1,0,0,0
 Christian,Stock,Boehringer Ingelheim,1,0,0,1,0
 Daniel,Leibovitz,Independent,1,1,0,1,0
-Daniel,Sabanés Bové,Roche,1,1,0,0,1
+Daniel,Sabanés Bové,RCONIS,1,1,0,0,1
 Dong,Xi,Gilead Sciences,1,0,0,0,0
 Friedrich,Pahlke,RPACT,1,0,0,0,0
 Jian,Wang,Eli Lilly,1,0,0,0,0
@@ -68,4 +68,6 @@ Rajesh,Hagalwadi,MaxisIT,1,0,0,0,0
 Kamil,Sijko,Transition Technologies Science,1,0,0,0,0
 Claudia,Carlucci,Daiichi Sankyo,1,0,1,0,0
 Sergei,Krivtov,Daiichi Sankyo,1,0,1,0,0
-Isaac,Gravestock,Roche,1,0,0,0,0
+Isaac,Gravestock,Roche,1,0,1,0,0
+Adam,Omidpanah,BMS,1,0,0,0,0
+Audrey,Yeo,Independent,1,0,0,0,0
