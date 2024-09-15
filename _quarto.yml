@@ -38,6 +38,9 @@ website:
         text: "Presentations"
       - href: hexwall.qmd
         text: "TaskView Hexwall"
+      - text: "Guides"
+        menu:
+          - href: guide.qmd
     right:
       - icon: github
         href: https://github.com/openstatsware/website
