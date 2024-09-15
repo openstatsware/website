@@ -28,7 +28,35 @@ This guide primarily addresses developers of statistical packages. Users interes
 
 # Recommendations
 
-
+```{r echo=FALSE}
+glue_or_drop <- function(doc, img) {
+    if (identical(doc, "")) {
+        NULL
+    } else {
+        paste0(
+          "## ", htmltools::tags$img(src = img, width = 25, alt = "logo"), "\n",
+          paste(
+            paste0(
+              paste0("[", names(doc), "]"),
+              paste0("(", doc, ")")
+            ), 
+            collapse = "\n"
+          )
+        )
+    }
+}
+guide_tabset <- function(r = "", python = "", julia = "") {
+    contents <- paste(
+        "::: {.panel-tabset}",
+        glue_or_drop(r, "https://www.r-project.org/logo/Rlogo.svg"),
+        glue_or_drop(python, "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"),
+        glue_or_drop(julia, "https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg"),
+        ":::",
+        sep = "\n\n"
+    )
+    cat(contents, sep = "\n\n") 
+}
+```
 
 ## Documentation
 
@@ -36,25 +64,13 @@ Documentation is important for both users and developers to understand all objec
 
 1.  Use **in-line comments** next to functions, classes and other objects to generate their corresponding documentation.
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[roxygen2](https://roxygen2.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[docstrings](https://peps.python.org/pep-0257/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[docstrings](https://docs.julialang.org/en/v1/manual/documentation/)
-
-:::
-
-
-
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("roxygen2" = "https://roxygen2.r-lib.org/"),
+    python = c("docstrings" = "https://peps.python.org/pep-0257/"),
+    julia = c("docstrings" = "https://docs.julialang.org/en/v1/manual/documentation/")
+)
+    ```
 
 2.  Do also **document internal functions** and classes for maintenance by future developers.
 
@@ -70,25 +86,13 @@ Vignettes are documents that complement the object documentation by providing a 
 
 3.  Host your vignettes on a **dedicated website**, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[pkgdown](https://pkgdown.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[Sphinx](https://www.sphinx-doc.org/en/master/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Documenter](https://documenter.juliadocs.org/)
-
-:::
-
-
-
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("pkgdown" = "https://pkgdown.r-lib.org/"),
+    python = c("Sphinx" = "https://www.sphinx-doc.org/en/master/"),
+    julia = c("Documenter" = "https://documenter.juliadocs.org/")
+)
+    ```
 
 ## Tests
 
@@ -98,44 +102,24 @@ Tests are a fundamental safety net and development tool to ensure that your pack
 
 2.  Write **functional tests** for all user facing functionality ("black box" testing). These tests ensure that the user API is stable when refactoring internal code.
 
-
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[testthat](https://testthat.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[pytest](https://pytest.org/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Test](https://docs.julialang.org/en/v1/stdlib/Test/)
-
-:::   
-
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("testthat" = "https://testthat.r-lib.org/"),
+    python = c("pytest" = "https://pytest.org/"),
+    julia = c("Test" = "https://docs.julialang.org/en/v1/stdlib/Test/")
+)
+    ```
 
 
 3.  In addition, ensure a **good coverage** of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[covr](https://covr.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[Coverage.py](https://coverage.readthedocs.io/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[Coverage.jl](https://github.com/JuliaCI/Coverage.jl)
-
-:::  
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("covr" = "https://covr.r-lib.org/"),
+    python = c("Coverage.py" = "https://coverage.readthedocs.io/"),
+    julia = c("Coverage.jl" = "https://github.com/JuliaCI/Coverage.jl")
+)
+    ```
 
 ## Functions
 
@@ -145,43 +129,23 @@ Function definitions should be short, simple and enforce argument types with ass
 
 2.  Use **type hints** or types to explain to the user which argument of the function expects which type of input.
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[roxytypes](https://openpharma.github.io/roxytypes/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[typing](https://docs.python.org/3/library/typing.html)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[types](https://docs.julialang.org/en/v1/manual/types/)
-
-:::  
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("roxytypes" = "https://openpharma.github.io/roxytypes/"),
+    python = c("typing" = "https://docs.python.org/3/library/typing.html"),
+    julia = c("types" = "https://docs.julialang.org/en/v1/manual/types/")
+)
+    ```
 
 3.  Enforce types and other expected properties of function arguments with **assertions**, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.
 
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[checkmate](https://mllg.github.io/checkmate/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[assertpy](https://pypi.org/project/assertpy/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[ArgCheck.jl](https://github.com/jw3126/ArgCheck.jl)
-
-:::  
-
-
-
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("checkmate" = "https://mllg.github.io/checkmate/"),
+    python = c("assertpy" = "https://pypi.org/project/assertpy/"),
+    julia = c("ArgCheck.jl" = "https://github.com/jw3126/ArgCheck.jl")
+)
+    ```
 
 ## Style
 
@@ -191,41 +155,23 @@ A consistent and readable code style that is language idiomatic should be used a
 
 2.  Use a **formatting tool** to automatically implement a consistent and readable code format.
 
-
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[styler](https://styler.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[Autopep8](https://pypi.org/project/autopep8/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[ArgCheck.jl](https://github.com/jw3126/ArgCheck.jl)
-
-:::  
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("styler" = "https://styler.r-lib.org/"),
+    python = c("Autopep8" = "https://pypi.org/project/autopep8/"),
+    julia = c("JuliaFormatter.jl" = "https://domluna.github.io/JuliaFormatter.jl/")
+)
+    ```
 
 3.  Use a **style checking** tool to enforce a consistent and readable code style.
 
-
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[lintr](https://lintr.r-lib.org/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[Pylint](https://pypi.org/project/pylint/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[StaticLint.jl in VScode](https://github.com/julia-vscode/StaticLint.jl)
-
-:::  
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c("lintr" = "https://lintr.r-lib.org/"),
+    python = c("Pylint" = "https://pypi.org/project/pylint/"),
+    julia = c("StaticLint.jl" = "https://github.com/julia-vscode/StaticLint.jl")
+)
+    ```
 
 ## Life cycle
 
@@ -240,23 +186,16 @@ Life cycle management is simplified by reducing dependencies, and should compris
 
 3.  Give clear information to users about changes in the package API via maintaining the **change log** and first **deprecating functionality** before removing it.
 
-
-::: {.panel-tabset}
-
-## <img src="https://www.r-project.org/logo/Rlogo.svg" alt="alt text" width="25">
-
-[lifecycle](https://cran.r-project.org/web/packages/lifecycle/index.html)  
-[fledge](https://fledge.cynkra.com/)
-
-## <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" alt="alt text" width="25">
-
-[deprecation](https://deprecation.readthedocs.io/)
-
-## <img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25">
-
-[workflow](https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/)
-
-:::  
+    ```{r results="asis", echo=FALSE}
+guide_tabset(
+    r = c(
+        "lifecycle" = "https://cran.r-project.org/web/packages/lifecycle/index.html",
+        "fledge" = "https://fledge.cynkra.com/"
+    ),
+    python = c("deprecation" = "https://deprecation.readthedocs.io/"),
+    julia = c("workflow" = "https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/")
+)
+    ```
 
 4.  Use a **central repository** for version control, collecting and resolving issues, and managing releases. Include the publication of a **contributing guide** to help onboard new developers and enable community contributions.
 
