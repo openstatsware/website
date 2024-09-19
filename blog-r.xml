@@ -9,7 +9,7 @@
 <link>https://www.openstatsware.org/blog.html#category=R</link>
 <atom:link href="https://www.openstatsware.org/blog-r.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
-<generator>quarto-1.5.56</generator>
+<generator>quarto-1.5.57</generator>
 <lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>openstatsware at UseR!2024</title>
@@ -71,23 +71,23 @@
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 44 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gigtiecela" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#gigtiecela table {
+<div id="fvheofqlsr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#fvheofqlsr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gigtiecela thead, #gigtiecela tbody, #gigtiecela tfoot, #gigtiecela tr, #gigtiecela td, #gigtiecela th {
+#fvheofqlsr thead, #fvheofqlsr tbody, #fvheofqlsr tfoot, #fvheofqlsr tr, #fvheofqlsr td, #fvheofqlsr th {
   border-style: none;
 }
 
-#gigtiecela p {
+#fvheofqlsr p {
   margin: 0;
   padding: 0;
 }
 
-#gigtiecela .gt_table {
+#fvheofqlsr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -113,12 +113,12 @@
   border-left-color: #D3D3D3;
 }
 
-#gigtiecela .gt_caption {
+#fvheofqlsr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gigtiecela .gt_title {
+#fvheofqlsr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -130,7 +130,7 @@
   border-bottom-width: 0;
 }
 
-#gigtiecela .gt_subtitle {
+#fvheofqlsr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -142,7 +142,7 @@
   border-top-width: 0;
 }
 
-#gigtiecela .gt_heading {
+#fvheofqlsr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -154,13 +154,13 @@
   border-right-color: #D3D3D3;
 }
 
-#gigtiecela .gt_bottom_border {
+#fvheofqlsr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gigtiecela .gt_col_headings {
+#fvheofqlsr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -175,7 +175,7 @@
   border-right-color: #D3D3D3;
 }
 
-#gigtiecela .gt_col_heading {
+#fvheofqlsr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -195,7 +195,7 @@
   overflow-x: hidden;
 }
 
-#gigtiecela .gt_column_spanner_outer {
+#fvheofqlsr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -207,15 +207,15 @@
   padding-right: 4px;
 }
 
-#gigtiecela .gt_column_spanner_outer:first-child {
+#fvheofqlsr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gigtiecela .gt_column_spanner_outer:last-child {
+#fvheofqlsr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gigtiecela .gt_column_spanner {
+#fvheofqlsr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -227,11 +227,11 @@
   width: 100%;
 }
 
-#gigtiecela .gt_spanner_row {
+#fvheofqlsr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gigtiecela .gt_group_heading {
+#fvheofqlsr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -257,7 +257,7 @@
   text-align: left;
 }
 
-#gigtiecela .gt_empty_group_heading {
+#fvheofqlsr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -272,15 +272,15 @@
   vertical-align: middle;
 }
 
-#gigtiecela .gt_from_md > :first-child {
+#fvheofqlsr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gigtiecela .gt_from_md > :last-child {
+#fvheofqlsr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gigtiecela .gt_row {
+#fvheofqlsr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -299,7 +299,7 @@
   overflow-x: hidden;
 }
 
-#gigtiecela .gt_stub {
+#fvheofqlsr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -312,7 +312,7 @@
   padding-right: 5px;
 }
 
-#gigtiecela .gt_stub_row_group {
+#fvheofqlsr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -326,15 +326,15 @@
   vertical-align: top;
 }
 
-#gigtiecela .gt_row_group_first td {
+#fvheofqlsr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gigtiecela .gt_row_group_first th {
+#fvheofqlsr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gigtiecela .gt_summary_row {
+#fvheofqlsr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -344,16 +344,16 @@
   padding-right: 5px;
 }
 
-#gigtiecela .gt_first_summary_row {
+#fvheofqlsr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gigtiecela .gt_first_summary_row.thick {
+#fvheofqlsr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gigtiecela .gt_last_summary_row {
+#fvheofqlsr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -363,7 +363,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#gigtiecela .gt_grand_summary_row {
+#fvheofqlsr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -373,7 +373,7 @@
   padding-right: 5px;
 }
 
-#gigtiecela .gt_first_grand_summary_row {
+#fvheofqlsr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -383,7 +383,7 @@
   border-top-color: #D3D3D3;
 }
 
-#gigtiecela .gt_last_grand_summary_row_top {
+#fvheofqlsr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -393,11 +393,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#gigtiecela .gt_striped {
+#fvheofqlsr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gigtiecela .gt_table_body {
+#fvheofqlsr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -406,7 +406,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#gigtiecela .gt_footnotes {
+#fvheofqlsr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -420,7 +420,7 @@
   border-right-color: #D3D3D3;
 }
 
-#gigtiecela .gt_footnote {
+#fvheofqlsr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -429,7 +429,7 @@
   padding-right: 5px;
 }
 
-#gigtiecela .gt_sourcenotes {
+#fvheofqlsr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -443,7 +443,7 @@
   border-right-color: #D3D3D3;
 }
 
-#gigtiecela .gt_sourcenote {
+#fvheofqlsr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -451,72 +451,72 @@
   padding-right: 5px;
 }
 
-#gigtiecela .gt_left {
+#fvheofqlsr .gt_left {
   text-align: left;
 }
 
-#gigtiecela .gt_center {
+#fvheofqlsr .gt_center {
   text-align: center;
 }
 
-#gigtiecela .gt_right {
+#fvheofqlsr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gigtiecela .gt_font_normal {
+#fvheofqlsr .gt_font_normal {
   font-weight: normal;
 }
 
-#gigtiecela .gt_font_bold {
+#fvheofqlsr .gt_font_bold {
   font-weight: bold;
 }
 
-#gigtiecela .gt_font_italic {
+#fvheofqlsr .gt_font_italic {
   font-style: italic;
 }
 
-#gigtiecela .gt_super {
+#fvheofqlsr .gt_super {
   font-size: 65%;
 }
 
-#gigtiecela .gt_footnote_marks {
+#fvheofqlsr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gigtiecela .gt_asterisk {
+#fvheofqlsr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gigtiecela .gt_indent_1 {
+#fvheofqlsr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gigtiecela .gt_indent_2 {
+#fvheofqlsr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gigtiecela .gt_indent_3 {
+#fvheofqlsr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gigtiecela .gt_indent_4 {
+#fvheofqlsr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gigtiecela .gt_indent_5 {
+#fvheofqlsr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gigtiecela .katex-display {
+#fvheofqlsr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gigtiecela div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fvheofqlsr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -542,15 +542,15 @@
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Agriculture/">Agricultural Science</a></td>
-<td class="gt_row gt_left" headers="maintainers">Adrian Correndo, Julia Piaskowski, Adam Sparks</td>
-<td class="gt_row gt_right" headers="last_update">2024-08-04</td>
-<td class="gt_row gt_right" headers="n_pkg">168</td>
+<td class="gt_row gt_left" headers="maintainers">Julia Piaskowski, Adam Sparks, Adrian Correndo</td>
+<td class="gt_row gt_right" headers="last_update">2024-09-12</td>
+<td class="gt_row gt_right" headers="n_pkg">167</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Bayesian/">Bayesian Inference</a></td>
 <td class="gt_row gt_left" headers="maintainers">Jong Hee Park, Michela Cameletti, Xun Pang, Kevin M. Quinn</td>
 <td class="gt_row gt_right" headers="last_update">2023-07-17</td>
-<td class="gt_row gt_right" headers="n_pkg">196</td>
+<td class="gt_row gt_right" headers="n_pkg">200</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/CausalInference/">Causal Inference</a></td>
@@ -562,7 +562,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ChemPhys/">Chemometrics and Computational Physics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Katharine Mullen</td>
 <td class="gt_row gt_right" headers="last_update">2024-01-29</td>
-<td class="gt_row gt_right" headers="n_pkg">95</td>
+<td class="gt_row gt_right" headers="n_pkg">98</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ClinicalTrials/">Clinical Trial Design, Monitoring, and Analysis</a></td>
@@ -591,8 +591,8 @@
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Distributions/">Probability Distributions</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang, Patrice Kiener, Bruce J. Swihart</td>
-<td class="gt_row gt_right" headers="last_update">2024-08-27</td>
-<td class="gt_row gt_right" headers="n_pkg">313</td>
+<td class="gt_row gt_right" headers="last_update">2024-09-05</td>
+<td class="gt_row gt_right" headers="n_pkg">315</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Econometrics/">Econometrics</a></td>
@@ -609,8 +609,8 @@
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Epidemiology/">Epidemiology</a></td>
 <td class="gt_row gt_left" headers="maintainers">Thibaut Jombart, Matthieu Rolland, Hugo Gruson</td>
-<td class="gt_row gt_right" headers="last_update">2024-06-20</td>
-<td class="gt_row gt_right" headers="n_pkg">89</td>
+<td class="gt_row gt_right" headers="last_update">2024-09-12</td>
+<td class="gt_row gt_right" headers="n_pkg">93</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ExperimentalDesign/">Design of Experiments (DoE) &amp; Analysis of Experimental Data</a></td>
@@ -628,7 +628,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Finance/">Empirical Finance</a></td>
 <td class="gt_row gt_left" headers="maintainers">Dirk Eddelbuettel</td>
 <td class="gt_row gt_right" headers="last_update">2024-03-05</td>
-<td class="gt_row gt_right" headers="n_pkg">155</td>
+<td class="gt_row gt_right" headers="n_pkg">154</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/FunctionalData/">Functional Data Analysis</a></td>
@@ -652,7 +652,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Hydrology/">Hydrological Data and Modeling</a></td>
 <td class="gt_row gt_left" headers="maintainers">Sam Albers, Ilaria Prosdocimi</td>
 <td class="gt_row gt_right" headers="last_update">2024-03-08</td>
-<td class="gt_row gt_right" headers="n_pkg">128</td>
+<td class="gt_row gt_right" headers="n_pkg">127</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MachineLearning/">Machine Learning &amp; Statistical Learning</a></td>
@@ -669,7 +669,7 @@
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MetaAnalysis/">Meta-Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Michael Dewey, Wolfgang Viechtbauer</td>
-<td class="gt_row gt_right" headers="last_update">2024-06-04</td>
+<td class="gt_row gt_right" headers="last_update">2024-09-10</td>
 <td class="gt_row gt_right" headers="n_pkg">185</td>
 </tr>
 <tr class="even">
@@ -682,7 +682,7 @@
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MixedModels/">Mixed, Multilevel, and Hierarchical Models in R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ben Bolker, Julia Piaskowski, Emi Tanaka, Phillip Alday, Wolfgang Viechtbauer</td>
 <td class="gt_row gt_right" headers="last_update">2024-05-08</td>
-<td class="gt_row gt_right" headers="n_pkg">169</td>
+<td class="gt_row gt_right" headers="n_pkg">168</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ModelDeployment">Model Deployment with R</a></td>
@@ -783,8 +783,8 @@
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/TimeSeries/">Time Series Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Rob J Hyndman, Rebecca Killick</td>
-<td class="gt_row gt_right" headers="last_update">2024-07-05</td>
-<td class="gt_row gt_right" headers="n_pkg">400</td>
+<td class="gt_row gt_right" headers="last_update">2024-09-09</td>
+<td class="gt_row gt_right" headers="n_pkg">402</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Tracking">Processing and Analysis of Tracking Data</a></td>
@@ -858,7 +858,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
+<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <p><img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
@@ -934,7 +934,7 @@
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid"></p>

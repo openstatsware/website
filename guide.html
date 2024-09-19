@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" sep="
-"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="0.0-3">
-<meta name="dcterms.date" content="2024-08-23">
+<meta name="author" content="0.1-0">
+<meta name="dcterms.date" content="2024-09-16">
 
 <title>openstatsguide – openstatsware</title>
 <style>
@@ -179,6 +178,17 @@ div.csl-indent {
     <a class="nav-link" href="./hexwall.html"> 
 <span class="menu-text">TaskView Hexwall</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-guides" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Guides</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-guides">    
+        <li>
+    <a class="dropdown-item" href="./guide.html">
+ <span class="dropdown-text">openstatsguide</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -237,14 +247,14 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Version</div>
     <div class="quarto-title-meta-contents">
-             <p>0.0-3 </p>
+             <p>0.1-0 </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 23, 2024</p>
+      <p class="date">September 16, 2024</p>
     </div>
   </div>
   
@@ -256,7 +266,6 @@ div.csl-indent {
 </header>
 
 
-<p><em>Note: This is a beta release of “openstatsguide” to accompany the useR 2024 abstract submission. It is not yet available interactively via the openstatsware.org website and will undergo further expert input before publication of the first release version 0.1.</em></p>
 <section id="scope" class="level1">
 <h1>Scope</h1>
 <p>We encourage developers of statistical software packages to follow this minimum set of good practices around:</p>
@@ -277,36 +286,20 @@ div.csl-indent {
 <p>Documentation is important for both users and developers to understand all objects in your package, without reading and interpreting the underlying source code.</p>
 <ol type="1">
 <li><p>Use <strong>in-line comments</strong> next to functions, classes and other objects to generate their corresponding documentation.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://roxygen2.r-lib.org/">roxygen2</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://peps.python.org/pep-0257/">docstrings</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://docs.julialang.org/en/v1/manual/documentation/">docstrings</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><a href="https://roxygen2.r-lib.org/">roxygen2</a></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><a href="https://peps.python.org/pep-0257/">docstrings</a></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><a href="https://docs.julialang.org/en/v1/manual/documentation/">docstrings</a></p>
+</div>
+</div>
+</div></li>
 <li><p>Do also <strong>document internal functions</strong> and classes for maintenance by future developers.</p></li>
 <li><p>Add <strong>code comments</strong> for ambiguous or complex pieces of internal code, but only after optimizing the code design as much as possible.</p></li>
 </ol>
@@ -318,36 +311,20 @@ div.csl-indent {
 <li><p>Provide an <strong>introduction vignette</strong> that introduces the package to new users, such that they have an easy entry point for getting started. Make sure to include code examples and automatically compile the vignette to ensure reproducibility.</p></li>
 <li><p>Include <strong>deep dive vignettes</strong> that go into depth on specific use cases, functionalities or underlying theory, in particular describing the underlying statistical methodology and how it is implemented in the package.</p></li>
 <li><p>Host your vignettes on a <strong>dedicated website</strong>, which allows users to read the vignettes without installing the package, and simplifies citing the vignettes in other publications.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://pkgdown.r-lib.org/">pkgdown</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://www.sphinx-doc.org/en/master/">Sphinx</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://documenter.juliadocs.org/">Documenter</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><a href="https://pkgdown.r-lib.org/">pkgdown</a></p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p><a href="https://www.sphinx-doc.org/en/master/">Sphinx</a></p>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p><a href="https://documenter.juliadocs.org/">Documenter</a></p>
+</div>
+</div>
+</div></li>
 </ol>
 </section>
 <section id="tests" class="level2">
@@ -356,67 +333,35 @@ div.csl-indent {
 <ol type="1">
 <li><p>Write <strong>unit tests</strong> for all functions and classes in your package, to ensure that all building blocks work correctly on their own (“white box” testing). Expect to rewrite tests for internal code when you refactor it.</p></li>
 <li><p>Write <strong>functional tests</strong> for all user facing functionality (“black box” testing). These tests ensure that the user API is stable when refactoring internal code.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://testthat.r-lib.org/">testthat</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://pytest.org/">pytest</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://docs.julialang.org/en/v1/stdlib/Test/">Test</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><a href="https://testthat.r-lib.org/">testthat</a></p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p><a href="https://pytest.org/">pytest</a></p>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p><a href="https://docs.julialang.org/en/v1/stdlib/Test/">Test</a></p>
+</div>
+</div>
+</div></li>
 <li><p>In addition, ensure a <strong>good coverage</strong> of your code with your tests as a final check, but only after having unit and functional tests on all levels of the code.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://covr.r-lib.org/">covr</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://coverage.readthedocs.io/">Coverage.py</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://github.com/JuliaCI/Coverage.jl">Coverage.jl</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><a href="https://covr.r-lib.org/">covr</a></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p><a href="https://coverage.readthedocs.io/">Coverage.py</a></p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p><a href="https://github.com/JuliaCI/Coverage.jl">Coverage.jl</a></p>
+</div>
+</div>
+</div></li>
 </ol>
 </section>
 <section id="functions" class="level2">
@@ -425,67 +370,35 @@ div.csl-indent {
 <ol type="1">
 <li><p>Write <strong>short functions</strong> with less than 50 lines of code for a single and well-defined purpose, with <strong>few arguments</strong>, and low cyclomatic complexity, in order to reduce the risk of bugs, simplify writing tests and ensure that you can maintain them.</p></li>
 <li><p>Use <strong>type hints</strong> or types to explain to the user which argument of the function expects which type of input.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://openpharma.github.io/roxytypes/">roxytypes</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://docs.python.org/3/library/typing.html">typing</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://docs.julialang.org/en/v1/manual/types/">types</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><a href="https://openpharma.github.io/roxytypes/">roxytypes</a></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p><a href="https://docs.python.org/3/library/typing.html">typing</a></p>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p><a href="https://docs.julialang.org/en/v1/manual/types/">types</a></p>
+</div>
+</div>
+</div></li>
 <li><p>Enforce types and other expected properties of function arguments with <strong>assertions</strong>, which give an early and readable error message to the user instead of failing function code downstream in a less explicable way.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://mllg.github.io/checkmate/">checkmate</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://pypi.org/project/assertpy/">assertpy</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://github.com/jw3126/ArgCheck.jl">ArgCheck.jl</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><a href="https://mllg.github.io/checkmate/">checkmate</a></p>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p><a href="https://pypi.org/project/assertpy/">assertpy</a></p>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p><a href="https://github.com/jw3126/ArgCheck.jl">ArgCheck.jl</a></p>
+</div>
+</div>
+</div></li>
 </ol>
 </section>
 <section id="style" class="level2">
@@ -494,70 +407,35 @@ div.csl-indent {
 <ol type="1">
 <li><p>Use <strong>language idiomatic</strong> code and follow the <strong>“clean code” rules</strong> (use descriptive and meaningful names, prefer simpler over more complex code, avoid duplication of code, regularly refactor code), while allowing for exceptions only where needed.</p></li>
 <li><p>Use a <strong>formatting tool</strong> to automatically implement a consistent and readable code format.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://styler.r-lib.org/">styler</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://pypi.org/project/autopep8/">Autopep8</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://domluna.github.io/JuliaFormatter.jl/">JuliaFormatter.jl</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p><a href="https://styler.r-lib.org/">styler</a></p>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<p><a href="https://pypi.org/project/autopep8/">Autopep8</a></p>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<p><a href="https://domluna.github.io/JuliaFormatter.jl/">JuliaFormatter.jl</a></p>
+</div>
+</div>
+</div></li>
 <li><p>Use a <strong>style checking</strong> tool to enforce a consistent and readable code style.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<a href="https://lintr.r-lib.org/">lintr</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://pypi.org/project/pylint/">Pylint</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<p>
-Enabled in VScode via
-<a href="https://github.com/julia-vscode/StaticLint.jl">StaticLint.jl</a>
-</p>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p><a href="https://lintr.r-lib.org/">lintr</a></p>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<p><a href="https://pypi.org/project/pylint/">Pylint</a></p>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<p><a href="https://github.com/julia-vscode/StaticLint.jl">StaticLint.jl</a></p>
+</div>
+</div>
+</div></li>
 </ol>
 </section>
 <section id="life-cycle" class="level2">
@@ -567,39 +445,20 @@ Enabled in VScode via
 <li><p><strong>Reduce dependencies</strong> to simplify maintenance of your own package. Only depend on other packages that you trust and deem stable enough for the purpose, in order to avoid reinventing the wheel.</p></li>
 <li><p><strong>Ensure that you track dependencies and pin their versions</strong> so if another developer contributes then they can use the same environment to produce consistent results and behaviours. This could be tracked using more system level approaches like configuring a snapshot date in the package repository to language-specific tools that generate a file that tracks dependencies and versions that serves as a source of truth for all packages developers.</p></li>
 <li><p>Give clear information to users about changes in the package API via maintaining the <strong>change log</strong> and first <strong>deprecating functionality</strong> before removing it.</p>
-<table style="width:100%;">
-<tbody>
-
-<tr><td>
-<details>
-<summary>
-<img src="https://www.r-project.org/logo/Rlogo.svg" height="20">
-</summary>
-<p>
-<a href="https://cran.r-project.org/web/packages/lifecycle/index.html">lifecycle</a>
-<a href="https://fledge.cynkra.com/">fledge</a>
-</p>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" height="20">
-</summary>
-<a href="https://deprecation.readthedocs.io/">deprecation</a>
-</details>
-</td>
-<td>
-<details>
-<summary>
-<img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" height="20">
-</summary>
-<a href="https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/">workflow</a>
-</details>
-</td>
-
-</tr></tbody>
-</table></li>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true"><img src="https://www.r-project.org/logo/Rlogo.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false"><img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg" width="25" alt="logo"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false"><img src="https://raw.githubusercontent.com/JuliaLang/julia-logo-graphics/master/images/julia-dots.svg" width="25" alt="logo"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p><a href="https://cran.r-project.org/web/packages/lifecycle/index.html">lifecycle</a> <a href="https://fledge.cynkra.com/">fledge</a></p>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p><a href="https://deprecation.readthedocs.io/">deprecation</a></p>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<p><a href="https://invenia.github.io/blog/2022/06/17/deprecating-in-julia/">workflow</a></p>
+</div>
+</div>
+</div></li>
 <li><p>Use a <strong>central repository</strong> for version control, collecting and resolving issues, and managing releases. Include the publication of a <strong>contributing guide</strong> to help onboard new developers and enable community contributions.</p></li>
 </ol>
 </section>
