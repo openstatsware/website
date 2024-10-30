@@ -2,7 +2,7 @@
 title: "Introducing openstatsware"
 subtitle: "Who we are and what we build together"
 author: "Daniel Sabanés Bové on behalf of `openstatsware`"
-date: "2024/02/23"
+date: "2024/10/30"
 format: 
   revealjs:
     incremental: true
