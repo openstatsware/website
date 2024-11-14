@@ -3,6 +3,8 @@ title: "Presentations"
 ---
 -   *Introducing `openstatsware`: Who we are and what we build together*. R/Pharma APAC Conference, 31 Oct 2024.
     -   [slides](slides/rpharma-apac-2024.html)
+-   *`brms.mmrm`: an R package for Bayesian MMRMs*. Bayesian Biostatistics Conference, 24 October 2024.
+    -   [slides](https://bayes-pharma.org/wp-content/uploads/2024/11/Will-Landau.pdf)
 -   *`{mmrm}`: A Robust and Comprehensive R Package for Implementing Mixed Models for Repeated Measures*. useR! 2024, 9 Jul 2024.
     -   [slides](slides/user-2024-mmrm-jul2024.html)
 -   *Introducing `openstatsware`: Who we are and what we build together*. ASA BIOP DL Webinar, 23 Feb 2024.
