@@ -25,17 +25,19 @@ comments: false
   </div>
 </div>
 ```
+
+```{=html}
+<div class="px-3 py-5 my-3">
+  <div class="text-center">
+  <p style="font-size: 1.5rem;">Latest news:</p>
+  </div>
+```
+
 ```{r}
 #| include = FALSE
 source(file = "utils/read_news.R")
 ```
 
-```{=html}
-<div class="px-3 py-5 my-3">
-  <div class="text-center">
-  <h1 style="font-size: 1.5rem;">Latest news:</h1>
-  </div>
-```
 ```{r}
 #| message = FALSE,
 #| warning = FALSE,
@@ -44,4 +46,6 @@ source(file = "utils/read_news.R")
 read.news(how_many = 3)
 ```
 
+```{=html}
 </div>
+```
