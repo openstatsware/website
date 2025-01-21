@@ -12,4 +12,4 @@ source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("bayesian_mmrm")
 ```
 
-To learn more about our Bayesian MMRM R package using [`brms`](https://paul-buerkner.github.io/brms/), please visit [rconsortium.github.io/brms.mmrm/](https://rconsortium.github.io/brms.mmrm/).
+To learn more about our Bayesian MMRM R package using [`brms`](https://paul-buerkner.github.io/brms/), please visit [https://openpharma.github.io/brms.mmrm/](https://openpharma.github.io/brms.mmrm/).
