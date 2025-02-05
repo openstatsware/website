@@ -1,0 +1,35 @@
+---
+title: openstatsware at the 2025 PSI conference
+description: A session titled _Statistical Software Engineering_ and submitted by the working group has been accepted for the 2025 PSI conference.
+author: "Alessandro"
+date: "2025-02-05"
+categories: [news]
+image: "psi-banner.png"
+---
+
+Hi everyone,
+
+Alessandro here.
+A quick blog post to announce that a single-topic session submitted by the working group and titled _Statistical Software Engineering_ has been accepted for the 2025 PSI conference.
+The conference will be at Wembley Stadium in London, UK, between June 8^th^ and 11^th^ 2025.
+
+![](psi-banner.png){fig-align="center"}
+
+The submission was led by Wilmar Igl (who will be chairing the session as well), and the session will be organised as follows:
+
+* Wilmar Igl, PhD (ICON) will start the session with the topic "The Mythical Man Month (1975-2025) - Planning, Implementing, and Managing Statistical Software Projects".
+  The talk will use the 50^th^ anniversary of the classic book entitled "The Mythical Man-month: Essays on Software Engineering" by Brooks (1975) as a starting point to explore modern concepts of software engineering and management, thereby, highlighting established truths and novel insights.
+  The topic is more general and conceptual in nature, but expected to appeal to a broader audience of statisticians, statistical programmers, and their managers.
+
+* Pravin Madhavan, PhD (Berry Consultants) will continue with the topic "Continuous Integration (CI) practices for statistical software development", thereby exploring conceptual, yet more technical approaches of  software engineering.
+  In this context, he will also explain related techniques including version control, automated testing, and build automation and give recommendations for best practices based on his experience of building large commercial software solutions, which are also applicable to open-source software.
+
+* Isaac Gravestock, PhD (Roche) will present the talk "Scaling Statistical Innovation and Open Source Collaborations".
+  He will explain that novel statistical methods also need user-friendly, robust, high-quality software.
+  Here, the role of the `openstatsware` working group in particular and the OpenPharma community in general is highlighted as platforms for industry and academic collaborations for development of software leading to the adoption of novel statistical methods.
+
+* Brian Lang, PhD (MSD) will conclude the session with the topic "Analysis Specification to Execution in R/Shiny".
+  He will present a practical example of the development of software based on R, Shiny and a database for study analysis planning and execution to accurately and efficiently generate tables, listings, and figures.
+
+We look forward to seeing you all at the conference (come say hi if you are attending!) and I'd like to personally thank Wilmar and all the presenters for putting together such an exciting session.
+I'm sure you'll all enjoy it.
