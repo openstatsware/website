@@ -7,6 +7,7 @@ read.news <- function(how_many = NULL, decreasing = TRUE) {
 
   # Import data
   news_data <- read.csv(file = "data/news.csv")
+  news_data <- na.omit(news_data)
   news_data$Date <- as.Date(news_data$Date, format = "%m/%d/%Y")
 
   # Sort
