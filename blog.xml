@@ -10,7 +10,41 @@
 <atom:link href="https://www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 05 Feb 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>openstatsware at the 2025 PSI conference</title>
+  <dc:creator>Alessandro </dc:creator>
+  <link>https://www.openstatsware.org/blog/psi-2025/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Hi everyone,</p>
+<p>Alessandro here. A quick blog post to announce that a single-topic session submitted by the working group and titled <em>Statistical Software Engineering</em> has been accepted for the 2025 PSI conference. The conference will be at Wembley Stadium in London, UK, between June 8<sup>th</sup> and 11<sup>th</sup> 2025.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.openstatsware.org/blog/psi-2025/psi-banner.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>The submission was led by Wilmar Igl (who will be chairing the session as well), and the session will be organised as follows:</p>
+<ul>
+<li><p>Wilmar Igl, PhD (ICON) will start the session with the topic “The Mythical Man Month (1975-2025) - Planning, Implementing, and Managing Statistical Software Projects”. The talk will use the 50<sup>th</sup> anniversary of the classic book entitled “The Mythical Man-month: Essays on Software Engineering” by Brooks (1975) as a starting point to explore modern concepts of software engineering and management, thereby, highlighting established truths and novel insights. The topic is more general and conceptual in nature, but expected to appeal to a broader audience of statisticians, statistical programmers, and their managers.</p></li>
+<li><p>Pravin Madhavan, PhD (Berry Consultants) will continue with the topic “Continuous Integration (CI) practices for statistical software development”, thereby exploring conceptual, yet more technical approaches of software engineering. In this context, he will also explain related techniques including version control, automated testing, and build automation and give recommendations for best practices based on his experience of building large commercial software solutions, which are also applicable to open-source software.</p></li>
+<li><p>Isaac Gravestock, PhD (Roche) will present the talk “Scaling Statistical Innovation and Open Source Collaborations”. He will explain that novel statistical methods also need user-friendly, robust, high-quality software. Here, the role of the <code>openstatsware</code> working group in particular and the OpenPharma community in general is highlighted as platforms for industry and academic collaborations for development of software leading to the adoption of novel statistical methods.</p></li>
+<li><p>Brian Lang, PhD (MSD) will conclude the session with the topic “Analysis Specification to Execution in R/Shiny”. He will present a practical example of the development of software based on R, Shiny and a database for study analysis planning and execution to accurately and efficiently generate tables, listings, and figures.</p></li>
+</ul>
+<p>We look forward to seeing you all at the conference (come say hi if you are attending!) and I’d like to personally thank Wilmar and all the presenters for putting together such an exciting session. I’m sure you’ll all enjoy it.</p>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://www.openstatsware.org/blog/psi-2025/</guid>
+  <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://www.openstatsware.org/blog/psi-2025/psi-banner.png" medium="image" type="image/png" height="58" width="144"/>
+</item>
 <item>
   <title>openstatsware at UseR!2024</title>
   <dc:creator>Daniel, Wilmar, Yann, Friedrich, Joseph</dc:creator>
@@ -153,23 +187,23 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 46 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ilrlqrugnv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#ilrlqrugnv table {
+<div id="algoptodpv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#algoptodpv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ilrlqrugnv thead, #ilrlqrugnv tbody, #ilrlqrugnv tfoot, #ilrlqrugnv tr, #ilrlqrugnv td, #ilrlqrugnv th {
+#algoptodpv thead, #algoptodpv tbody, #algoptodpv tfoot, #algoptodpv tr, #algoptodpv td, #algoptodpv th {
   border-style: none;
 }
 
-#ilrlqrugnv p {
+#algoptodpv p {
   margin: 0;
   padding: 0;
 }
 
-#ilrlqrugnv .gt_table {
+#algoptodpv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -195,12 +229,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-left-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_caption {
+#algoptodpv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ilrlqrugnv .gt_title {
+#algoptodpv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -212,7 +246,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-width: 0;
 }
 
-#ilrlqrugnv .gt_subtitle {
+#algoptodpv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -224,7 +258,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-width: 0;
 }
 
-#ilrlqrugnv .gt_heading {
+#algoptodpv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -236,13 +270,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_bottom_border {
+#algoptodpv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_col_headings {
+#algoptodpv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -257,7 +291,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_col_heading {
+#algoptodpv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -277,7 +311,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#ilrlqrugnv .gt_column_spanner_outer {
+#algoptodpv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -289,15 +323,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 4px;
 }
 
-#ilrlqrugnv .gt_column_spanner_outer:first-child {
+#algoptodpv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ilrlqrugnv .gt_column_spanner_outer:last-child {
+#algoptodpv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ilrlqrugnv .gt_column_spanner {
+#algoptodpv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -309,11 +343,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   width: 100%;
 }
 
-#ilrlqrugnv .gt_spanner_row {
+#algoptodpv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ilrlqrugnv .gt_group_heading {
+#algoptodpv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -339,7 +373,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   text-align: left;
 }
 
-#ilrlqrugnv .gt_empty_group_heading {
+#algoptodpv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -354,15 +388,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: middle;
 }
 
-#ilrlqrugnv .gt_from_md > :first-child {
+#algoptodpv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ilrlqrugnv .gt_from_md > :last-child {
+#algoptodpv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ilrlqrugnv .gt_row {
+#algoptodpv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -381,7 +415,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#ilrlqrugnv .gt_stub {
+#algoptodpv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -394,7 +428,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#ilrlqrugnv .gt_stub_row_group {
+#algoptodpv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -408,15 +442,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: top;
 }
 
-#ilrlqrugnv .gt_row_group_first td {
+#algoptodpv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ilrlqrugnv .gt_row_group_first th {
+#algoptodpv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ilrlqrugnv .gt_summary_row {
+#algoptodpv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -426,16 +460,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#ilrlqrugnv .gt_first_summary_row {
+#algoptodpv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_first_summary_row.thick {
+#algoptodpv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ilrlqrugnv .gt_last_summary_row {
+#algoptodpv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -445,7 +479,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_grand_summary_row {
+#algoptodpv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -455,7 +489,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#ilrlqrugnv .gt_first_grand_summary_row {
+#algoptodpv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -465,7 +499,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_last_grand_summary_row_top {
+#algoptodpv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -475,11 +509,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_striped {
+#algoptodpv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ilrlqrugnv .gt_table_body {
+#algoptodpv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -488,7 +522,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_footnotes {
+#algoptodpv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -502,7 +536,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_footnote {
+#algoptodpv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -511,7 +545,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#ilrlqrugnv .gt_sourcenotes {
+#algoptodpv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -525,7 +559,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#ilrlqrugnv .gt_sourcenote {
+#algoptodpv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -533,72 +567,72 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#ilrlqrugnv .gt_left {
+#algoptodpv .gt_left {
   text-align: left;
 }
 
-#ilrlqrugnv .gt_center {
+#algoptodpv .gt_center {
   text-align: center;
 }
 
-#ilrlqrugnv .gt_right {
+#algoptodpv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ilrlqrugnv .gt_font_normal {
+#algoptodpv .gt_font_normal {
   font-weight: normal;
 }
 
-#ilrlqrugnv .gt_font_bold {
+#algoptodpv .gt_font_bold {
   font-weight: bold;
 }
 
-#ilrlqrugnv .gt_font_italic {
+#algoptodpv .gt_font_italic {
   font-style: italic;
 }
 
-#ilrlqrugnv .gt_super {
+#algoptodpv .gt_super {
   font-size: 65%;
 }
 
-#ilrlqrugnv .gt_footnote_marks {
+#algoptodpv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ilrlqrugnv .gt_asterisk {
+#algoptodpv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ilrlqrugnv .gt_indent_1 {
+#algoptodpv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ilrlqrugnv .gt_indent_2 {
+#algoptodpv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ilrlqrugnv .gt_indent_3 {
+#algoptodpv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ilrlqrugnv .gt_indent_4 {
+#algoptodpv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ilrlqrugnv .gt_indent_5 {
+#algoptodpv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ilrlqrugnv .katex-display {
+#algoptodpv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ilrlqrugnv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#algoptodpv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -952,7 +986,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
+<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <p><img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
