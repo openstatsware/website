@@ -1,0 +1,17 @@
+---
+title: "Project Ideas"
+listing:
+  contents: ideas
+  sort: "date desc"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [title, date]
+page-layout: full
+title-block-banner: true
+---
+
+As part of our goal to engineer R packages to fill in gaps in the open-source statistical software landscape, we collect ideas and project proposals for public discussion.
+
+The aim is to refine the idea into a concrete project, agree on requirements, and identify interested developers.
