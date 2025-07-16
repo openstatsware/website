@@ -16,5 +16,11 @@
       "/blog/biop_report/index.html",
       "/blog/wg_announcement/index.html"
     ]
+  },
+  {
+    "listing": "/ideas.html",
+    "items": [
+      "/ideas/interval_censoring.html"
+    ]
   }
 ]

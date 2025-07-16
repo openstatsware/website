@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Daniel">
-<meta name="dcterms.date" content="2023-09-29">
-<meta name="description" content="We shared our working group progress and discussed with the panel and the audience challenges and next steps.">
+<meta name="author" content="Isaac Gravestock">
+<meta name="dcterms.date" content="2025-07-01">
 
-<title>Considerations in developing and using open-source statistical software in Pharma – openstatsware</title>
+<title>Interval Censored Survival Analysis – openstatsware</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -26,23 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../sticker/openstatsware-hex.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-21bfed1936c5be45fac4989462fbb4b2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-40153ce7e7b84d42521f8cc7c9f1eead.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../sticker/openstatsware-hex.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-21bfed1936c5be45fac4989462fbb4b2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-40153ce7e7b84d42521f8cc7c9f1eead.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,12 +76,12 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../sticker/openstatsware-hex.svg" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../sticker/openstatsware-hex.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -92,7 +91,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,33 +100,33 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
-    <a class="dropdown-item" href="../../goals.html">
+    <a class="dropdown-item" href="../goals.html">
  <span class="dropdown-text">Goals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../people.html">
+    <a class="dropdown-item" href="../people.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../sponsors.html">
+    <a class="dropdown-item" href="../sponsors.html">
  <span class="dropdown-text">Sponsors</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../join_us.html">
+    <a class="dropdown-item" href="../join_us.html">
  <span class="dropdown-text">Join Us</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../contact_us.html">
+    <a class="dropdown-item" href="../contact_us.html">
  <span class="dropdown-text">Contact Us</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../news.html"> 
+    <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -136,29 +135,29 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-workstreams">    
         <li>
-    <a class="dropdown-item" href="../../mmrm_R_package.html">
+    <a class="dropdown-item" href="../mmrm_R_package.html">
  <span class="dropdown-text">MMRM R Package Development</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../hta_page.html">
+    <a class="dropdown-item" href="../hta_page.html">
  <span class="dropdown-text">HTA-R workstream</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../bayesian_mmrm_R_package.html">
+    <a class="dropdown-item" href="../bayesian_mmrm_R_package.html">
  <span class="dropdown-text">Bayesian MMRM R Package Development</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../ssd_package.html">
+    <a class="dropdown-item" href="../ssd_package.html">
  <span class="dropdown-text">Bayesian Safety Signal Detection Julia Package</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../presentations.html"> 
+    <a class="nav-link" href="../presentations.html"> 
 <span class="menu-text">Presentations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../hexwall.html"> 
+    <a class="nav-link" href="../hexwall.html"> 
 <span class="menu-text">TaskView Hexwall</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -167,13 +166,13 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-guides">    
         <li>
-    <a class="dropdown-item" href="../../guide.html">
+    <a class="dropdown-item" href="../guide.html">
  <span class="dropdown-text">openstatsguide</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../ideas.html"> 
+    <a class="nav-link" href="../ideas.html"> 
 <span class="menu-text">Ideas</span></a>
   </li>  
 </ul>
@@ -184,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../blog.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../blog.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -196,44 +195,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Considerations in developing and using open-source statistical software in Pharma</h1>
-            <p class="subtitle lead">Summary of our session at this year’s Regulatory-Industry Statistics Workshop</p>
-                  <div>
-        <div class="description">
-          We shared our working group progress and discussed with the panel and the audience challenges and next steps.
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Daniel </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">September 29, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -241,96 +203,72 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#industry-presentation" id="toc-industry-presentation" class="nav-link active" data-scroll-target="#industry-presentation">Industry presentation</a></li>
-  <li><a href="#fda-presentation" id="toc-fda-presentation" class="nav-link" data-scroll-target="#fda-presentation">FDA presentation</a>
-  <ul class="collapse">
-  <li><a href="#history-of-r" id="toc-history-of-r" class="nav-link" data-scroll-target="#history-of-r">History of R</a></li>
-  <li><a href="#r-for-submissions" id="toc-r-for-submissions" class="nav-link" data-scroll-target="#r-for-submissions">R for submissions</a></li>
-  </ul></li>
-  <li><a href="#panel-discussion" id="toc-panel-discussion" class="nav-link" data-scroll-target="#panel-discussion">Panel discussion</a>
-  <ul class="collapse">
-  <li><a href="#popularity-of-r" id="toc-popularity-of-r" class="nav-link" data-scroll-target="#popularity-of-r">Popularity of R</a></li>
-  <li><a href="#quality-assessment" id="toc-quality-assessment" class="nav-link" data-scroll-target="#quality-assessment">Quality Assessment</a></li>
-  <li><a href="#package-dependencies" id="toc-package-dependencies" class="nav-link" data-scroll-target="#package-dependencies">Package Dependencies</a></li>
-  <li><a href="#commercial-models" id="toc-commercial-models" class="nav-link" data-scroll-target="#commercial-models">Commercial Models</a></li>
-  <li><a href="#containerization" id="toc-containerization" class="nav-link" data-scroll-target="#containerization">Containerization</a></li>
-  <li><a href="#newcomers" id="toc-newcomers" class="nav-link" data-scroll-target="#newcomers">Newcomers</a></li>
-  <li><a href="#hpc" id="toc-hpc" class="nav-link" data-scroll-target="#hpc">HPC</a></li>
-  </ul></li>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context">Context</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-
-
-<p>We were lucky that the <code>openstatsware</code> proposed session was accepted in this year’s <a href="https://ww2.amstat.org/meetings/biop/2023/">ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop 2023</a>, see the session details <a href="https://ww3.aievolution.com/AMSTATevents/index.cfm?do=ev.viewEv&amp;ev=2045">here</a>. We would like to thank Ya Wang (Gilead, <code>openstatsware</code>) who organized the session, and Ning Leng (Genentech) who moderated the session and helped with the invitations. It was great to have Paul Schuette (FDA CDER) as FDA presenter and Ryan Jung (FDA CDER) as additional FDA panelist. The round was completed by Eric Nantz (Eli Lilly) as additional industry panelist.</p>
-<p>Personally, I feel it was awesome to have a nicely filled auditorium of interested workshop participants to present to, despite the late timing of the session in the workshop (Friday afternoon).</p>
-<section id="industry-presentation" class="level2">
-<h2 class="anchored" data-anchor-id="industry-presentation">Industry presentation</h2>
-<p>In the first presentation “First year of the Software Engineering working group - working together across organizations” and on behalf of <code>openstatsware</code>, Daniel Sabanes Bove (Roche, <code>openstatsware</code>) introduced the working group (WG) and presented its progress during the first year. The slides are available (in slightly modified <code>html</code> format for convenience) <a href="https://rconsortium.github.io/asa-biop-swe-wg/slides/risw-first-year-wg-sep2023-quarto.html">here</a>.</p>
-</section>
-<section id="fda-presentation" class="level2">
-<h2 class="anchored" data-anchor-id="fda-presentation">FDA presentation</h2>
-<p>Paul Schuette gave the second presentation on “Open-source software for regulatory submissions and regulatory environments”, which is available on the R Submissions WG website <a href="https://github.com/RConsortium/submissions-wg/blob/main/_Documents/OpenSource1c_Paul_S_2023_ASA_biopharma.pdf">here</a>. Paul started by reminding us of <a href="https://fda.report/media/109552/Statistical-Software-Clarifying-Statement-PDF.pdf">FDA’s clarifying statement on software</a>, which was already published in May 2015. After noting that he could only comment on the CDER side of FDA for submissions, he commented on the Study Data Technical Conformance Guide (SDTCG). The SDTCG in particular mandates that all source code for ADaM data sets, as well as TLGs for primary and secondary efficacy analyses need to be submitted. Paul noted that while ASCII files are required and non-ASCII characters are to be avoided, the files could still be with <code>.r</code> extension - not only <code>.txt</code> files are allowed. Interestingly even <code>.jl</code> i.e.&nbsp;Julia files are allowed for module 5 content (although they have not received any Julia submission), while <code>.sas</code> and <code>.r</code> are allowed for modules 3 to 5. In the future they would like to be able to support more formats.</p>
-<section id="history-of-r" class="level3">
-<h3 class="anchored" data-anchor-id="history-of-r">History of R</h3>
-<p>Looking at the history of R, he noted that it followed S which was developed in the same building from Bell Labs as C and Unix, by John Chambers et al.&nbsp;R’s major innovation in the 1990s was the CRAN repository. RStudio as a popular IDE is available since 2011. With R Core and the R Foundation, a governance structure is in place. Discussing the various R community based WGs, Paul highlighted the R Submissions WG that already has completed 3 pilot submissions. Currently, pilot 4 with a container or web assembly based submission is under development. Paul also mentioned Python, which is used in a complementary set of applications such as natural language processing and machine learning, and less in statistics and visualization. He noted that also some commercial software is written in Python. Julia seems to be not (yet?) of great importance in the statistics community.</p>
-</section>
-<section id="r-for-submissions" class="level3">
-<h3 class="anchored" data-anchor-id="r-for-submissions">R for submissions</h3>
-<p>Open source software comes with benefits but also challenges. Paul noted the higher pace of changes in the software, and the missing support process when something goes wrong. The need for IT departments supporting the software installations can be another challenge. With almost <a href="https://cran.r-project.org/web/packages/">20,000 contributed R packages on CRAN</a>, it is not trivial to decide which R packages to trust.</p>
-<p>Zooming in on the use of R for submissions, Paul noted that CDER has not received yet a purely R based submission. So far, hybrid submissions combining R and proprietary software have been successfully received. Statistical reviewers also have been using R, in particular for plots that have in some instances already made it into labels. New graduates often come with R knowledge, however best practices are not taught in graduate schools. Paul recommended to reach out to the review divisions early before submissions, and to keep in mind the perspective of the statistical reviewers, who are using laptops for their review work.</p>
-<p>Paul finished with the Stan Lee quote “With great power comes great responsibility”, reminding us that we need to use the power of open source software responsibly.</p>
-</section>
-</section>
-<section id="panel-discussion" class="level2">
-<h2 class="anchored" data-anchor-id="panel-discussion">Panel discussion</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="panel_photo.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Panel discussion</figcaption>
-</figure>
-</div>
-<section id="popularity-of-r" class="level3">
-<h3 class="anchored" data-anchor-id="popularity-of-r">Popularity of R</h3>
-<p>Ning started the panel discussion with asking how popular R is in the companies and FDA. Paul mentioned that they have been seeing an uptick in the recent graduates with R and Python background during the last 5 years. They also encourage staff to be bilingual in the programming languages to increase flexibility. Ryan added that he personally uses R a lot, e.g.&nbsp;to replicate sponsor analyses, and conduct FDA in-house analyses/visualization. Some reviewers use Python but it is only for research purposes not for regulatory purposes. The FDA’s Division of Analytics and Informatics (DAI) also has lots of talented R programmers. Eric added that in Eli Lilly they use R more and more, and Daniel added that in Roche Pharma new molecules from this year onwards start their study data analyses in R.</p>
-</section>
-<section id="quality-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="quality-assessment">Quality Assessment</h3>
-<p>The next question was how the panel members assessed the quality of the packages. Daniel looks always at the source code of the package, which is nowadays typically available on GitHub - are tests included? If there are tests, are they meaningful and sufficiently granular? If yes, are functions documented? Are vignettes available? Eric added that documentation is very important for him to get started with a package, so is a key criterion. A great example here is the <a href="https://books.ropensci.org/targets/"><code>targets</code> package</a> from Will Landau. Paul mentioned that often he does not have a lot of time for the assessment, and provenance is an important factor: do you know where the package came from? Ryan added that not all packages meet the requirements of the reviewers, the issue already arose in one case where a package affiliated with LaTeX was utilized to provide improved fonts in R markdown. The package was rejected in the end because it could not be resolved. He added that well known packages are easier to accept, while not open sourced, proprietary packages would take a lot of time to review and test.</p>
-</section>
-<section id="package-dependencies" class="level3">
-<h3 class="anchored" data-anchor-id="package-dependencies">Package Dependencies</h3>
-<p>It was great to have a lot of the questions subsequently from the audience. The first was around package dependencies and how to deal with them. Eric mentioned that this was a key issue for the R Submission WG and its pilot submissions to the FDA, where <a href="https://rstudio.github.io/renv/articles/renv.html"><code>renv</code></a> has been used successfully. A key factor here was to be very verbose in the reviewers guide - you cannot be detailed enough because you want to make sure it can be reproduced on any machine. Also doing the work openly on GitHub helps to be transparent to the reviewers.</p>
-</section>
-<section id="commercial-models" class="level3">
-<h3 class="anchored" data-anchor-id="commercial-models">Commercial Models</h3>
-<p>Another question was whether commercial maintenance of open source packages could be an option, similar as RedHat for Linux. Paul commented that there were different models for monetizing open source software, he is aware of at least three different ones which come with their challenges. Generally, he encourages open source publication of packages and also harmonized cross-company efforts, to avoid surprises in submissions. The open source nature is an opportunity to avoid repeating the company specific macros submissions from sponsors for proprietary software seen in the past.</p>
-</section>
-<section id="containerization" class="level3">
-<h3 class="anchored" data-anchor-id="containerization">Containerization</h3>
-<p>One question was whether the use of containers could help solve the reproducibility challenge posed from different R and packages installations, and whether this could be integrated into the workflow of statistical reviewers at FDA potentially. Paul commented that there are several pain points. One was e.g.&nbsp;that containers work best with Linux operating systems, while reviewers work on Windows systems. Therefore, IT support was required which adds a level of complexity for the setup. Currently, other solutions are being discussed as part of <a href="https://rconsortium.github.io/submissions-wg/pilot4.html">Pilot 4 of the R Submissions WG</a>. One of them is <a href="https://docs.r-wasm.org/webr"><code>webR</code></a>, where it was important that the security requirements are fulfilled because sessions would be sandboxed in the reviewer’s browser session, as Eric added.</p>
-</section>
-<section id="newcomers" class="level3">
-<h3 class="anchored" data-anchor-id="newcomers">Newcomers</h3>
-<p>A follow on question to the quality assessment discussion was how newcomers to the biostatistics community could make sure that their packages can be accepted, although they might be unknown in the first place to the community. Daniel started by emphasizing that for him assessing the quality of the packages is not primarily driven by the authors - newcomers could do a great job with using best practices (including methods description in vignettes, tests, documentation, user vignettes, GitHub issues tracking, CRAN publication etc). Paul added that dissemination is important, e.g.&nbsp;Journal of Statistical Software and others are important outlets. Eric added that the <a href="https://rweekly.org/">R Weekly site</a> and <a href="https://rweekly.fireside.fm/">R Weekly Highlights podcast</a>, which regularly feature new and updated packages released in the R community, is another great way to publicize a new package and increase adoption.</p>
-</section>
-<section id="hpc" class="level3">
-<h3 class="anchored" data-anchor-id="hpc">HPC</h3>
-<p>The last question was whether extensive computing (e.g.&nbsp;cloud based sponsor submissions) could be handled during an FDA statistical review. Paul mentioned that unfortunately cloud based solutions are not currently compatible with security and other regulatory requirements. However, statistical reviewers have access to an FDA HPC environment, but the access process is not trivial, and can be time intensive.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="panel_photo_2.jpg" class="img-fluid figure-img"></p>
-<figcaption>Panel discussion</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Interval Censored Survival Analysis</h1>
 </div>
 
 
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Isaac Gravestock <a href="mailto:isaac.gravestock@roche.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>We have identified a gap in the R ecosystem for interval censoring analysis. A number of CRAN packages implement interval censoring methods, but none fully meets the requirements for our use case.</p>
+<section id="context" class="level2">
+<h2 class="anchored" data-anchor-id="context">Context</h2>
+<p>Considering time-to-disease progression, it is common that disease progression (such as tumour growth) is only measured at clinical visits, leading to interval-censored data, where the exact time of progression occured between the last “negative” and the first “positive” visit.</p>
+<p>If the timing and frequency of visits are not equal across treatment groups, a naive analysis using standard survival analysis methods will lead to biased results. As such, we would like to apply interval censoring methods to analyze such data as a sensitivity analysis to the standard survival analysis. The sensitivity analysis should be as close to the standard survival analysis as possible, apart from the interval censoring aspect. Therefore we have the following requirements.</p>
 </section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<ul>
+<li>Semi-parametric implementation</li>
+<li>Support for stratified baseline hazard</li>
+<li>Suitable performance for datasets with 1000s of observations</li>
+<li>Suitable variance estimation</li>
+<li>Supports data where all observations are interval or right censored.</li>
+</ul>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>If you are interested in this project, please join the discussion on our <a href="https://github.com/openstatsware/website/discussions">GitHub Discussions</a> or email <script type="text/javascript">
+<!--
+h='&#114;&#x6f;&#x63;&#104;&#x65;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x69;&#x73;&#x61;&#x61;&#x63;&#46;&#x67;&#114;&#x61;&#118;&#x65;&#x73;&#116;&#x6f;&#x63;&#x6b;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x49;&#x73;&#x61;&#x61;&#x63;&#32;&#x47;&#114;&#x61;&#118;&#x65;&#x73;&#116;&#x6f;&#x63;&#x6b;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>Isaac Gravestock (isaac.gravestock at roche dot com)</noscript></p>
+
+
 </section>
 
 </main> <!-- /main -->
