@@ -1,6 +1,11 @@
 ---
 title: "Interval Censored Survival Analysis"
 date: 2025-07-01
+author:
+  - name: "Isaac Gravestock"
+    email: "isaac.gravestock@roche.com"
+email-obfuscation: javascript
+
 ---
 
 We have identified a gap in the R ecosystem for interval censoring analysis. A number of CRAN packages implement interval censoring methods, but none fully meets the requirements for our use case.
@@ -21,4 +26,4 @@ If the timing and frequency of visits are not equal across treatment groups, a n
 
 ## Discussion
 
-If you are interested in this project, please join the discussion on our [GitHub Discussions](https://github.com/openstatsware/website/discussions).
+If you are interested in this project, please join the discussion on our [GitHub Discussions](https://github.com/openstatsware/website/discussions) or email [Isaac Gravestock](mailto:isaac.gravestock@roche.com)
