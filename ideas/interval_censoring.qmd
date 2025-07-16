@@ -1,0 +1,29 @@
+---
+title: "Interval Censored Survival Analysis"
+date: 2025-07-01
+author:
+  - name: "Isaac Gravestock"
+    email: "isaac.gravestock@roche.com"
+email-obfuscation: javascript
+
+---
+
+We have identified a gap in the R ecosystem for interval censoring analysis. A number of CRAN packages implement interval censoring methods, but none fully meets the requirements for our use case.
+
+## Context
+
+Considering time-to-disease progression, it is common that disease progression (such as tumour growth) is only measured at clinical visits, leading to interval-censored data, where the exact time of progression occured between the last "negative" and the first "positive" visit.
+
+If the timing and frequency of visits are not equal across treatment groups, a naive analysis using standard survival analysis methods will lead to biased results. As such, we would like to apply interval censoring methods to analyze such data as a sensitivity analysis to the standard survival analysis. The sensitivity analysis should be as close to the standard survival analysis as possible, apart from the interval censoring aspect. Therefore we have the following requirements.
+
+## Requirements
+
+- Semi-parametric implementation
+- Support for stratified baseline hazard
+- Suitable performance for datasets with  1000s of observations
+- Suitable variance estimation
+- Supports data where all observations are interval or right censored.
+
+## Discussion
+
+If you are interested in this project, please join the discussion on our [GitHub Discussions](https://github.com/openstatsware/website/discussions) or email [Isaac Gravestock](mailto:isaac.gravestock@roche.com)

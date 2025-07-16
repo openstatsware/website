@@ -41,6 +41,8 @@ website:
       - text: "Guides"
         menu:
           - href: guide.qmd
+      - href: ideas.qmd
+        text: "Ideas"
     right:
       - icon: github
         href: https://github.com/openstatsware/website
