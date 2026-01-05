@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working group">
   <meta name="dcterms.date" content="2023-09-29">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-deff403d298a6db94fe1675971ade306.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f27e1c275408ff76e6f600deb9c0bdd7.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -234,13 +234,13 @@ Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working grou
 <section id="members-and-meetings" class="slide level2">
 <h2>Members and meetings</h2>
 <ul>
-<li class="fragment">Currently 59 members
+<li class="fragment">Currently 63 members
 <ul>
 <li class="fragment">new members are welcome! (incl.&nbsp;academia/regulators/etc.)</li>
 </ul></li>
-<li class="fragment">Currently 38 organizations
+<li class="fragment">Currently 41 organizations
 <ul>
-<li class="fragment">Affamed, AstraZeneca, Bayer, Berry Consultants, BMS, Boehringer Ingelheim, CIMS Global, Cytel, Daiichi Sankyo, Denali, Edwards Lifesciences, Eli Lilly, EMD Serono, Erste Group, Genentech, Gilead Sciences, GSK, ICON, Independent, Johnson &amp; Johnson, mainanalytics, MaxisIT, Merck, Merck KGaA, MSD, Novartis, Novo Nordisk, Pfizer, R&amp;G US, RCONIS, Red Door Analytics, Regeneron, Roche, RPACT, RStudio &amp; R Consortium, Sanofi, Transition Technologies Science, UCB</li>
+<li class="fragment">Affamed, argenx, AstraZeneca, BASF, Bayer, Berry Consultants, BMS, Boehringer Ingelheim, CIMS Global, Cytel, Daiichi Sankyo, Denali, Edwards Lifesciences, Eli Lilly, EMD Serono, Erste Group, Genentech, Gilead Sciences, GSK, ICON, Independent, Johnson &amp; Johnson, Jumping Rivers, mainanalytics, MaxisIT, Merck, Merck KGaA, MSD, Novartis, Novo Nordisk, Pfizer, R&amp;G US, RCONIS, Red Door Analytics, Regeneron, Roche, RPACT, RStudio &amp; R Consortium, Sanofi, Transition Technologies Science, UCB</li>
 </ul></li>
 <li class="fragment">Meet every 2 weeks</li>
 </ul>
@@ -644,7 +644,7 @@ Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working grou
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -756,13 +756,14 @@ Daniel Sabanés Bové (Roche) and Ya Wang (Gilead) on behalf of the working grou
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy

@@ -9,7 +9,7 @@
 <link>https://www.openstatsware.org/blog.html</link>
 <atom:link href="https://www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the `openstatsware&#39; Working Group</description>
-<generator>quarto-1.7.32</generator>
+<generator>quarto-1.8.26</generator>
 <lastBuildDate>Wed, 05 Feb 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>openstatsware at the 2025 PSI conference</title>
@@ -125,7 +125,7 @@
 
 <p>We are happy to announce the first Julia package from <code>openstatsware</code>: please welcome <a href="https://openpharma.github.io/SafetySignalDetection.jl/"><code>SafetySignalDetection.jl</code></a>. This package implements Bayesian safety signal detection as proposed by <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/#Brock:2023">Brock et al.&nbsp;(2023)</a> using the <a href="https://github.com/TuringLang/Turing.jl">Turing.jl</a> framework. Please have a look at the corresponding <a href="https://openpharma.github.io/SafetySignalDetection.jl/stable/introduction/">introduction</a> to learn more.</p>
 <p>We successfully added the package today to the official Julia registry (<a href="https://github.com/JuliaRegistries/General/blob/master/S/SafetySignalDetection/Package.toml">link</a>), such that you can easily install it in Julia using:</p>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">using</span> <span class="bu" style="color: null;
 background-color: null;
@@ -136,7 +136,7 @@ font-style: inherit;">Pkg</span>.<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">add</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
+font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div></div>
 <p>The corresponding <a href="../../ssd_package.html">workstream</a> is open for new members who are interested in further developing the package, e.g.&nbsp;adding methodological variations etc.</p>
 <p>And if you are interested in a presentation about why Julia is interesting for implementing statistical software, don’t miss the <a href="https://www.psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all">PSI webinar on 17th April</a>!</p>
 
@@ -184,26 +184,26 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
 <section id="cran-task-views" class="level2">
 <h2 class="anchored" data-anchor-id="cran-task-views">CRAN task views</h2>
-<p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 48 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
+<p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 49 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="etocmwskls" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#etocmwskls table {
+<div id="nrkoqducgq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#nrkoqducgq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#etocmwskls thead, #etocmwskls tbody, #etocmwskls tfoot, #etocmwskls tr, #etocmwskls td, #etocmwskls th {
+#nrkoqducgq thead, #nrkoqducgq tbody, #nrkoqducgq tfoot, #nrkoqducgq tr, #nrkoqducgq td, #nrkoqducgq th {
   border-style: none;
 }
 
-#etocmwskls p {
+#nrkoqducgq p {
   margin: 0;
   padding: 0;
 }
 
-#etocmwskls .gt_table {
+#nrkoqducgq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -229,12 +229,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-left-color: #D3D3D3;
 }
 
-#etocmwskls .gt_caption {
+#nrkoqducgq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#etocmwskls .gt_title {
+#nrkoqducgq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -246,7 +246,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-width: 0;
 }
 
-#etocmwskls .gt_subtitle {
+#nrkoqducgq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -258,7 +258,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-width: 0;
 }
 
-#etocmwskls .gt_heading {
+#nrkoqducgq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -270,13 +270,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#etocmwskls .gt_bottom_border {
+#nrkoqducgq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#etocmwskls .gt_col_headings {
+#nrkoqducgq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -291,7 +291,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#etocmwskls .gt_col_heading {
+#nrkoqducgq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -311,7 +311,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#etocmwskls .gt_column_spanner_outer {
+#nrkoqducgq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -323,15 +323,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 4px;
 }
 
-#etocmwskls .gt_column_spanner_outer:first-child {
+#nrkoqducgq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#etocmwskls .gt_column_spanner_outer:last-child {
+#nrkoqducgq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#etocmwskls .gt_column_spanner {
+#nrkoqducgq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -343,11 +343,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   width: 100%;
 }
 
-#etocmwskls .gt_spanner_row {
+#nrkoqducgq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#etocmwskls .gt_group_heading {
+#nrkoqducgq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -373,7 +373,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   text-align: left;
 }
 
-#etocmwskls .gt_empty_group_heading {
+#nrkoqducgq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -388,15 +388,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: middle;
 }
 
-#etocmwskls .gt_from_md > :first-child {
+#nrkoqducgq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#etocmwskls .gt_from_md > :last-child {
+#nrkoqducgq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#etocmwskls .gt_row {
+#nrkoqducgq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -415,7 +415,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   overflow-x: hidden;
 }
 
-#etocmwskls .gt_stub {
+#nrkoqducgq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -428,7 +428,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#etocmwskls .gt_stub_row_group {
+#nrkoqducgq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -442,15 +442,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   vertical-align: top;
 }
 
-#etocmwskls .gt_row_group_first td {
+#nrkoqducgq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#etocmwskls .gt_row_group_first th {
+#nrkoqducgq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#etocmwskls .gt_summary_row {
+#nrkoqducgq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -460,16 +460,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#etocmwskls .gt_first_summary_row {
+#nrkoqducgq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#etocmwskls .gt_first_summary_row.thick {
+#nrkoqducgq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#etocmwskls .gt_last_summary_row {
+#nrkoqducgq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -479,7 +479,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#etocmwskls .gt_grand_summary_row {
+#nrkoqducgq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -489,7 +489,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#etocmwskls .gt_first_grand_summary_row {
+#nrkoqducgq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -499,7 +499,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-top-color: #D3D3D3;
 }
 
-#etocmwskls .gt_last_grand_summary_row_top {
+#nrkoqducgq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -509,11 +509,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#etocmwskls .gt_striped {
+#nrkoqducgq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#etocmwskls .gt_table_body {
+#nrkoqducgq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -522,7 +522,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-bottom-color: #D3D3D3;
 }
 
-#etocmwskls .gt_footnotes {
+#nrkoqducgq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -536,7 +536,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#etocmwskls .gt_footnote {
+#nrkoqducgq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -545,7 +545,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#etocmwskls .gt_sourcenotes {
+#nrkoqducgq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -559,7 +559,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   border-right-color: #D3D3D3;
 }
 
-#etocmwskls .gt_sourcenote {
+#nrkoqducgq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -567,80 +567,80 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
   padding-right: 5px;
 }
 
-#etocmwskls .gt_left {
+#nrkoqducgq .gt_left {
   text-align: left;
 }
 
-#etocmwskls .gt_center {
+#nrkoqducgq .gt_center {
   text-align: center;
 }
 
-#etocmwskls .gt_right {
+#nrkoqducgq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#etocmwskls .gt_font_normal {
+#nrkoqducgq .gt_font_normal {
   font-weight: normal;
 }
 
-#etocmwskls .gt_font_bold {
+#nrkoqducgq .gt_font_bold {
   font-weight: bold;
 }
 
-#etocmwskls .gt_font_italic {
+#nrkoqducgq .gt_font_italic {
   font-style: italic;
 }
 
-#etocmwskls .gt_super {
+#nrkoqducgq .gt_super {
   font-size: 65%;
 }
 
-#etocmwskls .gt_footnote_marks {
+#nrkoqducgq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#etocmwskls .gt_asterisk {
+#nrkoqducgq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#etocmwskls .gt_indent_1 {
+#nrkoqducgq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#etocmwskls .gt_indent_2 {
+#nrkoqducgq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#etocmwskls .gt_indent_3 {
+#nrkoqducgq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#etocmwskls .gt_indent_4 {
+#nrkoqducgq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#etocmwskls .gt_indent_5 {
+#nrkoqducgq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#etocmwskls .katex-display {
+#nrkoqducgq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#etocmwskls div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#nrkoqducgq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
 
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_heading header">
-<th colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">CRAN Task Views Summary Table</th>
+<td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">CRAN Task Views Summary Table</td>
 </tr>
 <tr class="gt_col_headings even">
 <th id="topic" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Topic</th>
@@ -653,50 +653,50 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ActuarialScience/">Actuarial Science</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang, Vincent Goulet</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-17</td>
-<td class="gt_row gt_right" headers="n_pkg">43</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-08</td>
+<td class="gt_row gt_right" headers="n_pkg">45</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Agriculture/">Agricultural Science</a></td>
-<td class="gt_row gt_left" headers="maintainers">Adrian Correndo, Julia Piaskowski, Adam Sparks</td>
-<td class="gt_row gt_right" headers="last_update">2025-07-10</td>
-<td class="gt_row gt_right" headers="n_pkg">167</td>
+<td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/AnomalyDetection/">Anomaly Detection</a></td>
+<td class="gt_row gt_left" headers="maintainers">Priyanga Dilini Talagala, Rob J. Hyndman, Gaetano Romano</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-21</td>
+<td class="gt_row gt_right" headers="n_pkg">118</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Bayesian/">Bayesian Inference</a></td>
 <td class="gt_row gt_left" headers="maintainers">Jong Hee Park, Michela Cameletti, Xun Pang, Kevin M. Quinn</td>
 <td class="gt_row gt_right" headers="last_update">2023-07-17</td>
-<td class="gt_row gt_right" headers="n_pkg">197</td>
+<td class="gt_row gt_right" headers="n_pkg">193</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/CausalInference/">Causal Inference</a></td>
-<td class="gt_row gt_left" headers="maintainers">Imke Mayer, Pan Zhao, Noah Greifer, Nick Huntington-Klein, Julie Josse</td>
-<td class="gt_row gt_right" headers="last_update">2023-08-04</td>
+<td class="gt_row gt_left" headers="maintainers">Imke Mayer, Pan Zhao, Nick Huntington-Klein, Julie Josse</td>
+<td class="gt_row gt_right" headers="last_update">2025-11-12</td>
 <td class="gt_row gt_right" headers="n_pkg">143</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ChemPhys/">Chemometrics and Computational Physics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Katharine Mullen</td>
 <td class="gt_row gt_right" headers="last_update">2025-06-04</td>
-<td class="gt_row gt_right" headers="n_pkg">99</td>
+<td class="gt_row gt_right" headers="n_pkg">100</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ClinicalTrials/">Clinical Trial Design, Monitoring, and Analysis</a></td>
-<td class="gt_row gt_left" headers="maintainers">Ed Zhang</td>
-<td class="gt_row gt_right" headers="last_update">2025-04-08</td>
-<td class="gt_row gt_right" headers="n_pkg">66</td>
+<td class="gt_row gt_left" headers="maintainers">Ya Wang, Thomas Jaki, Laura Pascasio Harris, Orla Doyle, Elias Laurin Meyer, Wilmar Igl</td>
+<td class="gt_row gt_right" headers="last_update">2025-09-04</td>
+<td class="gt_row gt_right" headers="n_pkg">115</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Cluster/">Cluster Analysis &amp; Finite Mixture Models</a></td>
 <td class="gt_row gt_left" headers="maintainers">Bettina Grün</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-05</td>
-<td class="gt_row gt_right" headers="n_pkg">108</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-07</td>
+<td class="gt_row gt_right" headers="n_pkg">110</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/CompositionalData/">Compositional Data Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Karel Hron, Javier Palarea-Albaladejo, Matthias Templ, Alessandra Menafoglio</td>
-<td class="gt_row gt_right" headers="last_update">2025-03-25</td>
-<td class="gt_row gt_right" headers="n_pkg">26</td>
+<td class="gt_row gt_right" headers="last_update">2025-09-23</td>
+<td class="gt_row gt_right" headers="n_pkg">27</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Databases/">Databases with R</a></td>
@@ -707,26 +707,26 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/DifferentialEquations/">Differential Equations</a></td>
 <td class="gt_row gt_left" headers="maintainers">Thomas Petzoldt, Karline Soetaert</td>
-<td class="gt_row gt_right" headers="last_update">2023-05-25</td>
-<td class="gt_row gt_right" headers="n_pkg">33</td>
+<td class="gt_row gt_right" headers="last_update">2025-08-19</td>
+<td class="gt_row gt_right" headers="n_pkg">31</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Distributions/">Probability Distributions</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang, Patrice Kiener, Bruce J. Swihart</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-06</td>
-<td class="gt_row gt_right" headers="n_pkg">332</td>
+<td class="gt_row gt_right" headers="last_update">2026-01-01</td>
+<td class="gt_row gt_right" headers="n_pkg">342</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/DynamicVisualizations/">Dynamic Visualizations and Interactive Graphics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Sherry Zhang, Dianne Cook, Ian Lyttle</td>
-<td class="gt_row gt_right" headers="last_update">2024-09-25</td>
-<td class="gt_row gt_right" headers="n_pkg">51</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-10</td>
+<td class="gt_row gt_right" headers="n_pkg">56</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Econometrics/">Econometrics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Achim Zeileis, Grant McDermott, Kevin Tappe</td>
-<td class="gt_row gt_right" headers="last_update">2025-04-03</td>
-<td class="gt_row gt_right" headers="n_pkg">151</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-28</td>
+<td class="gt_row gt_right" headers="n_pkg">152</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Environmetrics/">Analysis of Ecological and Environmental Data</a></td>
@@ -738,97 +738,97 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Epidemiology/">Epidemiology</a></td>
 <td class="gt_row gt_left" headers="maintainers">Thibaut Jombart, Matthieu Rolland, Hugo Gruson</td>
 <td class="gt_row gt_right" headers="last_update">2025-03-03</td>
-<td class="gt_row gt_right" headers="n_pkg">127</td>
+<td class="gt_row gt_right" headers="n_pkg">123</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ExperimentalDesign/">Design of Experiments (DoE) &amp; Analysis of Experimental Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ulrike Groemping, Tyler Morgan-Wall</td>
 <td class="gt_row gt_right" headers="last_update">2025-01-29</td>
-<td class="gt_row gt_right" headers="n_pkg">100</td>
+<td class="gt_row gt_right" headers="n_pkg">98</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ExtremeValue/">Extreme Value Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-17</td>
-<td class="gt_row gt_right" headers="n_pkg">40</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-16</td>
+<td class="gt_row gt_right" headers="n_pkg">41</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Finance/">Empirical Finance</a></td>
 <td class="gt_row gt_left" headers="maintainers">Dirk Eddelbuettel</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-13</td>
-<td class="gt_row gt_right" headers="n_pkg">150</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-28</td>
+<td class="gt_row gt_right" headers="n_pkg">148</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/FunctionalData/">Functional Data Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Fabian Scheipl, Eleonora Arnone, Giles Hooker, J. Derek Tucker, Julia Wrobel</td>
 <td class="gt_row gt_right" headers="last_update">2024-06-17</td>
-<td class="gt_row gt_right" headers="n_pkg">56</td>
+<td class="gt_row gt_right" headers="n_pkg">48</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/GraphicalModels/">Graphical Models</a></td>
 <td class="gt_row gt_left" headers="maintainers">Soren Hojsgaard</td>
-<td class="gt_row gt_right" headers="last_update">2023-04-05</td>
+<td class="gt_row gt_right" headers="last_update">2025-08-30</td>
 <td class="gt_row gt_right" headers="n_pkg">38</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/HighPerformanceComputing/">High-Performance and Parallel Computing with R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Dirk Eddelbuettel</td>
-<td class="gt_row gt_right" headers="last_update">2025-07-12</td>
-<td class="gt_row gt_right" headers="n_pkg">90</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-25</td>
+<td class="gt_row gt_right" headers="n_pkg">92</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Hydrology/">Hydrological Data and Modeling</a></td>
 <td class="gt_row gt_left" headers="maintainers">Sam Albers, Ilaria Prosdocimi</td>
-<td class="gt_row gt_right" headers="last_update">2024-03-08</td>
-<td class="gt_row gt_right" headers="n_pkg">123</td>
+<td class="gt_row gt_right" headers="last_update">2025-08-29</td>
+<td class="gt_row gt_right" headers="n_pkg">124</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MachineLearning/">Machine Learning &amp; Statistical Learning</a></td>
 <td class="gt_row gt_left" headers="maintainers">Torsten Hothorn, Hannah Frick, Lucas Kook</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-24</td>
-<td class="gt_row gt_right" headers="n_pkg">121</td>
+<td class="gt_row gt_right" headers="last_update">2025-11-24</td>
+<td class="gt_row gt_right" headers="n_pkg">122</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MedicalImaging/">Medical Image Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Brandon Whitcher, Jon Clayden, John Muschelli</td>
-<td class="gt_row gt_right" headers="last_update">2022-08-31</td>
-<td class="gt_row gt_right" headers="n_pkg">32</td>
+<td class="gt_row gt_right" headers="last_update">2025-08-05</td>
+<td class="gt_row gt_right" headers="n_pkg">43</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MetaAnalysis/">Meta-Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Michael Dewey, Wolfgang Viechtbauer</td>
-<td class="gt_row gt_right" headers="last_update">2025-05-27</td>
-<td class="gt_row gt_right" headers="n_pkg">187</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-23</td>
+<td class="gt_row gt_right" headers="n_pkg">197</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MissingData/">Missing Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Josse, Imke Mayer, Nicholas Tierney, Nathalie Vialaneix</td>
-<td class="gt_row gt_right" headers="last_update">2025-05-12</td>
-<td class="gt_row gt_right" headers="n_pkg">262</td>
+<td class="gt_row gt_right" headers="last_update">2025-09-24</td>
+<td class="gt_row gt_right" headers="n_pkg">259</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/MixedModels/">Mixed, Multilevel, and Hierarchical Models in R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Ben Bolker, Julia Piaskowski, Emi Tanaka, Phillip Alday, Wolfgang Viechtbauer</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-25</td>
-<td class="gt_row gt_right" headers="n_pkg">175</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-09</td>
+<td class="gt_row gt_right" headers="n_pkg">181</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ModelDeployment">Model Deployment with R</a></td>
 <td class="gt_row gt_left" headers="maintainers">Yuan Tang, James Joseph Balamuta</td>
 <td class="gt_row gt_right" headers="last_update">2022-08-24</td>
-<td class="gt_row gt_right" headers="n_pkg">29</td>
+<td class="gt_row gt_right" headers="n_pkg">31</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/NaturalLanguageProcessing/">Natural Language Processing</a></td>
 <td class="gt_row gt_left" headers="maintainers">Fridolin Wild</td>
 <td class="gt_row gt_right" headers="last_update">2023-09-12</td>
-<td class="gt_row gt_right" headers="n_pkg">58</td>
+<td class="gt_row gt_right" headers="n_pkg">57</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/NetworkAnalysis/">Network Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Fabio Ashtar Telarico, Pavel N. Krivitsky, James Hollway</td>
-<td class="gt_row gt_right" headers="last_update">2025-05-26</td>
-<td class="gt_row gt_right" headers="n_pkg">137</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-05</td>
+<td class="gt_row gt_right" headers="n_pkg">136</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/NumericalMathematics/">Numerical Mathematics</a></td>
@@ -840,25 +840,25 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/OfficialStatistics/">Official Statistics &amp; Survey Statistics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Matthias Templ, Alexander Kowarik, Tobias Schoch</td>
 <td class="gt_row gt_right" headers="last_update">2025-03-11</td>
-<td class="gt_row gt_right" headers="n_pkg">144</td>
+<td class="gt_row gt_right" headers="n_pkg">142</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Omics/">Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Julie Aubert, Toby Dylan Hocking, Nathalie Vialaneix</td>
-<td class="gt_row gt_right" headers="last_update">2025-05-19</td>
-<td class="gt_row gt_right" headers="n_pkg">241</td>
+<td class="gt_row gt_right" headers="last_update">2025-11-26</td>
+<td class="gt_row gt_right" headers="n_pkg">235</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Optimization/">Optimization and Mathematical Programming</a></td>
 <td class="gt_row gt_left" headers="maintainers">Florian Schwendinger, Hans W. Borchers</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-25</td>
-<td class="gt_row gt_right" headers="n_pkg">136</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-04</td>
+<td class="gt_row gt_right" headers="n_pkg">135</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Paleontology/">Paleontology</a></td>
 <td class="gt_row gt_left" headers="maintainers">William Gearty, Lewis A. Jones, Erin Dillon, Pedro Godoy, Harriet Drage, Christopher Dean, Bruna Farina</td>
 <td class="gt_row gt_right" headers="last_update">2025-1-5</td>
-<td class="gt_row gt_right" headers="n_pkg">47</td>
+<td class="gt_row gt_right" headers="n_pkg">49</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Pharmacokinetics/">Analysis of Pharmacokinetic Data</a></td>
@@ -870,61 +870,61 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Phylogenetics/">Phylogenetics</a></td>
 <td class="gt_row gt_left" headers="maintainers">William Gearty, Brian O'Meara, Jacob Berv, Gustavo A. Ballen, Diniz Ferreira, Hilmar Lapp, Lars Schmitz, Martin R. Smith, Nathan S. Upham, Jonathan A. Nations</td>
 <td class="gt_row gt_right" headers="last_update">2025-02-17</td>
-<td class="gt_row gt_right" headers="n_pkg">106</td>
+<td class="gt_row gt_right" headers="n_pkg">103</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Psychometrics/">Psychometric Models and Methods</a></td>
 <td class="gt_row gt_left" headers="maintainers">Patrick Mair, Yves Rosseel, Kathrin Gruber</td>
 <td class="gt_row gt_right" headers="last_update">2023-12-15</td>
-<td class="gt_row gt_right" headers="n_pkg">224</td>
+<td class="gt_row gt_right" headers="n_pkg">228</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ReproducibleResearch/">Reproducible Research</a></td>
 <td class="gt_row gt_left" headers="maintainers">John Blischak, Alison Hill, Ben Marwick, Daniel Sjoberg, Will Landau</td>
-<td class="gt_row gt_right" headers="last_update">2025-03-26</td>
-<td class="gt_row gt_right" headers="n_pkg">112</td>
+<td class="gt_row gt_right" headers="last_update">2025-10-08</td>
+<td class="gt_row gt_right" headers="n_pkg">110</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Robust/">Robust Statistical Methods</a></td>
 <td class="gt_row gt_left" headers="maintainers">Martin Maechler</td>
 <td class="gt_row gt_right" headers="last_update">2023-07-01</td>
-<td class="gt_row gt_right" headers="n_pkg">52</td>
+<td class="gt_row gt_right" headers="n_pkg">50</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Spatial/">Analysis of Spatial Data</a></td>
-<td class="gt_row gt_left" headers="maintainers">Roger Bivand, Jakub Nowosad</td>
-<td class="gt_row gt_right" headers="last_update">2025-06-02</td>
-<td class="gt_row gt_right" headers="n_pkg">216</td>
+<td class="gt_row gt_left" headers="maintainers">Roger Bivand, Jakub Nowosad, Krzysztof Dyba</td>
+<td class="gt_row gt_right" headers="last_update">2025-11-11</td>
+<td class="gt_row gt_right" headers="n_pkg">217</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/SpatioTemporal/">Handling and Analyzing Spatio-Temporal Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Edzer Pebesma, Roger Bivand</td>
 <td class="gt_row gt_right" headers="last_update">2022-10-01</td>
-<td class="gt_row gt_right" headers="n_pkg">72</td>
+<td class="gt_row gt_right" headers="n_pkg">71</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/SportsAnalytics/">Sports Analytics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Benjamin S. Baumer, Quang Nguyen, Gregory J. Matthews</td>
-<td class="gt_row gt_right" headers="last_update">2024-09-19</td>
-<td class="gt_row gt_right" headers="n_pkg">80</td>
+<td class="gt_row gt_right" headers="last_update">2025-09-09</td>
+<td class="gt_row gt_right" headers="n_pkg">82</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Survival/">Survival Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Arthur Allignol, Aurelien Latouche</td>
 <td class="gt_row gt_right" headers="last_update">2025-02-09</td>
-<td class="gt_row gt_right" headers="n_pkg">221</td>
+<td class="gt_row gt_right" headers="n_pkg">218</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/TeachingStatistics/">Teaching Statistics</a></td>
 <td class="gt_row gt_left" headers="maintainers">Paul Northrop</td>
-<td class="gt_row gt_right" headers="last_update">2025-05-30</td>
-<td class="gt_row gt_right" headers="n_pkg">56</td>
+<td class="gt_row gt_right" headers="last_update">2025-12-19</td>
+<td class="gt_row gt_right" headers="n_pkg">61</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/TimeSeries/">Time Series Analysis</a></td>
 <td class="gt_row gt_left" headers="maintainers">Rob J Hyndman, Rebecca Killick</td>
-<td class="gt_row gt_right" headers="last_update">2025-07-07</td>
-<td class="gt_row gt_right" headers="n_pkg">411</td>
+<td class="gt_row gt_right" headers="last_update">2026-01-02</td>
+<td class="gt_row gt_right" headers="n_pkg">419</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Tracking">Processing and Analysis of Tracking Data</a></td>
@@ -936,7 +936,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/WebTechnologies/">Web Technologies and Services</a></td>
 <td class="gt_row gt_left" headers="maintainers">Mauricio Vargas Sepulveda, Will Beasley</td>
 <td class="gt_row gt_right" headers="last_update">2024-10-27</td>
-<td class="gt_row gt_right" headers="n_pkg">185</td>
+<td class="gt_row gt_right" headers="n_pkg">180</td>
 </tr>
 </tbody>
 </table>
@@ -947,7 +947,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 </section>
 <section id="clinical-trials-task-view" class="level2">
 <h2 class="anchored" data-anchor-id="clinical-trials-task-view">Clinical Trials task view</h2>
-<p>We are going to focus on the <strong>Clinical Trial Design, Monitoring, and Analysis task view</strong> maintained by Ed Zhang. Below is the task view itself. The task view layout has in the header summary information of the task view and the body contains the packages. They are categorized into sections: Design and Monitoring, Design and Analysis, Analysis for Specific Designs, Analysis in General and Meta Analysis.</p>
+<p>We are going to focus on the <strong>Chemometrics and Computational Physics task view</strong> maintained by Katharine Mullen. Below is the task view itself. The task view layout has in the header summary information of the task view and the body contains the packages. They are categorized into sections: Design and Monitoring, Design and Analysis, Analysis for Specific Designs, Analysis in General and Meta Analysis.</p>
 <p>The next area of the layout lists which packages are “Core” packages to the task view, which are “Regular” and which are archived on CRAN. There is a section listing related links that can include either noteworthy packages on GitHub or topic-specific references. Finally, there are links to other task views that the packages may intersect.</p>
 <p>Each package listed in the task view has a link to the CRAN homepage of the package and a short description of what task the package intends to solve.</p>
 <div class="cell">
@@ -1172,7 +1172,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div>
 
 
 <p>On Friday February 10, Daniel, Friedrich, and Kevin held a one-day workshop on good software engineering practice for R (GSWEP4R) in Basel. In order to achieve the best learning experience for participants, we only offered this course face to face without dialing in option - and the 50 seats had been booked out quickly within days after the course had been announced.</p>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="https://www.openstatsware.org/blog/20230210-bbs-swe-course-basel/Daniel.jpg" class="img-fluid"></p>
