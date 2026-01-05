@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install CRAN dependencies
-        run: install.packages(c("pander", "glue", "geomtextpath", "gt"), repos = "https://cloud.r-project.org")
+        run: install.packages(c("pander", "glue", "geomtextpath", "gt", "viridis"), repos = "https://cloud.r-project.org")
         shell: Rscript {0}
 
       - name: Install GitHub dependencies
