@@ -1,7 +1,14 @@
 [
   {
+    "listing": "/ideas.html",
+    "items": [
+      "/ideas/interval_censoring.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
+      "/blog/pmrm-cran-release/index.html",
       "/blog/psi-2025/index.html",
       "/blog/user-2024/index.html",
       "/blog/new-co-chair/index.html",
@@ -15,12 +22,6 @@
       "/blog/mmrm-video-nov-2022/index.html",
       "/blog/biop_report/index.html",
       "/blog/wg_announcement/index.html"
-    ]
-  },
-  {
-    "listing": "/ideas.html",
-    "items": [
-      "/ideas/interval_censoring.html"
     ]
   }
 ]
