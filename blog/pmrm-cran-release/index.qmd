@@ -1,0 +1,65 @@
+---
+title: "`{pmrm}` joins openpharma and reaches CRAN"
+author: "Will Landau"
+subtitle: "Announcing a new R package for progression models for repeated measures"
+description: "`{pmrm}` is one of our newest R packages, implementing frequentist progression models for repeated measures (PMRMs) for clinical trials in progressive diseases."
+date: "2026-02-24"
+categories: [news, R]
+image: "pmrm-logo.png"
+---
+
+We are delighted to announce that [`{pmrm}`](https://openpharma.github.io/pmrm/) has joined the [openpharma](https://github.com/openpharma) GitHub org and is now available on [CRAN](https://CRAN.R-project.org/package=pmrm).
+This package implements frequentist progression models for repeated measures (PMRMs), a class of continuous-time nonlinear mixed-effects models for longitudinal clinical trials in progressive diseases.
+
+<img src="pmrm-logo.png" alt="Hex Sticker for pmrm R package" width="200"/>
+
+## What are PMRMs?
+
+Progression models for repeated measures (PMRMs) are closely related to classical mixed models for repeated measures (MMRMs).
+However, unlike MMRMs, which estimate treatment effects as linear combinations of additive effects on the outcome scale, PMRMs characterize treatment effects in terms of the underlying disease trajectory.
+This framing yields clinically interpretable quantities such as:
+
+* **Average time saved** due to treatment.
+* **Percent reduction in decline** due to treatment.
+
+The underlying methodology was developed by [Raket (2022)](https://doi.org/10.1002/sim.9581).
+
+## Fast and reliable
+
+Previous implementations of PMRMs were slow and often diverged.
+The `{pmrm}` package is faster and more reliable thanks to [`{RTMB}`](https://github.com/kaskr/RTMB), achieving orders-of-magnitude speedups over equivalent implementations with `nlme::gnls()`.
+PMRM analyses that once ran for over 9 minutes now take less than 3 seconds.
+
+[`{RTMB}`](https://github.com/kaskr/RTMB) by Kasper Kristensen brings the power of [CppAD](https://github.com/coin-or/CppAD) for exact automatic differentiation, [Eigen](https://eigen.tuxfamily.org/) for high-performance matrix-vector operations, and [CHOLMOD](https://github.com/DrTimothyAldenDavis/SuiteSparse) for efficient sparse matrix computations directly into R.
+Users can write model code that looks and feels like base R while automatically gaining access to these powerful C++ libraries under the hood.
+To learn more, please see the [official introduction to `{RTMB}`](https://kaskr.r-universe.dev/articles/RTMBp/RTMB-introduction.html).
+
+## Analyst-friendly features
+
+The `{pmrm}` package provides first-class functionality for:
+
+* Model-fitting and simulation.
+* Post-processing and visualization.
+* Marginal mean estimation.
+* S3 methods for standard statistical generics.
+
+These features make PMRMs accessible to clinical statisticians and analysts working on trials in progressive diseases.
+
+## Installation
+
+You can install `{pmrm}` from CRAN using:
+
+```r
+install.packages("pmrm")
+```
+
+Or install the development version from GitHub:
+
+```r
+pak::pak("openpharma/pmrm")
+```
+
+## Learn more
+
+Please visit the [package documentation](https://openpharma.github.io/pmrm/) for model definitions, a usage tutorial, and a complete function reference.
+The source code and issue tracker are available on [GitHub](https://github.com/openpharma/pmrm).
