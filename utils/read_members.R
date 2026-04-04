@@ -14,9 +14,9 @@ read.members <- function(subset) {
   members <- as.data.frame(read.csv(paste(path, "/data/members.csv", sep = "")))
 
   ## get subset of member list
-  subset <- as.name(subset)
+  subset_symbol <- as.name(subset)
   members.subset <- (members %>%
-    filter(!!subset == 1) %>%
+    filter(!!subset_symbol == 1) %>%
     select(Firstname, Lastname, Affiliation) %>%
     arrange(Firstname, Lastname) %>%
     rename(`First Name` = Firstname, `Last Name` = Lastname))

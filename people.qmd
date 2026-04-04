@@ -10,11 +10,14 @@
 
   * Alessandro Gasparini (Red Door Analytics)
 
+```{r, label = "load_read_members_script", echo = FALSE, message = FALSE, warning = FALSE}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.R", sep = ""))
+```
+
 **Members:**
 
 ```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
-path <- getwd()
-source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("SWE_WG_Member")
 ```
 
@@ -23,7 +26,5 @@ read.members("SWE_WG_Member")
 **Alumni:**
 
 ```{r, label = "alumni", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
-path <- getwd()
-source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("SWE_WG_Alumni")
 ```
