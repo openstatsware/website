@@ -6,7 +6,7 @@ date: "June 13 2023"
 date-format: long
 format: 
   revealjs:
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
     fontsize: 34px
     slide-number: true
 title-slide-attributes: 
@@ -209,7 +209,7 @@ Comparison to *de-facto* gold standard in SAS with `PROC MIXED`:
 :::
 
 ::: {.column width="33%"}
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="300"}
+![](https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png){height="300"}
 :::
 
 ::: {.column width="33%"}

@@ -29,7 +29,7 @@ Founded last year:
 :::
 
 ::: {.column width="50%"}
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="300"}
+![](https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png){height="300"}
 :::
 :::
 

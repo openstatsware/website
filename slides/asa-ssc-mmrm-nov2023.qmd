@@ -6,11 +6,11 @@ date: "2023/11/04"
 format: 
   revealjs:
     incremental: false
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/sticker-new-1200.png
     slide-number: c/t
     fontsize: 32px
 title-slide-attributes: 
-  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+  data-background-image: https://github.com/openstatsware/website/raw/main/sticker/sticker-new-1200.png
   data-background-size: 20%
   data-background-opacity: "0.5"
   data-background-position: 98% 10%

@@ -7,10 +7,10 @@ date: "8 August 2023"
 format: 
   revealjs:
     incremental: true
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
     slide-number: c/t
 title-slide-attributes: 
-  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-image: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
   data-background-size: 18%
   data-background-opacity: "0.5"
   data-background-position: 98% 10%
@@ -233,6 +233,6 @@ Contrasts and least square means estimates are available in `mmrm` using:
 :::
 
 ::: {.column width="50%"}
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+![](https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png){height="500"}
 :::
 :::
