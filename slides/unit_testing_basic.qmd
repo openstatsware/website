@@ -6,11 +6,11 @@ date: ""
 format: 
   revealjs:
     incremental: true
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
     slide-number: c/t
     margin: 0.05
 title-slide-attributes: 
-  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-image: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
   data-background-size: 10%
   data-background-opacity: "0.9"
   data-background-position: 92% 30%
@@ -137,7 +137,7 @@ Unit tests ...
 
 ## Brought to you by the Software Engineering Working Group
 
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500" fig-align="center"}
+![](https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png){height="500" fig-align="center"}
 
 <div style="text-align: center">
 [rconsortium.github.io/asa-biop-swe-wg](https://rconsortium.github.io/asa-biop-swe-wg/)

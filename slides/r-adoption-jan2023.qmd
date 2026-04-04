@@ -5,10 +5,10 @@ format:
   revealjs:
     theme: dark
     incremental: false
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
     slide-number: c/t
 title-slide-attributes: 
-  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png
+  data-background-image: https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png
   data-background-size: 20%
   data-background-opacity: "0.5"
   data-background-position: 80% 10%
@@ -275,6 +275,6 @@ Have an interest in working on these topics? Come work with us, information on t
 :::
 
 ::: {.column width="50%"}
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-1200.png){height="500"}
+![](https://github.com/openstatsware/website/raw/main/sticker/openstatsware-hex-1200.png){height="500"}
 :::
 :::

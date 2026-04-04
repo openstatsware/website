@@ -6,13 +6,13 @@ date: "2023/09/29"
 format: 
   revealjs:
     incremental: true
-    logo: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+    logo: https://github.com/openstatsware/website/raw/main/sticker/sticker-new-1200.png
     slide-number: c/t
     toc: true
     toc-depth: 1
     fontsize: 32px
 title-slide-attributes: 
-  data-background-image: https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png
+  data-background-image: https://github.com/openstatsware/website/raw/main/sticker/sticker-new-1200.png
   data-background-size: 20%
   data-background-opacity: "0.5"
   data-background-position: 98% 10%
@@ -38,7 +38,7 @@ Founded last year:
 :::
 
 ::: {.column width="30%"}
-![](https://github.com/RConsortium/asa-biop-swe-wg/raw/main/sticker/sticker-new-1200.png){height="300"}
+![](https://github.com/openstatsware/website/raw/main/sticker/sticker-new-1200.png){height="300"}
 :::
 :::
 
