@@ -16,3 +16,5 @@ _site
 
 # MacOS
 .DS_Store
+
+**/*.quarto_ipynb

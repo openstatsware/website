@@ -17,3 +17,13 @@ path <- getwd()
 source(file = paste(path, "/utils/read_members.R", sep = ""))
 read.members("SWE_WG_Member")
 ```
+
+<br>
+
+**Alumni:**
+
+```{r, label = "alumni", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+path <- getwd()
+source(file = paste(path, "/utils/read_members.R", sep = ""))
+read.members("SWE_WG_Alumni")
+```
