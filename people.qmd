@@ -1,5 +1,5 @@
 ---
-  title: "People"
+title: "People"
 ---
 
 **Co-Chairs:**
@@ -8,7 +8,7 @@
 
   * Ya Wang (Gilead)
 
-  * Alessandro Gasparini (Red Door Analytics)
+  * Alessandro Gasparini (GSK)
 
 ```{r, label = "load_read_members_script", echo = FALSE, message = FALSE, warning = FALSE}
 path <- getwd()
