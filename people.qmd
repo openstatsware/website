@@ -1,5 +1,6 @@
 ---
 title: "People"
+toc: false
 ---
 
 **Co-Chairs:**
@@ -10,21 +11,34 @@ title: "People"
 
   * Alessandro Gasparini (GSK)
 
-```{r, label = "load_read_members_script", echo = FALSE, message = FALSE, warning = FALSE}
+```{r load_read_members_script}
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
 path <- getwd()
 source(file = paste(path, "/utils/read_members.R", sep = ""))
 ```
 
+<br/>
+
 **Members:**
 
-```{r, label = "active", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+```{r active}
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| results: "asis"
 read.members("SWE_WG_Member")
 ```
 
-<br>
+<br/>
 
 **Alumni:**
 
-```{r, label = "alumni", echo = FALSE, message = FALSE, warning = FALSE, results = "asis"}
+```{r alumni}
+#| echo: FALSE
+#| message: FALSE
+#| warning: FALSE
+#| results: "asis"
 read.members("SWE_WG_Alumni")
 ```

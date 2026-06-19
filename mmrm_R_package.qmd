@@ -2,7 +2,7 @@
 title: "MMRM R Package Development"
 ---
 
-**Lead**: Daniel Sabanes Bove (Roche)
+**Lead**: Daniel Sabanes Bove (RCONIS)
 
 **Objective**: To develop a comprehensive R package for mixed models with repeated measures (MMRM) that is robust, well documented and thoroughly tested.
 

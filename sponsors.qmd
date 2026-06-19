@@ -1,5 +1,6 @@
 ---
-  title: "Sponsors"
+title: "Sponsors"
+toc: false
 ---
 
 ::: {.px-3 .py-5 .my-1 .text-center }

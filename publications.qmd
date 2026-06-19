@@ -1,5 +1,6 @@
 ---
-  title: "Publications"
+title: "Publications"
+draft: true
 ---
 
 To be added later.

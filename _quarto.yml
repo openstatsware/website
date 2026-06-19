@@ -3,14 +3,13 @@ project:
 resources:
   - CNAME
 website:
-
   title: "openstatsware"
   favicon: "sticker/openstatsware-hex.svg"
   site-url: "https://www.openstatsware.org"
-  description: "Website for the `openstatsware' Working Group"
+  description: "Website for the openstatsware Working Group"
 
   navbar:
-    background: "#f8f9fa"
+    background: transparent
     pinned: true
     title: false
     logo: "sticker/openstatsware-hex.svg"
