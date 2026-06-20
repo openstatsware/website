@@ -8,7 +8,7 @@
 <title>openstatsware</title>
 <link>https://www.openstatsware.org/blog.html#category=R</link>
 <atom:link href="https://www.openstatsware.org/blog-r.xml" rel="self" type="application/rss+xml"/>
-<description>Website for the `openstatsware&#39; Working Group</description>
+<description>Website for the openstatsware Working Group</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Tue, 24 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
@@ -139,23 +139,23 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 49 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="cpswyjvzhy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#cpswyjvzhy table {
+<div id="ihahfrzrib" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#ihahfrzrib table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#cpswyjvzhy thead, #cpswyjvzhy tbody, #cpswyjvzhy tfoot, #cpswyjvzhy tr, #cpswyjvzhy td, #cpswyjvzhy th {
+#ihahfrzrib thead, #ihahfrzrib tbody, #ihahfrzrib tfoot, #ihahfrzrib tr, #ihahfrzrib td, #ihahfrzrib th {
   border-style: none;
 }
 
-#cpswyjvzhy p {
+#ihahfrzrib p {
   margin: 0;
   padding: 0;
 }
 
-#cpswyjvzhy .gt_table {
+#ihahfrzrib .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -181,12 +181,12 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-left-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_caption {
+#ihahfrzrib .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#cpswyjvzhy .gt_title {
+#ihahfrzrib .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -198,7 +198,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-bottom-width: 0;
 }
 
-#cpswyjvzhy .gt_subtitle {
+#ihahfrzrib .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -210,7 +210,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-top-width: 0;
 }
 
-#cpswyjvzhy .gt_heading {
+#ihahfrzrib .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -222,13 +222,13 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-right-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_bottom_border {
+#ihahfrzrib .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_col_headings {
+#ihahfrzrib .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -243,7 +243,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-right-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_col_heading {
+#ihahfrzrib .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -263,7 +263,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   overflow-x: hidden;
 }
 
-#cpswyjvzhy .gt_column_spanner_outer {
+#ihahfrzrib .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -275,15 +275,15 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 4px;
 }
 
-#cpswyjvzhy .gt_column_spanner_outer:first-child {
+#ihahfrzrib .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cpswyjvzhy .gt_column_spanner_outer:last-child {
+#ihahfrzrib .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cpswyjvzhy .gt_column_spanner {
+#ihahfrzrib .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -295,11 +295,11 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   width: 100%;
 }
 
-#cpswyjvzhy .gt_spanner_row {
+#ihahfrzrib .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#cpswyjvzhy .gt_group_heading {
+#ihahfrzrib .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   text-align: left;
 }
 
-#cpswyjvzhy .gt_empty_group_heading {
+#ihahfrzrib .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -340,15 +340,15 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   vertical-align: middle;
 }
 
-#cpswyjvzhy .gt_from_md > :first-child {
+#ihahfrzrib .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cpswyjvzhy .gt_from_md > :last-child {
+#ihahfrzrib .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cpswyjvzhy .gt_row {
+#ihahfrzrib .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -367,7 +367,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   overflow-x: hidden;
 }
 
-#cpswyjvzhy .gt_stub {
+#ihahfrzrib .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -380,7 +380,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 5px;
 }
 
-#cpswyjvzhy .gt_stub_row_group {
+#ihahfrzrib .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -394,15 +394,15 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   vertical-align: top;
 }
 
-#cpswyjvzhy .gt_row_group_first td {
+#ihahfrzrib .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cpswyjvzhy .gt_row_group_first th {
+#ihahfrzrib .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#cpswyjvzhy .gt_summary_row {
+#ihahfrzrib .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -412,16 +412,16 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 5px;
 }
 
-#cpswyjvzhy .gt_first_summary_row {
+#ihahfrzrib .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_first_summary_row.thick {
+#ihahfrzrib .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cpswyjvzhy .gt_last_summary_row {
+#ihahfrzrib .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,7 +431,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-bottom-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_grand_summary_row {
+#ihahfrzrib .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -441,7 +441,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 5px;
 }
 
-#cpswyjvzhy .gt_first_grand_summary_row {
+#ihahfrzrib .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -451,7 +451,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-top-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_last_grand_summary_row_top {
+#ihahfrzrib .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -461,11 +461,11 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-bottom-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_striped {
+#ihahfrzrib .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cpswyjvzhy .gt_table_body {
+#ihahfrzrib .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -474,7 +474,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-bottom-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_footnotes {
+#ihahfrzrib .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -488,7 +488,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-right-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_footnote {
+#ihahfrzrib .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -497,7 +497,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 5px;
 }
 
-#cpswyjvzhy .gt_sourcenotes {
+#ihahfrzrib .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -511,7 +511,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   border-right-color: #D3D3D3;
 }
 
-#cpswyjvzhy .gt_sourcenote {
+#ihahfrzrib .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -519,72 +519,72 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
   padding-right: 5px;
 }
 
-#cpswyjvzhy .gt_left {
+#ihahfrzrib .gt_left {
   text-align: left;
 }
 
-#cpswyjvzhy .gt_center {
+#ihahfrzrib .gt_center {
   text-align: center;
 }
 
-#cpswyjvzhy .gt_right {
+#ihahfrzrib .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cpswyjvzhy .gt_font_normal {
+#ihahfrzrib .gt_font_normal {
   font-weight: normal;
 }
 
-#cpswyjvzhy .gt_font_bold {
+#ihahfrzrib .gt_font_bold {
   font-weight: bold;
 }
 
-#cpswyjvzhy .gt_font_italic {
+#ihahfrzrib .gt_font_italic {
   font-style: italic;
 }
 
-#cpswyjvzhy .gt_super {
+#ihahfrzrib .gt_super {
   font-size: 65%;
 }
 
-#cpswyjvzhy .gt_footnote_marks {
+#ihahfrzrib .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#cpswyjvzhy .gt_asterisk {
+#ihahfrzrib .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cpswyjvzhy .gt_indent_1 {
+#ihahfrzrib .gt_indent_1 {
   text-indent: 5px;
 }
 
-#cpswyjvzhy .gt_indent_2 {
+#ihahfrzrib .gt_indent_2 {
   text-indent: 10px;
 }
 
-#cpswyjvzhy .gt_indent_3 {
+#ihahfrzrib .gt_indent_3 {
   text-indent: 15px;
 }
 
-#cpswyjvzhy .gt_indent_4 {
+#ihahfrzrib .gt_indent_4 {
   text-indent: 20px;
 }
 
-#cpswyjvzhy .gt_indent_5 {
+#ihahfrzrib .gt_indent_5 {
   text-indent: 25px;
 }
 
-#cpswyjvzhy .katex-display {
+#ihahfrzrib .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#cpswyjvzhy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ihahfrzrib div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -822,7 +822,7 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Pharmacokinetics/">Analysis of Pharmacokinetic Data</a></td>
 <td class="gt_row gt_left" headers="maintainers">Bill Denney, Satyaprakash Nayak</td>
 <td class="gt_row gt_right" headers="last_update">2026-01-30</td>
-<td class="gt_row gt_right" headers="n_pkg">45</td>
+<td class="gt_row gt_right" headers="n_pkg">46</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Phylogenetics/">Phylogenetics</a></td>
@@ -1095,12 +1095,12 @@ font-style: inherit;">"openpharma/pmrm"</span>)</span></code></pre></div></div>
 
 
 <p>With the shift of biostatistics work from proprietary software (e.g.&nbsp;SAS) to R, it is now even more important to write reliable and reproducible code, and to be selective with the R packages we use. This topic is equally relevant for biostatistics work as it is for programming and other roles. A recent <a href="https://www.linkedin.com/pulse/research-software-engineering-clinical-biostatistics-saban%C3%A9s-bov%C3%A9/">panel discussion</a> on this topic highlighted this evolving need across companies and academia.</p>
-<p>To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the <a href="https://community.amstat.org/biop/home">American Statistical Association (ASA) Biopharmaceutical section (BIOP)</a> which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our <a href="https://community.amstat.org/biop/workinggroups/swe-wg">landing page</a> and <a href="https://rconsortium.github.io/asa-biop-swe-wg/">website</a> (hosted by the <a href="https://www.r-consortium.org/about">R Consortium</a> GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.</p>
+<p>To foster collaboration within biostatistics across organizational silos we proposed a new scientific working group under the umbrella of the <a href="https://community.amstat.org/biop/home">American Statistical Association (ASA) Biopharmaceutical section (BIOP)</a> which was quickly approved in August this year: The Software Engineering working group (SWE WG). Now we have launched our <a href="https://community.amstat.org/biop/workinggroups/swe-wg">landing page</a> and <a href="https://www.openstatsware.org">website</a> (hosted by the <a href="https://www.r-consortium.org/about">R Consortium</a> GitHub organization) and want to share this news broadly to raise awareness and attract contributors. We have more than 10 companies and institutions involved in the SWE WG and welcome new members.</p>
 <p>The primary objective of the SWE WG is to engineer R packages that implement important methods that are often utilized in biostatistics but still missing from our R toolbox. The first product is the recently-published R package implementing mixed models for repeated measures (MMRM): <a href="https://cran.r-project.org/package=mmrm">mmrm</a>. In particular, a critical advantage of this package over existing implementations is that it is faster and converges more reliably. It also provides a comprehensive set of features: users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite adjusted degrees of freedom, and extract the least square means estimates by using the <a href="https://github.com/rvlenth/emmeans">emmeans package</a>. We aim to establish the R package <a href="https://cran.r-project.org/package=mmrm">mmrm</a> as a new standard for fitting MMRM and will communicate it broadly. We welcome any community contributions to the R package, including feedback, questions and feature requests.</p>
 <p>The secondary objective is to develop best practices for engineering high-quality open-source statistical software, and to promote the use of these best practices in the broader biostatistics community via public training materials.</p>
 <p>➞ Would you like to try out the new package mmrm? Install it from <a href="https://cran.r-project.org/package=mmrm">CRAN</a> and read the <a href="https://openpharma.github.io/mmrm/">documentation</a> (hosted by the <a href="https://openpharma.github.io/#manifesto">openpharma GitHub organization</a>).</p>
-<p>➞ What do you think is missing in the statisticians’ R toolbox? Comment <a href="https://rconsortium.github.io/asa-biop-swe-wg/contact_us.html">here</a>!</p>
-<p>➞ Are you developing R packages and are interested in joining the working group? Please visit <a href="https://rconsortium.github.io/asa-biop-swe-wg/">our website</a> on <a href="https://rconsortium.github.io/asa-biop-swe-wg/join_us.html">how to join</a> (no ASA membership required).</p>
+<p>➞ What do you think is missing in the statisticians’ R toolbox? Comment <a href="https://www.openstatsware.org/contact_us.html">here</a>!</p>
+<p>➞ Are you developing R packages and are interested in joining the working group? Please visit <a href="https://www.openstatsware.org">our website</a> on <a href="https://www.openstatsware.org/join_us.html">how to join</a> (no ASA membership required).</p>
 
 
 
