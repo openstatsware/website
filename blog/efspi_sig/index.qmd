@@ -16,4 +16,4 @@ As many of the `openstatsware` members and their companies are based in Europe, 
 
 The new association does fit well with the existing ASA BIOP association of `openstatsware`. In fact, there are other working groups that are associated with both ASA BIOP and EFSPI (e.g. [Oncology Estimands](http://www.oncoestimand.org)). `openstatsware` continues to be a global working group across continents and countries.
 
-We are looking forward to the strenghtened collaboration with other EFSPI SIGs and corresponding events in Europe!
+We are looking forward to the strengthened collaboration with other EFSPI SIGs and corresponding events in Europe!

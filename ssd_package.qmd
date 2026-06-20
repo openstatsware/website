@@ -2,7 +2,7 @@
 title: "Bayesian Safety Signal Detection Julia Package"
 ---
 
-**Lead**: Daniel Sabanes Bove (Roche)
+**Lead**: Daniel Sabanes Bove (RCONIS)
 
 **Objective**: To develop a Julia package for Bayesian Safety Signal Detection based on the [Brock et al (2021)](https://doi.org/10.1002/pst.2278) method.
 

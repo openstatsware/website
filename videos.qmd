@@ -1,5 +1,6 @@
 ---
-  title: "Videos"
+title: "Videos"
+draft: true
 ---
 
 To be added later.

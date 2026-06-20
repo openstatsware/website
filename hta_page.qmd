@@ -1,5 +1,5 @@
 ---
-title: "HTA-R workstream"
+title: "HTA-R Workstream"
 ---
 
 **Lead**: Gregory Chen (MSD)

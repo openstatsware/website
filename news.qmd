@@ -1,6 +1,7 @@
 ---
 title: "News"
-editor_options: 
+toc: false
+editor_options:
   chunk_output_type: console
 ---
 

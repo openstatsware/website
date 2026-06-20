@@ -1,6 +1,7 @@
 ---
 pagetitle: "openstatsware"
 comments: false
+toc: false
 ---
 
 ```{=html}
