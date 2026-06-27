@@ -10,7 +10,33 @@
 <atom:link href="https://www.openstatsware.org/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the openstatsware Working Group</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Tue, 23 Jun 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 25 Jun 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>CRAN Task View on Clinical Trials - June 2026 Update</title>
+  <dc:creator>Ya </dc:creator>
+  <link>https://www.openstatsware.org/blog/cran-task-view-new-version-2026/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We are pleased to announce the release of an updated version of the <a href="https://cran.r-project.org/web/views/ClinicalTrials.html">CRAN Task View on Clinical Trials</a>, published on June 10, 2026. This update features a curated collection of R packages relevant to clinical trial design, monitoring, analysis, and reporting.</p>
+<p>The Task View serves as a practical resource for statisticians, programmers, and clinical researchers across the pharmaceutical industry, facilitating efficient identification of packages for common and advanced analytical needs. We thank the contributors and maintainers for their continued efforts in keeping this resource current, and we encourage the community to explore the updated content and provide feedback for future enhancements.</p>
+<div class="quarto-figure quarto-figure-&quot;center">
+<figure class="figure">
+<p><img src="https://www.openstatsware.org/blog/cran-task-view-new-version-2026/cran-task-view-june2026.png" class="img-fluid quarto-figure quarto-figure-&quot;center figure-img"></p>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://www.openstatsware.org/blog/cran-task-view-new-version-2026/</guid>
+  <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://www.openstatsware.org/blog/cran-task-view-new-version-2026/cran-task-view-june2026.png" medium="image" type="image/png" height="69" width="144"/>
+</item>
 <item>
   <title>openstatsware has been awarded as the SIG of The Year 2026</title>
   <dc:creator>Daniel </dc:creator>
@@ -286,23 +312,23 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
 <p>The <a href="https://cran.r-project.org/web/views/">CRAN tasks views</a> are an indispensable resource of information for discovering which R packages are the right ones for specific tasks. There are 49 of task views spanning a variety of topics. Each topic has subject matter experts who maintain the lists of packages. Below is a summary table of all the CRAN task views showing the topic (with a link to it), the maintainers, the date it was last updated and the number of packages in the task view.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="mmojozguca" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
-<style>#mmojozguca table {
+<div id="udiajqtlxb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:300px;">
+<style>#udiajqtlxb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mmojozguca thead, #mmojozguca tbody, #mmojozguca tfoot, #mmojozguca tr, #mmojozguca td, #mmojozguca th {
+#udiajqtlxb thead, #udiajqtlxb tbody, #udiajqtlxb tfoot, #udiajqtlxb tr, #udiajqtlxb td, #udiajqtlxb th {
   border-style: none;
 }
 
-#mmojozguca p {
+#udiajqtlxb p {
   margin: 0;
   padding: 0;
 }
 
-#mmojozguca .gt_table {
+#udiajqtlxb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -328,12 +354,12 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-left-color: #D3D3D3;
 }
 
-#mmojozguca .gt_caption {
+#udiajqtlxb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mmojozguca .gt_title {
+#udiajqtlxb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -345,7 +371,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-bottom-width: 0;
 }
 
-#mmojozguca .gt_subtitle {
+#udiajqtlxb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -357,7 +383,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-top-width: 0;
 }
 
-#mmojozguca .gt_heading {
+#udiajqtlxb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -369,13 +395,13 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-right-color: #D3D3D3;
 }
 
-#mmojozguca .gt_bottom_border {
+#udiajqtlxb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mmojozguca .gt_col_headings {
+#udiajqtlxb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -390,7 +416,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-right-color: #D3D3D3;
 }
 
-#mmojozguca .gt_col_heading {
+#udiajqtlxb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -410,7 +436,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   overflow-x: hidden;
 }
 
-#mmojozguca .gt_column_spanner_outer {
+#udiajqtlxb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -422,15 +448,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 4px;
 }
 
-#mmojozguca .gt_column_spanner_outer:first-child {
+#udiajqtlxb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mmojozguca .gt_column_spanner_outer:last-child {
+#udiajqtlxb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mmojozguca .gt_column_spanner {
+#udiajqtlxb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -442,11 +468,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   width: 100%;
 }
 
-#mmojozguca .gt_spanner_row {
+#udiajqtlxb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mmojozguca .gt_group_heading {
+#udiajqtlxb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -472,7 +498,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   text-align: left;
 }
 
-#mmojozguca .gt_empty_group_heading {
+#udiajqtlxb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -487,15 +513,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   vertical-align: middle;
 }
 
-#mmojozguca .gt_from_md > :first-child {
+#udiajqtlxb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mmojozguca .gt_from_md > :last-child {
+#udiajqtlxb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mmojozguca .gt_row {
+#udiajqtlxb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -514,7 +540,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   overflow-x: hidden;
 }
 
-#mmojozguca .gt_stub {
+#udiajqtlxb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -527,7 +553,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 5px;
 }
 
-#mmojozguca .gt_stub_row_group {
+#udiajqtlxb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -541,15 +567,15 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   vertical-align: top;
 }
 
-#mmojozguca .gt_row_group_first td {
+#udiajqtlxb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mmojozguca .gt_row_group_first th {
+#udiajqtlxb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mmojozguca .gt_summary_row {
+#udiajqtlxb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -559,16 +585,16 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 5px;
 }
 
-#mmojozguca .gt_first_summary_row {
+#udiajqtlxb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mmojozguca .gt_first_summary_row.thick {
+#udiajqtlxb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mmojozguca .gt_last_summary_row {
+#udiajqtlxb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -578,7 +604,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-bottom-color: #D3D3D3;
 }
 
-#mmojozguca .gt_grand_summary_row {
+#udiajqtlxb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -588,7 +614,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 5px;
 }
 
-#mmojozguca .gt_first_grand_summary_row {
+#udiajqtlxb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -598,7 +624,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-top-color: #D3D3D3;
 }
 
-#mmojozguca .gt_last_grand_summary_row_top {
+#udiajqtlxb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -608,11 +634,11 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-bottom-color: #D3D3D3;
 }
 
-#mmojozguca .gt_striped {
+#udiajqtlxb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mmojozguca .gt_table_body {
+#udiajqtlxb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -621,7 +647,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-bottom-color: #D3D3D3;
 }
 
-#mmojozguca .gt_footnotes {
+#udiajqtlxb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -635,7 +661,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-right-color: #D3D3D3;
 }
 
-#mmojozguca .gt_footnote {
+#udiajqtlxb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -644,7 +670,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 5px;
 }
 
-#mmojozguca .gt_sourcenotes {
+#udiajqtlxb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -658,7 +684,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   border-right-color: #D3D3D3;
 }
 
-#mmojozguca .gt_sourcenote {
+#udiajqtlxb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -666,72 +692,72 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
   padding-right: 5px;
 }
 
-#mmojozguca .gt_left {
+#udiajqtlxb .gt_left {
   text-align: left;
 }
 
-#mmojozguca .gt_center {
+#udiajqtlxb .gt_center {
   text-align: center;
 }
 
-#mmojozguca .gt_right {
+#udiajqtlxb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mmojozguca .gt_font_normal {
+#udiajqtlxb .gt_font_normal {
   font-weight: normal;
 }
 
-#mmojozguca .gt_font_bold {
+#udiajqtlxb .gt_font_bold {
   font-weight: bold;
 }
 
-#mmojozguca .gt_font_italic {
+#udiajqtlxb .gt_font_italic {
   font-style: italic;
 }
 
-#mmojozguca .gt_super {
+#udiajqtlxb .gt_super {
   font-size: 65%;
 }
 
-#mmojozguca .gt_footnote_marks {
+#udiajqtlxb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mmojozguca .gt_asterisk {
+#udiajqtlxb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mmojozguca .gt_indent_1 {
+#udiajqtlxb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mmojozguca .gt_indent_2 {
+#udiajqtlxb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mmojozguca .gt_indent_3 {
+#udiajqtlxb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mmojozguca .gt_indent_4 {
+#udiajqtlxb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mmojozguca .gt_indent_5 {
+#udiajqtlxb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mmojozguca .katex-display {
+#udiajqtlxb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mmojozguca div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#udiajqtlxb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -753,7 +779,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/ActuarialScience/">Actuarial Science</a></td>
 <td class="gt_row gt_left" headers="maintainers">Christophe Dutang, Vincent Goulet</td>
 <td class="gt_row gt_right" headers="last_update">2026-06-09</td>
-<td class="gt_row gt_right" headers="n_pkg">44</td>
+<td class="gt_row gt_right" headers="n_pkg">45</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="topic"><a href="https://github.com/cran-task-views/Agriculture/">Agricultural Science</a></td>
@@ -1100,7 +1126,7 @@ font-style: inherit;">"SafetySignalDetection"</span>)</span></code></pre></div><
 <section id="montreal-workshop" class="level2">
 <h2 class="anchored" data-anchor-id="montreal-workshop">Montreal workshop</h2>
 <p>On Monday and Tuesday this week (16 and 17 October), Doug Kelkhoff (Roche), Phil Boileau (Analysis Group) and Daniel Sabanés Bové (Roche) held another edition of the Good Software Engineering Practices for R Packages (or short GSWEP4RP) workshop - this time in Montreal, QC, Canada.</p>
-<div class="quarto-layout-panel" data-fig-align="center" data-layout-nrow="2">
+<div class="quarto-layout-panel" data-layout-nrow="2" data-fig-align="center">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <p><img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0190.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0192.JPG" class="img-fluid" style="width:33.0%"> <img src="https://www.openstatsware.org/blog/2023-gswe4rp-workshops-wrapup/IMG_0193.JPG" class="img-fluid" style="width:33.0%"></p>
